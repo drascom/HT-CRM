@@ -1,0 +1,45 @@
+/* Add your custom CSS here */
+/* For example: */
+/* body { padding-top: 20px; } */
+/* Surgery Status Colors */
+.status-booked {
+    color: #007bff !important; /* Blue */
+    font-weight: bold;
+}
+
+.status-completed {
+    color: #28a745 !important; /* Green */
+    font-weight: bold;
+}
+
+.status-cancelled {
+    color: #dc3545 !important; /* Red */
+    font-weight: bold;
+}
+
+.status-in-progress {
+    color: #ffc107; /* Yellow/Orange */
+    font-weight: bold;
+}
+
+/* Add more statuses as needed */
+
+/* Dropzone Styling */
+.dropzone {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 20px;
+    min-height: 150px; /* Give it some height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dropzone .dz-message {
+    margin: 0; /* Remove default margin */
+    font-size: 1.2em;
+    color: #666;
+}
