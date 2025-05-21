@@ -14,31 +14,36 @@ require_once 'includes/header.php';
 ?>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const surgeriesTable = document.getElementById('surgeries-table');
-    const statusMessagesDiv = document.getElementById('status-messages');
+    document.addEventListener('DOMContentLoaded', function() {
+        const surgeriesTable = document.getElementById('surgeries-table');
+        const statusMessagesDiv = document.getElementById('status-messages');
 
-    // Function to display messages
-    function displayMessage(message, type = 'success') {
-        statusMessagesDiv.innerHTML = `<div class="alert alert-${type}">${message}</div>`;
-    }
+        // Function to display messages
+        function displayMessage(message, type = 'success') {
+            statusMessagesDiv.innerHTML = `<div class="alert alert-${type}">${message}</div>`;
+        }
 
-    // Function to fetch and display surgeries
-// Function to format date as DD, MMM / YY
-    function formatDate(dateString) {
-        const options = { day: '2-digit', month: 'short', year: '2-digit' };
-        const date = new Date(dateString);
-        return date.toLocaleDateString('en-GB', options).replace(/\//g, ' / ');
-    }
-    function fetchAndDisplaySurgeries() {
-        fetch('api.php?entity=surgeries&action=list')
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    const surgeries = data.surgeries;
-                    let tableRows = '';
-                    surgeries.forEach(surgery => {
-                        tableRows += `
+        // Function to fetch and display surgeries
+        // Function to format date as DD, MMM / YY
+        function formatDate(dateString) {
+            const options = {
+                day: '2-digit',
+                month: 'short',
+                year: '2-digit'
+            };
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-GB', options).replace(/\//g, ' / ');
+        }
+
+        function fetchAndDisplaySurgeries() {
+            fetch('api.php?entity=surgeries&action=list')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        const surgeries = data.surgeries;
+                        let tableRows = '';
+                        surgeries.forEach(surgery => {
+                            tableRows += `
                             <tr data-surgery-id="${surgery.id}">
                                 <td>${formatDate(surgery.date)}</td>
                                 <td>
@@ -51,110 +56,114 @@ document.addEventListener('DOMContentLoaded', function () {
                                 </td>
                             </tr>
                         `;
-                    });
-                    surgeriesTable.querySelector('tbody').innerHTML = tableRows;
-                } else {
-                    displayMessage(`Error loading surgeries: ${data.error}`, 'danger');
-                }
-            })
-            .catch(error => {
-                console.error('Error fetching surgeries:', error);
-                displayMessage('An error occurred while loading surgery data.', 'danger');
-            });
-    }
-
-    // Delete surgery function
-    surgeriesTable.addEventListener('click', function (event) {
-        if (event.target.classList.contains('delete-surgery-btn')) {
-            const surgeryId = event.target.dataset.surgeryId;
-            if (confirm('Are you sure you want to delete this surgery?')) {
-                const formData = new FormData();
-                formData.append('entity', 'surgeries');
-                formData.append('action', 'delete');
-                formData.append('id', surgeryId);
-
-                fetch('api.php', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        displayMessage(data.message, 'success');
-                        fetchAndDisplaySurgeries(); // Refresh the surgery list
+                        });
+                        surgeriesTable.querySelector('tbody').innerHTML = tableRows;
                     } else {
-                        displayMessage(`Error deleting surgery: ${data.error}`, 'danger');
+                        displayMessage(`Error loading surgeries: ${data.error}`, 'danger');
                     }
                 })
                 .catch(error => {
-                    console.error('Error deleting surgery:', error);
-                    displayMessage('An error occurred while deleting the surgery.', 'danger');
+                    console.error('Error fetching surgeries:', error);
+                    displayMessage('An error occurred while loading surgery data.', 'danger');
                 });
-            }
         }
-    });
 
-    fetchAndDisplaySurgeries(); // Initial load of surgeries
+        // Delete surgery function
+        surgeriesTable.addEventListener('click', function(event) {
+            if (event.target.classList.contains('delete-surgery-btn')) {
+                const surgeryId = event.target.dataset.surgeryId;
+                if (confirm('Are you sure you want to delete this surgery?')) {
+                    const formData = new FormData();
+                    formData.append('entity', 'surgeries');
+                    formData.append('action', 'delete');
+                    formData.append('id', surgeryId);
 
-    // Search functionality
-    const surgerySearchInput = document.getElementById('surgery-search');
-    const searchSurgeryBtn = document.getElementById('search-surgery-btn');
-
-    function filterSurgeries() {
-        const searchTerm = surgerySearchInput.value.toLowerCase();
-        const rows = surgeriesTable.querySelectorAll('tbody tr');
-
-        rows.forEach(row => {
-            const date = row.cells[0].textContent.toLowerCase();
-            const patientName = row.cells[1].textContent.toLowerCase();
-            const status = row.cells[2].textContent.toLowerCase();
-
-            if (date.includes(searchTerm) || patientName.includes(searchTerm) || status.includes(searchTerm)) {
-                row.style.display = '';
-            } else {
-                row.style.display = 'none';
+                    fetch('api.php', {
+                            method: 'POST',
+                            body: formData
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                displayMessage(data.message, 'success');
+                                fetchAndDisplaySurgeries(); // Refresh the surgery list
+                            } else {
+                                displayMessage(`Error deleting surgery: ${data.error}`, 'danger');
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error deleting surgery:', error);
+                            displayMessage('An error occurred while deleting the surgery.', 'danger');
+                        });
+                }
             }
         });
-    }
 
-    searchSurgeryBtn.addEventListener('click', filterSurgeries);
+        fetchAndDisplaySurgeries(); // Initial load of surgeries
 
-    surgerySearchInput.addEventListener('keyup', function(event) {
-        if (event.key === 'Enter') {
-            filterSurgeries();
+        // Search functionality
+        const surgerySearchInput = document.getElementById('surgery-search');
+        const searchSurgeryBtn = document.getElementById('search-surgery-btn');
+
+        function filterSurgeries() {
+            const searchTerm = surgerySearchInput.value.toLowerCase();
+            const rows = surgeriesTable.querySelectorAll('tbody tr');
+
+            rows.forEach(row => {
+                const date = row.cells[0].textContent.toLowerCase();
+                const patientName = row.cells[1].textContent.toLowerCase();
+                const status = row.cells[2].textContent.toLowerCase();
+
+                if (date.includes(searchTerm) || patientName.includes(searchTerm) || status.includes(
+                        searchTerm)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
         }
+
+        surgerySearchInput.addEventListener('keyup', function(event) {
+            const searchTerm = surgerySearchInput.value.toLowerCase();
+            if (searchTerm.length >= 2 || searchTerm.length === 0) {
+                filterSurgeries();
+            } else if (searchTerm.length === 1) {
+                // If only one character, clear the filter
+                const rows = surgeriesTable.querySelectorAll('tbody tr');
+                rows.forEach(row => {
+                    row.style.display = '';
+                });
+            }
+        });
     });
-});
 </script>
 
 <div class="container mt-4">
     <h2 class="mb-2">Surgeries</h2>
-        <div class="row mb-3">
-            <div class="col-md-3">
-                <a href="add_edit_surgery.php" class="btn btn-success mb-3"><i class="fas fa-plus-circle me-1"></i>Add New Surgery</a>
-            </div>
-            <div class="col-md-6">
-                <input type="text" id="surgery-search" class="form-control" placeholder="Search surgeries...">
-            </div>
-            <div class="col-md-auto">
-                <button class="btn btn-primary" id="search-surgery-btn"><i class="fas fa-search me-1"></i>Search</button>
-            </div>
+    <div class="row mb-3">
+        <div class="col-md-3">
+            <a href="add_edit_surgery.php" class="btn btn-success mb-3"><i class="fas fa-plus-circle me-1"></i>Add New
+                Surgery</a>
         </div>
-    
-        <table class="table table-striped" id="surgeries-table">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Patient Name</th>
-                    <th>Status</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Surgery rows will be loaded here by JavaScript -->
-            </tbody>
-        </table>
-    
+        <div class="col-md-6">
+            <input type="text" id="surgery-search" class="form-control" placeholder="Search surgeries...">
+        </div>
+    </div>
+
+    <table class="table table-striped" id="surgeries-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Patient Name</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Surgery rows will be loaded here by JavaScript -->
+        </tbody>
+    </table>
+
 </div>
 
 <?php require_once 'includes/footer.php'; ?>

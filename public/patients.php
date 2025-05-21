@@ -16,13 +16,11 @@ require_once 'includes/header.php';
     <h2 class="mb-2">Patients</h2>
     <div class="row mb-3">
         <div class="col-md-3">
-            <a href="add_edit_patient.php" class="btn btn-success mb-3"><i class="fas fa-plus-circle me-1"></i>Add New Record</a>
+            <a href="add_edit_patient.php" class="btn btn-success mb-3"><i class="fas fa-plus-circle me-1"></i>Add New
+                Record</a>
         </div>
         <div class="col-md-6">
             <input type="text" id="patient-search" class="form-control" placeholder="Search patients...">
-        </div>
-        <div class="col-md-auto">
-            <button class="btn btn-primary" id="search-patient-btn"><i class="fas fa-search me-1"></i>Search</button>
         </div>
     </div>
 </div>
@@ -51,8 +49,7 @@ require_once 'includes/header.php';
             </div>
             <div class="modal-body">
                 <form action="upload.php" id="photo-upload-form" enctype="multipart/form-data">
-                    <input type="hidden" name="patient_id" id="upload-patient-id"
-                        value="<?php echo $patient_id; ?>">
+                    <input type="hidden" name="patient_id" id="upload-patient-id" value="<?php echo $patient_id; ?>">
                     <div class="mb-3">
                         <label for="photo_album_type_id" class="form-label">Album Type</label>
                         <select class="form-select" id="photo_album_type_id" name="photo_album_type_id" required>
@@ -178,10 +175,10 @@ require_once 'includes/header.php';
             });
         }
 
-        searchPatientBtn.addEventListener('click', filterPatients);
 
         patientSearchInput.addEventListener('keyup', function(event) {
-            if (event.key === 'Enter') {
+            const searchTerm = patientSearchInput.value;
+            if (searchTerm.length >= 2 || searchTerm.length === 0) {
                 filterPatients();
             }
         });
@@ -220,7 +217,8 @@ require_once 'includes/header.php';
 
                             surgeriesListDiv.innerHTML = surgeryHtml;
                         } else if (data.error) {
-                            surgeriesListDiv.innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
+                            surgeriesListDiv.innerHTML =
+                                `<div class="alert alert-danger">${data.error}</div>`;
                             return;
                         }
 
@@ -231,7 +229,8 @@ require_once 'includes/header.php';
                     })
                     .catch(error => {
                         console.error('Error fetching surgeries:', error);
-                        surgeriesListDiv.innerHTML = '<div class="alert alert-danger">Could not load surgeries.</div>';
+                        surgeriesListDiv.innerHTML =
+                            '<div class="alert alert-danger">Could not load surgeries.</div>';
                     });
             });
         }
@@ -257,7 +256,8 @@ require_once 'includes/header.php';
             fetch('api.php?entity=photo_album_types&action=list')
                 .then(response => response.json())
                 .then(data => {
-                    photoAlbumTypeSelect.innerHTML = '<option value="">Select Album Type</option>'; // Clear existing options
+                    photoAlbumTypeSelect.innerHTML =
+                        '<option value="">Select Album Type</option>'; // Clear existing options
                     if (data.success && data.photo_album_types) {
                         data.photo_album_types.forEach(albumType => {
                             const option = document.createElement('option');

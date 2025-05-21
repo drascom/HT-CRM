@@ -1,6 +1,6 @@
 <?php
 // Database connection details for SQLite
-$database_file = __DIR__ . '/../../db/database.sqlite';
+$database_file = __DIR__ . '/../database.sqlite';
 
 $db_exists = file_exists($database_file);
 
@@ -30,7 +30,6 @@ try {
             // Optionally handle this error more gracefully
         }
     }
-
 } catch (\PDOException $e) {
     // Log the error instead of displaying it in production
     error_log("Database connection error: " . $e->getMessage());
@@ -41,13 +40,13 @@ try {
 // If the database was just created, add an initial admin user
 if (!$db_exists) {
     $admin_username = 'admin';
-    $admin_email="test@abc.com";
+    $admin_email = "test@abc.com";
     $admin_password_raw = '1111';
     $admin_password_hashed = password_hash($admin_password_raw, PASSWORD_DEFAULT);
 
     try {
         $stmt = $pdo->prepare("INSERT INTO users (username, email, password, created_at, updated_at) VALUES (?, ?, datetime('now'), datetime('now'))");
-        $stmt->execute([$admin_username,$admin_email, $admin_password_hashed]);
+        $stmt->execute([$admin_username, $admin_email, $admin_password_hashed]);
         error_log("Initial admin user 'admin' created with password '1111'. PLEASE CHANGE THIS PASSWORD IMMEDIATELY.");
     } catch (\PDOException $e) {
         error_log("Failed to create initial admin user: " . $e->getMessage());
@@ -55,8 +54,8 @@ if (!$db_exists) {
     }
 }
 
-function get_db() {
+function get_db()
+{
     global $pdo;
     return $pdo;
 }
-?>
