@@ -46,53 +46,77 @@ if (!$photo_album_type) {
 $photo_album_type_name = $photo_album_type['name'];
 
 // Validate file upload
-if ($uploaded_file['error'] !== UPLOAD_ERR_OK) {
-    http_response_code(500); // Internal Server Error
-    echo json_encode(['error' => 'File upload failed with error code: ' . $uploaded_file['error']]);
-    exit();
+$files = [];
+$file_count = count($uploaded_file['name']);
+$files_results = [];
+
+// Structure the $_FILES array for easier processing of multiple files
+for ($i = 0; $i < $file_count; $i++) {
+    $files[] = [
+        'name' => $uploaded_file['name'][$i],
+        'type' => $uploaded_file['type'][$i],
+        'tmp_name' => $uploaded_file['tmp_name'][$i],
+        'error' => $uploaded_file['error'][$i],
+        'size' => $uploaded_file['size'][$i]
+    ];
 }
 
-// Define upload directory
-$upload_dir = './uploads/patient_' . $patient_id . '/' . $photo_album_type_name . '/';
+// Define upload directory base
+$upload_dir_base = './uploads/patient_' . $patient_id . '/' . $photo_album_type_name . '/';
 
 // Create directory if it doesn't exist
-if (!is_dir($upload_dir)) {
-    if (!mkdir($upload_dir, 0777, true)) {
+if (!is_dir($upload_dir_base)) {
+    if (!mkdir($upload_dir_base, 0777, true)) {
         http_response_code(500); // Internal Server Error
         echo json_encode(['error' => 'Failed to create upload directory.']);
         exit();
     }
 }
 
-// Generate a unique filename
-$file_extension = pathinfo($uploaded_file['name'], PATHINFO_EXTENSION);
-$new_filename = uniqid() . '.' . $file_extension;
-$destination_path = $upload_dir . $new_filename;
+foreach ($files as $file) {
+    $file_result = ['name' => $file['name'], 'success' => false];
 
-// Move the uploaded file
-if (!move_uploaded_file($uploaded_file['tmp_name'], $destination_path)) {
-    http_response_code(500); // Internal Server Error
-    echo json_encode(['error' => 'Failed to move uploaded file.']);
-    exit();
-}
-
-// Insert record into patient_photos table
-try {
-    $stmt = $pdo->prepare("INSERT INTO patient_photos (patient_id, photo_album_type_id, file_path, created_at, updated_at) VALUES (?, ?, ?, datetime('now'), datetime('now'))");
-    $stmt->execute([$patient_id, $photo_album_type_id, $destination_path]);
-
-    http_response_code(200); // OK
-    echo json_encode(['success' => 'File uploaded and record inserted successfully.', 'file_path' => $destination_path]);
-} catch (\PDOException $e) {
-    // Log the error
-    error_log("Error inserting photo record: " . $e->getMessage());
-
-    // Attempt to remove the uploaded file if DB insertion fails
-    if (file_exists($destination_path)) {
-        unlink($destination_path);
+    // Check for upload errors
+    if ($file['error'] !== UPLOAD_ERR_OK) {
+        $file_result['error'] = 'File upload failed with error code: ' . $file['error'];
+        $files_results[] = $file_result;
+        continue; // Skip to the next file
     }
 
-    http_response_code(500); // Internal Server Error
-    echo json_encode(['error' => 'Database error: Could not save photo record.']);
-    exit();
+    // Generate a unique filename
+    $file_extension = pathinfo($file['name'], PATHINFO_EXTENSION);
+    $new_filename = uniqid() . '.' . $file_extension;
+    $destination_path = $upload_dir_base . $new_filename;
+
+    // Move the uploaded file
+    if (!move_uploaded_file($file['tmp_name'], $destination_path)) {
+        $file_result['error'] = 'Failed to move uploaded file.';
+        $files_results[] = $file_result;
+        continue; // Skip to the next file
+    }
+
+    // Insert record into patient_photos table
+    try {
+        $stmt = $pdo->prepare("INSERT INTO patient_photos (patient_id, photo_album_type_id, file_path, created_at, updated_at) VALUES (?, ?, ?, datetime('now'), datetime('now'))");
+        $stmt->execute([$patient_id, $photo_album_type_id, $destination_path]);
+
+        $file_result['success'] = true;
+        $file_result['file_path'] = $destination_path;
+        $files_results[] = $file_result;
+    } catch (\PDOException $e) {
+        // Log the error
+        error_log("Error inserting photo record for file {$file['name']}: " . $e->getMessage());
+
+        // Attempt to remove the uploaded file if DB insertion fails
+        if (file_exists($destination_path)) {
+            unlink($destination_path);
+        }
+
+        $file_result['error'] = 'Database error: Could not save photo record.';
+        $files_results[] = $file_result;
+    }
 }
+
+// Return consolidated results
+http_response_code(200); // OK
+echo json_encode(['results' => $files_results]);

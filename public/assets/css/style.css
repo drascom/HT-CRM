@@ -43,3 +43,9 @@
     font-size: 1.2em;
     color: #666;
 }
+
+/* Photo Gallery Image Styling */
+.photo-gallery .card img {
+    height: 180px; /* Set a fixed height */
+    object-fit: cover; /* Crop the image to cover the area */
+}
