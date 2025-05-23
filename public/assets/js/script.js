@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 this.on("success", function(file, response) {
                     console.log("File uploaded successfully:", response);
-                    window.location.reload();
+                    // window.location.reload();
                 });
                 this.on("error", function(file, errorMessage) {
                     console.error("File upload error:", errorMessage);
