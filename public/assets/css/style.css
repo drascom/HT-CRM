@@ -1,6 +1,40 @@
 /* Add your custom CSS here */
 /* For example: */
 /* body { padding-top: 20px; } */
+
+/* Calendar Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+#calendar {
+    /* max-width: 900px; */
+    /* margin: 40px auto; */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* FullCalendar text and day number styling */
+.fc-theme-standard td,
+.fc-theme-standard th,
+.fc-theme-standard .fc-scrollgrid {
+    border-color: #ddd; /* Adjust border color if needed */
+}
+
+.fc-daygrid-day-number,
+.fc-event-title,
+.fc-list-item-title,
+.fc-list-item-time,
+.fc-col-header-cell-cushion,
+.fc-day-other .fc-daygrid-day-number {
+    color: #333; /* Dark gray color */
+}
+
 /* Surgery Status Colors */
 .status-booked {
     color: #007bff !important; /* Blue */
@@ -9,6 +43,29 @@
 
 .status-completed {
     color: #28a745 !important; /* Green */
+    font-weight: bold;
+}
+
+.event-details {
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 1em;
+}
+
+.event-details .patient-name {
+    color: black;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.event-details .graft-count {
+    color: gray;
+    font-style: italic;
+    margin-bottom: 3px;
+}
+
+.event-details .status {
+    color: gray;
     font-weight: bold;
 }
 

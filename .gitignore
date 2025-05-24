@@ -1,0 +1,49 @@
+add upload folder
+# Node modules
+node_modules/
+
+# Next.js output
+.next/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+
+# Environment variables
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Optional: SQLite database file
+database.sqlite
+
+# Uploads and temporary folders
+uploads/
+upload/
+ht/
+log.md
+
+# Optional: output builds, etc.
+out/
+dist/
+build/
+
+# Misc
+.vscode/
+.idea/
+
+# Ignore local git config
+.git/config.local
+/ht/
+ht/
+database.sqlite
+log.md

@@ -7,12 +7,13 @@ function handle_surgeries($action, $method, $db)
                 $date = trim($_POST['date'] ?? '');
                 $notes = trim($_POST['notes'] ?? '');
                 $status = trim($_POST['status'] ?? '');
+                $graft_count = $_POST['graft_count'] ?? null; // Retrieve graft_count
                 $patient_id = $_POST['patient_id'] ?? null;
 
                 if ($date && $status && $patient_id) {
-                    $stmt = $db->prepare("INSERT INTO surgeries (date, notes, status, patient_id, created_at, updated_at) VALUES (?, ?, ?, ?, datetime('now'), datetime('now'))");
-                    $stmt->execute([$date, $notes, $status, $patient_id]);
-                    return ['success' => true, 'id' => $db->lastInsertId()];
+                    $stmt = $db->prepare("INSERT INTO surgeries (date, notes, status, graft_count, patient_id, created_at, updated_at) VALUES (?, ?, ?, ?, ?, datetime('now'), datetime('now'))");
+                    $stmt->execute([$date, $notes, $status, $graft_count, $patient_id]); // Include graft_count in execute
+                    return ['success' => true, 'id' => $db->lastInsertId(), 'message' => 'Surgery added successfully.']; // Add success message
                 }
                 return ['success' => false, 'error' => 'Date, status, and patient_id are required.'];
             }
@@ -24,12 +25,13 @@ function handle_surgeries($action, $method, $db)
                 $date = trim($_POST['date'] ?? '');
                 $notes = trim($_POST['notes'] ?? '');
                 $status = trim($_POST['status'] ?? '');
+                $graft_count = $_POST['graft_count'] ?? null; // Retrieve graft_count
                 $patient_id = $_POST['patient_id'] ?? null;
 
                 if ($id && $date && $status && $patient_id) {
-                    $stmt = $db->prepare("UPDATE surgeries SET date = ?, notes = ?, status = ?, patient_id = ?, updated_at = datetime('now') WHERE id = ?");
-                    $stmt->execute([$date, $notes, $status, $patient_id, $id]);
-                    return ['success' => true];
+                    $stmt = $db->prepare("UPDATE surgeries SET date = ?, notes = ?, status = ?, graft_count = ?, patient_id = ?, updated_at = datetime('now') WHERE id = ?");
+                    $stmt->execute([$date, $notes, $status, $graft_count, $patient_id, $id]); // Include graft_count in execute
+                    return ['success' => true, 'message' => 'Surgery updated successfully.']; // Add success message
                 }
                 return ['success' => false, 'error' => 'All fields are required.'];
             }

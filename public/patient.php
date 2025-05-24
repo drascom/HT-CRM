@@ -24,8 +24,11 @@ require_once 'includes/header.php';
 
 <div class="container mt-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 id="page-title">Patient Profile</h2>
-        </h2>
+        <div class="d-flex align-items-center">
+            <img id="patient-avatar" src="" alt="Patient Avatar"
+                style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px; display: none;">
+            <h2 id="page-title">Patient Profile</h2>
+        </div>
     </div>
 
     <div id="status-messages">
@@ -45,6 +48,7 @@ require_once 'includes/header.php';
                 <tr>
                     <th>Date</th>
                     <th>Status</th>
+                    <th>Graft Count</th>
                     <th>Notes</th>
                     <th>Actions</th>
                 </tr>
@@ -110,7 +114,7 @@ require_once 'includes/header.php';
                                 <!-- Options will be loaded via JavaScript -->
                             </select>
                         </div>
-                        <div id="photo-dropzone" class="dropzone">
+                        <div id="photo-dropzone" class="dropzone" style="display: none;">
                             <div class="dz-message">Drag and drop images here or click to upload.</div>
                         </div>
                     </form>
@@ -125,6 +129,10 @@ require_once 'includes/header.php';
 </div>
 
 <?php require_once 'includes/footer.php'; ?>
+
+<!-- GLightbox CSS and JS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 
 <script src="assets/js/patients.js"></script>
 <script>
@@ -167,11 +175,23 @@ document.addEventListener('DOMContentLoaded', function() {
         const data = await fetchData('api.php?entity=patients&action=get&id=' + patientId);
 
         if (data && data.success) {
-            // Update page title with patient name
-            if (data.patient && data.patient.name) {
-                pageTitle.textContent = `Profile for ${sanitizeHTML(data.patient.name)}`;
+            // Update page title with patient name and display avatar
+            const patientAvatarImg = document.getElementById('patient-avatar');
+            if (data.patient) {
+                if (data.patient.name) {
+                    pageTitle.textContent = `${sanitizeHTML(data.patient.name)}`;
+                } else {
+                    pageTitle.textContent = `Profile for Patient ID ${patientId}`;
+                }
+                if (data.patient.avatar) {
+                    patientAvatarImg.src = sanitizeHTML(data.patient.avatar);
+                    patientAvatarImg.style.display = 'block';
+                } else {
+                    patientAvatarImg.style.display = 'none';
+                }
             } else {
-                pageTitle.textContent = `Profile for Patient ID ${patientId}`;
+                pageTitle.textContent = `Patient Profile`; // Reset title on error
+                patientAvatarImg.style.display = 'none';
             }
 
 
@@ -184,6 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     row.innerHTML = `
                             <td>${formatDate(surgery.date)}</td>
                             <td class="status-${sanitizeHTML(surgery.status)}">${sanitizeHTML(surgery.status)}</td>
+                            <td>${sanitizeHTML(surgery.graft_count || '0')}</td> <!-- Add this line -->
                             <td>${sanitizeHTML(surgery.notes || '')}</td>
                             <td>
                                 <a href="add_edit_surgery.php?id=${surgery.id}" class="btn btn-sm btn-warning me-2"><i class="fas fa-edit me-1"></i>Edit</a>
@@ -234,7 +255,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         photoCol.classList.add('col-md-3', 'col-sm-4', 'col-6', 'mb-4');
                         photoCol.innerHTML = `
                                 <div class="card">
-                                    <img src="${sanitizeHTML(photo.file_path)}" class="card-img-top" alt="Patient Photo">
+                                    <a href="${sanitizeHTML(photo.file_path)}" class="glightbox" data-gallery="${sanitizeHTML(albumType.name)}">
+                                        <img src="${sanitizeHTML(photo.file_path)}" class="card-img-top" alt="Patient Photo">
+                                    </a>
                                     <div class="card-body text-center">
                                         <button class="btn btn-danger btn-sm delete-item-btn" data-id="${photo.id}" data-type="photo"><i class="fas fa-trash-alt me-1"></i>Delete Photo</button>
                                     </div>
@@ -244,6 +267,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                     photosListDiv.appendChild(albumDiv);
                 }
+
+                // Initialize GLightbox after photos are rendered
+                GLightbox({
+                    selector: '.glightbox' // Target elements with the class 'glightbox'
+                });
 
             } else {
                 photosListDiv.innerHTML = '<p>No photos found for this patient.</p>';
@@ -316,11 +344,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle upload modal
     const uploadModal = document.getElementById('uploadModal');
     const photoAlbumTypeSelect = document.getElementById('photo_album_type_id');
+    const photoDropzoneDiv = document.getElementById('photo-dropzone');
 
     if (uploadModal) {
         uploadModal.addEventListener('show.bs.modal', function(event) {
             // Fetch and populate album types
             fetchPhotoAlbumTypes();
+            // Hide dropzone initially
+            photoDropzoneDiv.style.display = 'none';
             // The patient_id is already set in the hidden input via PHP
         });
     }
@@ -363,6 +394,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 photoAlbumTypeSelect.disabled = true; // Disable dropdown on error
             });
     }
+
+    // Show dropzone when an album type is selected
+    photoAlbumTypeSelect.addEventListener('change', function() {
+        if (this.value) {
+            photoDropzoneDiv.style.display = 'block';
+        } else {
+            photoDropzoneDiv.style.display = 'none';
+        }
+    });
 
     // Initialize Dropzone (assuming Dropzone.js is included elsewhere)
     // This part might need adjustment based on how Dropzone is initialized globally

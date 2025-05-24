@@ -9,9 +9,33 @@ function handle_patients($action, $method, $db)
                 $user_id = $_POST['user_id'] ?? null;
 
                 if (!empty($name)) {
-                    $stmt = $db->prepare("INSERT INTO patients (name, dob, user_id, created_at, updated_at) VALUES (?, ?, ?, datetime('now'), datetime('now'))");
-                    $stmt->execute([$name, $dob, $user_id]);
-                    return ['success' => true, 'id' => $db->lastInsertId()];
+                    $avatar_path = null;
+                    if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK) {
+                        $upload_dir = __DIR__ . '/../uploads/avatars/';
+                        if (!is_dir($upload_dir)) {
+                            if (!mkdir($upload_dir, 0777, true)) {
+                                return ['success' => false, 'error' => 'Failed to create upload directory.'];
+                            }
+                        }
+                        $file_extension = pathinfo($_FILES['avatar']['name'], PATHINFO_EXTENSION);
+                        $file_name = uniqid('avatar_') . '.' . $file_extension;
+                        $destination = $upload_dir . $file_name;
+
+                        if (move_uploaded_file($_FILES['avatar']['tmp_name'], $destination)) {
+                            $avatar_path = 'uploads/avatars/' . $file_name; // Path relative to public directory
+                        } else {
+                            return ['success' => false, 'error' => 'Failed to upload avatar.'];
+                        }
+                    }
+
+                    $stmt = $db->prepare("INSERT INTO patients (name, dob, user_id, avatar, created_at, updated_at) VALUES (?, ?, ?, ?, datetime('now'), datetime('now'))");
+                    $stmt->execute([$name, $dob, $user_id, $avatar_path]);
+                    $new_patient_id = $db->lastInsertId();
+                    // Fetch the newly created patient to return its data
+                    $stmt_fetch = $db->prepare("SELECT id, name, avatar FROM patients WHERE id = ?");
+                    $stmt_fetch->execute([$new_patient_id]);
+                    $new_patient = $stmt_fetch->fetch(PDO::FETCH_ASSOC);
+                    return ['success' => true, 'message' => 'Patient added successfully.', 'patient' => $new_patient]; // Return patient object
                 }
 
                 return ['success' => false, 'error' => 'Name is required.'];
@@ -25,15 +49,55 @@ function handle_patients($action, $method, $db)
                 $dob = trim($_POST['dob'] ?? '');
 
                 if ($id && $name) {
-                    $stmt = $db->prepare("UPDATE patients SET name = ?, dob = ?, updated_at = datetime('now') WHERE id = ?");
-                    $stmt->execute([$name, $dob, $id]);
-                    return ['success' => true];
+                    $avatar_path = null;
+                    if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK) {
+                        $upload_dir = __DIR__ . '/../uploads/avatars/';
+                        if (!is_dir($upload_dir)) {
+                            if (!mkdir($upload_dir, 0777, true)) {
+                                return ['success' => false, 'error' => 'Failed to create upload directory.'];
+                            }
+                        }
+                        $file_extension = pathinfo($_FILES['avatar']['name'], PATHINFO_EXTENSION);
+                        $file_name = uniqid('avatar_') . '.' . $file_extension;
+                        $destination = $upload_dir . $file_name;
+
+                        if (move_uploaded_file($_FILES['avatar']['tmp_name'], $destination)) {
+                            $avatar_path = 'uploads/avatars/' . $file_name; // Path relative to public directory
+
+                            // Optional: Delete old avatar if it exists
+                            $stmt_old_avatar = $db->prepare("SELECT avatar FROM patients WHERE id = ?");
+                            $stmt_old_avatar->execute([$id]);
+                            $old_avatar = $stmt_old_avatar->fetchColumn();
+                            if ($old_avatar && file_exists(__DIR__ . '/../' . $old_avatar)) {
+                                if (!unlink(__DIR__ . '/../' . $old_avatar)) {
+                                    return ['success' => false, 'error' => 'Failed to delete old avatar.'];
+                                }
+                            }
+                        } else {
+                            return ['success' => false, 'error' => 'Failed to upload avatar.'];
+                        }
+                    }
+
+                    $sql = "UPDATE patients SET name = ?, dob = ?, updated_at = datetime('now')";
+                    $params = [$name, $dob];
+
+                    if ($avatar_path !== null) {
+                        $sql .= ", avatar = ?";
+                        $params[] = $avatar_path;
+                    }
+
+                    $sql .= " WHERE id = ?";
+                    $params[] = $id;
+
+                    $stmt = $db->prepare($sql);
+                    $stmt->execute($params);
+
+                    return ['success' => true, 'message' => 'Patient updated successfully.'];
                 }
 
                 return ['success' => false, 'error' => 'ID and name are required.'];
             }
             break;
-
         case 'delete':
             if ($method === 'POST') {
                 $id = $_POST['id'] ?? null;
@@ -90,7 +154,7 @@ function handle_patients($action, $method, $db)
         case 'list':
             if ($method === 'GET') {
                 $stmt = $db->query("
-                    SELECT p.*, COUNT(s.id) AS surgery_count
+                    SELECT p.*, MAX(s.date) AS last_surgery_date
                     FROM patients p
                     LEFT JOIN surgeries s ON s.patient_id = p.id
                     GROUP BY p.id
