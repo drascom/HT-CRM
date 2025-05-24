@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css" rel="stylesheet" type="text/css" />
     <script src="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone-min.js"></script>
+    <!-- FullCalendar CSS -->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -27,7 +29,10 @@
                     <ul class="navbar-nav mx-auto">
                         <?php if (is_logged_in()): ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="surgeries.php"><i class="fas fa-hospital me-1"></i>Surgeries</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="calendar.php"><i class="fas fa-calendar me-1"></i>Calendar</a>
+                        </li>
+                        <a class="nav-link" href="surgeries.php"><i class="fas fa-hospital me-1"></i>Surgeries</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="patients.php"><i class="fas fa-users me-1"></i>Patients</a>
