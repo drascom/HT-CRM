@@ -43,7 +43,6 @@ build/
 
 # Ignore local git config
 .git/config.local
-/ht/
-ht/
+/secrets/
+secrets/
 database.sqlite
-log.md
