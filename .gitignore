@@ -40,6 +40,9 @@ build/
 # Misc
 .vscode/
 .idea/
+Bookings.xlsx
+bookings.json
+vendor/
 
 # Ignore local git config
 .git/config.local
