@@ -45,4 +45,6 @@ build/
 .git/config.local
 /secrets/
 secrets/
+/vendor/
+vendor/
 database.sqlite
