@@ -48,3 +48,6 @@ secrets/
 /vendor/
 vendor/
 database.sqlite
+*.xlsx
+bookings.json
+/Bookings.xlsx
