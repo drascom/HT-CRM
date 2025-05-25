@@ -62,11 +62,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     patients.forEach(patient => {
                         const avatarHtml = patient.avatar ?
                             `<img src="${patient.avatar}" alt="Avatar" style="width: 50px; height: 50px; border-radius: 50%;">` :
-                            '';
+                            `<img src="assets/avatar.png" alt="Default Avatar" style="width: 50px; height: 50px; border-radius: 50%;">`;
                         tableRows += `
                             <tr data-patient-id="${patient.id}" data-patient-name="${patient.name}" data-patient-dob="${patient.dob}">
                                 <td>
                                     ${avatarHtml}
+                                </td>
+                                <td>
                                     <a href="patient.php?id=${patient.id}">${patient.name}</a>
                                 </td>
                                 <td>${patient.dob || ''}</td>
@@ -74,15 +76,17 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <a href="patient.php?id=${patient.id}">${patient.last_surgery_date || 'N/A'}</a>
                                 </td>
                                 <td>
-                                    <a href="add_edit_patient.php?id=${patient.id}" class="btn btn-sm btn-warning me-2">
-                                        <i class="fas fa-edit me-1"></i>Edit
-                                    </a>
-                                    <button class="btn btn-sm btn-danger delete-patient-btn" data-patient-id="${patient.id}">
-                                        <i class="fas fa-trash-alt me-1"></i>Delete
-                                    </button>
-                                    <a href="patient.php?id=${patient.id}" class="btn btn-sm btn-info ms-2">
-                                        <i class="fas fa-camera me-1"></i>Photos
-                                    </a>
+                                    <div class="btn-group" role="group" aria-label="Patient Actions">
+                                        <a href="add_edit_patient.php?id=${patient.id}" class="btn btn-sm btn-warning">
+                                            <i class="fas fa-edit me-1"></i>Edit
+                                        </a>
+                                        <button class="btn btn-sm btn-danger delete-patient-btn" data-patient-id="${patient.id}">
+                                            <i class="fas fa-trash-alt me-1"></i>Delete
+                                        </button>
+                                        <a href="patient.php?id=${patient.id}" class="btn btn-sm btn-info">
+                                            <i class="fas fa-camera me-1"></i>Photos
+                                        </a>
+                                    </div>
                                 </td>
                             </tr>
                         `;

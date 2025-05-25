@@ -59,3 +59,27 @@ function get_db()
     global $pdo;
     return $pdo;
 }
+
+/**
+ * Recursively searches for database.sqlite starting from the project root.
+ *
+ * @param string $start_dir The directory to start the search from. Defaults to the project root.
+ * @return array An array of absolute paths to database.sqlite files found.
+ */
+function find_database_sqlite($start_dir = __DIR__ . '/../')
+{
+    $matches = [];
+    // Use @ to suppress warnings for unreadable directories
+    $iterator = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator($start_dir, RecursiveDirectoryIterator::SKIP_DOTS),
+        RecursiveIteratorIterator::SELF_FIRST
+    );
+
+    foreach ($iterator as $fileinfo) {
+        if ($fileinfo->isFile() && $fileinfo->getFilename() === 'database.sqlite') {
+            $matches[] = $fileinfo->getRealPath();
+        }
+    }
+
+    return $matches;
+}

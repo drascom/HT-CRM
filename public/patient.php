@@ -23,12 +23,15 @@ require_once 'includes/header.php';
 ?>
 
 <div class="container mt-4">
-    <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="d-flex justify-content-between align-items-center mb-4 border bg-light p-3 rounded">
         <div class="d-flex align-items-center">
             <img id="patient-avatar" src="" alt="Patient Avatar"
                 style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px; display: none;">
-            <h2 id="page-title">Patient Profile</h2>
+            <h2 id="page-title" class="mb-0">Patient Profile</h2>
         </div>
+        <a href="add_edit_patient.php?id=<?php echo htmlspecialchars($patient_id); ?>" class="btn btn-warning btn-sm">
+            <i class="fas fa-edit me-1"></i> Edit Patient
+        </a>
     </div>
 
     <div id="status-messages">
@@ -36,31 +39,33 @@ require_once 'includes/header.php';
     </div>
 
     <!-- Surgeries Section -->
-    <div class="border rounded p-3 mt-4 mb-4 bg-light">
+    <div class="border rounded p-2 mt-4 mb-4 bg-light">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <h3>Surgeries</h3>
             <a href="add_edit_surgery.php?patient_id=<?php echo htmlspecialchars($patient_id); ?>"
                 class="btn btn-success btn-light"><i class="fas fa-plus-circle me-1"></i>Add</a>
         </div>
 
-        <table class="table table-striped" id="surgeries-table">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Status</th>
-                    <th>Graft Count</th>
-                    <th>Notes</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Surgeries will be loaded here via JavaScript -->
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-striped" id="surgeries-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Graft Count</th>
+                        <th>Notes</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Surgeries will be loaded here via JavaScript -->
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <!-- Photos Section -->
-    <div class="border rounded p-3 mt-4 mb-4 bg-light">
+    <div class="border rounded p-2 mt-4 mb-4 bg-light">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <h3>Photo Album</h3>
             <button class="btn btn-primary btn-light" data-bs-toggle="modal" data-bs-target="#uploadModal"
@@ -185,10 +190,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 if (data.patient.avatar) {
                     patientAvatarImg.src = sanitizeHTML(data.patient.avatar);
-                    patientAvatarImg.style.display = 'block';
                 } else {
-                    patientAvatarImg.style.display = 'none';
+                    patientAvatarImg.src = 'assets/avatar.png';
                 }
+                patientAvatarImg.style.display = 'block';
             } else {
                 pageTitle.textContent = `Patient Profile`; // Reset title on error
                 patientAvatarImg.style.display = 'none';

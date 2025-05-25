@@ -19358,3 +19358,13320 @@
 ```
 ---
 
+## Request Log - 2025-05-24 10:58:47
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 10:58:47
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:58:47
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:58:47
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:58:47
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:58:47
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 09:49:08",
+        "avatar": "uploads\/avatars\/avatar_683195602f8dd.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 10:58:47
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 10:58:47
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:58:47
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:58:47
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:58:47
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:58:47
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 09:49:08",
+        "avatar": "uploads\/avatars\/avatar_683195602f8dd.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 10:58:47
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 10:58:47
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:58:47
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:58:47
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:58:47
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:58:47
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 09:49:08",
+        "avatar": "uploads\/avatars\/avatar_683195602f8dd.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 10:59:17
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 10:59:17
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:17
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:17
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:17
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:17
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 09:49:08",
+        "avatar": "uploads\/avatars\/avatar_683195602f8dd.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 10:59:17
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 10:59:17
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:17
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:17
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:17
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:17
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 09:49:08",
+        "avatar": "uploads\/avatars\/avatar_683195602f8dd.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 10:59:17
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 10:59:17
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:17
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:17
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:17
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:17
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 09:49:08",
+        "avatar": "uploads\/avatars\/avatar_683195602f8dd.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 10:59:19
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 10:59:19
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:19
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:19
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:19
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:19
+
+**Status:** Error
+**Details:**
+```json
+{
+    "success": false,
+    "error": "Invalid request"
+}
+```
+---
+
+## Request Log - 2025-05-24 10:59:21
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 10:59:21
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:21
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:21
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:21
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:21
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 09:49:08",
+        "avatar": "uploads\/avatars\/avatar_683195602f8dd.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 10:59:21
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 10:59:21
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:21
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:21
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:21
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:21
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 09:49:08",
+        "avatar": "uploads\/avatars\/avatar_683195602f8dd.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 10:59:21
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 10:59:21
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:21
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:21
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:21
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:21
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 09:49:08",
+        "avatar": "uploads\/avatars\/avatar_683195602f8dd.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 10:59:23
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 10:59:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 10:59:23
+
+**Status:** Error
+**Details:**
+```json
+{
+    "success": false,
+    "error": "Invalid request"
+}
+```
+---
+
+## Request Log - 2025-05-24 11:00:57
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:00:57
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:00:57
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:00:57
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:00:57
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:00:57
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 09:49:08",
+        "avatar": "uploads\/avatars\/avatar_683195602f8dd.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:00:57
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:00:57
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:00:57
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:00:57
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:00:57
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:00:57
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 09:49:08",
+        "avatar": "uploads\/avatars\/avatar_683195602f8dd.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:00:57
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:00:57
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:00:57
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:00:57
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:00:57
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:00:57
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 09:49:08",
+        "avatar": "uploads\/avatars\/avatar_683195602f8dd.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:01:01
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:01:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:01:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:01:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:01:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:01:01
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 09:49:08",
+        "avatar": "uploads\/avatars\/avatar_683195602f8dd.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:01:01
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:01:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:01:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:01:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:01:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:01:01
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 09:49:08",
+        "avatar": "uploads\/avatars\/avatar_683195602f8dd.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:01:01
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:01:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:01:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:01:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:01:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:01:01
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 09:49:08",
+        "avatar": "uploads\/avatars\/avatar_683195602f8dd.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:01:06
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:01:06
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:01:06
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:01:06
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:01:06
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:01:06
+
+**Status:** Error
+**Details:**
+```json
+{
+    "success": false,
+    "error": "Invalid request"
+}
+```
+---
+
+## Request Log - 2025-05-24 11:04:18
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:04:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:18
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 09:49:08",
+        "avatar": "uploads\/avatars\/avatar_683195602f8dd.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:04:18
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:04:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:18
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 09:49:08",
+        "avatar": "uploads\/avatars\/avatar_683195602f8dd.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:04:18
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:04:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:18
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 09:49:08",
+        "avatar": "uploads\/avatars\/avatar_683195602f8dd.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:04:20
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:04:20
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:20
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:20
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:20
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:20
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-24 11:04:26
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:04:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-24 11:04:26
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:04:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:26
+
+**Status:** Error
+**Details:**
+```json
+{
+    "success": false,
+    "error": "Invalid request"
+}
+```
+---
+
+## Request Log - 2025-05-24 11:04:26
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:04:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-24 11:04:28
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-24 11:04:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:28
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:04:26",
+            "avatar": null,
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:04:33
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-24 11:04:33
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:33
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:33
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:33
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:33
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:04:26",
+            "avatar": null,
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:04:35
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:04:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:35
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:04:26",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:04:35
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:04:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:35
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:04:26",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:04:35
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:04:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:35
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:04:26",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:04:38
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-24 11:04:38
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:38
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:38
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:38
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:04:38
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:04:26",
+            "avatar": null,
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:05:16
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-24 11:05:16
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:16
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:16
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:16
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:16
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:04:26",
+            "avatar": null,
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:05:18
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:05:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:18
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:04:26",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:05:18
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:05:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:18
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:04:26",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:05:18
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:05:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:18
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:18
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:04:26",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:05:25
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:05:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:25
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-24 11:05:25
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:05:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:25
+
+**Status:** Error
+**Details:**
+```json
+{
+    "success": false,
+    "error": "Invalid request"
+}
+```
+---
+
+## Request Log - 2025-05-24 11:05:25
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:05:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:25
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-24 11:05:26
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-24 11:05:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:05:25",
+            "avatar": null,
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:05:44
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:05:44
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:44
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:44
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:44
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:44
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:05:25",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:05:44
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:05:44
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:44
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:44
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:44
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:44
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:05:25",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:05:44
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:05:44
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:44
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:44
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:44
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:44
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:05:25",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:05:53
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:05:53
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:53
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:53
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:53
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:53
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-24 11:05:53
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:05:53
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:53
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:53
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:53
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:53
+
+**Status:** Error
+**Details:**
+```json
+{
+    "success": false,
+    "error": "Invalid request"
+}
+```
+---
+
+## Request Log - 2025-05-24 11:05:53
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:05:53
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:53
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:53
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:53
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:53
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-24 11:05:54
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-24 11:05:54
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:54
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:54
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:54
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:05:54
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:05:53",
+            "avatar": null,
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:07:35
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-24 11:07:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:07:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:07:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:07:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:07:35
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:05:53",
+            "avatar": null,
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:10:00
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:10:00
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:00
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:00
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:00
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:00
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:05:53",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:10:00
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:10:00
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:00
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:00
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:00
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:00
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:05:53",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:10:00
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:10:00
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:00
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:00
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:00
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:00
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:05:53",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:10:01
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:10:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:01
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:05:53",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:10:01
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:10:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:01
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:05:53",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:10:01
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:10:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:01
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:05:53",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:10:07
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:10:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:07
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-24 11:10:07
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:10:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:07
+
+**Status:** Error
+**Details:**
+```json
+{
+    "success": false,
+    "error": "Invalid request"
+}
+```
+---
+
+## Request Log - 2025-05-24 11:10:07
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:10:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:07
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-24 11:10:09
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-24 11:10:09
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:09
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:09
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:09
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:09
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:10:07",
+            "avatar": null,
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:10:34
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-24 11:10:34
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:34
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:34
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:34
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:34
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:10:07",
+            "avatar": null,
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:10:36
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:10:36
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:36
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:36
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:36
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:36
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:10:07",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:10:36
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:10:36
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:36
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:36
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:36
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:36
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:10:07",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:10:36
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:10:36
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:36
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:36
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:36
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:36
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:10:07",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:10:41
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:10:41
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:41
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:41
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:41
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:41
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-24 11:10:41
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:10:41
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:41
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:41
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:41
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:41
+
+**Status:** Error
+**Details:**
+```json
+{
+    "success": false,
+    "error": "Invalid request"
+}
+```
+---
+
+## Request Log - 2025-05-24 11:10:41
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:10:41
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:41
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:41
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:41
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:10:41
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-24 11:23:23
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:23:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:23
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:10:41",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:23:23
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:23:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:23
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:10:41",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:23:23
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:23:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:23
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:10:41",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:23:28
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:23:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:28
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-24 11:23:28
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:23:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:28
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_68319e209ea62.jpeg"
+}
+```
+---
+
+## Request Log - 2025-05-24 11:23:28
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:23:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:28
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-24 11:23:35
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:23:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:35
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:28",
+        "avatar": "uploads\/avatars\/avatar_68319e209ea62.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:23:35
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:23:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:35
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:28",
+        "avatar": "uploads\/avatars\/avatar_68319e209ea62.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:23:35
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:23:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:35
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:35
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:28",
+        "avatar": "uploads\/avatars\/avatar_68319e209ea62.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:23:39
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:23:39
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:39
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:39
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:39
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:39
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-24 11:23:44
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:23:44
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:44
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:44
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:44
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:44
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-24 11:23:44
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:23:44
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:44
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:44
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:44
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:44
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-24 11:23:46
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:23:46
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:46
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:46
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:46
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:46
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:44",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:23:46
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:23:46
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:46
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:46
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:46
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:46
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:44",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:23:46
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:23:46
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:46
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:46
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:46
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:46
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:44",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:23:51
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:23:51
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:51
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:51
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:51
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:51
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-24 11:23:51
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:23:51
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:51
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:51
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:51
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:51
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_68319e379d517.png"
+}
+```
+---
+
+## Request Log - 2025-05-24 11:23:51
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:23:51
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:51
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:51
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:51
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:51
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-24 11:23:55
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-24 11:23:55
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:55
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:55
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:55
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:23:55
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:26:41
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-24 11:26:41
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:26:41
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:26:41
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:26:41
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:26:41
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:26:43
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-24 11:26:43
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:26:43
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:26:43
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:26:43
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:26:43
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:26:46
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-24 11:26:46
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:26:46
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:26:46
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:26:46
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:26:46
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:27:49
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-24 11:27:49
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:27:49
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:27:49
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:27:49
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:27:49
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:28:21
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-24 11:28:21
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:28:21
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:28:21
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:28:21
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:28:21
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:28:22
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-24 11:28:22
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:28:22
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:28:22
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:28:22
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:28:22
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:29:26
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-24 11:29:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:29:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:29:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:29:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:29:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:29:29
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-24 11:29:29
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:29:29
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:29:29
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:29:29
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:29:29
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1,
+            "patient_name": "Emin ayhan colak"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:29:32
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-24 11:29:32
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:29:32
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:29:32
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:29:32
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:29:32
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:29:46
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-24 11:29:46
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:29:46
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:29:46
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:29:46
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:29:46
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1,
+            "patient_name": "Emin ayhan colak"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:29:58
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-24 11:29:58
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:29:58
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:29:58
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:29:58
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:29:58
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1,
+            "patient_name": "Emin ayhan colak"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:30:02
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:30:02
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:30:02
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:30:02
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:30:02
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:30:02
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:30:07
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=get&id=1
+
+## Response Log - 2025-05-24 11:30:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:30:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:30:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:30:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:30:07
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgery": {
+        "id": 1,
+        "date": "2025-05-30",
+        "notes": "12wqsdadas",
+        "status": "booked",
+        "graft_count": 111,
+        "created_at": "2025-05-24 09:35:30",
+        "updated_at": "2025-05-24 09:35:30",
+        "patient_id": 1,
+        "patient_name": "Emin ayhan colak"
+    }
+}
+```
+---
+
+## Request Log - 2025-05-24 11:30:09
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-24 11:30:09
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:30:09
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:30:09
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:30:09
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:30:09
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1,
+            "patient_name": "Emin ayhan colak"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:30:11
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:30:11
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:30:11
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:30:11
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:30:11
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:30:11
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:31:43
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:31:43
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:31:43
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:31:43
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:31:43
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:31:43
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:32:51
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:32:51
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:51
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:51
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:51
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:51
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:32:52
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:32:52
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:52
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:52
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:52
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:52
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:32:52
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:32:52
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:52
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:52
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:52
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:52
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:32:52
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:32:52
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:52
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:52
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:52
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:52
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:32:56
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:32:56
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:56
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:56
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:56
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:56
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:32:56
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:32:56
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:56
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:56
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:56
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:56
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:32:56
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:32:56
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:56
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:56
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:56
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:32:56
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:33:04
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:33:04
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:33:04
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:33:04
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:33:04
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:33:04
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:33:55
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-24 11:33:55
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:33:55
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:33:55
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:33:55
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:33:55
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1,
+            "patient_name": "Emin ayhan colak"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:34:01
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:34:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:01
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:01
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:34:03
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-24 11:34:03
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:03
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:03
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:03
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:03
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1,
+            "patient_name": "Emin ayhan colak"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:34:07
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-24 11:34:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:07
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:34:14
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-24 11:34:14
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:14
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:14
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:14
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:14
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1,
+            "patient_name": "Emin ayhan colak"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:34:16
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:34:16
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:16
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:16
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:16
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:16
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:34:36
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:34:36
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:36
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:36
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:36
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:34:36
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:36:53
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:36:53
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:36:53
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:36:53
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:36:53
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:36:53
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:37:38
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:37:38
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:37:38
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:37:38
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:37:38
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:37:38
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-24 11:38:02
+
+**Method:** GET
+**URL:** /api.php?entity=photo_album_types&action=list
+
+## Response Log - 2025-05-24 11:38:02
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/photo_album_types.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:02
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/photo_album_types.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:02
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_photo_album_types"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:02
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_photo_album_types"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:02
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "photo_album_types": [
+        {
+            "id": 1,
+            "name": "Pre-Surgery"
+        },
+        {
+            "id": 2,
+            "name": "Post-Surgery"
+        },
+        {
+            "id": 3,
+            "name": "Follow-up"
+        },
+        {
+            "id": 4,
+            "name": "1. Month"
+        },
+        {
+            "id": 5,
+            "name": "2. Month"
+        },
+        {
+            "id": 6,
+            "name": "3. Month"
+        },
+        {
+            "id": 7,
+            "name": "4. Month"
+        },
+        {
+            "id": 8,
+            "name": "5. Month"
+        },
+        {
+            "id": 9,
+            "name": "6. Month"
+        },
+        {
+            "id": 10,
+            "name": "7. Month"
+        },
+        {
+            "id": 11,
+            "name": "8. Month"
+        },
+        {
+            "id": 12,
+            "name": "9. Month"
+        },
+        {
+            "id": 13,
+            "name": "10. Month"
+        },
+        {
+            "id": 14,
+            "name": "11. Month"
+        },
+        {
+            "id": 15,
+            "name": "12. Month"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:38:11
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:38:11
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:11
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:11
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:11
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:11
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 1,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19310cf7.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 2,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311204.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 3,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a193117ad.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 4,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311ba0.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 5,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311fcd.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:38:19
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-24 11:38:19
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/photos.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:19
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/photos.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:19
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_photos"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:19
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_photos"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:19
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true
+}
+```
+---
+
+## Request Log - 2025-05-24 11:38:19
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:38:19
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:19
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:19
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:19
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:19
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 2,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311204.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 3,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a193117ad.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 4,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311ba0.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 5,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311fcd.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:38:26
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:38:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 2,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311204.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 3,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a193117ad.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 4,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311ba0.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 5,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311fcd.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:38:26
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:38:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 2,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311204.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 3,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a193117ad.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 4,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311ba0.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 5,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311fcd.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:38:26
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:38:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:38:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 2,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311204.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 3,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a193117ad.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 4,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311ba0.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 5,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311fcd.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:40:22
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-24 11:40:22
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:40:22
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:40:22
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:40:22
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:40:22
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:40:23
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 11:40:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:40:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:40:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:40:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:40:23
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 2,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311204.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 3,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a193117ad.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 4,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311ba0.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 5,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311fcd.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 11:41:07
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-24 11:41:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:41:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:41:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:41:07
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 11:41:07
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1,
+            "patient_name": "Emin ayhan colak"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 12:57:03
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-24 12:57:03
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:03
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:03
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:03
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:03
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1,
+            "patient_name": "Emin ayhan colak"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 12:57:12
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-24 12:57:12
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:12
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:12
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:12
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:12
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1,
+            "patient_name": "Emin ayhan colak"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 12:57:15
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 12:57:15
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:15
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:15
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:15
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:15
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 2,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311204.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 3,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a193117ad.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 4,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311ba0.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 5,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311fcd.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 12:57:24
+
+**Method:** GET
+**URL:** /api.php?entity=photo_album_types&action=list
+
+## Response Log - 2025-05-24 12:57:24
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/photo_album_types.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:24
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/photo_album_types.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:24
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_photo_album_types"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:24
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_photo_album_types"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:24
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "photo_album_types": [
+        {
+            "id": 1,
+            "name": "Pre-Surgery"
+        },
+        {
+            "id": 2,
+            "name": "Post-Surgery"
+        },
+        {
+            "id": 3,
+            "name": "Follow-up"
+        },
+        {
+            "id": 4,
+            "name": "1. Month"
+        },
+        {
+            "id": 5,
+            "name": "2. Month"
+        },
+        {
+            "id": 6,
+            "name": "3. Month"
+        },
+        {
+            "id": 7,
+            "name": "4. Month"
+        },
+        {
+            "id": 8,
+            "name": "5. Month"
+        },
+        {
+            "id": 9,
+            "name": "6. Month"
+        },
+        {
+            "id": 10,
+            "name": "7. Month"
+        },
+        {
+            "id": 11,
+            "name": "8. Month"
+        },
+        {
+            "id": 12,
+            "name": "9. Month"
+        },
+        {
+            "id": 13,
+            "name": "10. Month"
+        },
+        {
+            "id": 14,
+            "name": "11. Month"
+        },
+        {
+            "id": 15,
+            "name": "12. Month"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 12:57:30
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-24 12:57:30
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:30
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:30
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:30
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:30
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 6,
+            "patient_id": 1,
+            "photo_album_type_id": 8,
+            "file_path": ".\/uploads\/patient_1\/5. Month\/6831b42a7aea0.jpeg",
+            "created_at": "2025-05-24 11:57:30",
+            "updated_at": "2025-05-24 11:57:30",
+            "album_type": "5. Month"
+        },
+        {
+            "id": 2,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311204.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 3,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a193117ad.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 4,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311ba0.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 5,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311fcd.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-24 12:57:33
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-24 12:57:33
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:33
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:33
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:33
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-24 12:57:33
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1,
+            "patient_name": "Emin ayhan colak"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 11:12:10
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-25 11:12:10
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 11:12:10
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 11:12:10
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-25 11:12:10
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-25 11:12:10
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1,
+            "patient_name": "Emin ayhan colak"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 12:54:41
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-25 12:54:41
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 12:54:41
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 12:54:41
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-25 12:54:41
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-25 12:54:41
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1,
+            "patient_name": "Emin ayhan colak"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 12:56:28
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-25 12:56:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 12:56:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 12:56:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-25 12:56:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-25 12:56:28
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1,
+            "patient_name": "Emin ayhan colak"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:12:23
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-25 13:12:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:12:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:12:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:12:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:12:23
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1,
+            "patient_name": "Emin ayhan colak"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:12:26
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-25 13:12:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:12:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:12:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:12:26
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:12:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:15:05
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-25 13:15:05
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:15:05
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:15:05
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:15:05
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:15:05
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:15:20
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-25 13:15:20
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:15:20
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:15:20
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:15:20
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:15:20
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:16:51
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-25 13:16:51
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:16:51
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:16:51
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:16:51
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:16:51
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:16:53
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-25 13:16:53
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:16:53
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:16:53
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:16:53
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:16:53
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1,
+            "patient_name": "Emin ayhan colak"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:16:54
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-25 13:16:54
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:16:54
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:16:54
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:16:54
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:16:54
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1,
+            "patient_name": "Emin ayhan colak"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:16:56
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-25 13:16:56
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:16:56
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:16:56
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:16:56
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:16:56
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:16:57
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-25 13:16:57
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:16:57
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:16:57
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:16:57
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:16:57
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 6,
+            "patient_id": 1,
+            "photo_album_type_id": 8,
+            "file_path": ".\/uploads\/patient_1\/5. Month\/6831b42a7aea0.jpeg",
+            "created_at": "2025-05-24 11:57:30",
+            "updated_at": "2025-05-24 11:57:30",
+            "album_type": "5. Month"
+        },
+        {
+            "id": 2,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311204.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 3,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a193117ad.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 4,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311ba0.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 5,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311fcd.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:17:00
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-25 13:17:00
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:17:00
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:17:00
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:17:00
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:17:00
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1,
+            "patient_name": "Emin ayhan colak"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:19:32
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-25 13:19:32
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:19:32
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:19:32
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:19:32
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:19:32
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1,
+            "patient_name": "Emin ayhan colak"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:19:34
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-25 13:19:34
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:19:34
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:19:34
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:19:34
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:19:34
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:19:36
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-25 13:19:36
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:19:36
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:19:36
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:19:36
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:19:36
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:22:31
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-25 13:22:31
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:22:31
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:22:31
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:22:31
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:22:31
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:23:08
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-25 13:23:08
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:23:08
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:23:08
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:23:08
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:23:08
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:23:12
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-25 13:23:12
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:23:12
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/surgeries.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:23:12
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:23:12
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_surgeries"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:23:12
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1,
+            "patient_name": "Emin ayhan colak"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:23:14
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-25 13:23:14
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:23:14
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:23:14
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:23:14
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:23:14
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:25:49
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-25 13:25:49
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:25:49
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:25:49
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:25:49
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:25:49
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:25:59
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-25 13:25:59
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:25:59
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:25:59
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:25:59
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:25:59
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 2,
+        "name": "test",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-25 13:25:59
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-25 13:25:59
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:25:59
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:25:59
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:25:59
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:25:59
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 3,
+        "name": "test",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-25 13:25:59
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-25 13:25:59
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:25:59
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:25:59
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:25:59
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:25:59
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        },
+        {
+            "id": 2,
+            "name": "test",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-25 12:25:59",
+            "updated_at": "2025-05-25 12:25:59",
+            "avatar": null,
+            "last_surgery_date": null
+        },
+        {
+            "id": 3,
+            "name": "test",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-25 12:25:59",
+            "updated_at": "2025-05-25 12:25:59",
+            "avatar": null,
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:26:04
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=2
+
+## Response Log - 2025-05-25 13:26:04
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:04
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:04
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:04
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:04
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 2,
+        "name": "test",
+        "dob": "2025-05-15",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 1,
+        "created_at": "2025-05-25 12:25:59",
+        "updated_at": "2025-05-25 12:25:59",
+        "avatar": null
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-25 13:26:08
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=2
+
+## Response Log - 2025-05-25 13:26:08
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:08
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:08
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:08
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:08
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 2,
+        "name": "test",
+        "dob": "2025-05-15",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 1,
+        "created_at": "2025-05-25 12:25:59",
+        "updated_at": "2025-05-25 12:25:59",
+        "avatar": null
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-25 13:26:08
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=2
+
+## Response Log - 2025-05-25 13:26:08
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:08
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:08
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:08
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:08
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 2,
+        "name": "test",
+        "dob": "2025-05-15",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 1,
+        "created_at": "2025-05-25 12:25:59",
+        "updated_at": "2025-05-25 12:25:59",
+        "avatar": null
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-25 13:26:08
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=2
+
+## Response Log - 2025-05-25 13:26:08
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:08
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:08
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:08
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:08
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 2,
+        "name": "test",
+        "dob": "2025-05-15",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 1,
+        "created_at": "2025-05-25 12:25:59",
+        "updated_at": "2025-05-25 12:25:59",
+        "avatar": null
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-25 13:26:15
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-25 13:26:15
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:15
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:15
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:15
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:15
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        },
+        {
+            "id": 2,
+            "name": "test",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-25 12:25:59",
+            "updated_at": "2025-05-25 12:25:59",
+            "avatar": null,
+            "last_surgery_date": null
+        },
+        {
+            "id": 3,
+            "name": "test",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-25 12:25:59",
+            "updated_at": "2025-05-25 12:25:59",
+            "avatar": null,
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:26:17
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-25 13:26:17
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:17
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:17
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:17
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:26:17
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-10",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-24 09:35:20",
+        "updated_at": "2025-05-24 10:23:51",
+        "avatar": "uploads\/avatars\/avatar_68319e379d517.png"
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-30",
+            "notes": "12wqsdadas",
+            "status": "booked",
+            "graft_count": 111,
+            "created_at": "2025-05-24 09:35:30",
+            "updated_at": "2025-05-24 09:35:30",
+            "patient_id": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 6,
+            "patient_id": 1,
+            "photo_album_type_id": 8,
+            "file_path": ".\/uploads\/patient_1\/5. Month\/6831b42a7aea0.jpeg",
+            "created_at": "2025-05-24 11:57:30",
+            "updated_at": "2025-05-24 11:57:30",
+            "album_type": "5. Month"
+        },
+        {
+            "id": 2,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311204.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 3,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a193117ad.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 4,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311ba0.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        },
+        {
+            "id": 5,
+            "patient_id": 1,
+            "photo_album_type_id": 3,
+            "file_path": ".\/uploads\/patient_1\/Follow-up\/6831a19311fcd.jpeg",
+            "created_at": "2025-05-24 10:38:11",
+            "updated_at": "2025-05-24 10:38:11",
+            "album_type": "Follow-up"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:28:22
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-25 13:28:22
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:22
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:22
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:22
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:22
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        },
+        {
+            "id": 2,
+            "name": "test",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-25 12:25:59",
+            "updated_at": "2025-05-25 12:25:59",
+            "avatar": null,
+            "last_surgery_date": null
+        },
+        {
+            "id": 3,
+            "name": "test",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-25 12:25:59",
+            "updated_at": "2025-05-25 12:25:59",
+            "avatar": null,
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-25 13:28:23
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=2
+
+## Response Log - 2025-05-25 13:28:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:23
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:23
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 2,
+        "name": "test",
+        "dob": "2025-05-15",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 1,
+        "created_at": "2025-05-25 12:25:59",
+        "updated_at": "2025-05-25 12:25:59",
+        "avatar": null
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-25 13:28:25
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=2
+
+## Response Log - 2025-05-25 13:28:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:25
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 2,
+        "name": "test",
+        "dob": "2025-05-15",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 1,
+        "created_at": "2025-05-25 12:25:59",
+        "updated_at": "2025-05-25 12:25:59",
+        "avatar": null
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-25 13:28:25
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=2
+
+## Response Log - 2025-05-25 13:28:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:25
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 2,
+        "name": "test",
+        "dob": "2025-05-15",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 1,
+        "created_at": "2025-05-25 12:25:59",
+        "updated_at": "2025-05-25 12:25:59",
+        "avatar": null
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-25 13:28:25
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=2
+
+## Response Log - 2025-05-25 13:28:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:25
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 2,
+        "name": "test",
+        "dob": "2025-05-15",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 1,
+        "created_at": "2025-05-25 12:25:59",
+        "updated_at": "2025-05-25 12:25:59",
+        "avatar": null
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-25 13:28:28
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-25 13:28:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler file: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler file found: \/Users\/drascom\/Documents\/Projects\/aitest2\/public\/api_handlers\/patients.php"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Checking for handler function: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:28
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function found: handle_patients"
+}
+```
+---
+
+## Response Log - 2025-05-25 13:28:28
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-10",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-24 09:35:20",
+            "updated_at": "2025-05-24 10:23:51",
+            "avatar": "uploads\/avatars\/avatar_68319e379d517.png",
+            "last_surgery_date": "2025-05-30"
+        },
+        {
+            "id": 2,
+            "name": "test",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-25 12:25:59",
+            "updated_at": "2025-05-25 12:25:59",
+            "avatar": null,
+            "last_surgery_date": null
+        },
+        {
+            "id": 3,
+            "name": "test",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-25 12:25:59",
+            "updated_at": "2025-05-25 12:25:59",
+            "avatar": null,
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+

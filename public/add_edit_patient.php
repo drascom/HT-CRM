@@ -223,9 +223,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         deleteFormData.append('entity', 'patients');
                         deleteFormData.append('action',
                             'delete_avatar'); // New action for avatar deletion
-                        deleteFormData.append('id', patientId); // Patient ID
+                        deleteFormData.append('patient_id', patientId); // Patient ID
                         // You might need to send the avatar ID or path depending on your API
-                        // deleteFormData.append('avatar_id', file.avatarId);
+                        deleteFormData.append('avatar_url', file
+                            .dataURL); // Send avatar URL as identifier
 
                         fetch('api.php', {
                                 method: 'POST',
@@ -355,7 +356,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         // Redirect after a short delay on success
                         setTimeout(() => {
                             window.location.href = 'patients.php';
-                        }, 1500);
+                        }, 500);
                     } else {
                         displayMessage(`Error: ${data.error || data.message}`, 'danger');
                     }
@@ -402,4 +403,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<?php require_once 'public/includes/footer.php'; ?>
+<?php require_once 'includes/footer.php'; ?>

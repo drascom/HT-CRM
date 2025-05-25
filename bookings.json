@@ -1,0 +1,2756 @@
+[
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":"- 1 appointment between 9am - 12pm"
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":"- 1 appointment between 1pm and 5pm"
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"Each appointment is 30 minutes long."
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"Consultation Appointments can be book as the following; "
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":"- 1 appointment per day at 2pm"
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":"- Please Add F2F - Clients Name for face to face consultations"
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":"R - Example Name",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- Please Add V2V - Clients Name and mobile number for video consultations"
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":"C - Example Name",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":"C- DANNY ALCOCK",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":"C - WILLIAM HUNT",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- 1 appointment between 9am - 12pm"
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- 1 appointment between 1pm and 5pm"
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"Each appointment is 30 minutes long."
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":"C - JOE ROBSON ",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"Consultation Appointments can be book as the following; "
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":"C-David Andrew Jones",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":"Laszlo Karoly Miko 2pm",
+        "PRP Appointments can be booked as the following; ":"- 1 appointment per day at 2pm"
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":"C - Luke Parker",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- Please Add F2F - Clients Name for face to face consultations"
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- Please Add V2V - Clients Name and mobile number for video consultations"
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":"C - Chamal Hettiarachchi",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":"Adam Rotika",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":"C - Oli Mason",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":"Sunny Sanger 2pm",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":"VIDEO - Imran Patel - +44 7853 954071",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":"Liv Patient - B. Hudges \/\/ Staff",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":"C - Ben Arney",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":"VIDEO - THOMAS GRAY - +44 7543 945380",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":"C - Damien Conybeare-Jones",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":"C-Lucifer OShea",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":"C - Priyesh Pattni",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":"- 1 appointment between 9am - 12pm"
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":"C - Daniel Wilson Dunwell",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- 1 appointment between 1pm and 5pm"
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":"C - Wojciech Etz",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":"C - Dan Storey",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"Each appointment is 30 minutes long."
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":"Beechy Narula 3pm",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"Consultation Appointments can be book as the following; "
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":"C - Jamie Wanless",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- 1 appointment per day at 3pm"
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- Please Add F2F - Clients Name for face to face consultations"
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- Please Add V2V - Clients Name and mobile number for video consultations"
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":"C - Sean Mullins ",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":"C - Henry Dorkin",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":"C - Bradley Reynolds",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":"C - Nathan Sutcliffe ",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- 1 appointment between 9am - 12pm"
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- 1 appointment between 1pm and 5pm"
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"Each appointment is 30 minutes long."
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":"C - Michael Ridden",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":"C- Daniel Wright ",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"Consultation Appointments can be book as the following; "
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":"R - Adam Quinn",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- 1 appointment per day at 3pm"
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":"C - Jake Cronshaw",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- Please Add F2F - Clients Name for face to face consultations"
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":"- Please Add V2V - Clients Name and mobile number for video consultations"
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":"C - Kye Best ",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":"R - Didier Merveilleux",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":"C - Daniel Haywood",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":"C - Lee Cavanagh",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":"C - Branden Muirhead",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":"C - Luke Hayward",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- 1 appointment between 9am - 12pm"
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":"- 1 appointment between 1pm and 5pm"
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":"C - JACK EDWARDS",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"Each appointment is 30 minutes long."
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":"C - Michael Birch ",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":"C- Alexander Gillies ",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":"Consultation Appointments can be book as the following; "
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":"- 1 appointment per day at 3pm"
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- Please Add F2F - Clients Name for face to face consultations"
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- Please Add V2V - Clients Name and mobile number for video consultations"
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":"C - Shaun Abbott",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":"C - James Gibson",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":"R-Daniel Foley",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":"C - Aiden Pellett",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- 1 appointment between 9am - 12pm"
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":"C-Ross Beattie",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- 1 appointment between 1pm and 5pm"
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"Each appointment is 30 minutes long."
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":"R - Martin Parker",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"Consultation Appointments can be book as the following; "
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- 1 appointment per day at 3pm"
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":"R - Jason Murby",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- Please Add F2F - Clients Name for face to face consultations"
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- Please Add V2V - Clients Name and mobile number for video consultations"
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":"C - Anthony Edmunds ",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":"R-Paul Moran",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":"C - Chris Welford",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":"C - Adam Saidi",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- 1 appointment between 9am - 12pm"
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":"C - Paulius Konisevas",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- 1 appointment between 1pm and 5pm"
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"Each appointment is 30 minutes long."
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":"C - JC Etienne",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"Consultation Appointments can be book as the following; "
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- 1 appointment per day at 3pm"
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- Please Add F2F - Clients Name for face to face consultations"
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- Please Add V2V - Clients Name and mobile number for video consultations"
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":"C - Daniel Zanelli",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":"C - Mike Shingleston ",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":"C - David Dearle",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- 1 appointment between 9am - 12pm"
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- 1 appointment between 1pm and 5pm"
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":"C - Tim Lester ",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"Each appointment is 30 minutes long."
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":"R - Oliver Green",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"Consultation Appointments can be book as the following; "
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- 1 appointment per day at 3pm"
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- Please Add F2F - Clients Name for face to face consultations"
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- Please Add V2V - Clients Name and mobile number for video consultations"
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":"C - Michael Reichardt",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- 1 appointment between 9am - 12pm"
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- 1 appointment between 1pm and 5pm"
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"Each appointment is 30 minutes long."
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"Consultation Appointments can be book as the following; "
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- 1 appointment per day at 3pm"
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- Please Add F2F - Clients Name for face to face consultations"
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- Please Add V2V - Clients Name and mobile number for video consultations"
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":"C- Darren Hearn ",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":"C - Dave Hustwick",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":"- 1 appointment between 9am - 12pm"
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":"- 1 appointment between 1pm and 5pm"
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":"Each appointment is 30 minutes long."
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":"C - Jacob Cordell",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"Consultation Appointments can be book as the following; "
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":"- 1 appointment per day at 3pm"
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":"- Please Add F2F - Clients Name for face to face consultations"
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":"- Please Add V2V - Clients Name and mobile number for video consultations"
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":"C- David Jamal Ali ",
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":null,
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":null,
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Sunday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Monday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Tuesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Wednesday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Thursday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Friday",
+        "Room 3A - 8:30am":null,
+        "PRP Morning":null,
+        "PRP Afternoon":null,
+        "Consultation F2F\/V2V":null,
+        "PRP Appointments can be booked as the following; ":null
+    },
+    {
+        "Date":null,
+        "Day":"Saturday",
+        "Room 3A - 8:30am":"Closed",
+        "PRP Morning":"Closed",
+        "PRP Afternoon":"Closed",
+        "Consultation F2F\/V2V":"Closed",
+        "PRP Appointments can be booked as the following; ":null
+    }
+]
