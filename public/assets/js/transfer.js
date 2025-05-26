@@ -21,44 +21,71 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Disable the button and show loading indicator
             this.disabled = true;
-            this.textContent = 'Creating...';
+            this.textContent = 'Processing...'; // Changed text to Processing
 
             try {
                 // Remove "C", "-", and any surrounding spaces prefix from patient name if it exists
                 // Use regex to remove "C", optional spaces, "-", optional spaces at the beginning
-                patientName = patientName.replace(/^C\s*-\s*/, '').trim(); // Remove prefix and trim whitespace
+                const cleanedPatientName = patientName.replace(/^C\s*-\s*/, '').trim(); // Use a new variable for cleaned name
 
-                // 1. Create Patient Record
-                const patientFormData = new FormData();
-                patientFormData.append('entity', 'patients'); // Corrected parameter name
-                patientFormData.append('action', 'add');
-                patientFormData.append('name', patientName);
-                patientFormData.append('dob', ''); // Include dob as an empty string as requested
-                // Omitting user_id as it is not available from the sheet
+                let patientId;
+                let createNewPatient = true; // Assume creating new by default
 
-                const patientResponse = await fetch('api.php', {
-                    method: 'POST',
-                    body: patientFormData,
-                });
+                // 1. Check if patient already exists
+                const lookupResponse = await fetch(`api.php?entity=patient_lookup&action=find_by_name&name=${encodeURIComponent(cleanedPatientName)}`);
+                const lookupData = await lookupResponse.json();
 
-                const patientData = await patientResponse.json();
+                if (lookupData.success && lookupData.patient) {
+                    // Patient found, prompt user with rephrased message
+                    const confirmMessage = `Patient "${cleanedPatientName}" already exists. Click OK to create a NEW patient record with this name, or Cancel to use the EXISTING patient record.`;
+                    createNewPatient = confirm(confirmMessage); // true if OK (create new), false if Cancel (use existing)
 
-                if (!patientData.success) {
-                    throw new Error('Error creating patient: ' + (patientData.error || 'Unknown error'));
+                    if (!createNewPatient) {
+                        patientId = lookupData.patient.id; // Use existing patient ID
+                        this.textContent = 'Using existing patient...';
+                    } else {
+                        // User chose to create a new patient with the same name
+                        this.textContent = 'Creating new patient...';
+                        // Proceed to create a new patient as before
+                    }
+                } else {
+                    // Patient not found, proceed to create a new patient (createNewPatient is already true)
+                    this.textContent = 'Creating new patient...';
                 }
 
-                const patientId = patientData.patient.id; // Assuming the patient ID is returned in patient.id
+                // If user chose to create a new patient OR patient was not found
+                if (createNewPatient) { // Logic updated based on user feedback
+                    const patientFormData = new FormData();
+                    patientFormData.append('entity', 'patients');
+                    patientFormData.append('action', 'add');
+                    patientFormData.append('name', cleanedPatientName); // Use cleaned name
+                    patientFormData.append('dob', '');
+                    // Omitting user_id
 
-                // 2. Create Surgery Record
+                    const patientResponse = await fetch('api.php', {
+                        method: 'POST',
+                        body: patientFormData,
+                    });
+
+                    const patientData = await patientResponse.json();
+
+                    if (!patientData.success) {
+                        throw new Error('Error creating patient: ' + (patientData.error || 'Unknown error'));
+                    }
+                    patientId = patientData.patient.id; // Get ID of the newly created patient
+                }
+
+                // 2. Create Surgery Record using the determined patientId
+                this.textContent = 'Creating surgery...';
                 const surgeryFormData = new FormData();
-                surgeryFormData.append('entity', 'surgeries'); // Corrected parameter name
+                surgeryFormData.append('entity', 'surgeries');
                 surgeryFormData.append('action', 'add');
                 surgeryFormData.append('patient_id', patientId);
-                surgeryFormData.append('date', date);
+                surgeryFormData.append('date', date); // Use the original date format from data attribute (yyyy-mm-dd)
                 surgeryFormData.append('is_recorded', true);
-                surgeryFormData.append('status', 'booked'); // Updated status as requested
-                surgeryFormData.append('graft_count', 0); // Added graft_count as requested
-                surgeryFormData.append('notes', ''); // Added notes as an empty string
+                surgeryFormData.append('status', 'booked');
+                surgeryFormData.append('graft_count', 0);
+                surgeryFormData.append('notes', '');
 
                 const surgeryResponse = await fetch('api.php', {
                     method: 'POST',

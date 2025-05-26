@@ -173,6 +173,7 @@ function handle_patients($action, $method, $db)
                 return ['success' => false, 'error' => 'ID is required.'];
             }
             break;
+
         case 'list':
             if ($method === 'GET') {
                 $stmt = $db->query("
@@ -183,6 +184,24 @@ function handle_patients($action, $method, $db)
                     ORDER BY p.name
                 ");
                 return ['success' => true, 'patients' => $stmt->fetchAll(PDO::FETCH_ASSOC)];
+            }
+            break;
+
+        case 'find_by_name':
+            if ($method === 'GET') {
+                $name = trim($_GET['name'] ?? '');
+                if (!empty($name)) {
+                    $stmt = $db->prepare("SELECT id, name, avatar FROM patients WHERE name = ?");
+                    $stmt->execute([$name]);
+                    $patient = $stmt->fetch(PDO::FETCH_ASSOC);
+
+                    if ($patient) {
+                        return ['success' => true, 'patient' => $patient];
+                    } else {
+                        return ['success' => false, 'error' => 'Patient not found.'];
+                    }
+                }
+                return ['success' => false, 'error' => 'Name parameter is required.'];
             }
             break;
     }
