@@ -16,7 +16,8 @@ CREATE TABLE surgeries (
   graft_count INTEGER,
   created_at TEXT,
   updated_at TEXT,
-  patient_id INTEGER
+  patient_id INTEGER,
+  is_recorded BOOLEAN DEFAULT FALSE -- Added is_recorded field
 );
 
 CREATE TABLE photo_album_types (

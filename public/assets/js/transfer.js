@@ -2,8 +2,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Find all buttons with the class 'create-record-btn'
     const buttons = document.querySelectorAll('.create-record-btn');
 
-    // Add a click event listener to each button
     buttons.forEach(button => {
+        // Check the data-recorded attribute on page load
+        const isRecorded = button.getAttribute('data-recorded') === 'true';
+
+        if (isRecorded) {
+            button.textContent = 'Recorded';
+            button.classList.remove('btn-primary');
+            button.classList.add('btn-success');
+            button.disabled = true; // Disable the button if already recorded
+        }
+
+        // Add a click event listener to each button (only active for non-disabled buttons)
         button.addEventListener('click', async function() {
             // Get the date and patient name from data attributes
             const date = this.getAttribute('data-date');
@@ -14,10 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
             this.textContent = 'Creating...';
 
             try {
-                // Remove "C-" prefix from patient name if it exists
-                if (patientName.startsWith('C-')) {
-                    patientName = patientName.substring(2).trim(); // Remove "C-" and trim whitespace
-                }
+                // Remove "C", "-", and any surrounding spaces prefix from patient name if it exists
+                // Use regex to remove "C", optional spaces, "-", optional spaces at the beginning
+                patientName = patientName.replace(/^C\s*-\s*/, '').trim(); // Remove prefix and trim whitespace
 
                 // 1. Create Patient Record
                 const patientFormData = new FormData();
@@ -46,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 surgeryFormData.append('action', 'add');
                 surgeryFormData.append('patient_id', patientId);
                 surgeryFormData.append('date', date);
+                surgeryFormData.append('is_recorded', true);
                 surgeryFormData.append('status', 'booked'); // Updated status as requested
                 surgeryFormData.append('graft_count', 0); // Added graft_count as requested
                 surgeryFormData.append('notes', ''); // Added notes as an empty string
@@ -58,9 +68,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 const surgeryData = await surgeryResponse.json();
 
                 if (surgeryData.success) {
-                    this.textContent = 'Created!';
+                    this.textContent = 'Recorded'; // Change text to Recorded on successful creation
                     this.classList.remove('btn-primary');
                     this.classList.add('btn-success');
+                    this.disabled = true; // Disable button after successful creation
                     // Optionally, do something else on success, like refreshing the table
                 } else {
                     throw new Error('Error creating surgery: ' + (surgeryData.error || 'Unknown error'));
@@ -72,6 +83,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.classList.add('btn-danger');
                 console.error('API Error:', error);
                 alert('Error creating records: ' + error.message); // Show an alert with the error message
+                // Re-enable button on error if it wasn't initially recorded
+                 if (!isRecorded) {
+                    this.disabled = false;
+                    this.textContent = 'Create Records'; // Revert text on error
+                    this.classList.remove('btn-danger');
+                    this.classList.add('btn-primary');
+                }
             }
         });
     });

@@ -3639,3 +3639,2142 @@
 ```
 ---
 
+## Request Log - 2025-05-26 11:59:55
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 11:59:55
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": []
+}
+```
+---
+
+## Request Log - 2025-05-26 11:59:57
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 11:59:57
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": []
+}
+```
+---
+
+## Request Log - 2025-05-26 11:59:58
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-26 11:59:58
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-26 11:59:59
+
+**Method:** GET
+**URL:** /api.php?entity=users&action=list
+
+## Response Log - 2025-05-26 11:59:59
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "users": [
+        {
+            "id": 1,
+            "email": "test@example.com",
+            "username": "admin",
+            "role": "admin",
+            "created_at": "2025-05-26 10:59:55",
+            "updated_at": "2025-05-26 10:59:55"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:00:11
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:00:11
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": []
+}
+```
+---
+
+## Request Log - 2025-05-26 12:00:12
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-26 12:00:12
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-26 12:00:23
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:00:23
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 1,
+        "name": "DANNY ALCOCK",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-26 12:00:23
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:00:23
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "id": "1",
+    "message": "Surgery added successfully."
+}
+```
+---
+
+## Request Log - 2025-05-26 12:00:40
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:00:40
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "25 March 2025",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:00:23",
+            "updated_at": "2025-05-26 11:00:23",
+            "patient_id": 1,
+            "is_recorded": 0,
+            "patient_name": "DANNY ALCOCK"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:00:44
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:00:44
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true
+}
+```
+---
+
+## Request Log - 2025-05-26 12:00:44
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:00:44
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": []
+}
+```
+---
+
+## Request Log - 2025-05-26 12:02:19
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:02:19
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": []
+}
+```
+---
+
+## Request Log - 2025-05-26 12:02:22
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:02:22
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": []
+}
+```
+---
+
+## Request Log - 2025-05-26 12:02:26
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:02:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 2,
+        "name": "R - Example Name",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-26 12:02:26
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:02:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "id": "2",
+    "message": "Surgery added successfully."
+}
+```
+---
+
+## Request Log - 2025-05-26 12:02:33
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:02:33
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "10 March 2025",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:02:26",
+            "updated_at": "2025-05-26 11:02:26",
+            "patient_id": 2,
+            "is_recorded": 0,
+            "patient_name": "R - Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:02:34
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:02:34
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "10 March 2025",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:02:26",
+            "updated_at": "2025-05-26 11:02:26",
+            "patient_id": 2,
+            "is_recorded": 0,
+            "patient_name": "R - Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:04:08
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:04:08
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "10 March 2025",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:02:26",
+            "updated_at": "2025-05-26 11:02:26",
+            "patient_id": 2,
+            "is_recorded": 0,
+            "patient_name": "R - Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:04:10
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:04:10
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "10 March 2025",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:02:26",
+            "updated_at": "2025-05-26 11:02:26",
+            "patient_id": 2,
+            "is_recorded": 0,
+            "patient_name": "R - Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:09:16
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:09:16
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "10 March 2025",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:02:26",
+            "updated_at": "2025-05-26 11:02:26",
+            "patient_id": 2,
+            "is_recorded": 0,
+            "patient_name": "R - Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:09:20
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:09:20
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true
+}
+```
+---
+
+## Request Log - 2025-05-26 12:09:20
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:09:20
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": []
+}
+```
+---
+
+## Request Log - 2025-05-26 12:09:26
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:09:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 3,
+        "name": "DANNY ALCOCK",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-26 12:09:26
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:09:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "id": "3",
+    "message": "Surgery added successfully."
+}
+```
+---
+
+## Request Log - 2025-05-26 12:09:33
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:09:33
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 3,
+            "date": "25 March 2025",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:09:26",
+            "updated_at": "2025-05-26 11:09:26",
+            "patient_id": 3,
+            "is_recorded": 0,
+            "patient_name": "DANNY ALCOCK"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:09:36
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=3
+
+## Response Log - 2025-05-26 12:09:36
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 3,
+        "name": "DANNY ALCOCK",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-26 11:09:26",
+        "updated_at": "2025-05-26 11:09:26",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 3,
+            "date": "25 March 2025",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:09:26",
+            "updated_at": "2025-05-26 11:09:26",
+            "patient_id": 3,
+            "is_recorded": 0
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-26 12:14:58
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:14:58
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 3,
+            "date": "25 March 2025",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:09:26",
+            "updated_at": "2025-05-26 11:09:26",
+            "patient_id": 3,
+            "is_recorded": 0,
+            "patient_name": "DANNY ALCOCK"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:15:01
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:15:01
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 3,
+            "date": "25 March 2025",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:09:26",
+            "updated_at": "2025-05-26 11:09:26",
+            "patient_id": 3,
+            "is_recorded": 0,
+            "patient_name": "DANNY ALCOCK"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:15:02
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:15:02
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 3,
+            "date": "25 March 2025",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:09:26",
+            "updated_at": "2025-05-26 11:09:26",
+            "patient_id": 3,
+            "is_recorded": 0,
+            "patient_name": "DANNY ALCOCK"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:15:04
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=get&id=3
+
+## Response Log - 2025-05-26 12:15:04
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgery": {
+        "id": 3,
+        "date": "25 March 2025",
+        "notes": "",
+        "status": "booked",
+        "graft_count": 0,
+        "created_at": "2025-05-26 11:09:26",
+        "updated_at": "2025-05-26 11:09:26",
+        "patient_id": 3,
+        "is_recorded": 0,
+        "patient_name": "DANNY ALCOCK"
+    }
+}
+```
+---
+
+## Request Log - 2025-05-26 12:15:06
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:15:06
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 3,
+            "date": "25 March 2025",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:09:26",
+            "updated_at": "2025-05-26 11:09:26",
+            "patient_id": 3,
+            "is_recorded": 0,
+            "patient_name": "DANNY ALCOCK"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:15:19
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=get&id=3
+
+## Response Log - 2025-05-26 12:15:19
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgery": {
+        "id": 3,
+        "date": "25 March 2025",
+        "notes": "",
+        "status": "booked",
+        "graft_count": 0,
+        "created_at": "2025-05-26 11:09:26",
+        "updated_at": "2025-05-26 11:09:26",
+        "patient_id": 3,
+        "is_recorded": 0,
+        "patient_name": "DANNY ALCOCK"
+    }
+}
+```
+---
+
+## Request Log - 2025-05-26 12:15:22
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:15:22
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 3,
+            "date": "25 March 2025",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:09:26",
+            "updated_at": "2025-05-26 11:09:26",
+            "patient_id": 3,
+            "is_recorded": 0,
+            "patient_name": "DANNY ALCOCK"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:15:26
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=get&id=3
+
+## Response Log - 2025-05-26 12:15:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgery": {
+        "id": 3,
+        "date": "25 March 2025",
+        "notes": "",
+        "status": "booked",
+        "graft_count": 0,
+        "created_at": "2025-05-26 11:09:26",
+        "updated_at": "2025-05-26 11:09:26",
+        "patient_id": 3,
+        "is_recorded": 0,
+        "patient_name": "DANNY ALCOCK"
+    }
+}
+```
+---
+
+## Request Log - 2025-05-26 12:16:39
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:16:39
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 3,
+            "date": "25 March 2025",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:09:26",
+            "updated_at": "2025-05-26 11:09:26",
+            "patient_id": 3,
+            "is_recorded": 0,
+            "patient_name": "DANNY ALCOCK"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:17:11
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:17:11
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 4,
+        "name": "R - Example Name",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-26 12:17:11
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:17:11
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "id": "4",
+    "message": "Surgery added successfully."
+}
+```
+---
+
+## Request Log - 2025-05-26 12:17:15
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:17:15
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 3,
+            "date": "25 March 2025",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:09:26",
+            "updated_at": "2025-05-26 11:09:26",
+            "patient_id": 3,
+            "is_recorded": 0,
+            "patient_name": "DANNY ALCOCK"
+        },
+        {
+            "id": 4,
+            "date": "10\/03\/2025",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:17:11",
+            "updated_at": "2025-05-26 11:17:11",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:17:17
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=get&id=4
+
+## Response Log - 2025-05-26 12:17:17
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgery": {
+        "id": 4,
+        "date": "10\/03\/2025",
+        "notes": "",
+        "status": "booked",
+        "graft_count": 0,
+        "created_at": "2025-05-26 11:17:11",
+        "updated_at": "2025-05-26 11:17:11",
+        "patient_id": 4,
+        "is_recorded": 1,
+        "patient_name": "R - Example Name"
+    }
+}
+```
+---
+
+## Request Log - 2025-05-26 12:17:21
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:17:21
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 3,
+            "date": "25 March 2025",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:09:26",
+            "updated_at": "2025-05-26 11:09:26",
+            "patient_id": 3,
+            "is_recorded": 0,
+            "patient_name": "DANNY ALCOCK"
+        },
+        {
+            "id": 4,
+            "date": "10\/03\/2025",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:17:11",
+            "updated_at": "2025-05-26 11:17:11",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:17:29
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:17:29
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 3,
+            "date": "25 March 2025",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:09:26",
+            "updated_at": "2025-05-26 11:09:26",
+            "patient_id": 3,
+            "is_recorded": 0,
+            "patient_name": "DANNY ALCOCK"
+        },
+        {
+            "id": 4,
+            "date": "10\/03\/2025",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:17:11",
+            "updated_at": "2025-05-26 11:17:11",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:17:32
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:17:32
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true
+}
+```
+---
+
+## Request Log - 2025-05-26 12:17:32
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:17:32
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 3,
+            "date": "25 March 2025",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:09:26",
+            "updated_at": "2025-05-26 11:09:26",
+            "patient_id": 3,
+            "is_recorded": 0,
+            "patient_name": "DANNY ALCOCK"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:17:34
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:17:34
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true
+}
+```
+---
+
+## Request Log - 2025-05-26 12:17:34
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:17:34
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": []
+}
+```
+---
+
+## Request Log - 2025-05-26 12:17:38
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-26 12:17:38
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "DANNY ALCOCK",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-26 11:00:23",
+            "updated_at": "2025-05-26 11:00:23",
+            "avatar": null,
+            "last_surgery_date": null
+        },
+        {
+            "id": 3,
+            "name": "DANNY ALCOCK",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-26 11:09:26",
+            "updated_at": "2025-05-26 11:09:26",
+            "avatar": null,
+            "last_surgery_date": null
+        },
+        {
+            "id": 2,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-26 11:02:26",
+            "updated_at": "2025-05-26 11:02:26",
+            "avatar": null,
+            "last_surgery_date": null
+        },
+        {
+            "id": 4,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-26 11:17:11",
+            "updated_at": "2025-05-26 11:17:11",
+            "avatar": null,
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:17:49
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:17:49
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "id": "5",
+    "message": "Surgery added successfully."
+}
+```
+---
+
+## Request Log - 2025-05-26 12:17:50
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:17:50
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 5,
+            "date": "2025-05-17",
+            "notes": "",
+            "status": "booked",
+            "graft_count": "",
+            "created_at": "2025-05-26 11:17:49",
+            "updated_at": "2025-05-26 11:17:49",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:17:53
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:17:53
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 5,
+            "date": "2025-05-17",
+            "notes": "",
+            "status": "booked",
+            "graft_count": "",
+            "created_at": "2025-05-26 11:17:49",
+            "updated_at": "2025-05-26 11:17:49",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:18:34
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-26 12:18:34
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "DANNY ALCOCK",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-26 11:00:23",
+            "updated_at": "2025-05-26 11:00:23",
+            "avatar": null,
+            "last_surgery_date": null
+        },
+        {
+            "id": 3,
+            "name": "DANNY ALCOCK",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-26 11:09:26",
+            "updated_at": "2025-05-26 11:09:26",
+            "avatar": null,
+            "last_surgery_date": null
+        },
+        {
+            "id": 2,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-26 11:02:26",
+            "updated_at": "2025-05-26 11:02:26",
+            "avatar": null,
+            "last_surgery_date": "2025-05-17"
+        },
+        {
+            "id": 4,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-26 11:17:11",
+            "updated_at": "2025-05-26 11:17:11",
+            "avatar": null,
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:18:38
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:18:38
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-26 12:18:38
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-26 12:18:38
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 3,
+            "name": "DANNY ALCOCK",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-26 11:09:26",
+            "updated_at": "2025-05-26 11:09:26",
+            "avatar": null,
+            "last_surgery_date": null
+        },
+        {
+            "id": 2,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-26 11:02:26",
+            "updated_at": "2025-05-26 11:02:26",
+            "avatar": null,
+            "last_surgery_date": "2025-05-17"
+        },
+        {
+            "id": 4,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-26 11:17:11",
+            "updated_at": "2025-05-26 11:17:11",
+            "avatar": null,
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:18:40
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:18:40
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-26 12:18:40
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-26 12:18:40
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 2,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-26 11:02:26",
+            "updated_at": "2025-05-26 11:02:26",
+            "avatar": null,
+            "last_surgery_date": "2025-05-17"
+        },
+        {
+            "id": 4,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-26 11:17:11",
+            "updated_at": "2025-05-26 11:17:11",
+            "avatar": null,
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:18:41
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:18:41
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-26 12:18:41
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-26 12:18:41
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 4,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-26 11:17:11",
+            "updated_at": "2025-05-26 11:17:11",
+            "avatar": null,
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:18:43
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:18:43
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-26 12:18:43
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-26 12:18:43
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-26 12:18:44
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:18:44
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 5,
+            "date": "2025-05-17",
+            "notes": "",
+            "status": "booked",
+            "graft_count": "",
+            "created_at": "2025-05-26 11:17:49",
+            "updated_at": "2025-05-26 11:17:49",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:18:47
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:18:47
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true
+}
+```
+---
+
+## Request Log - 2025-05-26 12:18:47
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:18:47
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": []
+}
+```
+---
+
+## Request Log - 2025-05-26 12:18:52
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:18:52
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 5,
+        "name": "R - Example Name",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-26 12:18:52
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:18:52
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "id": "6",
+    "message": "Surgery added successfully."
+}
+```
+---
+
+## Request Log - 2025-05-26 12:19:14
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:19:14
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 6,
+            "date": "2025-03-10",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:18:52",
+            "updated_at": "2025-05-26 11:18:52",
+            "patient_id": 5,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:19:15
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=get&id=6
+
+## Response Log - 2025-05-26 12:19:15
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgery": {
+        "id": 6,
+        "date": "2025-03-10",
+        "notes": "",
+        "status": "booked",
+        "graft_count": 0,
+        "created_at": "2025-05-26 11:18:52",
+        "updated_at": "2025-05-26 11:18:52",
+        "patient_id": 5,
+        "is_recorded": 1,
+        "patient_name": "R - Example Name"
+    }
+}
+```
+---
+
+## Request Log - 2025-05-26 12:19:18
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:19:18
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Surgery updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-26 12:19:20
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=5
+
+## Response Log - 2025-05-26 12:19:20
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 5,
+        "name": "R - Example Name",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-26 11:18:52",
+        "updated_at": "2025-05-26 11:18:52",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 6,
+            "date": "2025-03-10",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:18:52",
+            "updated_at": "2025-05-26 11:19:18",
+            "patient_id": 5,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-26 12:19:24
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=get&id=6
+
+## Response Log - 2025-05-26 12:19:24
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgery": {
+        "id": 6,
+        "date": "2025-03-10",
+        "notes": "",
+        "status": "booked",
+        "graft_count": 0,
+        "created_at": "2025-05-26 11:18:52",
+        "updated_at": "2025-05-26 11:19:18",
+        "patient_id": 5,
+        "is_recorded": 1,
+        "patient_name": "R - Example Name"
+    }
+}
+```
+---
+
+## Request Log - 2025-05-26 12:19:25
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:19:25
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Surgery updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-26 12:19:27
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=5
+
+## Response Log - 2025-05-26 12:19:27
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 5,
+        "name": "R - Example Name",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-26 11:18:52",
+        "updated_at": "2025-05-26 11:18:52",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 6,
+            "date": "2025-03-10",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:18:52",
+            "updated_at": "2025-05-26 11:19:25",
+            "patient_id": 5,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-26 12:20:49
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:20:49
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 6,
+        "name": "Example Name",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-26 12:20:49
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:20:49
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "id": "7",
+    "message": "Surgery added successfully."
+}
+```
+---
+
+## Request Log - 2025-05-26 12:20:55
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:20:55
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 7,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:20:49",
+            "updated_at": "2025-05-26 11:20:49",
+            "patient_id": 6,
+            "is_recorded": 1,
+            "patient_name": "Example Name"
+        },
+        {
+            "id": 6,
+            "date": "2025-03-10",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:18:52",
+            "updated_at": "2025-05-26 11:19:25",
+            "patient_id": 5,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:21:08
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:21:08
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 7,
+        "name": "DANNY ALCOCK",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-26 12:21:08
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:21:08
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "id": "8",
+    "message": "Surgery added successfully."
+}
+```
+---
+
+## Request Log - 2025-05-26 12:21:10
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:21:10
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 8,
+        "name": "WILLIAM HUNT",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-26 12:21:10
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-26 12:21:10
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "id": "9",
+    "message": "Surgery added successfully."
+}
+```
+---
+
+## Request Log - 2025-05-26 12:21:12
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-26 12:21:12
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 9,
+            "date": "2025-03-27",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:21:10",
+            "updated_at": "2025-05-26 11:21:10",
+            "patient_id": 8,
+            "is_recorded": 1,
+            "patient_name": "WILLIAM HUNT"
+        },
+        {
+            "id": 8,
+            "date": "2025-03-25",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:21:08",
+            "updated_at": "2025-05-26 11:21:08",
+            "patient_id": 7,
+            "is_recorded": 1,
+            "patient_name": "DANNY ALCOCK"
+        },
+        {
+            "id": 7,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:20:49",
+            "updated_at": "2025-05-26 11:20:49",
+            "patient_id": 6,
+            "is_recorded": 1,
+            "patient_name": "Example Name"
+        },
+        {
+            "id": 6,
+            "date": "2025-03-10",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-26 11:18:52",
+            "updated_at": "2025-05-26 11:19:25",
+            "patient_id": 5,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-26 12:21:14
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-26 12:21:14
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 7,
+            "name": "DANNY ALCOCK",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-26 11:21:08",
+            "updated_at": "2025-05-26 11:21:08",
+            "avatar": null,
+            "last_surgery_date": "2025-03-25"
+        },
+        {
+            "id": 6,
+            "name": "Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-26 11:20:49",
+            "updated_at": "2025-05-26 11:20:49",
+            "avatar": null,
+            "last_surgery_date": "2025-03-11"
+        },
+        {
+            "id": 5,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-26 11:18:52",
+            "updated_at": "2025-05-26 11:18:52",
+            "avatar": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 8,
+            "name": "WILLIAM HUNT",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-26 11:21:10",
+            "updated_at": "2025-05-26 11:21:10",
+            "avatar": null,
+            "last_surgery_date": "2025-03-27"
+        }
+    ]
+}
+```
+---
+

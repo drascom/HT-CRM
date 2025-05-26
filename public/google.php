@@ -182,6 +182,9 @@ if (!$usingCache) {
                 echo "    </thead>";
                 echo "    <tbody>";
                 // Start from the second row to skip headers
+                // Get database connection
+                $pdo = get_db();
+
                 for ($i = 1; $i < count($values); $i++) {
                     echo "        <tr>";
                     foreach ($values[$i] as $cell) {
@@ -192,13 +195,52 @@ if (!$usingCache) {
                     // Assuming the first column is date (Day Month) and third is patient name
                     $date_str = $values[$i][0] ?? ''; // Get date string from first column
                     $patient_name = $values[$i][2] ?? ''; // Get patient name from third column
-                    $full_date = $date_str . ' 2025'; // Append the year 2025
+                    $full_date_str = $date_str . ' 2025'; // Append the year 2025
+                    // Parse the date string and reformat to dd/mm/yyyy
+                    $date_obj = DateTime::createFromFormat('j F Y', $full_date_str);
+                    $formatted_date = $date_obj ? $date_obj->format('Y-m-d') : $full_date_str; // Use original string if parsing fails, format to yyyy-mm-dd
 
-                    // Only show the button if the patient name starts with 'C-'
-                    // Only show the button if the patient name is not empty and does not include 'closed'
+                    $is_recorded = false;
+                    $patient_id = null;
+
+                    // Check if patient and surgery record already exist
+                    if (!empty($patient_name)) {
+                        // Remove "C", "-", and any surrounding spaces prefix for database lookup if it exists
+                        $lookup_patient_name = $patient_name;
+                        // Use regex to remove "C", optional spaces, "-", optional spaces at the beginning
+                        $lookup_patient_name = preg_replace('/^C\s*-\s*/', '', $lookup_patient_name);
+                        $lookup_patient_name = trim($lookup_patient_name); // Trim any remaining whitespace
+
+                        // Find patient by name
+                        $stmt_patient = $pdo->prepare("SELECT id FROM patients WHERE name = ?");
+                        $stmt_patient->execute([$lookup_patient_name]);
+                        $patient = $stmt_patient->fetch(PDO::FETCH_ASSOC);
+
+                        if ($patient) {
+                            $patient_id = $patient['id'];
+                            // Find surgery by patient_id and date
+                            $stmt_surgery = $pdo->prepare("SELECT is_recorded FROM surgeries WHERE patient_id = ? AND date = ?");
+                            $stmt_surgery->execute([$patient_id, $formatted_date]); // Use formatted_date
+                            $surgery = $stmt_surgery->fetch(PDO::FETCH_ASSOC);
+
+                            if ($surgery && $surgery['is_recorded']) {
+                                $is_recorded = true;
+                            }
+                        }
+                    }
+
+                    // Log lookup_patient_name to console for debugging
+                    // echo "<script>console.log('Lookup Patient Name: " . print_r($patient) . "');</script>";
+
+                    // Only show the button if the patient name is not empty and does not include 'Closed'
+                    // Also pass the recorded status to the button
                     if (!empty($values[$i][2]) && !str_contains($values[$i][2], 'Closed')) {
-                        echo "                <button class='btn btn-sm btn-primary create-record-btn' data-date='" . htmlspecialchars($full_date) . "' data-patient-name='" . htmlspecialchars($patient_name) . "'>";
-                        echo "                    Create Records";
+                        $button_text = $is_recorded ? 'Recorded' : 'Create Records';
+                        $button_class = $is_recorded ? 'btn-success' : 'btn-primary';
+                        $disabled_attr = $is_recorded ? 'disabled' : '';
+
+                        echo "                <button class='btn btn-sm create-record-btn " . $button_class . "' data-date='" . htmlspecialchars($formatted_date) . "' data-patient-name='" . htmlspecialchars($patient_name) . "' data-recorded='" . ($is_recorded ? 'true' : 'false') . "' " . $disabled_attr . ">"; // Use formatted_date
+                        echo "                    " . htmlspecialchars($button_text);
                         echo "                </button>";
                     }
                     echo "            </td>";

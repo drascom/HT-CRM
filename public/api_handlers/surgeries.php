@@ -11,8 +11,8 @@ function handle_surgeries($action, $method, $db)
                 $patient_id = $_POST['patient_id'] ?? null;
 
                 if ($date && $status && $patient_id) {
-                    $stmt = $db->prepare("INSERT INTO surgeries (date, notes, status, graft_count, patient_id, created_at, updated_at) VALUES (?, ?, ?, ?, ?, datetime('now'), datetime('now'))");
-                    $stmt->execute([$date, $notes, $status, $graft_count, $patient_id]); // Include graft_count in execute
+                    $stmt = $db->prepare("INSERT INTO surgeries (date, notes, status, graft_count, patient_id, is_recorded, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'))");
+                    $stmt->execute([$date, $notes, $status, $graft_count, $patient_id, TRUE]); // Include graft_count and set is_recorded to TRUE
                     return ['success' => true, 'id' => $db->lastInsertId(), 'message' => 'Surgery added successfully.']; // Add success message
                 }
                 return ['success' => false, 'error' => 'Date, status, and patient_id are required.'];
