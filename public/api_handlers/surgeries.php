@@ -33,7 +33,7 @@ function handle_surgeries($action, $method, $db)
                     $stmt->execute([$date, $notes, $status, $graft_count, $patient_id, $id]); // Include graft_count in execute
                     return ['success' => true, 'message' => 'Surgery updated successfully.']; // Add success message
                 }
-                return ['success' => false, 'error' => 'All fields are required.'];
+                return ['success' => false, 'error' => 'id, date, status, and patient_id are required.'];
             }
             break;
 
@@ -61,7 +61,7 @@ function handle_surgeries($action, $method, $db)
                     $stmt = $db->prepare("SELECT s.*, p.name as patient_name FROM surgeries s LEFT JOIN patients p ON s.patient_id = p.id WHERE s.id = ?");
                     $stmt->execute([$id]);
                     $data = $stmt->fetch(PDO::FETCH_ASSOC);
-                    return $data ? ['success' => true, 'surgery' => $data] : ['success' => false, 'error' => 'Not found'];
+                    return $data ? ['success' => true, 'surgery' => $data] : ['success' => false, 'error' => "Surgery not found with ID: {$id}"];
                 }
                 return ['success' => false, 'error' => 'ID is required.'];
             }
@@ -82,5 +82,5 @@ function handle_surgeries($action, $method, $db)
             break;
     }
 
-    return ['success' => false, 'error' => 'Invalid request'];
+    return ['success' => false, 'error' => "Invalid request for action '{$action}' with method '{$method}'."];
 }

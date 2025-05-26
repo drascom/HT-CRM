@@ -46,7 +46,7 @@ function handle_photo_album_types($action, $method, $db)
                     $stmt = $db->prepare("SELECT * FROM photo_album_types WHERE id = ?");
                     $stmt->execute([$id]);
                     $data = $stmt->fetch(PDO::FETCH_ASSOC);
-                    return $data ? ['success' => true, 'type' => $data] : ['success' => false, 'error' => 'Not found'];
+                    return $data ? ['success' => true, 'type' => $data] : ['success' => false, 'error' => "Photo album type not found with ID: {$id}"];
                 }
                 return ['success' => false, 'error' => 'ID is required.'];
             }
@@ -60,5 +60,5 @@ function handle_photo_album_types($action, $method, $db)
             break;
     }
 
-    return ['success' => false, 'error' => 'Invalid request'];
+    return ['success' => false, 'error' => "Invalid request for action '{$action}' with method '{$method}'."];
 }

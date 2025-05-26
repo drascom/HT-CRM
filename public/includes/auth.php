@@ -2,12 +2,29 @@
 session_start();
 
 // Function to check if a user is logged in
-function is_logged_in() {
+function is_logged_in()
+{
     return isset($_SESSION['user_id']);
+}
+// Function to check if the logged-in user has the admin role
+function is_admin()
+{
+    if (!is_logged_in()) {
+        return false;
+    }
+
+    global $pdo; // Use the PDO connection from db.php
+
+    $stmt = $pdo->prepare("SELECT role FROM users WHERE id = ?");
+    $stmt->execute([$_SESSION['user_id']]);
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    return $user && $user['role'] === 'admin';
 }
 
 // Function to attempt user login
-function login_user($email, $password) {
+function login_user($email, $password)
+{
     global $pdo; // Use the PDO connection from db.php
 
     $stmt = $pdo->prepare("SELECT id, password FROM users WHERE email = ?");
@@ -22,7 +39,8 @@ function login_user($email, $password) {
 }
 
 // Function to log out the current user
-function logout_user() {
+function logout_user()
+{
     session_unset();
     session_destroy();
 }
@@ -35,7 +53,8 @@ if (!is_logged_in() && $current_page !== 'login.php' && $current_page !== 'signu
     exit();
 }
 // Function to register a new user
-function register_user($email, $username, $password) {
+function register_user($email, $username, $password)
+{
     global $pdo; // Use the PDO connection from db.php
 
     // Check if email or username already exists
@@ -49,12 +68,10 @@ function register_user($email, $username, $password) {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     // Insert the new user into the database
-    $stmt = $pdo->prepare("INSERT INTO users (email, username, password) VALUES (?, ?, ?)");
-    if ($stmt->execute([$email, $username, $hashed_password])) {
+    $stmt = $pdo->prepare("INSERT INTO users (email, username, password, role) VALUES (?, ?, ?, ?)");
+    if ($stmt->execute([$email, $username, $hashed_password, 'user'])) {
         return true; // Registration successful
     } else {
         return false; // Registration failed
     }
 }
-
-?>

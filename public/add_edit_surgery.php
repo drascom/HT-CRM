@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         if (isEditing ||
                             <?php echo json_encode($patient_id_from_url !== null); ?>) {
                             window.location.href =
-                                `patient_surgeries.php?patient_id=${formData.get('patient_id')}`;
+                                `patient.php?id=${formData.get('patient_id')}`;
                         } else {
                             window.location.href = 'surgeries.php';
                         }

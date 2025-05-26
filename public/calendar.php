@@ -61,6 +61,7 @@ require_once 'includes/header.php';
                                     end: surgery.date +
                                         'T18:00:00', // Set end time to 18:00
                                     extendedProps: {
+                                        patientId: surgery.patient_id,
                                         patientName: surgery.patient_name,
                                         graft_count: surgery.graft_count,
                                         status: surgery.status
@@ -81,6 +82,7 @@ require_once 'includes/header.php';
             },
             eventContent: function(arg) {
                 // Customize event display for better readability and styling
+                let patientId = arg.event.extendedProps.patientId || 'N/A';
                 let patientName = arg.event.extendedProps.patientName || 'N/A';
                 let status = arg.event.extendedProps.status || 'N/A';
                 let graft_count = arg.event.extendedProps.graft_count || 'N/A';
@@ -97,11 +99,13 @@ require_once 'includes/header.php';
 
                 return {
                     html: `
-                        <div class="event-details">
-                            <div class="patient-name"><b>${patientName}</b></div>
-                            <div class="graft-count"><i>Graft: </i>${graft_count}</div>
-                            <div class="status"><i>Status:</i> <span class="${statusClass}">${status}</span></div>
-                        </div>
+                        <a href="patient.php?id=${patientId}" style="text-decoration: none; color: inherit;">
+                            <div class="event-details">
+                                <div class="patient-name"><b>${patientName}</b></div>
+                                <div class="graft-count"><i>Graft: </i>${graft_count}</div>
+                                <div class="status"><i>Status:</i> <span class="${statusClass}">${status}</span></div>
+                            </div>
+                        </a>
                     `
                 };
             }

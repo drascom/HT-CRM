@@ -3,6 +3,7 @@ CREATE TABLE users (
   email TEXT NOT NULL UNIQUE,
   username TEXT NOT NULL UNIQUE,
   password TEXT NOT NULL,
+  role TEXT DEFAULT 'user',
   created_at TEXT,
   updated_at TEXT
 );
@@ -46,7 +47,7 @@ CREATE TABLE patient_photos (
   updated_at TEXT
 );
 
-INSERT INTO users (email, username, password, created_at, updated_at) VALUES ('test@example.com', 'admin', '$2y$10$aEtcftk7GMX3bP3DqIRxQ.DmbuVMC.b18q96ziMwSQWyQO/TWuG5a', datetime('now'), datetime('now'));
+INSERT INTO users (email, username, password,role, created_at, updated_at) VALUES ('test@example.com', 'admin', '$2y$10$aEtcftk7GMX3bP3DqIRxQ.DmbuVMC.b18q96ziMwSQWyQO/TWuG5a','admin', datetime('now'), datetime('now'));
 INSERT INTO photo_album_types (name, created_at, updated_at) VALUES ('Pre-Surgery', datetime('now'), datetime('now'));
 INSERT INTO photo_album_types (name, created_at, updated_at) VALUES ('Post-Surgery', datetime('now'), datetime('now'));
 INSERT INTO photo_album_types (name, created_at, updated_at) VALUES ('Follow-up', datetime('now'), datetime('now'));
@@ -62,3 +63,12 @@ INSERT INTO photo_album_types (name, created_at, updated_at) VALUES ('9. Month',
 INSERT INTO photo_album_types (name, created_at, updated_at) VALUES ('10. Month', datetime('now'), datetime('now'));
 INSERT INTO photo_album_types (name, created_at, updated_at) VALUES ('11. Month', datetime('now'), datetime('now'));
 INSERT INTO photo_album_types (name, created_at, updated_at) VALUES ('12. Month', datetime('now'), datetime('now'));
+
+CREATE TABLE settings (
+  key TEXT PRIMARY KEY UNIQUE,
+  value TEXT
+);
+
+INSERT INTO settings (key, value) VALUES ('spreadsheet_id', '1dGY4Ir9TpnGxwfBUnNrytBPDtJl93BWSbU95V2jfWZY');
+INSERT INTO settings (key, value) VALUES ('cache_duration', '300');
+INSERT INTO settings (key, value) VALUES ('cell_range', 'A1:Z');

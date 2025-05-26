@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const statusMessagesDiv = document.getElementById('status-messages');
     const patientIdInput = document.querySelector('#patient-form input[name="id"]');
     const isEditing = patientIdInput !== null;
-    // const surgerySelect = document.getElementById('surgery_id'); // Removed surgery select
+    const patientId = isEditing ? patientIdInput.value : null; // Get patientId if editing
 
     // Function to display messages
     function displayMessage(message, type = 'success') {
@@ -75,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fetch patient data if editing
     if (isEditing) {
-        const patientId = patientIdInput.value;
         fetch(`api.php?entity=patients&action=get&id=${patientId}`)
             .then(response => response.json())
             .then(data => {
@@ -98,68 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-
-    // Handle form submission
-    patientForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
-
-        // Dropzone handles avatar upload separately, so no need to include it here
-
-        const nameInput = document.getElementById('name');
-        if (!nameInput.value.trim()) {
-            displayMessage('Patient name is required.', 'danger');
-            return; // Stop the form submission
-        }
-
-        // Create FormData for other patient details
-        const formData = new FormData();
-        formData.append('entity', 'patients');
-        formData.append('action', isEditing ? 'update' : 'add');
-        if (isEditing) {
-            formData.append('id', patientIdInput.value);
-        } else {
-            formData.append('user_id', <?php echo json_encode($_SESSION['user_id']); ?>);
-        }
-        formData.append('name', document.getElementById('name').value);
-        formData.append('dob', document.getElementById('dob').value);
-        // Do NOT append avatar here, Dropzone handles it
-
-        fetch('api.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    displayMessage(data.message, 'success');
-                    // Redirect after a short delay on success
-                    setTimeout(() => {
-                        window.location.href = 'patients.php';
-                    }, 1500);
-                } else {
-                    displayMessage(`Error: ${data.error || data.message}`, 'danger');
-                }
-            })
-            .catch(error => {
-                console.error('Error submitting form:', error);
-                displayMessage('An error occurred while saving patient data.', 'danger');
-            });
-    });
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const patientForm = document.getElementById('patient-form');
-    const statusMessagesDiv = document.getElementById('status-messages');
-    const patientIdInput = document.querySelector('#patient-form input[name="id"]');
-    const isEditing = patientIdInput !== null;
-    const patientId = isEditing ? patientIdInput.value : null; // Get patientId if editing
-
-    // Function to display messages
-    function displayMessage(message, type = 'success') {
-        statusMessagesDiv.innerHTML = `<div class="alert alert-${type}">${message}</div>`;
-    }
 
     // Initialize Dropzone for avatar upload
     if (typeof Dropzone !== 'undefined') {
@@ -373,34 +310,5 @@ document.addEventListener('DOMContentLoaded', function() {
         displayMessage('File upload functionality is not available because Dropzone.js failed to load.',
             'danger');
     }
-
-
-    // Fetch patient data if editing (keep this part to populate other fields)
-    if (isEditing && patientId) {
-        fetch(`api.php?entity=patients&action=get&id=${patientId}`)
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    const patient = data.patient;
-                    document.getElementById('name').value = patient.name;
-                    document.getElementById('dob').value = patient.dob;
-                    // Removed surgery_id handling
-
-                    // The Dropzone init function now handles displaying the avatar
-                    // No need to display the current avatar here anymore
-                    // The Dropzone init function will fetch and display it as a mock file
-                } else {
-                    displayMessage(`Error loading patient: ${data.error}`, 'danger');
-                }
-            })
-            .catch(error => {
-                console.error('Error fetching patient:', error);
-                displayMessage('An error occurred while loading patient data.', 'danger');
-            });
-    }
-
-
 });
 </script>
-
-<?php require_once 'includes/footer.php'; ?>

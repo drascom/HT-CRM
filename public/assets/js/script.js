@@ -39,3 +39,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const loadingSpinner = document.getElementById('loading-spinner');
+    const mainContent = document.getElementById('main-content');
+
+    if (loadingSpinner && mainContent) {
+        loadingSpinner.style.display = 'none'; // Hide the spinner
+        mainContent.style.display = 'block'; // Show the main content
+    }
+});

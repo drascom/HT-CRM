@@ -111,3 +111,18 @@ body {
     /* text-align: center; */
     vertical-align: middle;
 }
+
+/* Loading Spinner and Main Content Visibility */
+#loading-spinner {
+    /* Basic styling for the spinner container */
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column; /* Stack spinner and text vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    min-height: 150px; /* Give it some height */
+    margin-top: 50px; /* Add some space from the top */
+}
+
+#main-content {
+    display: none; /* Initially hide the main content */
+}

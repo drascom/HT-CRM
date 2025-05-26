@@ -80,9 +80,11 @@ document.addEventListener('DOMContentLoaded', function() {
                                         <a href="add_edit_patient.php?id=${patient.id}" class="btn btn-sm btn-warning">
                                             <i class="fas fa-edit me-1"></i>Edit
                                         </a>
+                                        <?php if (is_admin()): ?>
                                         <button class="btn btn-sm btn-danger delete-patient-btn" data-patient-id="${patient.id}">
                                             <i class="fas fa-trash-alt me-1"></i>Delete
                                         </button>
+                                        <?php endif; ?>
                                         <a href="patient.php?id=${patient.id}" class="btn btn-sm btn-info">
                                             <i class="fas fa-camera me-1"></i>Photos
                                         </a>

@@ -51,7 +51,7 @@ function handle_patients($action, $method, $db)
                 if ($id) {
                     $stmt = $db->prepare("DELETE FROM patients WHERE id = ?");
                     $stmt->execute([$id]);
-                    return ['success' => true];
+                    return ['success' => true, 'message' => 'Patient deleted successfully.'];
                 }
 
                 return ['success' => false, 'error' => 'ID is required.'];
@@ -187,5 +187,5 @@ function handle_patients($action, $method, $db)
             break;
     }
 
-    return ['success' => false, 'error' => 'Invalid request'];
+    return ['success' => false, 'error' => "Invalid request for action '{$action}' with method '{$method}'."];
 }

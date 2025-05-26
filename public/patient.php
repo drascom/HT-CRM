@@ -25,8 +25,10 @@ require_once 'includes/header.php';
 <div class="container mt-4">
     <div class="d-flex justify-content-between align-items-center mb-4 border bg-light p-3 rounded">
         <div class="d-flex align-items-center">
-            <img id="patient-avatar" src="" alt="Patient Avatar"
-                style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px; display: none;">
+            <a href="add_edit_patient.php?id=<?php echo htmlspecialchars($patient_id); ?>">
+                <img id="patient-avatar" src="" alt="Patient Avatar"
+                    style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px; display: none;">
+            </a>
             <h2 id="page-title" class="mb-0">Patient Profile</h2>
         </div>
         <a href="add_edit_patient.php?id=<?php echo htmlspecialchars($patient_id); ?>" class="btn btn-warning btn-sm">
@@ -213,8 +215,10 @@ document.addEventListener('DOMContentLoaded', function() {
                             <td>${sanitizeHTML(surgery.notes || '')}</td>
                             <td>
                                 <a href="add_edit_surgery.php?id=${surgery.id}" class="btn btn-sm btn-warning me-2"><i class="fas fa-edit me-1"></i>Edit</a>
-                                <button class="btn btn-sm btn-danger delete-item-btn" data-id="${surgery.id}" data-type="surgery"><i class="fas fa-trash-alt me-1"></i>Delete</button>
-                            </td>
+                                <?php if (is_admin()): ?>
+                                     <button class="btn btn-sm btn-danger delete-item-btn" data-id="${surgery.id}" data-type="surgery"><i class="fas fa-trash-alt me-1"></i>Delete</button>
+                                <?php endif; ?>
+                              </td>
                         `;
                     surgeriesTableBody.appendChild(row);
                 });

@@ -30,6 +30,8 @@
                     <ul class="navbar-nav mx-auto">
                         <?php if (is_logged_in()): ?>
                         <li class="nav-item">
+                            <a class="nav-link" href="google.php"><i class="fas fa-file-excel me-1"></i>Sheet</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="calendar.php"><i class="fas fa-calendar me-1"></i>Calendar</a>
                         </li>
@@ -38,10 +40,19 @@
                         <li class="nav-item">
                             <a class="nav-link" href="patients.php"><i class="fas fa-users me-1"></i>Patients</a>
                         </li>
+                        <?php if (is_admin()) {
+                                echo '
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="users.php"><i class="fas fa-users me-1"></i>Users</a>
+                                </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="settings.php"><i class="fas fa-cog me-1"></i>Settings</a>
-                        </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="settings.php"><i class="fas fa-cog me-1"></i>Settings</a>
+                                </li>
+                        ';
+                            }
+                            ?>
+
 
                         <?php endif; ?>
                     </ul>

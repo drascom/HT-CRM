@@ -13,7 +13,7 @@ function handle_photos($action, $method, $db)
                     $stmt->execute([$patient_id, $album_type_id, $file_path]);
                     return ['success' => true, 'id' => $db->lastInsertId()];
                 }
-                return ['success' => false, 'error' => 'All fields are required.'];
+                return ['success' => false, 'error' => 'patient_id, photo_album_type_id, and file_path are required.'];
             }
             break;
 
@@ -88,14 +88,14 @@ function handle_photos($action, $method, $db)
                 $id = $_GET['id'] ?? null;
                 if ($id) {
                     $stmt = $db->prepare("
-                        SELECT pp.*, pat.name AS album_type 
-                        FROM patient_photos pp 
-                        LEFT JOIN photo_album_types pat ON pp.photo_album_type_id = pat.id 
+                        SELECT pp.*, pat.name AS album_type
+                        FROM patient_photos pp
+                        LEFT JOIN photo_album_types pat ON pp.photo_album_type_id = pat.id
                         WHERE pp.id = ?
                     ");
                     $stmt->execute([$id]);
                     $data = $stmt->fetch(PDO::FETCH_ASSOC);
-                    return $data ? ['success' => true, 'photo' => $data] : ['success' => false, 'error' => 'Not found'];
+                    return $data ? ['success' => true, 'photo' => $data] : ['success' => false, 'error' => "Photo not found with ID: {$id}"];
                 }
                 return ['success' => false, 'error' => 'ID is required.'];
             }
@@ -106,9 +106,9 @@ function handle_photos($action, $method, $db)
                 $patient_id = $_GET['patient_id'] ?? null;
                 if ($patient_id) {
                     $stmt = $db->prepare("
-                        SELECT pp.*, pat.name AS album_type 
-                        FROM patient_photos pp 
-                        LEFT JOIN photo_album_types pat ON pp.photo_album_type_id = pat.id 
+                        SELECT pp.*, pat.name AS album_type
+                        FROM patient_photos pp
+                        LEFT JOIN photo_album_types pat ON pp.photo_album_type_id = pat.id
                         WHERE pp.patient_id = ?
                         ORDER BY pp.created_at DESC
                     ");
@@ -116,9 +116,9 @@ function handle_photos($action, $method, $db)
                     return ['success' => true, 'photos' => $stmt->fetchAll(PDO::FETCH_ASSOC)];
                 } else {
                     $stmt = $db->query("
-                        SELECT pp.*, pat.name AS album_type 
-                        FROM patient_photos pp 
-                        LEFT JOIN photo_album_types pat ON pp.photo_album_type_id = pat.id 
+                        SELECT pp.*, pat.name AS album_type
+                        FROM patient_photos pp
+                        LEFT JOIN photo_album_types pat ON pp.photo_album_type_id = pat.id
                         ORDER BY pp.created_at DESC
                     ");
                     return ['success' => true, 'photos' => $stmt->fetchAll(PDO::FETCH_ASSOC)];
@@ -127,5 +127,5 @@ function handle_photos($action, $method, $db)
             break;
     }
 
-    return ['success' => false, 'error' => 'Invalid request'];
+    return ['success' => false, 'error' => "Invalid request for action '{$action}' with method '{$method}'."];
 }

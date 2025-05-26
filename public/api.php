@@ -33,40 +33,47 @@ if (!is_logged_in()) {
 }
 
 // Main API routing
-$entity = $_GET['entity'] ?? $_POST['entity'] ?? null;
-$action = $_GET['action'] ?? $_POST['action'] ?? null;
+$entity = null;
+$action = null;
 $method = $_SERVER['REQUEST_METHOD'];
-$response = ['success' => false, 'message' => 'Invalid request'];
+
+if ($method === 'POST') {
+    // For standard POST requests, entity and action should be in $_POST
+    $entity = $_POST['entity'] ?? null;
+    $action = $_POST['action'] ?? null;
+} elseif ($method === 'PUT') {
+    // For PUT requests, read from the request body (assuming JSON)
+    $input = json_decode($request_body, true);
+    if ($input) {
+        $entity = $input['entity'] ?? null;
+        $action = $input['action'] ?? null;
+    }
+} else { // For GET and other methods, still check $_GET
+    $entity = $_GET['entity'] ?? null;
+    $action = $_GET['action'] ?? null;
+}
+
+$response = ['success' => false, 'message' => "Invalid request: Missing entity or action.", 'details' => ['entity' => $entity, 'action' => $action, 'method' => $method]];
 
 if ($entity && $action) {
     $handler_file = __DIR__ . "/api_handlers/{$entity}.php";
     $handler_function = "handle_{$entity}";
 
     // Log file check
-    $log_message = "Checking for handler file: " . $handler_file;
-    log_response(['log' => $log_message]);
-
     if (file_exists($handler_file)) {
-        $log_message = "Handler file found: " . $handler_file;
-        log_response(['log' => $log_message]);
         include_once $handler_file;
 
         // Log function check
-        $log_message = "Checking for handler function: " . $handler_function;
-        log_response(['log' => $log_message]);
-
         if (function_exists($handler_function)) {
-            $log_message = "Handler function found: " . $handler_function;
-            log_response(['log' => $log_message]);
             $db = get_db();
             $response = $handler_function($action, $method, $db);
         } else {
-            $log_message = "Handler function not found: " . $handler_function;
+            $log_message = "Handler function not found for entity '{$entity}', action '{$action}', method '{$method}': " . $handler_function;
             log_response(['log' => $log_message]);
             $response = ['success' => false, 'message' => "Function {$handler_function} not found."];
         }
     } else {
-        $log_message = "Handler file not found: " . $handler_file;
+        $log_message = "Handler file not found for entity '{$entity}', action '{$action}', method '{$method}': " . $handler_file;
         log_response(['log' => $log_message]);
         $response = ['success' => false, 'message' => "Handler for {$entity} not found."];
     }

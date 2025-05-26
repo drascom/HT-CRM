@@ -1,6 +1,6 @@
 <?php
 // Database connection details for SQLite
-$database_file = __DIR__ . '/../database.sqlite';
+$database_file = __DIR__ . '/database.sqlite'; // Correct path to database file in includes folder
 
 $db_exists = file_exists($database_file);
 
@@ -16,7 +16,7 @@ try {
 
     // If the database file did not exist, initialize it from database.sql
     if (!$db_exists) {
-        $sql_file = __DIR__ . '/../database.sql';
+        $sql_file = __DIR__ . '/database.sql';
         if (file_exists($sql_file)) {
             $sql = file_get_contents($sql_file);
             if ($sql !== false) {
@@ -45,7 +45,7 @@ if (!$db_exists) {
     $admin_password_hashed = password_hash($admin_password_raw, PASSWORD_DEFAULT);
 
     try {
-        $stmt = $pdo->prepare("INSERT INTO users (username, email, password, created_at, updated_at) VALUES (?, ?, datetime('now'), datetime('now'))");
+        $stmt = $pdo->prepare("INSERT INTO users (username, email, password, role, created_at, updated_at) VALUES (?, ?, ?, 'admin', datetime('now'), datetime('now'))");
         $stmt->execute([$admin_username, $admin_email, $admin_password_hashed]);
         error_log("Initial admin user 'admin' created with password '1111'. PLEASE CHANGE THIS PASSWORD IMMEDIATELY.");
     } catch (\PDOException $e) {
