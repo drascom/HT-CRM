@@ -23,7 +23,8 @@ $user_id = $_GET['user_id'];
         <div class="col-md-6">
             <h4>Update Profile Information</h4>
             <form id="updateProfileForm">
-                <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
+                <input type="hidden" name="id" value="<?php echo $user_id; ?>">
+                <input type="hidden" name="role" id="role" value="">
                 <div class="form-group">
                     <label for="username">Username:</label>
                     <input type="text" class="form-control" id="username" name="username" value="">
@@ -40,7 +41,6 @@ $user_id = $_GET['user_id'];
             <h4>Change Password</h4>
             <form id="changePasswordForm">
                 <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
-                <input type="hidden" class="form-control" id="current_password" name="current_password" required>
 
                 <div class="form-group">
                     <label for="new_password">New Password:</label>
@@ -61,13 +61,26 @@ $user_id = $_GET['user_id'];
 document.getElementById('updateProfileForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const formData = new FormData(this);
-    formData.append('entity', 'users');
-    formData.append('action', 'update_profile');
+    const userId = document.getElementById('updateProfileForm').querySelector('input[name="id"]').value;
+    const username = document.getElementById('username').value;
+    const role = document.getElementById('role').value;
+    const email = document.getElementById('email').value;
+
+    const userData = {
+        id: userId,
+        username: username,
+        email: email,
+        role: role,
+        entity: 'users',
+        action: 'update'
+    };
 
     fetch('api.php', {
             method: 'POST',
-            body: formData
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(userData)
         })
         .then(response => response.json())
         .then(data => {
@@ -76,22 +89,25 @@ document.getElementById('updateProfileForm').addEventListener('submit', function
             if (data.success) {
                 messageDiv.classList.remove('alert-danger');
                 messageDiv.classList.add('alert-success');
-                messageDiv.textContent = data.message;
+                messageDiv.textContent = data.message ||
+                    'Profile updated successfully!'; // Use a default success message
                 // Update username in navbar if it was changed
-                if (data.message.includes('Username updated')) {
+                if (data.message && data.message.includes('Username updated')) {
                     // This requires updating the header dynamically or reloading the page
                     // For simplicity, we'll just show the message. A full solution
                     // might involve a page reload or more complex JS DOM manipulation.
                     // location.reload(); // Option to reload page to show updated username in header
                 }
             } else {
+                console.error('Error updating profile:', data.message || data.error);
                 messageDiv.classList.remove('alert-success');
                 messageDiv.classList.add('alert-danger');
-                messageDiv.textContent = data.error || data.message;
+                messageDiv.textContent = data.error || data.message ||
+                    'An error occurred while updating the profile.'; // Use a default error message
             }
         })
         .catch(error => {
-            console.error('Error:', error);
+            console.error('Error updating profile:', error);
             const messageDiv = document.getElementById('message');
             messageDiv.style.display = 'block';
             messageDiv.classList.remove('alert-success');
@@ -103,13 +119,24 @@ document.getElementById('updateProfileForm').addEventListener('submit', function
 document.getElementById('changePasswordForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const formData = new FormData(this);
-    formData.append('entity', 'users');
-    formData.append('action', 'change_password');
+    const userId = document.getElementById('changePasswordForm').querySelector('input[name="user_id"]').value;
+    const newPassword = document.getElementById('new_password').value;
+    const confirmPassword = document.getElementById('confirm_password').value;
+
+    const passwordData = {
+        user_id: userId,
+        new_password: newPassword,
+        confirm_password: confirmPassword,
+        entity: 'users',
+        action: 'change_password'
+    };
 
     fetch('api.php', {
             method: 'POST',
-            body: formData
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(passwordData)
         })
         .then(response => response.json())
         .then(data => {
@@ -118,19 +145,21 @@ document.getElementById('changePasswordForm').addEventListener('submit', functio
             if (data.success) {
                 messageDiv.classList.remove('alert-danger');
                 messageDiv.classList.add('alert-success');
-                messageDiv.textContent = data.message;
+                messageDiv.textContent = data.message ||
+                    'Password changed successfully!'; // Use a default success message
                 // Clear password fields on success
-                document.getElementById('current_password').value = '';
                 document.getElementById('new_password').value = '';
                 document.getElementById('confirm_password').value = '';
             } else {
+                console.error('Error changing password:', data.message || data.error);
                 messageDiv.classList.remove('alert-success');
                 messageDiv.classList.add('alert-danger');
-                messageDiv.textContent = data.error || data.message;
+                messageDiv.textContent = data.error || data.message ||
+                    'An error occurred while changing the password.'; // Use a default error message
             }
         })
         .catch(error => {
-            console.error('Error:', error);
+            console.error('Error changing password:', error);
             const messageDiv = document.getElementById('message');
             messageDiv.style.display = 'block';
             messageDiv.classList.remove('alert-success');
@@ -141,8 +170,8 @@ document.getElementById('changePasswordForm').addEventListener('submit', functio
 document.addEventListener('DOMContentLoaded', function() {
     const user_id = <?php echo json_encode($user_id); ?>;
     const username = document.getElementById('username');
+    const role = document.getElementById('role');
     const email = document.getElementById('email');
-    const password = document.getElementById('current_password');
     const statusMessagesDiv = document.getElementById('message');
 
     // Function to display messages
@@ -158,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     const user = data.user;
                     username.value = user.username;
                     email.value = user.email;
-                    password.value = user.password
+                    role.value = user.role;
                 } else {
                     displayMessage(`Error loading patient: ${data.error}`, 'danger');
                 }

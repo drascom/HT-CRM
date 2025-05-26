@@ -48,8 +48,10 @@ vendor/
 .git/config.local
 /secrets/
 secrets/
-/vendor/
-vendor/
+/vendor/*
+vendor/*
+/cache/
+cache/*
 database.sqlite
 *.xlsx
 bookings.json
