@@ -9,164 +9,250 @@ if (!is_logged_in()) {
 }
 
 
-$page_title = "All Surgeries";
+$page_title = "Surgeries";
 require_once 'includes/header.php';
 ?>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const surgeriesTable = document.getElementById('surgeries-table');
-        const statusMessagesDiv = document.getElementById('status-messages');
+<!-- Status Messages -->
+<div id="status-messages">
+    <!-- Success or error messages will be displayed here -->
+</div>
 
-        // Function to display messages
-        function displayMessage(message, type = 'success') {
-            statusMessagesDiv.innerHTML = `<div class="alert alert-${type}">${message}</div>`;
-        }
+<!-- Page Header -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="mb-0">
+        <i class="fas fa-hospital me-2 text-primary"></i>
+        Surgeries
+    </h2>
+    <a href="add_edit_surgery.php" class="btn btn-success">
+        <i class="fas fa-plus-circle me-1"></i>
+        <span class="d-none d-sm-inline">Add New Surgery</span>
+        <span class="d-inline d-sm-none">Add</span>
+    </a>
+</div>
 
-        // Function to fetch and display surgeries
-        // Function to format date as DD, MMM / YY
-        function formatDate(dateString) {
-            const options = {
-                day: '2-digit',
-                month: 'short',
-                year: '2-digit'
-            };
-            const date = new Date(dateString);
-            return date.toLocaleDateString('en-GB', options).replace(/\//g, ' / ');
-        }
-
-        function fetchAndDisplaySurgeries() {
-            fetch('api.php?entity=surgeries&action=list')
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        const surgeries = data.surgeries;
-                        let tableRows = '';
-                        surgeries.forEach(surgery => {
-                            tableRows += `
-                            <tr data-surgery-id="${surgery.id}">
-                                <td>${formatDate(surgery.date)}</td>
-                                <td>
-                                    ${surgery.patient_name ? `<a href="patient.php?id=${surgery.patient_id}">${surgery.patient_name}</a>` : 'N/A'}
-                                </td>
-                                <td class="status-${surgery.status}">${surgery.status}</td>
-                                <td>
-                                    <a href="add_edit_surgery.php?id=${surgery.id}" class="btn btn-sm btn-warning me-2"><i class="fas fa-edit me-1"></i>Edit</a>
-                                    <?php if (is_admin()): ?>
-                                    <button class="btn btn-sm btn-danger delete-surgery-btn" data-surgery-id="${surgery.id}"><i class="fas fa-trash-alt me-1"></i>Delete</button>
-                                    <?php endif; ?>
-                                </td>
-                            </tr>
-                        `;
-                        });
-                        surgeriesTable.querySelector('tbody').innerHTML = tableRows;
-                    } else {
-                        displayMessage(`Error loading surgeries: ${data.error}`, 'danger');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error fetching surgeries:', error);
-                    displayMessage('An error occurred while loading surgery data.', 'danger');
-                });
-        }
-
-        // Delete surgery function
-        surgeriesTable.addEventListener('click', function(event) {
-            if (event.target.classList.contains('delete-surgery-btn')) {
-                const surgeryId = event.target.dataset.surgeryId;
-                if (confirm('Are you sure you want to delete this surgery?')) {
-                    const formData = new FormData();
-                    formData.append('entity', 'surgeries');
-                    formData.append('action', 'delete');
-                    formData.append('id', surgeryId);
-
-                    fetch('api.php', {
-                            method: 'POST',
-                            body: formData
-                        })
-                        .then(response => response.json())
-                        .then(data => {
-                            if (data.success) {
-                                displayMessage(data.message, 'success');
-                                fetchAndDisplaySurgeries(); // Refresh the surgery list
-                            } else {
-                                displayMessage(`Error deleting surgery: ${data.error}`, 'danger');
-                            }
-                        })
-                        .catch(error => {
-                            console.error('Error deleting surgery:', error);
-                            displayMessage('An error occurred while deleting the surgery.', 'danger');
-                        });
-                }
-            }
-        });
-
-        fetchAndDisplaySurgeries(); // Initial load of surgeries
-
-        // Search functionality
-        const surgerySearchInput = document.getElementById('surgery-search');
-        const searchSurgeryBtn = document.getElementById('search-surgery-btn');
-
-        function filterSurgeries() {
-            const searchTerm = surgerySearchInput.value.toLowerCase();
-            const rows = surgeriesTable.querySelectorAll('tbody tr');
-
-            rows.forEach(row => {
-                const date = row.cells[0].textContent.toLowerCase();
-                const patientName = row.cells[1].textContent.toLowerCase();
-                const status = row.cells[2].textContent.toLowerCase();
-
-                if (date.includes(searchTerm) || patientName.includes(searchTerm) || status.includes(
-                        searchTerm)) {
-                    row.style.display = '';
-                } else {
-                    row.style.display = 'none';
-                }
-            });
-        }
-
-        surgerySearchInput.addEventListener('keyup', function(event) {
-            const searchTerm = surgerySearchInput.value.toLowerCase();
-            if (searchTerm.length >= 2 || searchTerm.length === 0) {
-                filterSurgeries();
-            } else if (searchTerm.length === 1) {
-                // If only one character, clear the filter
-                const rows = surgeriesTable.querySelectorAll('tbody tr');
-                rows.forEach(row => {
-                    row.style.display = '';
-                });
-            }
-        });
-    });
-</script>
-
-<div class="container mt-4">
-    <h2 class="mb-2">Surgeries</h2>
-    <div id="status-messages"></div> <!-- Added status messages div -->
-    <div class="row mb-3">
-        <div class="col-md-3">
-            <a href="add_edit_surgery.php" class="btn btn-success mb-3"><i class="fas fa-plus-circle me-1"></i>Add New
-                Surgery</a>
+<!-- Search Section -->
+<div class="search-section">
+    <div class="row align-items-center">
+        <div class="col-md-8">
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="text" id="surgery-search" class="form-control"
+                       placeholder="Search surgeries by date, patient, or status...">
+            </div>
         </div>
-        <div class="col-md-6">
-            <input type="text" id="surgery-search" class="form-control" placeholder="Search surgeries...">
+        <div class="col-md-4 mt-3 mt-md-0">
+            <div class="text-muted small">
+                <i class="fas fa-info-circle me-1"></i>
+                <span id="surgery-count">Loading...</span> surgeries found
+            </div>
         </div>
     </div>
+</div>
 
-    <table class="table table-striped" id="surgeries-table">
+<!-- Surgeries Table -->
+<div class="table-responsive">
+    <table class="table table-hover" id="surgeries-table">
         <thead>
             <tr>
                 <th>Date</th>
                 <th>Patient Name</th>
                 <th>Status</th>
-                <th>Actions</th>
+                <th class="text-center">Actions</th>
             </tr>
         </thead>
         <tbody>
             <!-- Surgery rows will be loaded here by JavaScript -->
         </tbody>
     </table>
-
 </div>
 
+<!-- Loading Spinner -->
+<div id="loading-spinner" style="display: none;">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="mt-3 text-muted">Loading surgeries...</p>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const surgeriesTable = document.getElementById('surgeries-table');
+    const statusMessagesDiv = document.getElementById('status-messages');
+
+    // Function to display messages
+    function displayMessage(message, type = 'success') {
+        statusMessagesDiv.innerHTML = `<div class="alert alert-${type}">${message}</div>`;
+    }
+
+    // Function to fetch and display surgeries
+    // Function to format date as DD, MMM / YY
+    function formatDate(dateString) {
+        const options = {
+            day: '2-digit',
+            month: 'short',
+            year: '2-digit'
+        };
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-GB', options).replace(/\//g, ' / ');
+    }
+
+    function fetchAndDisplaySurgeries() {
+        // Show loading spinner
+        document.getElementById('loading-spinner').style.display = 'flex';
+        surgeriesTable.style.display = 'none';
+
+        fetch('api.php?entity=surgeries&action=list')
+            .then(response => response.json())
+            .then(data => {
+                // Hide loading spinner
+                document.getElementById('loading-spinner').style.display = 'none';
+                surgeriesTable.style.display = 'table';
+
+                if (data.success) {
+                    const surgeries = data.surgeries;
+                    let tableRows = '';
+
+                    surgeries.forEach(surgery => {
+                        tableRows += `
+                            <tr data-surgery-id="${surgery.id}">
+                                <td>
+                                    <span class="fw-medium">${formatDate(surgery.date)}</span>
+                                </td>
+                                <td>
+                                    ${surgery.patient_name ?
+                                        `<a href="patient.php?id=${surgery.patient_id}" class="fw-medium text-decoration-none">
+                                            <span class="text-truncate-mobile">${surgery.patient_name}</span>
+                                        </a>` :
+                                        '<span class="text-muted">N/A</span>'
+                                    }
+                                </td>
+                                <td>
+                                    <span class="badge bg-${getStatusColor(surgery.status)} status-${surgery.status}">
+                                        ${surgery.status}
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="Surgery Actions">
+                                        <a href="add_edit_surgery.php?id=${surgery.id}"
+                                           class="btn btn-sm btn-outline-warning"
+                                           title="Edit Surgery">
+                                            <i class="fas fa-edit"></i>
+                                            <span class="d-none d-lg-inline ms-1">Edit</span>
+                                        </a>
+                                        <?php if (is_admin()): ?>
+                                        <button class="btn btn-sm btn-outline-danger delete-surgery-btn"
+                                                data-surgery-id="${surgery.id}"
+                                                title="Delete Surgery">
+                                            <i class="fas fa-trash-alt"></i>
+                                            <span class="d-none d-lg-inline ms-1">Delete</span>
+                                        </button>
+                                        <?php endif; ?>
+                                    </div>
+                                </td>
+                            </tr>
+                        `;
+                    });
+
+                    surgeriesTable.querySelector('tbody').innerHTML = tableRows;
+
+                    // Update surgery count
+                    document.getElementById('surgery-count').textContent = surgeries.length;
+                } else {
+                    displayMessage(`Error loading surgeries: ${data.error}`, 'danger');
+                    document.getElementById('surgery-count').textContent = '0';
+                }
+            })
+            .catch(error => {
+                // Hide loading spinner
+                document.getElementById('loading-spinner').style.display = 'none';
+                surgeriesTable.style.display = 'table';
+
+                console.error('Error fetching surgeries:', error);
+                displayMessage('An error occurred while loading surgery data.', 'danger');
+                document.getElementById('surgery-count').textContent = '0';
+            });
+    }
+
+    // Helper function to get status color for badges
+    function getStatusColor(status) {
+        switch(status.toLowerCase()) {
+            case 'completed': return 'success';
+            case 'booked': return 'primary';
+            case 'cancelled': return 'danger';
+            case 'in-progress': return 'warning';
+            default: return 'secondary';
+        }
+    }
+
+    // Delete surgery function
+    surgeriesTable.addEventListener('click', function(event) {
+        if (event.target.classList.contains('delete-surgery-btn')) {
+            const surgeryId = event.target.dataset.surgeryId;
+            if (confirm('Are you sure you want to delete this surgery?')) {
+                const formData = new FormData();
+                formData.append('entity', 'surgeries');
+                formData.append('action', 'delete');
+                formData.append('id', surgeryId);
+
+                fetch('api.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            displayMessage(data.message, 'success');
+                            fetchAndDisplaySurgeries(); // Refresh the surgery list
+                        } else {
+                            displayMessage(`Error deleting surgery: ${data.error}`, 'danger');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error deleting surgery:', error);
+                        displayMessage('An error occurred while deleting the surgery.', 'danger');
+                    });
+            }
+        }
+    });
+
+    fetchAndDisplaySurgeries(); // Initial load of surgeries
+
+    // Search functionality
+    const surgerySearchInput = document.getElementById('surgery-search');
+    const searchSurgeryBtn = document.getElementById('search-surgery-btn');
+
+    function filterSurgeries() {
+        const searchTerm = surgerySearchInput.value.toLowerCase();
+        const rows = surgeriesTable.querySelectorAll('tbody tr');
+
+        rows.forEach(row => {
+            const date = row.cells[0].textContent.toLowerCase();
+            const patientName = row.cells[1].textContent.toLowerCase();
+            const status = row.cells[2].textContent.toLowerCase();
+
+            if (date.includes(searchTerm) || patientName.includes(searchTerm) || status.includes(
+                    searchTerm)) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    }
+
+    surgerySearchInput.addEventListener('keyup', function(event) {
+        const searchTerm = surgerySearchInput.value.toLowerCase();
+        if (searchTerm.length >= 2 || searchTerm.length === 0) {
+            filterSurgeries();
+        } else if (searchTerm.length === 1) {
+            // If only one character, clear the filter
+            const rows = surgeriesTable.querySelectorAll('tbody tr');
+            rows.forEach(row => {
+                row.style.display = '';
+            });
+        }
+    });
+});
+</script>
 <?php require_once 'includes/footer.php'; ?>

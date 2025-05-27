@@ -7,38 +7,74 @@ if (!is_logged_in()) {
     exit();
 }
 
+$page_title = "Patients";
 require_once 'includes/header.php';
 ?>
-<div class="container mt-4">
-    <div id="status-messages">
-        <!-- Success or error messages will be displayed here -->
-    </div>
-    <h2 class="mb-2">Patients</h2>
-    <div class="row mb-3">
-        <div class="col-md-3">
-            <a href="add_edit_patient.php" class="btn btn-success mb-3"><i class="fas fa-plus-circle me-1"></i>Add New
-                Record</a>
+
+<!-- Status Messages -->
+<div id="status-messages">
+    <!-- Success or error messages will be displayed here -->
+</div>
+
+<!-- Page Header -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="mb-0">
+        <i class="fas fa-users me-2 text-primary"></i>
+        Patients
+    </h2>
+    <a href="add_edit_patient.php" class="btn btn-success">
+        <i class="fas fa-plus-circle me-1"></i>
+        <span class="d-none d-sm-inline">Add New Patient</span>
+        <span class="d-inline d-sm-none">Add</span>
+    </a>
+</div>
+
+<!-- Search Section -->
+<div class="search-section">
+    <div class="row align-items-center">
+        <div class="col-md-8">
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="text" id="patient-search" class="form-control"
+                       placeholder="Search patients by name or date of birth...">
+            </div>
         </div>
-        <div class="col-md-6">
-            <input type="text" id="patient-search" class="form-control" placeholder="Search patients...">
+        <div class="col-md-4 mt-3 mt-md-0">
+            <div class="text-muted small">
+                <i class="fas fa-info-circle me-1"></i>
+                <span id="patient-count">Loading...</span> patients found
+            </div>
         </div>
     </div>
 </div>
 
-<table class="table table-striped" id="patients-table">
-    <thead>
-        <tr>
-            <th>Avatar</th>
-            <th>Name</th>
-            <th>DOB</th>
-            <th>Last Surgery Date</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- Patient rows will be loaded here via JavaScript -->
-    </tbody>
-</table>
+<!-- Patients Table -->
+<div class="table-responsive">
+    <table class="table table-hover" id="patients-table">
+        <thead>
+            <tr>
+                <th>Avatar</th>
+                <th>Name</th>
+                <th>Date of Birth</th>
+                <th>Last Surgery</th>
+                <th class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Patient rows will be loaded here via JavaScript -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Loading Spinner -->
+<div id="loading-spinner" style="display: none;">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="mt-3 text-muted">Loading patients...</p>
+</div>
 
 
 <script>
@@ -53,54 +89,92 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to fetch and display patients
     function fetchAndDisplayPatients() {
+        // Show loading spinner
+        document.getElementById('loading-spinner').style.display = 'flex';
+        patientsTable.style.display = 'none';
+
         fetch('api.php?entity=patients&action=list')
             .then(response => response.json())
             .then(data => {
+                // Hide loading spinner
+                document.getElementById('loading-spinner').style.display = 'none';
+                patientsTable.style.display = 'table';
+
                 if (data.success) {
                     const patients = data.patients;
                     let tableRows = '';
+
                     patients.forEach(patient => {
                         const avatarHtml = patient.avatar ?
-                            `<img src="${patient.avatar}" alt="Avatar" style="width: 50px; height: 50px; border-radius: 50%;">` :
-                            `<img src="assets/avatar.png" alt="Default Avatar" style="width: 50px; height: 50px; border-radius: 50%;">`;
+                            `<img src="${patient.avatar}" alt="Avatar" class="avatar">` :
+                            `<img src="assets/avatar.png" alt="Default Avatar" class="avatar">`;
+
                         tableRows += `
                             <tr data-patient-id="${patient.id}" data-patient-name="${patient.name}" data-patient-dob="${patient.dob}">
                                 <td>
                                     ${avatarHtml}
                                 </td>
                                 <td>
-                                    <a href="patient.php?id=${patient.id}">${patient.name}</a>
+                                    <a href="patient.php?id=${patient.id}" class="fw-medium text-decoration-none">
+                                        ${patient.name}
+                                    </a>
                                 </td>
-                                <td>${patient.dob || ''}</td>
                                 <td>
-                                    <a href="patient.php?id=${patient.id}">${patient.last_surgery_date || 'N/A'}</a>
+                                    <span class="text-truncate-mobile">${patient.dob || 'N/A'}</span>
+                                </td>
+                                <td>
+                                    ${patient.last_surgery_date ?
+                                        `<a href="patient.php?id=${patient.id}" class="text-decoration-none">
+                                            <span class="text-truncate-mobile">${patient.last_surgery_date}</span>
+                                        </a>` :
+                                        '<span class="text-muted">No surgeries</span>'
+                                    }
                                 </td>
                                 <td>
                                     <div class="btn-group" role="group" aria-label="Patient Actions">
-                                        <a href="add_edit_patient.php?id=${patient.id}" class="btn btn-sm btn-warning">
-                                            <i class="fas fa-edit me-1"></i>Edit
+                                        <a href="add_edit_patient.php?id=${patient.id}"
+                                           class="btn btn-sm btn-outline-warning"
+                                           title="Edit Patient">
+                                            <i class="fas fa-edit"></i>
+                                            <span class="d-none d-lg-inline ms-1">Edit</span>
                                         </a>
                                         <?php if (is_admin()): ?>
-                                        <button class="btn btn-sm btn-danger delete-patient-btn" data-patient-id="${patient.id}">
-                                            <i class="fas fa-trash-alt me-1"></i>Delete
+                                        <button class="btn btn-sm btn-outline-danger delete-patient-btn"
+                                                data-patient-id="${patient.id}"
+                                                title="Delete Patient">
+                                            <i class="fas fa-trash-alt"></i>
+                                            <span class="d-none d-lg-inline ms-1">Delete</span>
                                         </button>
                                         <?php endif; ?>
-                                        <a href="patient.php?id=${patient.id}" class="btn btn-sm btn-info">
-                                            <i class="fas fa-camera me-1"></i>Photos
+                                        <a href="patient.php?id=${patient.id}"
+                                           class="btn btn-sm btn-outline-info"
+                                           title="View Photos">
+                                            <i class="fas fa-camera"></i>
+                                            <span class="d-none d-lg-inline ms-1">Photos</span>
                                         </a>
                                     </div>
                                 </td>
                             </tr>
                         `;
                     });
+
                     patientsTable.querySelector('tbody').innerHTML = tableRows;
+
+                    // Update patient count
+                    document.getElementById('patient-count').textContent = patients.length;
                 } else {
                     displayMessage(`Error loading patients: ${data.error}`, 'danger');
+                    document.getElementById('patient-count').textContent = '0';
                 }
             })
             .catch(error => {
+                // Hide loading spinner
+                document.getElementById('loading-spinner').style.display = 'none';
+                patientsTable.style.display = 'table';
+
                 console.error('Error fetching patients:', error);
                 displayMessage('An error occurred while loading patient data.', 'danger');
+                document.getElementById('patient-count').textContent = '0';
             });
     }
 

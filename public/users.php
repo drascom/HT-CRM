@@ -15,76 +15,141 @@ if (!is_logged_in() || !is_admin()) {
 // For a dynamic page using API, fetching initially might not be necessary.
 ?>
 
-<?php include __DIR__ . '/includes/header.php'; ?>
+<?php
+$page_title = "User Management";
+include __DIR__ . '/includes/header.php';
+?>
 
+<!-- Status Messages -->
 <div id="status-messages">
     <!-- Success or error messages will be displayed here -->
 </div>
-<h2 class="mb-2">User Management</h2>
-<div class="row mb-3">
-    <div class="col-md-3">
-        <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#userModal" id="addUserBtn"><i
-                class="fas fa-plus-circle me-1"></i>Add User</button>
-    </div>
-    <div class="col-md-6">
-        <input type="text" id="user-search" class="form-control" placeholder="Search users...">
+
+<!-- Page Header -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="mb-0">
+        <i class="fas fa-users me-2 text-primary"></i>
+        User Management
+    </h2>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#userModal" id="addUserBtn">
+        <i class="fas fa-plus-circle me-1"></i>
+        <span class="d-none d-sm-inline">Add User</span>
+    </button>
+</div>
+
+<!-- Search Section -->
+<div class="search-section">
+    <div class="row align-items-center">
+        <div class="col-md-8">
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="text" id="user-search" class="form-control"
+                       placeholder="Search users by email, username, or role...">
+            </div>
+        </div>
+        <div class="col-md-4 mt-3 mt-md-0">
+            <div class="text-muted small">
+                <i class="fas fa-info-circle me-1"></i>
+                <span id="user-count">Loading...</span> users found
+            </div>
+        </div>
     </div>
 </div>
 
-<table class="table table-striped" id="usersTable">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Email</th>
-            <th>Username</th>
-            <th>Role</th>
-            <th>Created At</th>
-            <th>Updated At</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- User rows will be populated by JavaScript -->
-    </tbody>
-</table>
+<!-- Users Table -->
+<div class="table-responsive">
+    <table class="table table-hover" id="usersTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Username</th>
+                <th>Role</th>
+                <th class="d-none d-md-table-cell">Created</th>
+                <th class="d-none d-lg-table-cell">Updated</th>
+                <th class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- User rows will be populated by JavaScript -->
+        </tbody>
+    </table>
+</div>
 
 <!-- User Add/Edit Modal -->
 <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="userModalLabel">Add User</h5>
+                <h5 class="modal-title" id="userModalLabel">
+                    <i class="fas fa-user-plus me-2"></i>
+                    Add User
+                </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form id="userForm">
                     <input type="hidden" id="userId">
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" required>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">
+                                    <i class="fas fa-envelope me-1"></i>
+                                    Email Address
+                                </label>
+                                <input type="email" class="form-control" id="email"
+                                       placeholder="user@example.com" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">
+                                    <i class="fas fa-user me-1"></i>
+                                    Username
+                                </label>
+                                <input type="text" class="form-control" id="username"
+                                       placeholder="Enter username" required>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="username" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" required>
-                        <small class="form-text text-muted" id="passwordHelp">Required for new users. Leave blank to
-                            keep current password when editing.</small>
-                    </div>
-                    <div class="mb-3">
-                        <label for="role" class="form-label">Role</label>
-                        <select class="form-select" id="role" required>
-                            <option value="user">User</option>
-                            <option value="admin">Admin</option>
-                        </select>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="password" class="form-label">
+                                    <i class="fas fa-lock me-1"></i>
+                                    Password
+                                </label>
+                                <input type="password" class="form-control" id="password"
+                                       placeholder="Enter password" required>
+                                <small class="form-text text-muted" id="passwordHelp">
+                                    Required for new users. Leave blank to keep current password when editing.
+                                </small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="role" class="form-label">
+                                    <i class="fas fa-user-tag me-1"></i>
+                                    Role
+                                </label>
+                                <select class="form-select" id="role" required>
+                                    <option value="user">User</option>
+                                    <option value="admin">Admin</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="saveUserBtn">Save User</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <i class="fas fa-times me-1"></i>Close
+                </button>
+                <button type="button" class="btn btn-primary" id="saveUserBtn">
+                    <i class="fas fa-save me-1"></i>Save User
+                </button>
             </div>
         </div>
     </div>
@@ -148,22 +213,35 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         users.forEach(user => {
+            const roleColor = user.role === 'admin' ? 'danger' : 'primary';
             const row = `
                 <tr>
-                    <td>${user.id}</td>
-                    <td>${user.email}</td>
-                    <td>${user.username}</td>
-                    <td>${user.role}</td>
-                    <td>${user.created_at || 'N/A'}</td>
-                    <td>${user.updated_at || 'N/A'}</td>
+                    <td><span class="fw-medium">${user.id}</span></td>
+                    <td><span class="text-truncate-mobile">${user.email}</span></td>
+                    <td><span class="fw-medium">${user.username}</span></td>
+                    <td><span class="badge bg-${roleColor}">${user.role}</span></td>
+                    <td class="d-none d-md-table-cell"><small>${user.created_at || 'N/A'}</small></td>
+                    <td class="d-none d-lg-table-cell"><small>${user.updated_at || 'N/A'}</small></td>
                     <td>
-                        <button class="btn btn-sm btn-warning edit-user-btn" data-id="${user.id}" data-bs-toggle="modal" data-bs-target="#userModal">Edit</button>
-                        <button class="btn btn-sm btn-danger delete-user-btn" data-id="${user.id}">Delete</button>
+                        <div class="btn-group" role="group">
+                            <button class="btn btn-sm btn-outline-warning edit-user-btn" data-id="${user.id}"
+                                    data-bs-toggle="modal" data-bs-target="#userModal" title="Edit User">
+                                <i class="fas fa-edit"></i>
+                                <span class="d-none d-lg-inline ms-1">Edit</span>
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger delete-user-btn" data-id="${user.id}" title="Delete User">
+                                <i class="fas fa-trash-alt"></i>
+                                <span class="d-none d-lg-inline ms-1">Delete</span>
+                            </button>
+                        </div>
                     </td>
                 </tr>
             `;
             usersTableBody.innerHTML += row;
         });
+
+        // Update user count
+        document.getElementById('user-count').textContent = users.length;
     }
 
     // Function to reset the user form

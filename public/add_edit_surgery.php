@@ -14,102 +14,176 @@ $is_editing = false;
 
 // Fetch surgery data if ID is provided (for editing)
 
-require_once 'includes/header.php';
 $surgery_id = $_GET['id'] ?? null;
 $patient_id_from_url = $_GET['patient_id'] ?? null; // Get patient_id if passed in URL
 $is_editing = $surgery_id !== null;
 
 $page_title = $is_editing ? 'Edit Surgery' : 'Add New Surgery';
+require_once 'includes/header.php';
 ?>
 
-<div class="container mt-4">
-    <h2 id="page-title"><?php echo $page_title; ?></h2>
+<!-- Status Messages -->
+<div id="status-messages">
+    <!-- Success or error messages will be displayed here -->
+</div>
 
-    <div id="status-messages">
-        <!-- Success or error messages will be displayed here -->
+<!-- Page Header -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="mb-0">
+        <i class="fas fa-hospital me-2 text-primary"></i>
+        <?php echo $page_title; ?>
+    </h2>
+    <a href="<?php echo $is_editing ? 'surgeries.php' : 'surgeries.php'; ?>" class="btn btn-outline-secondary">
+        <i class="fas fa-arrow-left me-1"></i>
+        <span class="d-none d-sm-inline">Back to Surgeries</span>
+    </a>
+</div>
+
+<!-- Surgery Form -->
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">
+            <i class="fas fa-hospital me-2"></i>
+            Surgery Information
+        </h5>
     </div>
+    <div class="card-body">
+        <form id="surgery-form">
+            <?php if ($is_editing): ?>
+            <input type="hidden" name="id" value="<?php echo htmlspecialchars($surgery_id); ?>">
+            <?php endif; ?>
+            <input type="hidden" name="entity" value="surgeries">
+            <input type="hidden" name="action" value="<?php echo $is_editing ? 'update' : 'add'; ?>">
 
-    <form id="surgery-form">
-        <?php if ($is_editing): ?>
-        <input type="hidden" name="id" value="<?php echo htmlspecialchars($surgery_id); ?>">
-        <?php endif; ?>
-        <input type="hidden" name="entity" value="surgeries">
-        <input type="hidden" name="action" value="<?php echo $is_editing ? 'update' : 'add'; ?>">
-
-        <?php if (!$is_editing): // Only show patient selection when adding 
-        ?>
-        <div class="mb-3">
-            <label for="patient_id" class="form-label">Patient</label>
-            <div class="input-group">
-                <select class="form-select" id="patient_id" name="patient_id" required>
-                    <option value="">Select Patient</option>
-                    <!-- Patient options will be loaded via JavaScript -->
-                </select>
-                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#newPatientModal">
-                    <i class="fas fa-plus me-1"></i>New Patient
-                </button>
+            <?php if (!$is_editing): // Only show patient selection when adding ?>
+            <div class="mb-3">
+                <label for="patient_id" class="form-label">
+                    <i class="fas fa-user me-1"></i>
+                    Patient
+                </label>
+                <div class="input-group">
+                    <select class="form-select" id="patient_id" name="patient_id" required>
+                        <option value="">Select Patient</option>
+                        <!-- Patient options will be loaded via JavaScript -->
+                    </select>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#newPatientModal">
+                        <i class="fas fa-plus me-1"></i>
+                        <span class="d-none d-sm-inline">New Patient</span>
+                    </button>
+                </div>
             </div>
-        </div>
-        <?php else: // If editing, patient_id is part of the surgery data fetched via API 
-        ?>
-        <input type="hidden" name="patient_id" id="patient_id">
-        <?php endif; ?>
+            <?php else: // If editing, patient_id is part of the surgery data fetched via API ?>
+            <input type="hidden" name="patient_id" id="patient_id">
+            <?php endif; ?>
 
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="date" class="form-label">
+                            <i class="fas fa-calendar me-1"></i>
+                            Surgery Date
+                        </label>
+                        <input type="date" class="form-control" id="date" name="date" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="status" class="form-label">
+                            <i class="fas fa-info-circle me-1"></i>
+                            Status
+                        </label>
+                        <select class="form-select" id="status" name="status" required>
+                            <option value="booked">Booked</option>
+                            <option value="completed">Completed</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
 
-        <div class="mb-3">
-            <label for="date" class="form-label">Date</label>
-            <input type="date" class="form-control" id="date" name="date" required>
-        </div>
-        <div class="mb-3">
-            <label for="status" class="form-label">Status</label>
-            <select class="form-select" id="status" name="status" required>
-                <option value="booked">Booked</option>
-                <option value="completed">Completed</option>
-                <option value="cancelled">Cancelled</option>
-            </select>
-        </div>
-        <div class="mb-3">
-            <label for="graft_count" class="form-label">Graft Count</label>
-            <input type="number" class="form-control" id="graft_count" name="graft_count" min="0">
-        </div>
-        <div class="mb-3">
-            <label for="notes" class="form-label">Notes</label>
-            <textarea class="form-control" id="notes" name="notes" rows="3"></textarea>
-        </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="graft_count" class="form-label">
+                            <i class="fas fa-hashtag me-1"></i>
+                            Graft Count
+                        </label>
+                        <input type="number" class="form-control" id="graft_count" name="graft_count"
+                               min="0" placeholder="Enter graft count">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!-- Empty column for spacing -->
+                </div>
+            </div>
 
-        <button type="submit" class="btn btn-primary"><i class="fas fa-save me-1"></i><span
-                id="save-button-text"><?php echo $is_editing ? 'Update Surgery' : 'Add Surgery'; ?></span></button>
-        <a href="<?php echo $is_editing ? 'patient_surgeries.php?patient_id=' . htmlspecialchars($patient_id_from_url ?? ($surgery['patient_id'] ?? '')) : 'surgeries.php'; ?>"
-            class="btn btn-secondary"><i class="fas fa-times-circle me-1"></i>Cancel</a>
-    </form>
+            <div class="mb-4">
+                <label for="notes" class="form-label">
+                    <i class="fas fa-sticky-note me-1"></i>
+                    Notes
+                </label>
+                <textarea class="form-control" id="notes" name="notes" rows="4"
+                          placeholder="Enter any additional notes about the surgery..."></textarea>
+            </div>
 
+            <div class="d-flex flex-column flex-sm-row gap-2">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-save me-1"></i>
+                    <span id="save-button-text"><?php echo $is_editing ? 'Update Surgery' : 'Add Surgery'; ?></span>
+                </button>
+                <a href="<?php echo $is_editing ? 'surgeries.php' : 'surgeries.php'; ?>" class="btn btn-secondary">
+                    <i class="fas fa-times me-1"></i>
+                    Cancel
+                </a>
+            </div>
+        </form>
+    </div>
 </div>
 
 <!-- New Patient Modal -->
 <div class="modal fade" id="newPatientModal" tabindex="-1" aria-labelledby="newPatientModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="newPatientModalLabel">Create New Patient</h5>
+                <h5 class="modal-title" id="newPatientModalLabel">
+                    <i class="fas fa-user-plus me-2"></i>
+                    Create New Patient
+                </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form id="new-patient-form">
-                    <div class="mb-3">
-                        <label for="new_patient_name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="new_patient_name" name="name" required>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="new_patient_name" class="form-label">
+                                    <i class="fas fa-user me-1"></i>
+                                    Patient Name
+                                </label>
+                                <input type="text" class="form-control" id="new_patient_name" name="name"
+                                       placeholder="Enter patient name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="new_patient_dob" class="form-label">
+                                    <i class="fas fa-calendar me-1"></i>
+                                    Date of Birth
+                                </label>
+                                <input type="date" class="form-control" id="new_patient_dob" name="dob">
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="new_patient_dob" class="form-label">Date of Birth</label>
-                        <input type="date" class="form-control" id="new_patient_dob" name="dob">
-                    </div>
-                    <!-- Add other patient fields as needed -->
                 </form>
                 <div id="new-patient-status"></div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary" id="save-new-patient">Create Patient</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <i class="fas fa-times me-1"></i>Cancel
+                </button>
+                <button type="button" class="btn btn-primary" id="save-new-patient">
+                    <i class="fas fa-save me-1"></i>Create Patient
+                </button>
             </div>
         </div>
     </div>

@@ -54,40 +54,89 @@ $currentSpreadsheetId = get_setting('spreadsheet_id');
 $currentCacheDuration = get_setting('cache_duration');
 $currentCellRange = get_setting('cell_range');
 
+$page_title = "Settings";
 require_once 'includes/header.php';
 ?>
 
-<div class="container mt-4">
-    <h2>Settings</h2>
+<!-- Page Header -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="mb-0">
+        <i class="fas fa-cog me-2 text-primary"></i>
+        Settings
+    </h2>
+</div>
 
-    <?php if (isset($message)): ?>
-    <div class="alert alert-success" role="alert">
-        <?php echo htmlspecialchars($message); ?>
+<!-- Status Messages -->
+<?php if (isset($message)): ?>
+<div class="alert alert-success" role="alert">
+    <i class="fas fa-check-circle me-2"></i>
+    <?php echo htmlspecialchars($message); ?>
+</div>
+<?php endif; ?>
+
+<!-- Settings Form -->
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">
+            <i class="fas fa-file-excel me-2"></i>
+            Google Sheets Configuration
+        </h5>
     </div>
-    <?php endif; ?>
+    <div class="card-body">
+        <form method="POST">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="spreadsheet_id" class="form-label">
+                            <i class="fas fa-table me-1"></i>
+                            Spreadsheet ID
+                        </label>
+                        <input type="text" class="form-control" id="spreadsheet_id" name="spreadsheet_id"
+                            value="<?php echo htmlspecialchars($currentSpreadsheetId ?? ''); ?>"
+                            placeholder="Enter Google Sheets ID" required>
+                        <div class="form-text">
+                            The ID from your Google Sheets URL
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="mb-3">
+                        <label for="cache_duration" class="form-label">
+                            <i class="fas fa-clock me-1"></i>
+                            Cache Duration (seconds)
+                        </label>
+                        <input type="number" class="form-control" id="cache_duration" name="cache_duration"
+                            value="<?php echo htmlspecialchars($currentCacheDuration ?? ''); ?>"
+                            placeholder="3600" required min="0">
+                        <div class="form-text">
+                            How long to cache data
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="mb-3">
+                        <label for="cell_range" class="form-label">
+                            <i class="fas fa-border-all me-1"></i>
+                            Cell Range
+                        </label>
+                        <input type="text" class="form-control" id="cell_range" name="cell_range"
+                            value="<?php echo htmlspecialchars($currentCellRange ?? ''); ?>"
+                            placeholder="A1:Z" required>
+                        <div class="form-text">
+                            Range of cells to fetch
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <form method="POST">
-        <fieldset>
-            <legend>Google Sheet Settings</legend>
-            <div class="mb-3">
-                <label for="spreadsheet_id" class="form-label">Spreadsheet ID:</label>
-                <input type="text" class="form-control" id="spreadsheet_id" name="spreadsheet_id"
-                    value="<?php echo htmlspecialchars($currentSpreadsheetId ?? ''); ?>" required>
+            <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-save me-1"></i>
+                    Save Settings
+                </button>
             </div>
-            <div class="mb-3">
-                <label for="cache_duration" class="form-label">Cache Duration (seconds):</label>
-                <input type="number" class="form-control" id="cache_duration" name="cache_duration"
-                    value="<?php echo htmlspecialchars($currentCacheDuration ?? ''); ?>" required min="0">
-            </div>
-            <div class="mb-3">
-                <label for="cell_range" class="form-label">Cell Range (e.g., A1:Z):</label>
-                <input type="text" class="form-control" id="cell_range" name="cell_range"
-                    value="<?php echo htmlspecialchars($currentCellRange ?? ''); ?>" required>
-            </div>
-        </fieldset>
-
-        <button type="submit" class="btn btn-primary">Save Settings</button>
-    </form>
+        </form>
+    </div>
 </div>
 
 <?php require_once 'includes/footer.php'; ?>

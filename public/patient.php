@@ -22,41 +22,63 @@ $page_title = "Patient Profile";
 require_once 'includes/header.php';
 ?>
 
-<div class="container mt-4">
-    <div class="d-flex justify-content-between align-items-center mb-4 border bg-light p-3 rounded">
-        <div class="d-flex align-items-center">
-            <a href="add_edit_patient.php?id=<?php echo htmlspecialchars($patient_id); ?>">
-                <img id="patient-avatar" src="" alt="Patient Avatar"
-                    style="width: 60px; height: 60px; border-radius: 50%; margin-right: 15px; display: none;">
-            </a>
-            <h2 id="page-title" class="mb-0">Patient Profile</h2>
+<!-- Status Messages -->
+<div id="status-messages">
+    <!-- Success or error messages will be displayed here -->
+</div>
+
+<!-- Patient Header -->
+<div class="card mb-4">
+    <div class="card-body">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
+            <div class="d-flex align-items-center mb-3 mb-md-0">
+                <a href="add_edit_patient.php?id=<?php echo htmlspecialchars($patient_id); ?>" class="me-3">
+                    <img id="patient-avatar" src="" alt="Patient Avatar" class="avatar" style="display: none; width: 60px; height: 60px;">
+                </a>
+                <div>
+                    <h2 id="page-title" class="mb-0">Patient Profile</h2>
+                    <small class="text-muted">Patient ID: <?php echo htmlspecialchars($patient_id); ?></small>
+                </div>
+            </div>
+            <div class="btn-group" role="group">
+                <a href="add_edit_patient.php?id=<?php echo htmlspecialchars($patient_id); ?>" class="btn btn-warning">
+                    <i class="fas fa-edit me-1"></i>
+                    <span class="d-none d-sm-inline">Edit Patient</span>
+                </a>
+                <a href="patients.php" class="btn btn-outline-secondary">
+                    <i class="fas fa-arrow-left me-1"></i>
+                    <span class="d-none d-sm-inline">Back to Patients</span>
+                </a>
+            </div>
         </div>
-        <a href="add_edit_patient.php?id=<?php echo htmlspecialchars($patient_id); ?>" class="btn btn-warning btn-sm">
-            <i class="fas fa-edit me-1"></i> Edit Patient
-        </a>
     </div>
+</div>
 
-    <div id="status-messages">
-        <!-- Success or error messages will be displayed here -->
-    </div>
-
-    <!-- Surgeries Section -->
-    <div class="border rounded p-2 mt-4 mb-4 bg-light">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-            <h3>Surgeries</h3>
+<!-- Surgeries Section -->
+<div class="card mb-4">
+    <div class="card-header">
+        <div class="d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">
+                <i class="fas fa-hospital me-2"></i>
+                Surgeries
+            </h5>
             <a href="add_edit_surgery.php?patient_id=<?php echo htmlspecialchars($patient_id); ?>"
-                class="btn btn-success btn-light"><i class="fas fa-plus-circle me-1"></i>Add</a>
+                class="btn btn-success btn-sm">
+                <i class="fas fa-plus-circle me-1"></i>
+                <span class="d-none d-sm-inline">Add Surgery</span>
+            </a>
         </div>
-
+    </div>
+    <div class="card-body p-0">
         <div class="table-responsive">
-            <table class="table table-striped" id="surgeries-table">
+            <table class="table table-hover mb-0" id="surgeries-table">
                 <thead>
                     <tr>
                         <th>Date</th>
                         <th>Status</th>
                         <th>Graft Count</th>
-                        <th>Notes</th>
-                        <th>Actions</th>
+                        <th class="d-none d-md-table-cell">Notes</th>
+                        <th class="text-center">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -65,73 +87,97 @@ require_once 'includes/header.php';
             </table>
         </div>
     </div>
+</div>
 
-    <!-- Photos Section -->
-    <div class="border rounded p-2 mt-4 mb-4 bg-light">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-            <h3>Photo Album</h3>
-            <button class="btn btn-primary btn-light" data-bs-toggle="modal" data-bs-target="#uploadModal"
+<!-- Photos Section -->
+<div class="card mb-4">
+    <div class="card-header">
+        <div class="d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">
+                <i class="fas fa-camera me-2"></i>
+                Photo Albums
+            </h5>
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#uploadModal"
                 data-patient-id="<?php echo htmlspecialchars($patient_id); ?>">
-                <i class="fas fa-upload me-1"></i>Add Photos
+                <i class="fas fa-upload me-1"></i>
+                <span class="d-none d-sm-inline">Add Photos</span>
             </button>
         </div>
+    </div>
+    <div class="card-body">
         <div id="photos-list">
             <!-- Photo albums and photos will be loaded here via JavaScript -->
         </div>
     </div>
+</div>
 
-    <!-- Delete Confirmation Modal (Basic Structure) -->
-    <div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-labelledby="deleteConfirmModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="deleteConfirmModalLabel">Confirm Deletion</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Are you sure you want to delete this item?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i
-                            class="fas fa-times-circle me-1"></i>Cancel</button>
-                    <button type="button" class="btn btn-danger" id="confirmDeleteBtn"><i
-                            class="fas fa-trash-alt me-1"></i>Delete</button>
-                </div>
+<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-labelledby="deleteConfirmModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteConfirmModalLabel">
+                    <i class="fas fa-exclamation-triangle text-warning me-2"></i>
+                    Confirm Deletion
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="mb-0">Are you sure you want to delete this item?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <i class="fas fa-times me-1"></i>Cancel
+                </button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">
+                    <i class="fas fa-trash-alt me-1"></i>Delete
+                </button>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Upload Modal -->
-    <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="uploadModalLabel">Upload Photos</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="upload.php" id="photo-upload-form" enctype="multipart/form-data">
-                        <input type="hidden" name="patient_id" id="upload-patient-id"
-                            value="<?php echo $patient_id; ?>">
-                        <div class="mb-3">
-                            <label for="photo_album_type_id" class="form-label">Album Type</label>
-                            <select class="form-select" id="photo_album_type_id" name="photo_album_type_id" required>
-                                <option value="">Select Album Type</option>
-                                <!-- Options will be loaded via JavaScript -->
-                            </select>
+<!-- Upload Modal -->
+<div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen-sm-down">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="uploadModalLabel">
+                    <i class="fas fa-upload me-2"></i>
+                    Upload Photos
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="upload.php" id="photo-upload-form" enctype="multipart/form-data">
+                    <input type="hidden" name="patient_id" id="upload-patient-id"
+                        value="<?php echo $patient_id; ?>">
+                    <div class="mb-3">
+                        <label for="photo_album_type_id" class="form-label">Album Type</label>
+                        <select class="form-select" id="photo_album_type_id" name="photo_album_type_id" required>
+                            <option value="">Select Album Type</option>
+                            <!-- Options will be loaded via JavaScript -->
+                        </select>
+                    </div>
+                    <div id="photo-dropzone" class="dropzone" style="display: none;">
+                        <div class="dz-message">
+                            <span class="note needsclick">
+                                <i class="fas fa-cloud-upload-alt fa-2x mb-2"></i><br>
+                                Drag and drop images here or click to upload.
+                            </span>
                         </div>
-                        <div id="photo-dropzone" class="dropzone" style="display: none;">
-                            <div class="dz-message">Drag and drop images here or click to upload.</div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <i class="fas fa-times me-1"></i>Close
+                </button>
             </div>
         </div>
     </div>
+</div>
 
 </div>
 
@@ -168,6 +214,17 @@ document.addEventListener('DOMContentLoaded', function() {
         };
         const date = new Date(dateString);
         return date.toLocaleDateString('en-GB', options).replace(/\//g, ' / ');
+    }
+
+    // Helper function to get status color for badges
+    function getStatusColor(status) {
+        switch(status.toLowerCase()) {
+            case 'completed': return 'success';
+            case 'booked': return 'primary';
+            case 'cancelled': return 'danger';
+            case 'in-progress': return 'warning';
+            default: return 'secondary';
+        }
     }
 
     // Override or extend loadPatientProfileData from patients.js
@@ -209,16 +266,24 @@ document.addEventListener('DOMContentLoaded', function() {
                     const row = document.createElement('tr');
                     row.setAttribute('data-surgery-id', surgery.id);
                     row.innerHTML = `
-                            <td>${formatDate(surgery.date)}</td>
-                            <td class="status-${sanitizeHTML(surgery.status)}">${sanitizeHTML(surgery.status)}</td>
-                            <td>${sanitizeHTML(surgery.graft_count || '0')}</td> <!-- Add this line -->
-                            <td>${sanitizeHTML(surgery.notes || '')}</td>
+                            <td><span class="fw-medium">${formatDate(surgery.date)}</span></td>
+                            <td><span class="badge bg-${getStatusColor(surgery.status)} status-${sanitizeHTML(surgery.status)}">${sanitizeHTML(surgery.status)}</span></td>
+                            <td>${sanitizeHTML(surgery.graft_count || '0')}</td>
+                            <td class="d-none d-md-table-cell">${sanitizeHTML(surgery.notes || '')}</td>
                             <td>
-                                <a href="add_edit_surgery.php?id=${surgery.id}" class="btn btn-sm btn-warning me-2"><i class="fas fa-edit me-1"></i>Edit</a>
-                                <?php if (is_admin()): ?>
-                                     <button class="btn btn-sm btn-danger delete-item-btn" data-id="${surgery.id}" data-type="surgery"><i class="fas fa-trash-alt me-1"></i>Delete</button>
-                                <?php endif; ?>
-                              </td>
+                                <div class="btn-group" role="group">
+                                    <a href="add_edit_surgery.php?id=${surgery.id}" class="btn btn-sm btn-outline-warning" title="Edit Surgery">
+                                        <i class="fas fa-edit"></i>
+                                        <span class="d-none d-lg-inline ms-1">Edit</span>
+                                    </a>
+                                    <?php if (is_admin()): ?>
+                                    <button class="btn btn-sm btn-outline-danger delete-item-btn" data-id="${surgery.id}" data-type="surgery" title="Delete Surgery">
+                                        <i class="fas fa-trash-alt"></i>
+                                        <span class="d-none d-lg-inline ms-1">Delete</span>
+                                    </button>
+                                    <?php endif; ?>
+                                </div>
+                            </td>
                         `;
                     surgeriesTableBody.appendChild(row);
                 });
@@ -261,14 +326,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     albumType.photos.forEach(photo => {
                         const photoCol = document.createElement('div');
-                        photoCol.classList.add('col-md-3', 'col-sm-4', 'col-6', 'mb-4');
+                        photoCol.classList.add('col-lg-3', 'col-md-4', 'col-sm-6', 'col-6', 'mb-4');
                         photoCol.innerHTML = `
-                                <div class="card">
+                                <div class="card h-100">
                                     <a href="${sanitizeHTML(photo.file_path)}" class="glightbox" data-gallery="${sanitizeHTML(albumType.name)}">
-                                        <img src="${sanitizeHTML(photo.file_path)}" class="card-img-top" alt="Patient Photo">
+                                        <img src="${sanitizeHTML(photo.file_path)}" class="card-img-top" alt="Patient Photo" style="height: 200px; object-fit: cover;">
                                     </a>
-                                    <div class="card-body text-center">
-                                        <button class="btn btn-danger btn-sm delete-item-btn" data-id="${photo.id}" data-type="photo"><i class="fas fa-trash-alt me-1"></i>Delete Photo</button>
+                                    <div class="card-body text-center p-2">
+                                        <button class="btn btn-outline-danger btn-sm delete-item-btn" data-id="${photo.id}" data-type="photo" title="Delete Photo">
+                                            <i class="fas fa-trash-alt"></i>
+                                            <span class="d-none d-lg-inline ms-1">Delete</span>
+                                        </button>
                                     </div>
                                 </div>
                             `;

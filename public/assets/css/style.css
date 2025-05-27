@@ -1,29 +1,326 @@
-/* Add your custom CSS here */
-/* For example: */
-/* body { padding-top: 20px; } */
+/* ===================================
+   MODERN RESPONSIVE DESIGN SYSTEM
+   =================================== */
 
-/* Calendar Styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    /* padding: 20px; */
-    background-color: #f4f4f4;
+/* Root Variables for Consistent Design */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+
+    --border-radius: 0.5rem;
+    --border-radius-sm: 0.25rem;
+    --border-radius-lg: 0.75rem;
+
+    --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+    --font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
+
+/* Base Styles */
+body {
+    font-family: var(--font-family-sans-serif);
+    background-color: #f8f9fa;
+    color: var(--dark-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: medium;
+}
+
+/* Main Content Layout */
+.main-content {
+    flex: 1;
+    min-height: calc(100vh - 200px);
+}
+
+/* Enhanced Navigation */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-sm);
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Card Enhancements */
+.card {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-2px);
+}
+
+.card-header {
+    background-color: var(--light-color);
+    border-bottom: 1px solid #dee2e6;
+    font-weight: 600;
+}
+
+/* Button Enhancements */
+.btn {
+    border-radius: var(--border-radius-sm);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-group .btn {
+    margin-right: 0.25rem;
+}
+
+.btn-group .btn:last-child {
+    margin-right: 0;
+}
+
+/* Form Enhancements */
+.form-control, .form-select {
+    border-radius: var(--border-radius-sm);
+    border: 1px solid #ced4da;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Table Responsive Design */
+.table-responsive {
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    background: white;
+    margin-bottom: 1.5rem;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background-color: var(--light-color);
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+    color: var(--dark-color);
+    padding: 1rem 0.75rem;
+    white-space: nowrap;
+}
+
+.table tbody td {
+    padding: 0.75rem;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* Mobile Table Scrolling */
+@media (max-width: 768px) {
+    .table-responsive {
+        border-radius: var(--border-radius-sm);
+        margin: 0 -15px 1.5rem -15px;
+        box-shadow: none;
+        border: 1px solid #dee2e6;
+    }
+
+    .table-responsive .table {
+        min-width: 600px; /* Force horizontal scroll */
+    }
+
+    .table thead th,
+    .table tbody td {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-group .btn {
+        margin-right: 0;
+        margin-bottom: 0.25rem;
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .btn-group .btn:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Avatar Styling */
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 576px) {
+    .avatar {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Status Colors */
+.status-booked {
+    background-color: var(--primary-color) !important;
+    font-weight: 600;
+}
+
+.status-completed {
+    background-color: var(--success-color) !important;
+    font-weight: 600;
+}
+
+.status-cancelled {
+    background-color: var(--danger-color) !important;
+    font-weight: 600;
+}
+
+.status-in-progress {
+    background-color: var(--warning-color) !important;
+    font-weight: 600;
+}
+
+/* Page Headers */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color), #0056b3);
+    color: white;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius);
+}
+
+.page-header h1, .page-header h2 {
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+/* Search and Filter Section */
+.search-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 1.5rem;
+}
+
+/* Alert Enhancements */
+.alert {
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+}
+
+/* Loading States */
+#loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    margin: 2rem 0;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+#main-content {
+    display: none;
+}
+
+/* Utility Classes */
+@media (max-width: 576px) {
+    .text-truncate-mobile {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 150px;
+    }
+}
+
+/* Badge Enhancements */
+.badge {
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.35em 0.65em;
+}
+
+/* Mobile-first responsive utilities */
+@media (max-width: 768px) {
+    .mobile-stack {
+        flex-direction: column !important;
+    }
+
+    .mobile-center {
+        text-align: center !important;
+    }
+
+    .mobile-hide {
+        display: none !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-show {
+        display: none !important;
+    }
+}
+
+/* ===================================
+   CALENDAR STYLING
+   =================================== */
 
 #calendar {
-    /* max-width: 900px; */
-    /* margin: 40px auto; */
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 2rem;
 }
 
-/* FullCalendar text and day number styling */
+/* FullCalendar Customizations */
 .fc-theme-standard td,
 .fc-theme-standard th,
 .fc-theme-standard .fc-scrollgrid {
-    border-color: #ddd; /* Adjust border color if needed */
+    border-color: #dee2e6;
 }
 
 .fc-daygrid-day-number,
@@ -32,97 +329,255 @@ body {
 .fc-list-item-time,
 .fc-col-header-cell-cushion,
 .fc-day-other .fc-daygrid-day-number {
-    color: #333; /* Dark gray color */
+    color: var(--dark-color);
 }
 
-/* Surgery Status Colors */
-.status-booked {
-    color: #007bff !important; /* Blue */
-    font-weight: bold;
+.fc-button-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
-.status-completed {
-    color: #28a745 !important; /* Green */
-    font-weight: bold;
+.fc-button-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
 }
-
+.day-events{
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
 .event-details {
-    padding: 5px;
-    border-radius: 3px;
-    font-size: 1em;
+    padding: 0.5rem;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.875rem;
+    background: white;
+    box-shadow: var(--shadow-sm);
 }
 
 .event-details .patient-name {
-    color: black;
-    font-weight: bold;
-    margin-bottom: 3px;
+    color: var(--dark-color);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
 }
 
 .event-details .graft-count {
-    color: gray;
+    color: var(--secondary-color);
     font-style: italic;
-    margin-bottom: 3px;
+    margin-bottom: 0.25rem;
 }
 
 .event-details .status {
-    color: gray;
-    font-weight: bold;
+    font-weight: 600;
 }
 
-.status-cancelled {
-    color: #dc3545 !important; /* Red */
-    font-weight: bold;
-}
+/* ===================================
+   DROPZONE STYLING
+   =================================== */
 
-.status-in-progress {
-    color: #ffc107; /* Yellow/Orange */
-    font-weight: bold;
-}
-
-/* Add more statuses as needed */
-
-/* Dropzone Styling */
 .dropzone {
-    border: 2px dashed #ccc;
-    border-radius: 5px;
-    background-color: #f8f8f8;
+    border: 2px dashed #ced4da;
+    border-radius: var(--border-radius);
+    background-color: var(--light-color);
     text-align: center;
-    padding: 20px;
-    min-height: 150px; /* Give it some height */
+    padding: 2rem;
+    min-height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dropzone:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+.dropzone.dz-drag-hover {
+    border-color: var(--primary-color);
+    background-color: rgba(13, 110, 253, 0.1);
 }
 
 .dropzone .dz-message {
-    margin: 0; /* Remove default margin */
-    font-size: 1.2em;
-    color: #666;
+    margin: 0;
+    font-size: 1.125rem;
+    color: var(--secondary-color);
+    font-weight: 500;
 }
 
-/* Photo Gallery Image Styling */
+.dropzone .dz-message .note {
+    font-size: 0.875rem;
+    color: var(--secondary-color);
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* ===================================
+   PHOTO GALLERY STYLING
+   ================================== */
+
+.photo-gallery {
+    margin-top: 2rem;
+}
+
+.photo-gallery .card {
+    border: none;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.photo-gallery .card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
 .photo-gallery .card img {
-    height: 180px; /* Set a fixed height */
-    object-fit: cover; /* Crop the image to cover the area */
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-#patients-table td {
-    /* text-align: center; */
-    vertical-align: middle;
+.photo-gallery .card:hover img {
+    transform: scale(1.05);
 }
 
-/* Loading Spinner and Main Content Visibility */
-#loading-spinner {
-    /* Basic styling for the spinner container */
-    display: flex; /* Use flexbox to center content */
-    flex-direction: column; /* Stack spinner and text vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    min-height: 150px; /* Give it some height */
-    margin-top: 50px; /* Add some space from the top */
+.photo-gallery .card-body {
+    padding: 1rem;
 }
 
-#main-content {
-    display: none; /* Initially hide the main content */
+.photo-gallery .card-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.photo-gallery .card-text {
+    font-size: 0.75rem;
+    color: var(--secondary-color);
+}
+
+/* Mobile Photo Gallery */
+@media (max-width: 576px) {
+    .photo-gallery .card img {
+        height: 150px;
+    }
+
+    .photo-gallery .card-body {
+        padding: 0.75rem;
+    }
+}
+
+/* ===================================
+   MODAL ENHANCEMENTS
+   =================================== */
+
+/* Full-screen modals on mobile */
+@media (max-width: 575.98px) {
+    .modal-fullscreen-sm-down {
+        width: 100vw;
+        max-width: none;
+        height: 100%;
+        margin: 0;
+    }
+
+    .modal-fullscreen-sm-down .modal-content {
+        height: 100vh;
+        border: 0;
+        border-radius: 0;
+    }
+
+    .modal-fullscreen-sm-down .modal-body {
+        overflow-y: auto;
+    }
+}
+
+/* Modal improvements */
+.modal-header {
+    border-bottom: 1px solid #dee2e6;
+    background-color: var(--light-color);
+}
+
+.modal-footer {
+    border-top: 1px solid #dee2e6;
+    background-color: var(--light-color);
+}
+
+.modal-title {
+    font-weight: 600;
+}
+
+/* Dropzone in modals */
+.modal .dropzone {
+    min-height: 150px;
+    margin-top: 1rem;
+}
+
+@media (max-width: 575.98px) {
+    .modal .dropzone {
+        min-height: 200px;
+    }
+}
+
+/* ===================================
+   RESPONSIVE IMPROVEMENTS
+   =================================== */
+
+/* Mobile Navigation Improvements */
+@media (max-width: 991px) {
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-nav .nav-link:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Tablet Optimizations */
+@media (max-width: 992px) and (min-width: 769px) {
+    .container-fluid {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .table thead th,
+    .table tbody td {
+        padding: 0.625rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Mobile Optimizations */
+@media (max-width: 576px) {
+    .container-fluid {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .btn {
+        font-size: 0.875rem;
+        padding: 0.375rem 0.75rem;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    .search-section {
+        padding: 1rem;
+    }
+
+    .page-header {
+        padding: 1.5rem 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .page-header h2 {
+        font-size: 1.5rem;
+    }
 }

@@ -20,42 +20,91 @@ $page_title = $is_editing ? 'Edit Patient' : 'Add New Patient';
 require_once 'includes/header.php';
 ?>
 
-<div class="container mt-4">
-    <h2 id="page-title"><?php echo $is_editing ? 'Edit Patient' : 'Add New Patient'; ?></h2>
+<!-- Status Messages -->
+<div id="status-messages">
+    <!-- Success or error messages will be displayed here -->
+</div>
 
-    <div id="status-messages">
-        <!-- Success or error messages will be displayed here -->
+<!-- Page Header -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="mb-0">
+        <i class="fas fa-user-edit me-2 text-primary"></i>
+        <?php echo $is_editing ? 'Edit Patient' : 'Add New Patient'; ?>
+    </h2>
+    <a href="patients.php" class="btn btn-outline-secondary">
+        <i class="fas fa-arrow-left me-1"></i>
+        <span class="d-none d-sm-inline">Back to Patients</span>
+    </a>
+</div>
+
+<!-- Patient Form -->
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">
+            <i class="fas fa-user me-2"></i>
+            Patient Information
+        </h5>
     </div>
+    <div class="card-body">
+        <form id="patient-form">
+            <?php if ($is_editing): ?>
+            <input type="hidden" name="id" value="<?php echo htmlspecialchars($patient_id); ?>">
+            <?php endif; ?>
+            <input type="hidden" name="entity" value="patients">
+            <input type="hidden" name="action" value="<?php echo $is_editing ? 'update' : 'add'; ?>">
+            <?php if (!$is_editing): ?>
+            <input type="hidden" name="user_id" value="<?php echo htmlspecialchars($_SESSION['user_id']); ?>">
+            <?php endif; ?>
 
-    <form id="patient-form">
-        <?php if ($is_editing): ?>
-        <input type="hidden" name="id" value="<?php echo htmlspecialchars($patient_id); ?>">
-        <?php endif; ?>
-        <input type="hidden" name="entity" value="patients">
-        <input type="hidden" name="action" value="<?php echo $is_editing ? 'update' : 'add'; ?>">
-        <?php if (!$is_editing): ?>
-        <input type="hidden" name="user_id" value="<?php echo htmlspecialchars($_SESSION['user_id']); ?>">
-        <?php endif; ?>
-        <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" name="name" required>
-        </div>
-        <div class="mb-3">
-            <label for="dob" class="form-label">Date of Birth</label>
-            <input type="date" class="form-control" id="dob" name="dob">
-        </div>
-        <div class="mb-3">
-            <div id="avatar-dropzone" class="dropzone">
-                <div class="dz-message">Drag and drop avatar here or click to upload.</div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">
+                            <i class="fas fa-user me-1"></i>
+                            Patient Name
+                        </label>
+                        <input type="text" class="form-control" id="name" name="name"
+                               placeholder="Enter patient name" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="dob" class="form-label">
+                            <i class="fas fa-calendar me-1"></i>
+                            Date of Birth
+                        </label>
+                        <input type="date" class="form-control" id="dob" name="dob">
+                    </div>
+                </div>
             </div>
-        </div>
-        <!-- Surgery ID field might be handled differently now, or removed -->
-        <!-- Keeping for now, but its purpose might change -->
-        <button type="submit" class="btn btn-primary"><i class="fas fa-save me-1"></i><span
-                id="save-button-text"><?php echo $is_editing ? 'Update Patient' : 'Add Patient'; ?></span></button>
-        <a href="patients.php" class="btn btn-secondary"><i class="fas fa-times-circle me-1"></i>Cancel</a>
-    </form>
 
+            <div class="mb-4">
+                <label class="form-label">
+                    <i class="fas fa-image me-1"></i>
+                    Patient Avatar
+                </label>
+                <div id="avatar-dropzone" class="dropzone">
+                    <div class="dz-message">
+                        <span class="note needsclick">
+                            <i class="fas fa-cloud-upload-alt fa-2x mb-2"></i><br>
+                            Drag and drop avatar here or click to upload.
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row gap-2">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-save me-1"></i>
+                    <span id="save-button-text"><?php echo $is_editing ? 'Update Patient' : 'Add Patient'; ?></span>
+                </button>
+                <a href="patients.php" class="btn btn-secondary">
+                    <i class="fas fa-times me-1"></i>
+                    Cancel
+                </a>
+            </div>
+        </form>
+    </div>
 </div>
 
 <?php require_once 'includes/footer.php'; ?>
