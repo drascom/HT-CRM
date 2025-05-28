@@ -353,6 +353,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Add event listener to graft_count to update status
+    const graftCountInput = document.getElementById('graft_count');
+    const statusSelect = document.getElementById('status');
+
+    if (graftCountInput && statusSelect) {
+        graftCountInput.addEventListener('input', function() {
+            // Check if the graft_count input has a value (is not empty and not just whitespace)
+            if (this.value.trim() !== '' && parseInt(this.value) >= 0) {
+                statusSelect.value = 'completed';
+            }
+            // Optional: Reset status if graft_count is cleared
+            // else {
+            //     // You might want to reset to 'booked' or leave as is
+            //     // statusSelect.value = 'booked';
+            // }
+        });
+    }
+
     // Reset modal form when hidden
     if (newPatientModal) {
         newPatientModal.addEventListener('hidden.bs.modal', function() {

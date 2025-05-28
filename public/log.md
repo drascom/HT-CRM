@@ -53661,3 +53661,135 @@
 ```
 ---
 
+## Request Log - 2025-05-28 14:52:29
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:52:29
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name",
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:52:30
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=get&id=2
+
+## Response Log - 2025-05-28 14:52:30
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgery": {
+        "id": 2,
+        "date": "2025-05-22",
+        "notes": "",
+        "status": "booked",
+        "graft_count": 555,
+        "created_at": "2025-05-27 23:57:56",
+        "updated_at": "2025-05-27 23:57:56",
+        "patient_id": 2,
+        "is_recorded": 1,
+        "patient_name": "acenta 1",
+        "agency_name": "test"
+    }
+}
+```
+---
+
+## Request Log - 2025-05-28 14:52:34
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-28 14:52:34
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Surgery updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-28 14:52:35
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=2
+
+## Response Log - 2025-05-28 14:52:35
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 2,
+        "name": "acenta 1",
+        "dob": "2025-05-02",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 2,
+        "created_at": "2025-05-27 23:43:44",
+        "updated_at": "2025-05-27 23:44:01",
+        "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+        "agency_id": 1
+    },
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 1111,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-28 13:52:34",
+            "patient_id": 2,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+

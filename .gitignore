@@ -2,18 +2,6 @@ add upload folder
 # Node modules
 node_modules/
 
-# Next.js output
-.next/
-
-# Logs
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Testing
-coverage/
 
 # Environment variables
 .env
@@ -37,13 +25,6 @@ out/
 dist/
 build/
 
-# Misc
-.vscode/
-.idea/
-Bookings.xlsx
-bookings.json
-vendor/
-
 # Ignore local git config
 .git/config.local
 /secrets/
@@ -54,5 +35,3 @@ vendor/*
 cache/*
 database.sqlite
 *.xlsx
-bookings.json
-/Bookings.xlsx
