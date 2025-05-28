@@ -78,6 +78,21 @@ require_once 'includes/header.php';
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="agency_id" class="form-label">
+                            <i class="fas fa-building me-1"></i>
+                            Agency
+                        </label>
+                        <select class="form-select" id="agency_id" name="agency_id">
+                            <option value="">Select Agency (Optional)</option>
+                            <!-- Agency options will be loaded dynamically -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+
             <div class="mb-4">
                 <label class="form-label">
                     <i class="fas fa-image me-1"></i>
@@ -116,11 +131,44 @@ document.addEventListener('DOMContentLoaded', function() {
     const patientIdInput = document.querySelector('#patient-form input[name="id"]');
     const isEditing = patientIdInput !== null;
     const patientId = isEditing ? patientIdInput.value : null; // Get patientId if editing
+    let allAgencies = []; // Store all agencies for dropdown
 
     // Function to display messages
     function displayMessage(message, type = 'success') {
         statusMessagesDiv.innerHTML = `<div class="alert alert-${type}">${message}</div>`;
     }
+
+    // Function to fetch agencies from the API
+    function fetchAgencies() {
+        fetch('api.php?entity=agencies&action=list')
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    allAgencies = data.agencies;
+                    populateAgencyDropdown();
+                } else {
+                    console.error('Error fetching agencies:', data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching agencies:', error);
+            });
+    }
+
+    // Function to populate agency dropdown
+    function populateAgencyDropdown() {
+        const agencySelect = document.getElementById('agency_id');
+        agencySelect.innerHTML = '<option value="">Select Agency (Optional)</option>';
+        allAgencies.forEach(agency => {
+            const option = document.createElement('option');
+            option.value = agency.id;
+            option.textContent = agency.name;
+            agencySelect.appendChild(option);
+        });
+    }
+
+    // Fetch agencies first
+    fetchAgencies();
 
     // Fetch patient data if editing
     if (isEditing) {
@@ -131,7 +179,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     const patient = data.patient;
                     document.getElementById('name').value = patient.name;
                     document.getElementById('dob').value = patient.dob;
-                    // Removed surgery_id handling
+
+                    // Set agency if available
+                    if (patient.agency_id) {
+                        document.getElementById('agency_id').value = patient.agency_id;
+                    }
 
                     // The Dropzone init function now handles displaying the avatar
                     // No need for a separate preview div here
@@ -329,6 +381,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             formData.append('name', document.getElementById('name').value);
             formData.append('dob', document.getElementById('dob').value);
+            formData.append('agency_id', document.getElementById('agency_id').value);
             // Do NOT append avatar here, Dropzone handles it
 
             fetch('api.php', {

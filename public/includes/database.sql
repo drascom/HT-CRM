@@ -5,7 +5,8 @@ CREATE TABLE users (
   password TEXT NOT NULL,
   role TEXT DEFAULT 'user',
   created_at TEXT,
-  updated_at TEXT
+  updated_at TEXT,
+  agency_id INTEGER
 );
 
 CREATE TABLE surgeries (
@@ -36,7 +37,8 @@ CREATE TABLE patients (
   user_id INTEGER,
   created_at TEXT,
   updated_at TEXT,
-  avatar TEXT
+  avatar TEXT,
+  agency_id INTEGER
 );
 
 CREATE TABLE patient_photos (
@@ -70,6 +72,22 @@ CREATE TABLE settings (
   value TEXT
 );
 
-INSERT INTO settings (key, value) VALUES ('spreadsheet_id', '1dGY4Ir9TpnGxwfBUnNrytBPDtJl93BWSbU95V2jfWZY');
+INSERT INTO settings (key, value) VALUES ('spreadsheet_id', '1mP20et8Pe_RMQvEC-ra2mXi9aoAtTwK_jsMwcUn9tt0');
 INSERT INTO settings (key, value) VALUES ('cache_duration', '300');
-INSERT INTO settings (key, value) VALUES ('cell_range', 'A1:Z');
+INSERT INTO settings (key, value) VALUES ('cell_range', 'A1:I30');
+
+CREATE TABLE agencies (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL UNIQUE,
+  created_at TEXT,
+  updated_at TEXT
+);
+
+-- Add foreign key constraints
+-- Note: SQLite doesn't support adding foreign keys to existing tables,
+-- so we'll handle this in the application logic
+
+-- Insert sample agencies for testing
+INSERT INTO agencies (name, created_at, updated_at) VALUES ('Main Office', datetime('now'), datetime('now'));
+INSERT INTO agencies (name, created_at, updated_at) VALUES ('Branch Office A', datetime('now'), datetime('now'));
+INSERT INTO agencies (name, created_at, updated_at) VALUES ('Branch Office B', datetime('now'), datetime('now'));

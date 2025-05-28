@@ -243,7 +243,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const patientAvatarImg = document.getElementById('patient-avatar');
             if (data.patient) {
                 if (data.patient.name) {
-                    pageTitle.textContent = `${sanitizeHTML(data.patient.name)}`;
+                    let titleText = `${sanitizeHTML(data.patient.name)}`;
+                    if (data.patient.agency_name) {
+                        titleText += ` - ${sanitizeHTML(data.patient.agency_name)}`;
+                    }
+                    pageTitle.textContent = titleText;
                 } else {
                     pageTitle.textContent = `Profile for Patient ID ${patientId}`;
                 }

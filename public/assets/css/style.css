@@ -33,7 +33,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-size: medium;
 }
 
 /* Main Content Layout */
@@ -342,8 +341,11 @@ body {
     border-color: #0056b3;
 }
 .day-events{
-    font-weight: 600;
-    margin-bottom: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 0.875rem; /* Increased font size */
+    font-weight: bold; /* Made text bold */
 }
 .event-details {
     padding: 0.5rem;
@@ -580,4 +582,14 @@ body {
     .page-header h2 {
         font-size: 1.5rem;
     }
+}
+
+/* Fix for delete button click area */
+.delete-surgery-btn i,
+.delete-item-btn i,
+.delete-patient-btn i,
+.delete-item-btn span,
+.delete-patient-btn span,
+.delete-surgery-btn span {
+    pointer-events: none;
 }

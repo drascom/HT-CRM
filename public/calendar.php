@@ -12,8 +12,7 @@ require_once 'includes/header.php';
 ?>
 
 <style>
-/* Custom Calendar Styles */
-.calendar-container {
+Custom Calendar Styles .calendar-container {
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -21,7 +20,7 @@ require_once 'includes/header.php';
 }
 
 .calendar-header {
-    background: linear-gradient(135deg, #0d6efd 0%, #0056b3 100%);
+    background: linear-gradient(135deg, rgb(88, 88, 89) 0%, rgb(55, 78, 102) 50%);
     color: white;
     padding: 1rem;
     display: flex;
@@ -352,7 +351,7 @@ require_once 'includes/header.php';
 </style>
 
 <!-- Page Header -->
-<div class="d-flex justify-content-between align-items-center mb-4">
+<!-- <div class="d-flex justify-content-between align-items-center mb-4">
     <h2 class="mb-0">
         <i class="fas fa-calendar me-2 text-primary"></i>
         Surgery Calendar
@@ -363,7 +362,7 @@ require_once 'includes/header.php';
             <span class="d-none d-sm-inline">Add Surgery</span>
         </a>
     </div>
-</div>
+</div> -->
 
 <!-- Calendar Container -->
 <div class="calendar-container">
@@ -384,8 +383,8 @@ require_once 'includes/header.php';
         <div class="view-toggle">
             <button type="button" id="monthViewBtn" class="active">Month</button>
             <button type="button" id="listMonthBtn">List Month</button>
-            <button type="button" id="listWeekBtn">List Week</button>
-            <button type="button" id="listDayBtn">List Day</button>
+            <button type="button" style="display:none;" id="listWeekBtn">List Week</button>
+            <button type="button" style="display:none;" id="listDayBtn">List Day</button>
         </div>
     </div>
 
@@ -661,6 +660,16 @@ class CustomCalendar {
                     eventEl.appendChild(graftCountEl);
                 }
 
+                // Create agency name element (if exists) and append to event link
+                if (surgery.agency_name) {
+                    const agencyEl = document.createElement('div'); // Use div for new line
+                    agencyEl.className = 'agency-name';
+                    agencyEl.textContent = surgery.agency_name;
+                    agencyEl.style.fontSize = '0.65rem';
+                    agencyEl.style.color = '#6c757d';
+                    agencyEl.style.fontStyle = 'italic';
+                    <?php if (is_admin()): ?> eventEl.appendChild(agencyEl); <?php endif; ?>
+                }
                 eventsEl.appendChild(eventEl);
             });
 
@@ -753,6 +762,7 @@ class CustomCalendar {
                             </div>
                             <div class="list-details">
                                 <span class="me-3">Graft: ${surgery.graft_count || 'N/A'}</span>
+                                ${surgery.agency_name ? `<span class="me-3">Agency: ${surgery.agency_name}</span>` : ''}
                                 <span class="status-badge ${surgery.status}">${surgery.status}</span>
                             </div>
                         </div>

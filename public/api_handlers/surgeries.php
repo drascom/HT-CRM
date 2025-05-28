@@ -58,7 +58,7 @@ function handle_surgeries($action, $method, $db)
             if ($method === 'GET') {
                 $id = $_GET['id'] ?? null;
                 if ($id) {
-                    $stmt = $db->prepare("SELECT s.*, p.name as patient_name FROM surgeries s LEFT JOIN patients p ON s.patient_id = p.id WHERE s.id = ?");
+                    $stmt = $db->prepare("SELECT s.*, p.name as patient_name, a.name as agency_name FROM surgeries s LEFT JOIN patients p ON s.patient_id = p.id LEFT JOIN agencies a ON p.agency_id = a.id WHERE s.id = ?");
                     $stmt->execute([$id]);
                     $data = $stmt->fetch(PDO::FETCH_ASSOC);
                     return $data ? ['success' => true, 'surgery' => $data] : ['success' => false, 'error' => "Surgery not found with ID: {$id}"];
@@ -71,11 +71,24 @@ function handle_surgeries($action, $method, $db)
             if ($method === 'GET') {
                 $patient_id = $_GET['patient_id'] ?? null;
                 if ($patient_id) {
-                    $stmt = $db->prepare("SELECT s.*, p.name as patient_name FROM surgeries s JOIN patients p ON s.patient_id = p.id WHERE s.patient_id = ? ORDER BY s.date DESC");
+                    $stmt = $db->prepare("SELECT s.*, p.name as patient_name, a.name as agency_name FROM surgeries s JOIN patients p ON s.patient_id = p.id LEFT JOIN agencies a ON p.agency_id = a.id WHERE s.patient_id = ? ORDER BY s.date DESC");
                     $stmt->execute([$patient_id]);
                     return ['success' => true, 'surgeries' => $stmt->fetchAll(PDO::FETCH_ASSOC)];
                 } else {
-                    $stmt = $db->query("SELECT s.*, p.name as patient_name FROM surgeries s LEFT JOIN patients p ON s.patient_id = p.id ORDER BY s.date DESC");
+                    // Apply agency filtering for non-admin users
+                    $sql = "SELECT s.*, p.name as patient_name, a.name as agency_name FROM surgeries s LEFT JOIN patients p ON s.patient_id = p.id LEFT JOIN agencies a ON p.agency_id = a.id";
+                    $params = [];
+
+                    // If user is not admin, restrict to their agency
+                    if ($_SESSION['role'] !== 'admin' && $_SESSION['agency_id']) {
+                        $sql .= " WHERE p.agency_id = ?";
+                        $params[] = $_SESSION['agency_id'];
+                    }
+
+                    $sql .= " ORDER BY s.date DESC";
+
+                    $stmt = $db->prepare($sql);
+                    $stmt->execute($params);
                     return ['success' => true, 'surgeries' => $stmt->fetchAll(PDO::FETCH_ASSOC)];
                 }
             }

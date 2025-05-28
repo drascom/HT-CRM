@@ -40,14 +40,13 @@ try {
 // If the database was just created, add an initial admin user
 if (!$db_exists) {
     $admin_username = 'admin';
-    $admin_email = "test@abc.com";
-    $admin_password_raw = '1111';
+    $admin_email = "drayhancolak@gmail.com";
+    $admin_password_raw = 'Doktor2024';
     $admin_password_hashed = password_hash($admin_password_raw, PASSWORD_DEFAULT);
 
     try {
         $stmt = $pdo->prepare("INSERT INTO users (username, email, password, role, created_at, updated_at) VALUES (?, ?, ?, 'admin', datetime('now'), datetime('now'))");
         $stmt->execute([$admin_username, $admin_email, $admin_password_hashed]);
-        error_log("Initial admin user 'admin' created with password '1111'. PLEASE CHANGE THIS PASSWORD IMMEDIATELY.");
     } catch (\PDOException $e) {
         error_log("Failed to create initial admin user: " . $e->getMessage());
         // Optionally handle this error more gracefully

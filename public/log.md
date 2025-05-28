@@ -42216,3 +42216,11448 @@
 ```
 ---
 
+## Request Log - 2025-05-27 15:27:10
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 15:27:10
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 2,
+            "date": "2025-05-01",
+            "notes": "sumeyye ekerken bayildi.",
+            "status": "completed",
+            "graft_count": 4000,
+            "created_at": "2025-05-27 13:52:08",
+            "updated_at": "2025-05-27 13:52:40",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "Daniel Ryan Hall"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 15:28:53
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 15:28:53
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 2,
+            "date": "2025-05-01",
+            "notes": "sumeyye ekerken bayildi.",
+            "status": "completed",
+            "graft_count": 4000,
+            "created_at": "2025-05-27 13:52:08",
+            "updated_at": "2025-05-27 13:52:40",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "Daniel Ryan Hall"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 15:29:20
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 15:29:20
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 2,
+            "date": "2025-05-01",
+            "notes": "sumeyye ekerken bayildi.",
+            "status": "completed",
+            "graft_count": 4000,
+            "created_at": "2025-05-27 13:52:08",
+            "updated_at": "2025-05-27 13:52:40",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "Daniel Ryan Hall"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 15:29:55
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 15:29:55
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 2,
+            "date": "2025-05-01",
+            "notes": "sumeyye ekerken bayildi.",
+            "status": "completed",
+            "graft_count": 4000,
+            "created_at": "2025-05-27 13:52:08",
+            "updated_at": "2025-05-27 13:52:40",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "Daniel Ryan Hall"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 15:31:27
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 15:31:27
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 2,
+            "date": "2025-05-01",
+            "notes": "sumeyye ekerken bayildi.",
+            "status": "completed",
+            "graft_count": 4000,
+            "created_at": "2025-05-27 13:52:08",
+            "updated_at": "2025-05-27 13:52:40",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "Daniel Ryan Hall"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 15:31:48
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 15:31:48
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 2,
+            "date": "2025-05-01",
+            "notes": "sumeyye ekerken bayildi.",
+            "status": "completed",
+            "graft_count": 4000,
+            "created_at": "2025-05-27 13:52:08",
+            "updated_at": "2025-05-27 13:52:40",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "Daniel Ryan Hall"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 15:31:59
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 15:31:59
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 2,
+            "date": "2025-05-01",
+            "notes": "sumeyye ekerken bayildi.",
+            "status": "completed",
+            "graft_count": 4000,
+            "created_at": "2025-05-27 13:52:08",
+            "updated_at": "2025-05-27 13:52:40",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "Daniel Ryan Hall"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 15:33:14
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 15:33:14
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 2,
+            "date": "2025-05-01",
+            "notes": "sumeyye ekerken bayildi.",
+            "status": "completed",
+            "graft_count": 4000,
+            "created_at": "2025-05-27 13:52:08",
+            "updated_at": "2025-05-27 13:52:40",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "Daniel Ryan Hall"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 15:34:03
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 15:34:03
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 2,
+            "date": "2025-05-01",
+            "notes": "sumeyye ekerken bayildi.",
+            "status": "completed",
+            "graft_count": 4000,
+            "created_at": "2025-05-27 13:52:08",
+            "updated_at": "2025-05-27 13:52:40",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "Daniel Ryan Hall"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 15:34:04
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 15:34:04
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 2,
+            "date": "2025-05-01",
+            "notes": "sumeyye ekerken bayildi.",
+            "status": "completed",
+            "graft_count": 4000,
+            "created_at": "2025-05-27 13:52:08",
+            "updated_at": "2025-05-27 13:52:40",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "Daniel Ryan Hall"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 15:34:21
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=2
+
+## Response Log - 2025-05-27 15:34:21
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 2,
+        "name": "Daniel Ryan Hall",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 13:52:08",
+        "updated_at": "2025-05-27 13:52:08",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-01",
+            "notes": "sumeyye ekerken bayildi.",
+            "status": "completed",
+            "graft_count": 4000,
+            "created_at": "2025-05-27 13:52:08",
+            "updated_at": "2025-05-27 13:52:40",
+            "patient_id": 2,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-27 15:34:26
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-27 15:34:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true
+}
+```
+---
+
+## Request Log - 2025-05-27 15:34:26
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=2
+
+## Response Log - 2025-05-27 15:34:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 2,
+        "name": "Daniel Ryan Hall",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 13:52:08",
+        "updated_at": "2025-05-27 13:52:08",
+        "avatar": null
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-27 15:34:29
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-27 15:34:29
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 2,
+            "name": "Daniel Ryan Hall",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:52:08",
+            "updated_at": "2025-05-27 13:52:08",
+            "avatar": null,
+            "last_surgery_date": null
+        },
+        {
+            "id": 1,
+            "name": "Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:36:38",
+            "avatar": null,
+            "last_surgery_date": "2025-03-11"
+        },
+        {
+            "id": 4,
+            "name": "Kris Bell",
+            "dob": "1988-01-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:59:45",
+            "avatar": "uploads\/avatars\/avatar_6835c55111719.jpeg",
+            "last_surgery_date": "2025-05-22"
+        },
+        {
+            "id": 3,
+            "name": "William Michael Pentland",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "avatar": null,
+            "last_surgery_date": "2025-05-02"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 15:34:36
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-27 15:34:36
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-27 15:34:36
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-27 15:34:36
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 2,
+            "name": "Daniel Ryan Hall",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:52:08",
+            "updated_at": "2025-05-27 13:52:08",
+            "avatar": null,
+            "last_surgery_date": null
+        },
+        {
+            "id": 4,
+            "name": "Kris Bell",
+            "dob": "1988-01-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:59:45",
+            "avatar": "uploads\/avatars\/avatar_6835c55111719.jpeg",
+            "last_surgery_date": "2025-05-22"
+        },
+        {
+            "id": 3,
+            "name": "William Michael Pentland",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "avatar": null,
+            "last_surgery_date": "2025-05-02"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 15:34:39
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-27 15:34:39
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-27 15:34:39
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-27 15:34:39
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 4,
+            "name": "Kris Bell",
+            "dob": "1988-01-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:59:45",
+            "avatar": "uploads\/avatars\/avatar_6835c55111719.jpeg",
+            "last_surgery_date": "2025-05-22"
+        },
+        {
+            "id": 3,
+            "name": "William Michael Pentland",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "avatar": null,
+            "last_surgery_date": "2025-05-02"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 15:34:54
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=4
+
+## Response Log - 2025-05-27 15:34:54
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 4,
+        "name": "Kris Bell",
+        "dob": "1988-01-01",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 13:56:51",
+        "updated_at": "2025-05-27 13:59:45",
+        "avatar": "uploads\/avatars\/avatar_6835c55111719.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 11,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c577196d9.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 12,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771986f.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 13,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c577199aa.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 14,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719ac1.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 15,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719bf6.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 16,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719d2a.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 17,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719eb5.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 18,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719ffc.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 19,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771a12c.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 20,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771a273.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 1,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7340.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 2,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7539.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 3,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c76ca.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 4,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c77fa.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 5,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7920.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 6,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7a82.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 7,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7c53.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 8,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7dbd.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 9,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7efb.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 10,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c802f.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 15:34:54
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=4
+
+## Response Log - 2025-05-27 15:34:54
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 4,
+        "name": "Kris Bell",
+        "dob": "1988-01-01",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 13:56:51",
+        "updated_at": "2025-05-27 13:59:45",
+        "avatar": "uploads\/avatars\/avatar_6835c55111719.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 11,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c577196d9.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 12,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771986f.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 13,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c577199aa.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 14,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719ac1.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 15,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719bf6.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 16,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719d2a.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 17,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719eb5.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 18,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719ffc.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 19,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771a12c.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 20,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771a273.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 1,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7340.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 2,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7539.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 3,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c76ca.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 4,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c77fa.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 5,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7920.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 6,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7a82.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 7,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7c53.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 8,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7dbd.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 9,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7efb.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 10,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c802f.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 15:34:56
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-27 15:34:56
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 4,
+            "name": "Kris Bell",
+            "dob": "1988-01-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:59:45",
+            "avatar": "uploads\/avatars\/avatar_6835c55111719.jpeg",
+            "last_surgery_date": "2025-05-22"
+        },
+        {
+            "id": 3,
+            "name": "William Michael Pentland",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "avatar": null,
+            "last_surgery_date": "2025-05-02"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 15:34:58
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=4
+
+## Response Log - 2025-05-27 15:34:58
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 4,
+        "name": "Kris Bell",
+        "dob": "1988-01-01",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 13:56:51",
+        "updated_at": "2025-05-27 13:59:45",
+        "avatar": "uploads\/avatars\/avatar_6835c55111719.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 11,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c577196d9.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 12,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771986f.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 13,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c577199aa.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 14,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719ac1.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 15,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719bf6.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 16,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719d2a.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 17,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719eb5.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 18,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719ffc.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 19,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771a12c.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 20,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771a273.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 1,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7340.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 2,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7539.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 3,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c76ca.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 4,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c77fa.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 5,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7920.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 6,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7a82.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 7,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7c53.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 8,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7dbd.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 9,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7efb.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 10,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c802f.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 15:34:58
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=4
+
+## Response Log - 2025-05-27 15:34:58
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 4,
+        "name": "Kris Bell",
+        "dob": "1988-01-01",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 13:56:51",
+        "updated_at": "2025-05-27 13:59:45",
+        "avatar": "uploads\/avatars\/avatar_6835c55111719.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 11,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c577196d9.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 12,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771986f.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 13,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c577199aa.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 14,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719ac1.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 15,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719bf6.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 16,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719d2a.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 17,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719eb5.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 18,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719ffc.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 19,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771a12c.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 20,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771a273.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 1,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7340.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 2,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7539.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 3,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c76ca.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 4,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c77fa.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 5,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7920.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 6,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7a82.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 7,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7c53.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 8,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7dbd.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 9,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7efb.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 10,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c802f.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 15:35:00
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-27 15:35:00
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 4,
+            "name": "Kris Bell",
+            "dob": "1988-01-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:59:45",
+            "avatar": "uploads\/avatars\/avatar_6835c55111719.jpeg",
+            "last_surgery_date": "2025-05-22"
+        },
+        {
+            "id": 3,
+            "name": "William Michael Pentland",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "avatar": null,
+            "last_surgery_date": "2025-05-02"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 15:37:32
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-27 15:37:32
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 4,
+            "name": "Kris Bell",
+            "dob": "1988-01-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:59:45",
+            "avatar": "uploads\/avatars\/avatar_6835c55111719.jpeg",
+            "last_surgery_date": "2025-05-22"
+        },
+        {
+            "id": 3,
+            "name": "William Michael Pentland",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "avatar": null,
+            "last_surgery_date": "2025-05-02"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 15:59:41
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-27 15:59:41
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 4,
+            "name": "Kris Bell",
+            "dob": "1988-01-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:59:45",
+            "avatar": "uploads\/avatars\/avatar_6835c55111719.jpeg",
+            "last_surgery_date": "2025-05-22"
+        },
+        {
+            "id": 3,
+            "name": "William Michael Pentland",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "avatar": null,
+            "last_surgery_date": "2025-05-02"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 15:59:42
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 15:59:42
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:01:26
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 16:01:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:01:31
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 16:01:31
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:01:50
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 16:01:50
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:01:54
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-27 16:01:54
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 4,
+            "name": "Kris Bell",
+            "dob": "1988-01-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:59:45",
+            "avatar": "uploads\/avatars\/avatar_6835c55111719.jpeg",
+            "last_surgery_date": "2025-05-22"
+        },
+        {
+            "id": 3,
+            "name": "William Michael Pentland",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "avatar": null,
+            "last_surgery_date": "2025-05-02"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:03:20
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-27 16:03:20
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 4,
+            "name": "Kris Bell",
+            "dob": "1988-01-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:59:45",
+            "avatar": "uploads\/avatars\/avatar_6835c55111719.jpeg",
+            "last_surgery_date": "2025-05-22"
+        },
+        {
+            "id": 3,
+            "name": "William Michael Pentland",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "avatar": null,
+            "last_surgery_date": "2025-05-02"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:03:25
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-27 16:03:25
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 4,
+            "name": "Kris Bell",
+            "dob": "1988-01-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:59:45",
+            "avatar": "uploads\/avatars\/avatar_6835c55111719.jpeg",
+            "last_surgery_date": "2025-05-22"
+        },
+        {
+            "id": 3,
+            "name": "William Michael Pentland",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "avatar": null,
+            "last_surgery_date": "2025-05-02"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:03:27
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 16:03:27
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:03:29
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 16:03:29
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:03:31
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 16:03:31
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:04:10
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 16:04:10
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:04:32
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=4
+
+## Response Log - 2025-05-27 16:04:32
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 4,
+        "name": "Kris Bell",
+        "dob": "1988-01-01",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 13:56:51",
+        "updated_at": "2025-05-27 13:59:45",
+        "avatar": "uploads\/avatars\/avatar_6835c55111719.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 11,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c577196d9.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 12,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771986f.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 13,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c577199aa.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 14,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719ac1.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 15,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719bf6.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 16,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719d2a.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 17,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719eb5.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 18,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719ffc.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 19,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771a12c.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 20,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771a273.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 1,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7340.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 2,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7539.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 3,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c76ca.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 4,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c77fa.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 5,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7920.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 6,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7a82.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 7,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7c53.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 8,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7dbd.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 9,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7efb.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 10,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c802f.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:06:03
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=4
+
+## Response Log - 2025-05-27 16:06:03
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 4,
+        "name": "Kris Bell",
+        "dob": "1988-01-01",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 13:56:51",
+        "updated_at": "2025-05-27 13:59:45",
+        "avatar": "uploads\/avatars\/avatar_6835c55111719.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 11,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c577196d9.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 12,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771986f.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 13,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c577199aa.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 14,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719ac1.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 15,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719bf6.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 16,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719d2a.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 17,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719eb5.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 18,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719ffc.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 19,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771a12c.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 20,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771a273.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 1,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7340.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 2,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7539.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 3,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c76ca.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 4,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c77fa.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 5,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7920.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 6,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7a82.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 7,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7c53.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 8,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7dbd.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 9,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7efb.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 10,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c802f.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:30:30
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 16:30:30
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:42:35
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=3
+
+## Response Log - 2025-05-27 16:42:35
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 3,
+        "name": "William Michael Pentland",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 13:52:10",
+        "updated_at": "2025-05-27 13:52:10",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-27 16:43:20
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=3
+
+## Response Log - 2025-05-27 16:43:20
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 3,
+        "name": "William Michael Pentland",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 13:52:10",
+        "updated_at": "2025-05-27 13:52:10",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-27 16:43:20
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=3
+
+## Response Log - 2025-05-27 16:43:20
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 3,
+        "name": "William Michael Pentland",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 13:52:10",
+        "updated_at": "2025-05-27 13:52:10",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-27 16:44:30
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-27 16:44:30
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6835dddedf927.jpeg"
+}
+```
+---
+
+## Request Log - 2025-05-27 16:44:30
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-27 16:44:30
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-27 16:44:31
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-27 16:44:31
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 4,
+            "name": "Kris Bell",
+            "dob": "1988-01-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:59:45",
+            "avatar": "uploads\/avatars\/avatar_6835c55111719.jpeg",
+            "last_surgery_date": "2025-05-22"
+        },
+        {
+            "id": 3,
+            "name": "William Michael Pentland",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 15:44:30",
+            "avatar": "uploads\/avatars\/avatar_6835dddedf927.jpeg",
+            "last_surgery_date": "2025-05-02"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:45:06
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=4
+
+## Response Log - 2025-05-27 16:45:06
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 4,
+        "name": "Kris Bell",
+        "dob": "1988-01-01",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 13:56:51",
+        "updated_at": "2025-05-27 13:59:45",
+        "avatar": "uploads\/avatars\/avatar_6835c55111719.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 11,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c577196d9.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 12,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771986f.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 13,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c577199aa.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 14,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719ac1.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 15,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719bf6.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 16,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719d2a.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 17,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719eb5.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 18,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719ffc.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 19,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771a12c.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 20,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771a273.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 1,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7340.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 2,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7539.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 3,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c76ca.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 4,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c77fa.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 5,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7920.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 6,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7a82.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 7,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7c53.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 8,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7dbd.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 9,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7efb.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 10,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c802f.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:45:28
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 16:45:28
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:46:53
+
+**Method:** GET
+**URL:** /api.php?entity=patient_lookup&action=find_by_name&name=Steve%20Pardoe
+
+## Response Log - 2025-05-27 16:46:53
+
+**Status:** Error
+**Details:**
+```json
+{
+    "success": false,
+    "error": "Patient not found."
+}
+```
+---
+
+## Request Log - 2025-05-27 16:46:53
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-27 16:46:53
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 5,
+        "name": "Steve Pardoe",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-27 16:46:53
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-27 16:46:53
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "id": "5",
+    "message": "Surgery added successfully."
+}
+```
+---
+
+## Request Log - 2025-05-27 16:47:06
+
+**Method:** GET
+**URL:** /api.php?entity=patient_lookup&action=find_by_name&name=Nate%20Turner
+
+## Response Log - 2025-05-27 16:47:06
+
+**Status:** Error
+**Details:**
+```json
+{
+    "success": false,
+    "error": "Patient not found."
+}
+```
+---
+
+## Request Log - 2025-05-27 16:47:06
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-27 16:47:06
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 6,
+        "name": "Nate Turner",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-27 16:47:06
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-27 16:47:06
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "id": "6",
+    "message": "Surgery added successfully."
+}
+```
+---
+
+## Request Log - 2025-05-27 16:47:32
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 16:47:32
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 6,
+            "date": "2025-05-13",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 15:47:06",
+            "updated_at": "2025-05-27 15:47:06",
+            "patient_id": 6,
+            "is_recorded": 1,
+            "patient_name": "Nate Turner"
+        },
+        {
+            "id": 5,
+            "date": "2025-05-12",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 15:46:53",
+            "updated_at": "2025-05-27 15:46:53",
+            "patient_id": 5,
+            "is_recorded": 1,
+            "patient_name": "Steve Pardoe"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:47:39
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=5
+
+## Response Log - 2025-05-27 16:47:39
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 5,
+        "name": "Steve Pardoe",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 15:46:53",
+        "updated_at": "2025-05-27 15:46:53",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 5,
+            "date": "2025-05-12",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 15:46:53",
+            "updated_at": "2025-05-27 15:46:53",
+            "patient_id": 5,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-27 16:47:41
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=5
+
+## Response Log - 2025-05-27 16:47:41
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 5,
+        "name": "Steve Pardoe",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 15:46:53",
+        "updated_at": "2025-05-27 15:46:53",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 5,
+            "date": "2025-05-12",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 15:46:53",
+            "updated_at": "2025-05-27 15:46:53",
+            "patient_id": 5,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-27 16:47:41
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=5
+
+## Response Log - 2025-05-27 16:47:41
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 5,
+        "name": "Steve Pardoe",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 15:46:53",
+        "updated_at": "2025-05-27 15:46:53",
+        "avatar": null
+    },
+    "surgeries": [
+        {
+            "id": 5,
+            "date": "2025-05-12",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 15:46:53",
+            "updated_at": "2025-05-27 15:46:53",
+            "patient_id": 5,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-27 16:47:48
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-27 16:47:48
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6835dea43c4ad.jpeg"
+}
+```
+---
+
+## Request Log - 2025-05-27 16:47:48
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-27 16:47:48
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-27 16:47:48
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-27 16:47:48
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 4,
+            "name": "Kris Bell",
+            "dob": "1988-01-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:59:45",
+            "avatar": "uploads\/avatars\/avatar_6835c55111719.jpeg",
+            "last_surgery_date": "2025-05-22"
+        },
+        {
+            "id": 6,
+            "name": "Nate Turner",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 15:47:06",
+            "updated_at": "2025-05-27 15:47:06",
+            "avatar": null,
+            "last_surgery_date": "2025-05-13"
+        },
+        {
+            "id": 5,
+            "name": "Steve Pardoe",
+            "dob": "2025-05-22",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 15:46:53",
+            "updated_at": "2025-05-27 15:47:48",
+            "avatar": "uploads\/avatars\/avatar_6835dea43c4ad.jpeg",
+            "last_surgery_date": "2025-05-12"
+        },
+        {
+            "id": 3,
+            "name": "William Michael Pentland",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 15:44:30",
+            "avatar": "uploads\/avatars\/avatar_6835dddedf927.jpeg",
+            "last_surgery_date": "2025-05-02"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:49:37
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=4
+
+## Response Log - 2025-05-27 16:49:37
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 4,
+        "name": "Kris Bell",
+        "dob": "1988-01-01",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 13:56:51",
+        "updated_at": "2025-05-27 13:59:45",
+        "avatar": "uploads\/avatars\/avatar_6835c55111719.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 11,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c577196d9.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 12,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771986f.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 13,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c577199aa.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 14,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719ac1.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 15,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719bf6.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 16,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719d2a.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 17,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719eb5.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 18,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c57719ffc.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 19,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771a12c.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 20,
+            "patient_id": 4,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_4\/Post-Surgery\/6835c5771a273.jpeg",
+            "created_at": "2025-05-27 14:00:23",
+            "updated_at": "2025-05-27 14:00:23",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 1,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7340.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 2,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7539.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 3,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c76ca.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 4,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c77fa.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 5,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7920.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 6,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7a82.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 7,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7c53.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 8,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7dbd.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 9,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c7efb.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 10,
+            "patient_id": 4,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_4\/Pre-Surgery\/6835c561c802f.jpeg",
+            "created_at": "2025-05-27 14:00:01",
+            "updated_at": "2025-05-27 14:00:01",
+            "album_type": "Pre-Surgery"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:49:45
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-27 16:49:45
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 4,
+            "name": "Kris Bell",
+            "dob": "1988-01-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:59:45",
+            "avatar": "uploads\/avatars\/avatar_6835c55111719.jpeg",
+            "last_surgery_date": "2025-05-22"
+        },
+        {
+            "id": 6,
+            "name": "Nate Turner",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 15:47:06",
+            "updated_at": "2025-05-27 15:47:06",
+            "avatar": null,
+            "last_surgery_date": "2025-05-13"
+        },
+        {
+            "id": 5,
+            "name": "Steve Pardoe",
+            "dob": "2025-05-22",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 15:46:53",
+            "updated_at": "2025-05-27 15:47:48",
+            "avatar": "uploads\/avatars\/avatar_6835dea43c4ad.jpeg",
+            "last_surgery_date": "2025-05-12"
+        },
+        {
+            "id": 3,
+            "name": "William Michael Pentland",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 15:44:30",
+            "avatar": "uploads\/avatars\/avatar_6835dddedf927.jpeg",
+            "last_surgery_date": "2025-05-02"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:49:50
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 16:49:50
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 6,
+            "date": "2025-05-13",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 15:47:06",
+            "updated_at": "2025-05-27 15:47:06",
+            "patient_id": 6,
+            "is_recorded": 1,
+            "patient_name": "Nate Turner"
+        },
+        {
+            "id": 5,
+            "date": "2025-05-12",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 15:46:53",
+            "updated_at": "2025-05-27 15:46:53",
+            "patient_id": 5,
+            "is_recorded": 1,
+            "patient_name": "Steve Pardoe"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:50:27
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 16:50:27
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 6,
+            "date": "2025-05-13",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 15:47:06",
+            "updated_at": "2025-05-27 15:47:06",
+            "patient_id": 6,
+            "is_recorded": 1,
+            "patient_name": "Nate Turner"
+        },
+        {
+            "id": 5,
+            "date": "2025-05-12",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 15:46:53",
+            "updated_at": "2025-05-27 15:46:53",
+            "patient_id": 5,
+            "is_recorded": 1,
+            "patient_name": "Steve Pardoe"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:50:44
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=5
+
+## Response Log - 2025-05-27 16:50:44
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 5,
+        "name": "Steve Pardoe",
+        "dob": "2025-05-22",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 15:46:53",
+        "updated_at": "2025-05-27 15:47:48",
+        "avatar": "uploads\/avatars\/avatar_6835dea43c4ad.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 5,
+            "date": "2025-05-12",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 15:46:53",
+            "updated_at": "2025-05-27 15:46:53",
+            "patient_id": 5,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-27 16:50:49
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=get&id=5
+
+## Response Log - 2025-05-27 16:50:49
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgery": {
+        "id": 5,
+        "date": "2025-05-12",
+        "notes": "",
+        "status": "booked",
+        "graft_count": 0,
+        "created_at": "2025-05-27 15:46:53",
+        "updated_at": "2025-05-27 15:46:53",
+        "patient_id": 5,
+        "is_recorded": 1,
+        "patient_name": "Steve Pardoe"
+    }
+}
+```
+---
+
+## Request Log - 2025-05-27 16:51:05
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-27 16:51:05
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Surgery updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-27 16:51:06
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=5
+
+## Response Log - 2025-05-27 16:51:06
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 5,
+        "name": "Steve Pardoe",
+        "dob": "2025-05-22",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 15:46:53",
+        "updated_at": "2025-05-27 15:47:48",
+        "avatar": "uploads\/avatars\/avatar_6835dea43c4ad.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 5,
+            "date": "2025-05-12",
+            "notes": "daskldhjlsandlsa jdpsajdlasjd dlsa;d;;asd mds;aldmd;lsad;sdmlsamc;lsa",
+            "status": "booked",
+            "graft_count": 44444,
+            "created_at": "2025-05-27 15:46:53",
+            "updated_at": "2025-05-27 15:51:05",
+            "patient_id": 5,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-27 16:51:11
+
+**Method:** GET
+**URL:** /api.php?entity=photo_album_types&action=list
+
+## Response Log - 2025-05-27 16:51:11
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "photo_album_types": [
+        {
+            "id": 1,
+            "name": "Pre-Surgery"
+        },
+        {
+            "id": 2,
+            "name": "Post-Surgery"
+        },
+        {
+            "id": 3,
+            "name": "Follow-up"
+        },
+        {
+            "id": 4,
+            "name": "1. Month"
+        },
+        {
+            "id": 5,
+            "name": "2. Month"
+        },
+        {
+            "id": 6,
+            "name": "3. Month"
+        },
+        {
+            "id": 7,
+            "name": "4. Month"
+        },
+        {
+            "id": 8,
+            "name": "5. Month"
+        },
+        {
+            "id": 9,
+            "name": "6. Month"
+        },
+        {
+            "id": 10,
+            "name": "7. Month"
+        },
+        {
+            "id": 11,
+            "name": "8. Month"
+        },
+        {
+            "id": 12,
+            "name": "9. Month"
+        },
+        {
+            "id": 13,
+            "name": "10. Month"
+        },
+        {
+            "id": 14,
+            "name": "11. Month"
+        },
+        {
+            "id": 15,
+            "name": "12. Month"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:51:31
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=5
+
+## Response Log - 2025-05-27 16:51:31
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 5,
+        "name": "Steve Pardoe",
+        "dob": "2025-05-22",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 15:46:53",
+        "updated_at": "2025-05-27 15:47:48",
+        "avatar": "uploads\/avatars\/avatar_6835dea43c4ad.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 5,
+            "date": "2025-05-12",
+            "notes": "daskldhjlsandlsa jdpsajdlasjd dlsa;d;;asd mds;aldmd;lsad;sdmlsamc;lsa",
+            "status": "booked",
+            "graft_count": 44444,
+            "created_at": "2025-05-27 15:46:53",
+            "updated_at": "2025-05-27 15:51:05",
+            "patient_id": 5,
+            "is_recorded": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 21,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df839677f.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 22,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df83969d0.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 23,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8396bc9.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 24,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8396d9f.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 25,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8396f45.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 26,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df83970f2.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 27,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df83972b6.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 28,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8397499.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 29,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8397679.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 30,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8397824.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:51:35
+
+**Method:** GET
+**URL:** /api.php?entity=photo_album_types&action=list
+
+## Response Log - 2025-05-27 16:51:35
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "photo_album_types": [
+        {
+            "id": 1,
+            "name": "Pre-Surgery"
+        },
+        {
+            "id": 2,
+            "name": "Post-Surgery"
+        },
+        {
+            "id": 3,
+            "name": "Follow-up"
+        },
+        {
+            "id": 4,
+            "name": "1. Month"
+        },
+        {
+            "id": 5,
+            "name": "2. Month"
+        },
+        {
+            "id": 6,
+            "name": "3. Month"
+        },
+        {
+            "id": 7,
+            "name": "4. Month"
+        },
+        {
+            "id": 8,
+            "name": "5. Month"
+        },
+        {
+            "id": 9,
+            "name": "6. Month"
+        },
+        {
+            "id": 10,
+            "name": "7. Month"
+        },
+        {
+            "id": 11,
+            "name": "8. Month"
+        },
+        {
+            "id": 12,
+            "name": "9. Month"
+        },
+        {
+            "id": 13,
+            "name": "10. Month"
+        },
+        {
+            "id": 14,
+            "name": "11. Month"
+        },
+        {
+            "id": 15,
+            "name": "12. Month"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:51:42
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=5
+
+## Response Log - 2025-05-27 16:51:42
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 5,
+        "name": "Steve Pardoe",
+        "dob": "2025-05-22",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 15:46:53",
+        "updated_at": "2025-05-27 15:47:48",
+        "avatar": "uploads\/avatars\/avatar_6835dea43c4ad.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 5,
+            "date": "2025-05-12",
+            "notes": "daskldhjlsandlsa jdpsajdlasjd dlsa;d;;asd mds;aldmd;lsad;sdmlsamc;lsa",
+            "status": "booked",
+            "graft_count": 44444,
+            "created_at": "2025-05-27 15:46:53",
+            "updated_at": "2025-05-27 15:51:05",
+            "patient_id": 5,
+            "is_recorded": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 31,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6c053.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 32,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6c292.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 33,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6c48c.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 34,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6c673.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 35,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6c87b.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 36,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6ca2c.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 37,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6cbcf.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 38,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6cd8c.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 39,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6cf2d.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 21,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df839677f.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 22,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df83969d0.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 23,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8396bc9.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 24,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8396d9f.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 25,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8396f45.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 26,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df83970f2.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 27,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df83972b6.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 28,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8397499.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 29,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8397679.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 30,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8397824.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:52:04
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-27 16:52:04
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true
+}
+```
+---
+
+## Request Log - 2025-05-27 16:52:04
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=5
+
+## Response Log - 2025-05-27 16:52:04
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 5,
+        "name": "Steve Pardoe",
+        "dob": "2025-05-22",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 15:46:53",
+        "updated_at": "2025-05-27 15:47:48",
+        "avatar": "uploads\/avatars\/avatar_6835dea43c4ad.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 5,
+            "date": "2025-05-12",
+            "notes": "daskldhjlsandlsa jdpsajdlasjd dlsa;d;;asd mds;aldmd;lsad;sdmlsamc;lsa",
+            "status": "booked",
+            "graft_count": 44444,
+            "created_at": "2025-05-27 15:46:53",
+            "updated_at": "2025-05-27 15:51:05",
+            "patient_id": 5,
+            "is_recorded": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 31,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6c053.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 32,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6c292.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 33,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6c48c.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 34,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6c673.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 35,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6c87b.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 36,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6ca2c.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 38,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6cd8c.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 39,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6cf2d.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 21,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df839677f.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 22,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df83969d0.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 23,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8396bc9.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 24,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8396d9f.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 25,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8396f45.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 26,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df83970f2.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 27,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df83972b6.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 28,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8397499.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 29,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8397679.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 30,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8397824.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:52:07
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-27 16:52:07
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true
+}
+```
+---
+
+## Request Log - 2025-05-27 16:52:07
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=5
+
+## Response Log - 2025-05-27 16:52:07
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 5,
+        "name": "Steve Pardoe",
+        "dob": "2025-05-22",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 15:46:53",
+        "updated_at": "2025-05-27 15:47:48",
+        "avatar": "uploads\/avatars\/avatar_6835dea43c4ad.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 5,
+            "date": "2025-05-12",
+            "notes": "daskldhjlsandlsa jdpsajdlasjd dlsa;d;;asd mds;aldmd;lsad;sdmlsamc;lsa",
+            "status": "booked",
+            "graft_count": 44444,
+            "created_at": "2025-05-27 15:46:53",
+            "updated_at": "2025-05-27 15:51:05",
+            "patient_id": 5,
+            "is_recorded": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 31,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6c053.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 32,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6c292.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 33,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6c48c.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 34,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6c673.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 35,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6c87b.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 38,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6cd8c.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 39,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6cf2d.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 21,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df839677f.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 22,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df83969d0.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 23,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8396bc9.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 24,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8396d9f.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 25,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8396f45.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 26,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df83970f2.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 27,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df83972b6.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 28,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8397499.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 29,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8397679.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 30,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8397824.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:52:14
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=get&id=5
+
+## Response Log - 2025-05-27 16:52:14
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgery": {
+        "id": 5,
+        "date": "2025-05-12",
+        "notes": "daskldhjlsandlsa jdpsajdlasjd dlsa;d;;asd mds;aldmd;lsad;sdmlsamc;lsa",
+        "status": "booked",
+        "graft_count": 44444,
+        "created_at": "2025-05-27 15:46:53",
+        "updated_at": "2025-05-27 15:51:05",
+        "patient_id": 5,
+        "is_recorded": 1,
+        "patient_name": "Steve Pardoe"
+    }
+}
+```
+---
+
+## Request Log - 2025-05-27 16:52:24
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-27 16:52:24
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Surgery updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-27 16:52:25
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=5
+
+## Response Log - 2025-05-27 16:52:25
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 5,
+        "name": "Steve Pardoe",
+        "dob": "2025-05-22",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 15:46:53",
+        "updated_at": "2025-05-27 15:47:48",
+        "avatar": "uploads\/avatars\/avatar_6835dea43c4ad.jpeg"
+    },
+    "surgeries": [
+        {
+            "id": 5,
+            "date": "2025-05-12",
+            "notes": "daskldhjlsandlsa jdpsajdlasjd dlsa;d;;asd mds;aldmd;lsad;sdmlsamc;lsa",
+            "status": "completed",
+            "graft_count": 44444,
+            "created_at": "2025-05-27 15:46:53",
+            "updated_at": "2025-05-27 15:52:24",
+            "patient_id": 5,
+            "is_recorded": 1
+        }
+    ],
+    "photos": [
+        {
+            "id": 31,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6c053.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 32,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6c292.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 33,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6c48c.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 34,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6c673.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 35,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6c87b.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 38,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6cd8c.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 39,
+            "patient_id": 5,
+            "photo_album_type_id": 2,
+            "file_path": ".\/uploads\/patient_5\/Post-Surgery\/6835df8e6cf2d.jpeg",
+            "created_at": "2025-05-27 15:51:42",
+            "updated_at": "2025-05-27 15:51:42",
+            "album_type": "Post-Surgery"
+        },
+        {
+            "id": 21,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df839677f.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 22,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df83969d0.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 23,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8396bc9.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 24,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8396d9f.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 25,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8396f45.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 26,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df83970f2.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 27,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df83972b6.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 28,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8397499.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 29,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8397679.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        },
+        {
+            "id": 30,
+            "patient_id": 5,
+            "photo_album_type_id": 1,
+            "file_path": ".\/uploads\/patient_5\/Pre-Surgery\/6835df8397824.jpeg",
+            "created_at": "2025-05-27 15:51:31",
+            "updated_at": "2025-05-27 15:51:31",
+            "album_type": "Pre-Surgery"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 16:52:28
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 16:52:28
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 6,
+            "date": "2025-05-13",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 15:47:06",
+            "updated_at": "2025-05-27 15:47:06",
+            "patient_id": 6,
+            "is_recorded": 1,
+            "patient_name": "Nate Turner"
+        },
+        {
+            "id": 5,
+            "date": "2025-05-12",
+            "notes": "daskldhjlsandlsa jdpsajdlasjd dlsa;d;;asd mds;aldmd;lsad;sdmlsamc;lsa",
+            "status": "completed",
+            "graft_count": 44444,
+            "created_at": "2025-05-27 15:46:53",
+            "updated_at": "2025-05-27 15:52:24",
+            "patient_id": 5,
+            "is_recorded": 1,
+            "patient_name": "Steve Pardoe"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 23:38:10
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 23:38:10
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 6,
+            "date": "2025-05-13",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 15:47:06",
+            "updated_at": "2025-05-27 15:47:06",
+            "patient_id": 6,
+            "is_recorded": 1,
+            "patient_name": "Nate Turner"
+        },
+        {
+            "id": 5,
+            "date": "2025-05-12",
+            "notes": "daskldhjlsandlsa jdpsajdlasjd dlsa;d;;asd mds;aldmd;lsad;sdmlsamc;lsa",
+            "status": "completed",
+            "graft_count": 44444,
+            "created_at": "2025-05-27 15:46:53",
+            "updated_at": "2025-05-27 15:52:24",
+            "patient_id": 5,
+            "is_recorded": 1,
+            "patient_name": "Steve Pardoe"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 23:41:05
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 23:41:05
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 6,
+            "date": "2025-05-13",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 15:47:06",
+            "updated_at": "2025-05-27 15:47:06",
+            "patient_id": 6,
+            "is_recorded": 1,
+            "patient_name": "Nate Turner"
+        },
+        {
+            "id": 5,
+            "date": "2025-05-12",
+            "notes": "daskldhjlsandlsa jdpsajdlasjd dlsa;d;;asd mds;aldmd;lsad;sdmlsamc;lsa",
+            "status": "completed",
+            "graft_count": 44444,
+            "created_at": "2025-05-27 15:46:53",
+            "updated_at": "2025-05-27 15:52:24",
+            "patient_id": 5,
+            "is_recorded": 1,
+            "patient_name": "Steve Pardoe"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 23:51:32
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 23:51:32
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 6,
+            "date": "2025-05-13",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 15:47:06",
+            "updated_at": "2025-05-27 15:47:06",
+            "patient_id": 6,
+            "is_recorded": 1,
+            "patient_name": "Nate Turner"
+        },
+        {
+            "id": 5,
+            "date": "2025-05-12",
+            "notes": "daskldhjlsandlsa jdpsajdlasjd dlsa;d;;asd mds;aldmd;lsad;sdmlsamc;lsa",
+            "status": "completed",
+            "graft_count": 44444,
+            "created_at": "2025-05-27 15:46:53",
+            "updated_at": "2025-05-27 15:52:24",
+            "patient_id": 5,
+            "is_recorded": 1,
+            "patient_name": "Steve Pardoe"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-27 23:53:55
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-27 23:53:55
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 4,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 3100,
+            "created_at": "2025-05-27 13:56:51",
+            "updated_at": "2025-05-27 13:57:28",
+            "patient_id": 4,
+            "is_recorded": 1,
+            "patient_name": "Kris Bell"
+        },
+        {
+            "id": 6,
+            "date": "2025-05-13",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 15:47:06",
+            "updated_at": "2025-05-27 15:47:06",
+            "patient_id": 6,
+            "is_recorded": 1,
+            "patient_name": "Nate Turner"
+        },
+        {
+            "id": 5,
+            "date": "2025-05-12",
+            "notes": "daskldhjlsandlsa jdpsajdlasjd dlsa;d;;asd mds;aldmd;lsad;sdmlsamc;lsa",
+            "status": "completed",
+            "graft_count": 44444,
+            "created_at": "2025-05-27 15:46:53",
+            "updated_at": "2025-05-27 15:52:24",
+            "patient_id": 5,
+            "is_recorded": 1,
+            "patient_name": "Steve Pardoe"
+        },
+        {
+            "id": 3,
+            "date": "2025-05-02",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 13:52:10",
+            "updated_at": "2025-05-27 13:52:10",
+            "patient_id": 3,
+            "is_recorded": 1,
+            "patient_name": "William Michael Pentland"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-11",
+            "notes": "",
+            "status": "cancelled",
+            "graft_count": 111,
+            "created_at": "2025-05-27 13:36:38",
+            "updated_at": "2025-05-27 13:51:08",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:24:52
+
+**Method:** GET
+**URL:** /api.php?entity=users&action=list
+
+## Response Log - 2025-05-28 00:24:52
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "users": [
+        {
+            "id": 1,
+            "email": "test@example.com",
+            "username": "admin",
+            "role": "admin",
+            "created_at": "2025-05-27 13:36:18",
+            "updated_at": "2025-05-27 13:36:18"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:25:49
+
+**Method:** GET
+**URL:** /api.php?entity=users&action=list
+
+## Response Log - 2025-05-28 00:25:49
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "users": [
+        {
+            "id": 1,
+            "email": "test@example.com",
+            "username": "admin",
+            "role": "admin",
+            "created_at": "2025-05-27 23:25:41",
+            "updated_at": "2025-05-27 23:25:41"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:26:30
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 00:26:30
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:27:19
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 00:27:19
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:27:23
+
+**Method:** GET
+**URL:** /api.php?entity=users&action=list
+
+## Response Log - 2025-05-28 00:27:23
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "users": [
+        {
+            "id": 1,
+            "email": "test@example.com",
+            "username": "admin",
+            "role": "admin",
+            "created_at": "2025-05-27 23:25:41",
+            "updated_at": "2025-05-27 23:25:41"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:27:24
+
+**Method:** GET
+**URL:** /api.php?entity=users&action=get&id=1
+
+## Response Log - 2025-05-28 00:27:24
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "user": {
+        "id": 1,
+        "email": "test@example.com",
+        "username": "admin",
+        "role": "admin",
+        "created_at": "2025-05-27 23:25:41",
+        "updated_at": "2025-05-27 23:25:41"
+    }
+}
+```
+---
+
+## Request Log - 2025-05-28 00:40:15
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 00:40:15
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:40:17
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 00:40:17
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:40:19
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=get_all
+
+## Response Log - 2025-05-28 00:40:19
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function not found for entity 'agencies', action 'get_all', method 'GET': handle_agencies"
+}
+```
+---
+
+## Response Log - 2025-05-28 00:40:19
+
+**Status:** Error
+**Details:**
+```json
+{
+    "success": false,
+    "message": "Function handle_agencies not found."
+}
+```
+---
+
+## Request Log - 2025-05-28 00:40:25
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-28 00:40:25
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function not found for entity 'agencies', action 'create', method 'POST': handle_agencies"
+}
+```
+---
+
+## Response Log - 2025-05-28 00:40:25
+
+**Status:** Error
+**Details:**
+```json
+{
+    "success": false,
+    "message": "Function handle_agencies not found."
+}
+```
+---
+
+## Request Log - 2025-05-28 00:40:32
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-28 00:40:32
+
+**Status:** Info
+**Details:**
+```json
+{
+    "log": "Handler function not found for entity 'agencies', action 'create', method 'POST': handle_agencies"
+}
+```
+---
+
+## Response Log - 2025-05-28 00:40:32
+
+**Status:** Error
+**Details:**
+```json
+{
+    "success": false,
+    "message": "Function handle_agencies not found."
+}
+```
+---
+
+## Request Log - 2025-05-28 00:41:17
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-28 00:41:17
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "id": "1",
+    "message": "Agency created successfully."
+}
+```
+---
+
+## Request Log - 2025-05-28 00:41:18
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=get_all
+
+## Response Log - 2025-05-28 00:41:18
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "test",
+            "created_at": "2025-05-27 23:41:17",
+            "updated_at": "2025-05-27 23:41:17"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:41:21
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=get_all
+
+## Response Log - 2025-05-28 00:41:21
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "test",
+            "created_at": "2025-05-27 23:41:17",
+            "updated_at": "2025-05-27 23:41:17"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:42:10
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 00:42:10
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:42:13
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 00:42:13
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:42:14
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 00:42:14
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:42:15
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 00:42:15
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:42:16
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 00:42:16
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:42:41
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 00:42:41
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:42:47
+
+**Method:** GET
+**URL:** /api.php?entity=patient_lookup&action=find_by_name&name=R%20-%20Example%20Name
+
+## Response Log - 2025-05-28 00:42:48
+
+**Status:** Error
+**Details:**
+```json
+{
+    "success": false,
+    "error": "Patient not found."
+}
+```
+---
+
+## Request Log - 2025-05-28 00:42:48
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-28 00:42:48
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 1,
+        "name": "R - Example Name",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-28 00:42:48
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-28 00:42:48
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "id": "1",
+    "message": "Surgery added successfully."
+}
+```
+---
+
+## Request Log - 2025-05-28 00:42:52
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 00:42:52
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:42:59
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-28 00:42:59
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "R - Example Name",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 23:42:48",
+        "updated_at": "2025-05-27 23:42:48",
+        "avatar": null,
+        "agency_id": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "patient_id": 1,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:43:03
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-28 00:43:03
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "R - Example Name",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 23:42:48",
+        "updated_at": "2025-05-27 23:42:48",
+        "avatar": null,
+        "agency_id": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "patient_id": 1,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:43:03
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-28 00:43:03
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "R - Example Name",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 23:42:48",
+        "updated_at": "2025-05-27 23:42:48",
+        "avatar": null,
+        "agency_id": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "patient_id": 1,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:43:14
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 00:43:14
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:43:17
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 00:43:17
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:43:44
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-28 00:43:44
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_68364e30652ae.png"
+}
+```
+---
+
+## Request Log - 2025-05-28 00:43:44
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-28 00:43:44
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 2,
+        "name": "acenta 1",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-28 00:43:44
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 00:43:44
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:43:44",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:43:49
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=2
+
+## Response Log - 2025-05-28 00:43:49
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 2,
+        "name": "acenta 1",
+        "dob": "2025-05-02",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 2,
+        "created_at": "2025-05-27 23:43:44",
+        "updated_at": "2025-05-27 23:43:44",
+        "avatar": null,
+        "agency_id": 1
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:43:52
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=2
+
+## Response Log - 2025-05-28 00:43:52
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 2,
+        "name": "acenta 1",
+        "dob": "2025-05-02",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 2,
+        "created_at": "2025-05-27 23:43:44",
+        "updated_at": "2025-05-27 23:43:44",
+        "avatar": null,
+        "agency_id": 1
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:43:52
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=2
+
+## Response Log - 2025-05-28 00:43:52
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 2,
+        "name": "acenta 1",
+        "dob": "2025-05-02",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 2,
+        "created_at": "2025-05-27 23:43:44",
+        "updated_at": "2025-05-27 23:43:44",
+        "avatar": null,
+        "agency_id": 1
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:44:01
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-28 00:44:01
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_68364e41ad68d.png"
+}
+```
+---
+
+## Request Log - 2025-05-28 00:44:01
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-28 00:44:01
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-28 00:44:02
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 00:44:02
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:44:04
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 00:44:04
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:44:09
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 00:44:09
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:44:11
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 00:44:11
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:44:18
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=2
+
+## Response Log - 2025-05-28 00:44:18
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 2,
+        "name": "acenta 1",
+        "dob": "2025-05-02",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 2,
+        "created_at": "2025-05-27 23:43:44",
+        "updated_at": "2025-05-27 23:44:01",
+        "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+        "agency_id": 1
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:44:21
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 00:44:21
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:44:26
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 00:44:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:44:31
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 00:44:31
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:44:33
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=2
+
+## Response Log - 2025-05-28 00:44:33
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 2,
+        "name": "acenta 1",
+        "dob": "2025-05-02",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 2,
+        "created_at": "2025-05-27 23:43:44",
+        "updated_at": "2025-05-27 23:44:01",
+        "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+        "agency_id": 1
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:44:33
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=2
+
+## Response Log - 2025-05-28 00:44:33
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 2,
+        "name": "acenta 1",
+        "dob": "2025-05-02",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 2,
+        "created_at": "2025-05-27 23:43:44",
+        "updated_at": "2025-05-27 23:44:01",
+        "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+        "agency_id": 1
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:44:36
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 00:44:36
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:44:39
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 00:44:39
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:44:43
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-28 00:44:43
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "R - Example Name",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 23:42:48",
+        "updated_at": "2025-05-27 23:42:48",
+        "avatar": null,
+        "agency_id": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "patient_id": 1,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:44:43
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-28 00:44:43
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "R - Example Name",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 23:42:48",
+        "updated_at": "2025-05-27 23:42:48",
+        "avatar": null,
+        "agency_id": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "patient_id": 1,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:44:44
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 00:44:44
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:44:48
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-28 00:44:48
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:44:48
+
+**Method:** GET
+**URL:** /api.php?entity=users&action=list
+
+## Response Log - 2025-05-28 00:44:48
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "users": [
+        {
+            "id": 1,
+            "email": "test@example.com",
+            "username": "admin",
+            "role": "admin",
+            "agency_id": null,
+            "created_at": "2025-05-27 23:25:41",
+            "updated_at": "2025-05-27 23:25:41"
+        },
+        {
+            "id": 2,
+            "email": "orangespringuk@gmail.com",
+            "username": "ayhan",
+            "role": "user",
+            "agency_id": 1,
+            "created_at": "2025-05-27 23:41:44",
+            "updated_at": "2025-05-27 23:41:44"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:46:21
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 00:46:21
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:46:22
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-28 00:46:22
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "R - Example Name",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 23:42:48",
+        "updated_at": "2025-05-27 23:42:48",
+        "avatar": null,
+        "agency_id": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "patient_id": 1,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:46:22
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-28 00:46:22
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "R - Example Name",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 23:42:48",
+        "updated_at": "2025-05-27 23:42:48",
+        "avatar": null,
+        "agency_id": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "patient_id": 1,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:47:18
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 00:47:18
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:48:01
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 00:48:01
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:48:07
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-28 00:48:07
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "R - Example Name",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 23:42:48",
+        "updated_at": "2025-05-27 23:42:48",
+        "avatar": null,
+        "agency_id": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 0,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "patient_id": 1,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:48:08
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=get&id=1
+
+## Response Log - 2025-05-28 00:48:08
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgery": {
+        "id": 1,
+        "date": "2025-03-10",
+        "notes": "",
+        "status": "booked",
+        "graft_count": 0,
+        "created_at": "2025-05-27 23:42:48",
+        "updated_at": "2025-05-27 23:42:48",
+        "patient_id": 1,
+        "is_recorded": 1,
+        "patient_name": "R - Example Name"
+    }
+}
+```
+---
+
+## Request Log - 2025-05-28 00:48:13
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-28 00:48:13
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Surgery updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-28 00:48:15
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-28 00:48:15
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "R - Example Name",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 23:42:48",
+        "updated_at": "2025-05-27 23:42:48",
+        "avatar": null,
+        "agency_id": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:48:17
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 00:48:17
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:49:11
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-28 00:49:11
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:49:11
+
+**Method:** GET
+**URL:** /api.php?entity=users&action=list
+
+## Response Log - 2025-05-28 00:49:11
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "users": [
+        {
+            "id": 1,
+            "email": "test@example.com",
+            "username": "admin",
+            "role": "admin",
+            "agency_id": null,
+            "created_at": "2025-05-27 23:25:41",
+            "updated_at": "2025-05-27 23:25:41"
+        },
+        {
+            "id": 2,
+            "email": "orangespringuk@gmail.com",
+            "username": "ayhan",
+            "role": "user",
+            "agency_id": 1,
+            "created_at": "2025-05-27 23:41:44",
+            "updated_at": "2025-05-27 23:41:44"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:49:14
+
+**Method:** GET
+**URL:** /api.php?entity=users&action=get&id=1
+
+## Response Log - 2025-05-28 00:49:14
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "user": {
+        "id": 1,
+        "email": "test@example.com",
+        "username": "admin",
+        "role": "admin",
+        "agency_id": null,
+        "created_at": "2025-05-27 23:25:41",
+        "updated_at": "2025-05-27 23:25:41"
+    }
+}
+```
+---
+
+## Request Log - 2025-05-28 00:49:21
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=get_all
+
+## Response Log - 2025-05-28 00:49:21
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "test",
+            "created_at": "2025-05-27 23:41:17",
+            "updated_at": "2025-05-27 23:41:17"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:49:29
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-28 00:49:29
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "id": "2",
+    "message": "Agency created successfully."
+}
+```
+---
+
+## Request Log - 2025-05-28 00:49:30
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=get_all
+
+## Response Log - 2025-05-28 00:49:30
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 2,
+            "name": "Hospital",
+            "created_at": "2025-05-27 23:49:29",
+            "updated_at": "2025-05-27 23:49:29"
+        },
+        {
+            "id": 1,
+            "name": "test",
+            "created_at": "2025-05-27 23:41:17",
+            "updated_at": "2025-05-27 23:41:17"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:57:10
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 00:57:10
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:57:25
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 00:57:25
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:57:35
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 00:57:35
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "agency_name": "test",
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:57:39
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 00:57:39
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:57:41
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 00:57:41
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:57:56
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-28 00:57:56
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "id": "2",
+    "message": "Surgery added successfully."
+}
+```
+---
+
+## Request Log - 2025-05-28 00:57:58
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 00:57:58
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:57:59
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 00:57:59
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:58:22
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=get_all
+
+## Response Log - 2025-05-28 00:58:22
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 2,
+            "name": "Hospital",
+            "created_at": "2025-05-27 23:49:29",
+            "updated_at": "2025-05-27 23:49:29"
+        },
+        {
+            "id": 1,
+            "name": "test",
+            "created_at": "2025-05-27 23:41:17",
+            "updated_at": "2025-05-27 23:41:17"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:58:24
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 00:58:24
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name",
+            "agency_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:58:28
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 00:58:28
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name",
+            "agency_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:58:31
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=get&id=1
+
+## Response Log - 2025-05-28 00:58:31
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgery": {
+        "id": 1,
+        "date": "2025-03-10",
+        "notes": "dfsasadsadsa",
+        "status": "booked",
+        "graft_count": 321321,
+        "created_at": "2025-05-27 23:42:48",
+        "updated_at": "2025-05-27 23:48:13",
+        "patient_id": 1,
+        "is_recorded": 1,
+        "patient_name": "R - Example Name",
+        "agency_name": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-28 00:58:35
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 00:58:35
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name",
+            "agency_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:58:37
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-28 00:58:37
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "R - Example Name",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 23:42:48",
+        "updated_at": "2025-05-27 23:42:48",
+        "avatar": null,
+        "agency_id": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-28 00:58:39
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=get&id=1
+
+## Response Log - 2025-05-28 00:58:39
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgery": {
+        "id": 1,
+        "date": "2025-03-10",
+        "notes": "dfsasadsadsa",
+        "status": "booked",
+        "graft_count": 321321,
+        "created_at": "2025-05-27 23:42:48",
+        "updated_at": "2025-05-27 23:48:13",
+        "patient_id": 1,
+        "is_recorded": 1,
+        "patient_name": "R - Example Name",
+        "agency_name": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-28 00:58:42
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 00:58:42
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name",
+            "agency_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:58:44
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-28 00:58:44
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 2,
+            "name": "Hospital"
+        },
+        {
+            "id": 1,
+            "name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:58:44
+
+**Method:** GET
+**URL:** /api.php?entity=users&action=list
+
+## Response Log - 2025-05-28 00:58:44
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "users": [
+        {
+            "id": 1,
+            "email": "test@example.com",
+            "username": "admin",
+            "role": "admin",
+            "agency_id": null,
+            "created_at": "2025-05-27 23:25:41",
+            "updated_at": "2025-05-27 23:25:41"
+        },
+        {
+            "id": 2,
+            "email": "orangespringuk@gmail.com",
+            "username": "ayhan",
+            "role": "user",
+            "agency_id": 1,
+            "created_at": "2025-05-27 23:41:44",
+            "updated_at": "2025-05-27 23:41:44"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 00:58:46
+
+**Method:** GET
+**URL:** /api.php?entity=users&action=get&id=1
+
+## Response Log - 2025-05-28 00:58:46
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "user": {
+        "id": 1,
+        "email": "test@example.com",
+        "username": "admin",
+        "role": "admin",
+        "agency_id": null,
+        "created_at": "2025-05-27 23:25:41",
+        "updated_at": "2025-05-27 23:25:41"
+    }
+}
+```
+---
+
+## Request Log - 2025-05-28 00:58:49
+
+**Method:** POST
+**URL:** /api.php
+**Body:** {&quot;entity&quot;:&quot;users&quot;,&quot;email&quot;:&quot;test@example.com&quot;,&quot;username&quot;:&quot;admin&quot;,&quot;role&quot;:&quot;admin&quot;,&quot;agency_id&quot;:&quot;2&quot;,&quot;id&quot;:&quot;1&quot;,&quot;action&quot;:&quot;edit&quot;}
+
+## Response Log - 2025-05-28 00:58:49
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true
+}
+```
+---
+
+## Request Log - 2025-05-28 00:58:49
+
+**Method:** GET
+**URL:** /api.php?entity=users&action=list
+
+## Response Log - 2025-05-28 00:58:49
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "users": [
+        {
+            "id": 1,
+            "email": "test@example.com",
+            "username": "admin",
+            "role": "admin",
+            "agency_id": 2,
+            "created_at": "2025-05-27 23:25:41",
+            "updated_at": "2025-05-27 23:58:49"
+        },
+        {
+            "id": 2,
+            "email": "orangespringuk@gmail.com",
+            "username": "ayhan",
+            "role": "user",
+            "agency_id": 1,
+            "created_at": "2025-05-27 23:41:44",
+            "updated_at": "2025-05-27 23:41:44"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:05:51
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:05:51
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name",
+            "agency_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:06:10
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:06:10
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:06:14
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:06:14
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:07:16
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:07:16
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name",
+            "agency_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:07:18
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:07:18
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:07:20
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:07:20
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:07:22
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:07:22
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:07:24
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-28 14:07:24
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 2,
+            "name": "Hospital"
+        },
+        {
+            "id": 1,
+            "name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:07:24
+
+**Method:** GET
+**URL:** /api.php?entity=users&action=list
+
+## Response Log - 2025-05-28 14:07:24
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "users": [
+        {
+            "id": 1,
+            "email": "test@example.com",
+            "username": "admin",
+            "role": "admin",
+            "agency_id": 2,
+            "created_at": "2025-05-27 23:25:41",
+            "updated_at": "2025-05-27 23:58:49"
+        },
+        {
+            "id": 2,
+            "email": "orangespringuk@gmail.com",
+            "username": "ayhan",
+            "role": "user",
+            "agency_id": 1,
+            "created_at": "2025-05-27 23:41:44",
+            "updated_at": "2025-05-27 23:41:44"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:07:36
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:07:36
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:07:38
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:07:38
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:07:41
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:07:41
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:11:10
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:11:10
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:11:16
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:11:16
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:12:39
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:12:39
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:13:11
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:13:11
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:20:12
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:20:12
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:20:15
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:20:15
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name",
+            "agency_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:20:17
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:20:17
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name",
+            "agency_name": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:20:19
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:20:19
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:20:19
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-28 14:20:19
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 2,
+            "name": "Hospital"
+        },
+        {
+            "id": 1,
+            "name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:20:19
+
+**Method:** GET
+**URL:** /api.php?entity=users&action=list
+
+## Response Log - 2025-05-28 14:20:19
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "users": [
+        {
+            "id": 1,
+            "email": "test@example.com",
+            "username": "admin",
+            "role": "admin",
+            "agency_id": 2,
+            "created_at": "2025-05-27 23:25:41",
+            "updated_at": "2025-05-27 23:58:49"
+        },
+        {
+            "id": 2,
+            "email": "orangespringuk@gmail.com",
+            "username": "ayhan",
+            "role": "user",
+            "agency_id": 1,
+            "created_at": "2025-05-27 23:41:44",
+            "updated_at": "2025-05-27 23:41:44"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:20:24
+
+**Method:** GET
+**URL:** /api.php?entity=users&action=get&id=1
+
+## Response Log - 2025-05-28 14:20:24
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "user": {
+        "id": 1,
+        "email": "test@example.com",
+        "username": "admin",
+        "role": "admin",
+        "agency_id": 2,
+        "created_at": "2025-05-27 23:25:41",
+        "updated_at": "2025-05-27 23:58:49"
+    }
+}
+```
+---
+
+## Request Log - 2025-05-28 14:20:33
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=get_all
+
+## Response Log - 2025-05-28 14:20:33
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 2,
+            "name": "Hospital",
+            "created_at": "2025-05-27 23:49:29",
+            "updated_at": "2025-05-27 23:49:29"
+        },
+        {
+            "id": 1,
+            "name": "test",
+            "created_at": "2025-05-27 23:41:17",
+            "updated_at": "2025-05-27 23:41:17"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:20:39
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:20:39
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:20:41
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:20:41
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:20:42
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:20:42
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:22:28
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=get_all
+
+## Response Log - 2025-05-28 14:22:28
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 2,
+            "name": "Hospital",
+            "created_at": "2025-05-27 23:49:29",
+            "updated_at": "2025-05-27 23:49:29"
+        },
+        {
+            "id": 1,
+            "name": "test",
+            "created_at": "2025-05-27 23:41:17",
+            "updated_at": "2025-05-27 23:41:17"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:22:31
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:22:31
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:22:34
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:22:34
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:22:39
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:22:39
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:22:41
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:22:41
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:23:11
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:23:11
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:23:13
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:23:13
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:23:16
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:23:16
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:42:48",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:23:30
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-28 14:23:30
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 2,
+            "name": "Hospital"
+        },
+        {
+            "id": 1,
+            "name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:23:30
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-28 14:23:30
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "R - Example Name",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 23:42:48",
+        "updated_at": "2025-05-27 23:42:48",
+        "avatar": null,
+        "agency_id": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-28 14:23:30
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-28 14:23:30
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "R - Example Name",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 23:42:48",
+        "updated_at": "2025-05-27 23:42:48",
+        "avatar": null,
+        "agency_id": null
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-28 14:23:35
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-28 14:23:35
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-28 14:23:35
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:23:35
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-28 13:23:35",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:23:39
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:23:39
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-28 13:23:35",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:23:43
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-28 14:23:43
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 2,
+            "name": "Hospital"
+        },
+        {
+            "id": 1,
+            "name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:23:43
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-28 14:23:43
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "R - Example Name",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 23:42:48",
+        "updated_at": "2025-05-28 13:23:35",
+        "avatar": null,
+        "agency_id": 2
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-28 14:23:43
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-28 14:23:43
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "R - Example Name",
+        "dob": "",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": null,
+        "created_at": "2025-05-27 23:42:48",
+        "updated_at": "2025-05-28 13:23:35",
+        "avatar": null,
+        "agency_id": 2
+    },
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1
+        }
+    ],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-28 14:23:51
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-28 14:23:51
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-28 14:23:51
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:23:51
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-28 13:23:51",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:24:35
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:24:35
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name",
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:24:37
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:24:37
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name",
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:24:47
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:24:47
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-28 13:23:51",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:36:26
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:36:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-28 13:23:51",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": "2025-03-10"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:39:49
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:39:49
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-28 13:23:51",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": "2025-03-10",
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22",
+            "agency_name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:40:00
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:40:00
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name",
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:40:02
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:40:02
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-28 13:23:51",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": "2025-03-10",
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22",
+            "agency_name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:40:04
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:40:04
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name",
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:40:05
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:40:05
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-28 13:23:51",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": "2025-03-10",
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22",
+            "agency_name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:40:08
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-28 14:40:08
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 2,
+            "name": "Hospital"
+        },
+        {
+            "id": 1,
+            "name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:40:08
+
+**Method:** GET
+**URL:** /api.php?entity=users&action=list
+
+## Response Log - 2025-05-28 14:40:08
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "users": [
+        {
+            "id": 1,
+            "email": "test@example.com",
+            "username": "admin",
+            "role": "admin",
+            "agency_id": 2,
+            "created_at": "2025-05-27 23:25:41",
+            "updated_at": "2025-05-27 23:58:49"
+        },
+        {
+            "id": 2,
+            "email": "orangespringuk@gmail.com",
+            "username": "ayhan",
+            "role": "user",
+            "agency_id": 1,
+            "created_at": "2025-05-27 23:41:44",
+            "updated_at": "2025-05-27 23:41:44"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:40:11
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=get_all
+
+## Response Log - 2025-05-28 14:40:11
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 2,
+            "name": "Hospital",
+            "created_at": "2025-05-27 23:49:29",
+            "updated_at": "2025-05-27 23:49:29"
+        },
+        {
+            "id": 1,
+            "name": "test",
+            "created_at": "2025-05-27 23:41:17",
+            "updated_at": "2025-05-27 23:41:17"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:40:15
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:40:15
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name",
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:40:19
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:40:19
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-28 13:23:51",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": "2025-03-10",
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22",
+            "agency_name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:40:20
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-28 14:40:20
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "R - Example Name",
+            "dob": "",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-28 13:23:51",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": "2025-03-10",
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 2,
+            "name": "acenta 1",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-27 23:43:44",
+            "updated_at": "2025-05-27 23:44:01",
+            "avatar": "uploads\/avatars\/avatar_68364e41ad68d.png",
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-22",
+            "agency_name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:40:21
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:40:21
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:40:24
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:40:24
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:40:31
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:40:31
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name",
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:40:33
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:40:33
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name",
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:41:15
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:41:15
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name",
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:42:47
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:42:47
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name",
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:43:11
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:43:11
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        },
+        {
+            "id": 1,
+            "date": "2025-03-10",
+            "notes": "dfsasadsadsa",
+            "status": "booked",
+            "graft_count": 321321,
+            "created_at": "2025-05-27 23:42:48",
+            "updated_at": "2025-05-27 23:48:13",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "R - Example Name",
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:43:19
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:43:19
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-28 14:43:35
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=get&id=2
+
+## Response Log - 2025-05-28 14:43:35
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgery": {
+        "id": 2,
+        "date": "2025-05-22",
+        "notes": "",
+        "status": "booked",
+        "graft_count": 555,
+        "created_at": "2025-05-27 23:57:56",
+        "updated_at": "2025-05-27 23:57:56",
+        "patient_id": 2,
+        "is_recorded": 1,
+        "patient_name": "acenta 1",
+        "agency_name": "test"
+    }
+}
+```
+---
+
+## Request Log - 2025-05-28 14:43:40
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-28 14:43:40
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 2,
+            "date": "2025-05-22",
+            "notes": "",
+            "status": "booked",
+            "graft_count": 555,
+            "created_at": "2025-05-27 23:57:56",
+            "updated_at": "2025-05-27 23:57:56",
+            "patient_id": 2,
+            "is_recorded": 1,
+            "patient_name": "acenta 1",
+            "agency_name": "test"
+        }
+    ]
+}
+```
+---
+

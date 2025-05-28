@@ -28,10 +28,11 @@ function handle_patients($action, $method, $db)
                 $id = $_POST['id'] ?? null;
                 $name = trim($_POST['name'] ?? '');
                 $dob = trim($_POST['dob'] ?? '');
+                $agency_id = $_POST['agency_id'] ?? null;
 
                 if ($id && $name) {
-                    $sql = "UPDATE patients SET name = ?, dob = ?, updated_at = datetime('now')";
-                    $params = [$name, $dob];
+                    $sql = "UPDATE patients SET name = ?, dob = ?, agency_id = ?, updated_at = datetime('now')";
+                    $params = [$name, $dob, $agency_id];
 
                     $sql .= " WHERE id = ?";
                     $params[] = $id;
@@ -177,9 +178,10 @@ function handle_patients($action, $method, $db)
         case 'list':
             if ($method === 'GET') {
                 $stmt = $db->query("
-                    SELECT p.*, MAX(s.date) AS last_surgery_date
+                    SELECT p.*, MAX(s.date) AS last_surgery_date, a.name AS agency_name
                     FROM patients p
                     LEFT JOIN surgeries s ON s.patient_id = p.id
+                    LEFT JOIN agencies a ON p.agency_id = a.id
                     GROUP BY p.id
                     ORDER BY p.name
                 ");

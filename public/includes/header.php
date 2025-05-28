@@ -80,6 +80,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="agency.php">
+                            <i class="fas fa-building me-1"></i>
+                            <span class="d-lg-inline d-none">Agencies</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="settings.php">
                             <i class="fas fa-cog me-1"></i>
                             <span class="d-lg-inline d-none">Settings</span>
@@ -140,4 +146,4 @@
 
     <!-- Main Content -->
     <main class="main-content">
-        <div class="container-fluid px-3 px-md-4 py-4">
+        <div class="container-fluid px-3 px-md-4 py-2">

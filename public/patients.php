@@ -58,6 +58,7 @@ require_once 'includes/header.php';
                 <th>Avatar</th>
                 <th>Name</th>
                 <th>Date of Birth</th>
+                <?php if (is_admin()): ?><th>Agency</th> <?php endif; ?>
                 <th>Last Surgery</th>
                 <th class="text-center">Actions</th>
             </tr>
@@ -119,9 +120,14 @@ document.addEventListener('DOMContentLoaded', function() {
                                         ${patient.name}
                                     </a>
                                 </td>
-                                <td>
+                                 <td>
                                     <span class="text-truncate-mobile">${patient.dob || 'N/A'}</span>
                                 </td>
+                                 <?php if (is_admin()): ?> 
+                                <td>
+                                    <span class="text-truncate-mobile">${patient.agency_name || 'No Agency'}</span>
+                                </td>
+                                 <?php endif; ?>
                                 <td>
                                     ${patient.last_surgery_date ?
                                         `<a href="patient.php?id=${patient.id}" class="text-decoration-none">

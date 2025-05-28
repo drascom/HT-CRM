@@ -90,7 +90,7 @@ function get_setting($key)
 
 // --- Configuration ---
 // IMPORTANT: Replace with the path to your service account key file or configure OAuth 2.0
-$credentialsPath = './secrets/sanctuary.json';
+$credentialsPath = './secrets/liv-hsh-patients-18682cec86db.json';
 $spreadsheetId = get_setting('spreadsheet_id'); // Get Spreadsheet ID from settings
 $cacheDuration = (int)get_setting('cache_duration') ?: 3600; // Default 1 hour
 $cellRange = get_setting('cell_range') ?: 'A1:Z'; // Default range
@@ -496,24 +496,24 @@ debugLog("Performance metrics", [
 </div>
 
 <script>
-// Step 9: Client-side initialization and loading management
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Google Sheets page loaded');
+    // Step 9: Client-side initialization and loading management
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Google Sheets page loaded');
 
-    // Hide loading spinner and show main content
-    const loadingSpinner = document.getElementById('loading-spinner');
-    const mainContent = document.getElementById('main-content');
+        // Hide loading spinner and show main content
+        const loadingSpinner = document.getElementById('loading-spinner');
+        const mainContent = document.getElementById('main-content');
 
-    if (loadingSpinner) {
-        loadingSpinner.style.display = 'none';
-    }
+        if (loadingSpinner) {
+            loadingSpinner.style.display = 'none';
+        }
 
-    if (mainContent) {
-        mainContent.style.display = 'block';
-    }
+        if (mainContent) {
+            mainContent.style.display = 'block';
+        }
 
-    console.log('Content display toggled');
-});
+        console.log('Content display toggled');
+    });
 </script>
 
 <?php

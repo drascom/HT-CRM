@@ -11,11 +11,12 @@ function handle_users($action, $method, $db, $request_data = [])
                 $username = trim($input['username'] ?? '');
                 $password = trim($input['password'] ?? '');
                 $role = trim($input['role'] ?? 'user'); // Default role to 'user'
+                $agency_id = $input['agency_id'] ?? null;
 
                 if ($email && $username && $password) {
                     $hashed = password_hash($password, PASSWORD_DEFAULT);
-                    $stmt = $db->prepare("INSERT INTO users (email, username, password, role, created_at, updated_at) VALUES (?, ?, ?, ?, datetime('now'), datetime('now'))");
-                    $stmt->execute([$email, $username, $hashed, $role]);
+                    $stmt = $db->prepare("INSERT INTO users (email, username, password, role, agency_id, created_at, updated_at) VALUES (?, ?, ?, ?, ?, datetime('now'), datetime('now'))");
+                    $stmt->execute([$email, $username, $hashed, $role, $agency_id]);
                     return ['success' => true, 'id' => $db->lastInsertId()];
                 }
 
@@ -30,15 +31,16 @@ function handle_users($action, $method, $db, $request_data = [])
                 $username = trim($input['username'] ?? '');
                 $password = trim($input['password'] ?? '');
                 $role = trim($input['role'] ?? 'user'); // Default role to 'user'
+                $agency_id = $input['agency_id'] ?? null;
 
                 if ($id && $email && $username) {
                     if ($password) {
                         $hashed = password_hash($password, PASSWORD_DEFAULT);
-                        $stmt = $db->prepare("UPDATE users SET email = ?, username = ?, password = ?, role = ?, updated_at = datetime('now') WHERE id = ?");
-                        $stmt->execute([$email, $username, $hashed, $role, $id]);
+                        $stmt = $db->prepare("UPDATE users SET email = ?, username = ?, password = ?, role = ?, agency_id = ?, updated_at = datetime('now') WHERE id = ?");
+                        $stmt->execute([$email, $username, $hashed, $role, $agency_id, $id]);
                     } else {
-                        $stmt = $db->prepare("UPDATE users SET email = ?, username = ?, role = ?, updated_at = datetime('now') WHERE id = ?");
-                        $stmt->execute([$email, $username, $role, $id]);
+                        $stmt = $db->prepare("UPDATE users SET email = ?, username = ?, role = ?, agency_id = ?, updated_at = datetime('now') WHERE id = ?");
+                        $stmt->execute([$email, $username, $role, $agency_id, $id]);
                     }
                     return ['success' => true];
                 }
@@ -54,15 +56,16 @@ function handle_users($action, $method, $db, $request_data = [])
                 $username = trim($input['username'] ?? '');
                 $password = trim($input['password'] ?? '');
                 $role = trim($input['role'] ?? 'user'); // Default role to 'user'
+                $agency_id = $input['agency_id'] ?? null;
                 error_log("User update handler - ID: " . ($id ?? 'NULL') . ", Email: " . ($email ?? 'NULL') . ", Username: " . ($username ?? 'NULL')); // Added logging
                 if ($id && $email && $username) {
                     if ($password) {
                         $hashed = password_hash($password, PASSWORD_DEFAULT);
-                        $stmt = $db->prepare("UPDATE users SET email = ?, username = ?, password = ?, role = ?, updated_at = datetime('now') WHERE id = ?");
-                        $stmt->execute([$email, $username, $hashed, $role, $id]);
+                        $stmt = $db->prepare("UPDATE users SET email = ?, username = ?, password = ?, role = ?, agency_id = ?, updated_at = datetime('now') WHERE id = ?");
+                        $stmt->execute([$email, $username, $hashed, $role, $agency_id, $id]);
                     } else {
-                        $stmt = $db->prepare("UPDATE users SET email = ?, username = ?, role = ?, updated_at = datetime('now') WHERE id = ?");
-                        $stmt->execute([$email, $username, $role, $id]);
+                        $stmt = $db->prepare("UPDATE users SET email = ?, username = ?, role = ?, agency_id = ?, updated_at = datetime('now') WHERE id = ?");
+                        $stmt->execute([$email, $username, $role, $agency_id, $id]);
                     }
                     return ['success' => true];
                 }
@@ -87,7 +90,7 @@ function handle_users($action, $method, $db, $request_data = [])
             if ($method === 'GET') {
                 $id = $_GET['id'] ?? null; // GET parameter for get_user
                 if ($id) {
-                    $stmt = $db->prepare("SELECT id, email, username, role, created_at, updated_at FROM users WHERE id = ?");
+                    $stmt = $db->prepare("SELECT id, email, username, role, agency_id, created_at, updated_at FROM users WHERE id = ?");
                     $stmt->execute([$id]);
                     $data = $stmt->fetch(PDO::FETCH_ASSOC);
                     return $data ? ['success' => true, 'user' => $data] : ['success' => false, 'error' => "User not found with ID: {$id}"];
@@ -98,7 +101,7 @@ function handle_users($action, $method, $db, $request_data = [])
 
         case 'list':
             if ($method === 'GET') {
-                $stmt = $db->query("SELECT id, email, username, role, created_at, updated_at FROM users ORDER BY username");
+                $stmt = $db->query("SELECT id, email, username, role, agency_id, created_at, updated_at FROM users ORDER BY username");
                 return ['success' => true, 'users' => $stmt->fetchAll(PDO::FETCH_ASSOC)];
             }
             break;

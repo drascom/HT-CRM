@@ -67,7 +67,8 @@ include __DIR__ . '/includes/header.php';
                 <th>Email</th>
                 <th>Username</th>
                 <th>Role</th>
-                <th class="d-none d-md-table-cell">Created</th>
+                <th class="d-none d-md-table-cell">Agency</th>
+                <th class="d-none d-lg-table-cell">Created</th>
                 <th class="d-none d-lg-table-cell">Updated</th>
                 <th class="text-center">Actions</th>
             </tr>
@@ -141,6 +142,20 @@ include __DIR__ . '/includes/header.php';
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label for="agency" class="form-label">
+                                    <i class="fas fa-building me-1"></i>
+                                    Agency
+                                </label>
+                                <select class="form-select" id="agency">
+                                    <option value="">Select Agency (Optional)</option>
+                                    <!-- Agency options will be loaded dynamically -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
             <div class="modal-footer">
@@ -164,12 +179,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const usernameInput = document.getElementById('username');
     const passwordInput = document.getElementById('password');
     const roleSelect = document.getElementById('role');
+    const agencySelect = document.getElementById('agency');
     const addUserBtn = document.getElementById('addUserBtn');
     const saveUserBtn = document.getElementById('saveUserBtn');
     const usersTableBody = document.querySelector('#usersTable tbody');
     const passwordHelp = document.getElementById('passwordHelp');
     const statusMessagesDiv = document.getElementById('status-messages');
     let allUsers = []; // Store all users for client-side filtering
+    let allAgencies = []; // Store all agencies for dropdown
 
     // Function to display status messages
     function displayStatusMessage(message, type = 'success') {
@@ -184,6 +201,41 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert.hide();
             }
         }, 5000);
+    }
+
+    // Function to fetch agencies from the API
+    function fetchAgencies() {
+        fetch('api.php?entity=agencies&action=list')
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    allAgencies = data.agencies;
+                    populateAgencyDropdown();
+                } else {
+                    console.error('Error fetching agencies:', data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching agencies:', error);
+            });
+    }
+
+    // Function to populate agency dropdown
+    function populateAgencyDropdown() {
+        agencySelect.innerHTML = '<option value="">Select Agency (Optional)</option>';
+        allAgencies.forEach(agency => {
+            const option = document.createElement('option');
+            option.value = agency.id;
+            option.textContent = agency.name;
+            agencySelect.appendChild(option);
+        });
+    }
+
+    // Function to get agency name by ID
+    function getAgencyName(agencyId) {
+        if (!agencyId) return 'None';
+        const agency = allAgencies.find(a => a.id == agencyId);
+        return agency ? agency.name : 'Unknown';
     }
 
     // Function to fetch users from the API
@@ -209,18 +261,20 @@ document.addEventListener('DOMContentLoaded', function() {
     function populateUsersTable(users) {
         usersTableBody.innerHTML = ''; // Clear existing rows
         if (users.length === 0) {
-            usersTableBody.innerHTML = '<tr><td colspan="7" class="text-center">No users found.</td></tr>';
+            usersTableBody.innerHTML = '<tr><td colspan="8" class="text-center">No users found.</td></tr>';
             return;
         }
         users.forEach(user => {
             const roleColor = user.role === 'admin' ? 'danger' : 'primary';
+            const agencyName = getAgencyName(user.agency_id);
             const row = `
                 <tr>
                     <td><span class="fw-medium">${user.id}</span></td>
                     <td><span class="text-truncate-mobile">${user.email}</span></td>
                     <td><span class="fw-medium">${user.username}</span></td>
                     <td><span class="badge bg-${roleColor}">${user.role}</span></td>
-                    <td class="d-none d-md-table-cell"><small>${user.created_at || 'N/A'}</small></td>
+                    <td class="d-none d-md-table-cell"><small>${agencyName}</small></td>
+                    <td class="d-none d-lg-table-cell"><small>${user.created_at || 'N/A'}</small></td>
                     <td class="d-none d-lg-table-cell"><small>${user.updated_at || 'N/A'}</small></td>
                     <td>
                         <div class="btn-group" role="group">
@@ -286,6 +340,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             emailInput.value = data.user.email;
                             usernameInput.value = data.user.username;
                             roleSelect.value = data.user.role;
+                            agencySelect.value = data.user.agency_id || '';
                             // Password field is intentionally not populated for security
                         } else {
                             console.error('Error fetching user data:', data.message);
@@ -322,12 +377,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const username = usernameInput.value;
             const password = passwordInput.value;
             const role = roleSelect.value;
+            const agencyId = agencySelect.value || null;
 
             const userData = {
                 entity: 'users',
                 email: email,
                 username: username,
-                role: role
+                role: role,
+                agency_id: agencyId
             };
 
             let action = 'add';
@@ -427,8 +484,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    // Initial fetch of users when the page loads
+    // Initial fetch of agencies and users when the page loads
     if (window.location.pathname.includes("users.php")) {
+        fetchAgencies();
         fetchUsers();
     }
 

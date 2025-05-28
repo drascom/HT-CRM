@@ -27,12 +27,14 @@ function login_user($email, $password)
 {
     global $pdo; // Use the PDO connection from db.php
 
-    $stmt = $pdo->prepare("SELECT id, password FROM users WHERE email = ?");
+    $stmt = $pdo->prepare("SELECT id, password, role, agency_id FROM users WHERE email = ?");
     $stmt->execute([$email]);
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($user && password_verify($password, $user['password'])) {
         $_SESSION['user_id'] = $user['id'];
+        $_SESSION['role'] = $user['role'];
+        $_SESSION['agency_id'] = $user['agency_id'];
         return true;
     }
     return false;
@@ -53,7 +55,7 @@ if (!is_logged_in() && $current_page !== 'login.php' && $current_page !== 'signu
     exit();
 }
 // Function to register a new user
-function register_user($email, $username, $password)
+function register_user($email, $username, $password, $agency_id = null)
 {
     global $pdo; // Use the PDO connection from db.php
 
@@ -68,8 +70,8 @@ function register_user($email, $username, $password)
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     // Insert the new user into the database
-    $stmt = $pdo->prepare("INSERT INTO users (email, username, password, role) VALUES (?, ?, ?, ?)");
-    if ($stmt->execute([$email, $username, $hashed_password, 'user'])) {
+    $stmt = $pdo->prepare("INSERT INTO users (email, username, password, role, agency_id, created_at, updated_at) VALUES (?, ?, ?, ?, ?, datetime('now'), datetime('now'))");
+    if ($stmt->execute([$email, $username, $hashed_password, 'user', $agency_id])) {
         return true; // Registration successful
     } else {
         return false; // Registration failed
