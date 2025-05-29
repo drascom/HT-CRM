@@ -7,10 +7,11 @@ function handle_patients($action, $method, $db)
                 $name = trim($_POST['name'] ?? '');
                 $dob = trim($_POST['dob'] ?? '');
                 $user_id = $_POST['user_id'] ?? null;
+                $agency_id = $_POST['agency_id'] ?? null;
 
                 if (!empty($name)) {
-                    $stmt = $db->prepare("INSERT INTO patients (name, dob, user_id, created_at, updated_at) VALUES (?, ?, ?, datetime('now'), datetime('now'))");
-                    $stmt->execute([$name, $dob, $user_id]);
+                    $stmt = $db->prepare("INSERT INTO patients (name, dob, user_id, created_at, updated_at,agency_id) VALUES (?, ?, ?, datetime('now'), datetime('now'),?)");
+                    $stmt->execute([$name, $dob, $user_id, $agency_id]);
                     $new_patient_id = $db->lastInsertId();
                     // Fetch the newly created patient to return its data
                     $stmt_fetch = $db->prepare("SELECT id, name, avatar FROM patients WHERE id = ?");
@@ -177,14 +178,32 @@ function handle_patients($action, $method, $db)
 
         case 'list':
             if ($method === 'GET') {
-                $stmt = $db->query("
-                    SELECT p.*, MAX(s.date) AS last_surgery_date, a.name AS agency_name
-                    FROM patients p
-                    LEFT JOIN surgeries s ON s.patient_id = p.id
-                    LEFT JOIN agencies a ON p.agency_id = a.id
-                    GROUP BY p.id
-                    ORDER BY p.name
-                ");
+                $agency_id = $_GET['agency'] ?? null;
+
+                if ($agency_id) {
+                    // Filter by agency
+                    $stmt = $db->prepare("
+                        SELECT p.*, MAX(s.date) AS last_surgery_date, a.name AS agency_name
+                        FROM patients p
+                        LEFT JOIN surgeries s ON s.patient_id = p.id
+                        LEFT JOIN agencies a ON p.agency_id = a.id
+                        WHERE p.agency_id = ?
+                        GROUP BY p.id
+                        ORDER BY p.name
+                    ");
+                    $stmt->execute([$agency_id]);
+                } else {
+                    // Get all patients
+                    $stmt = $db->query("
+                        SELECT p.*, MAX(s.date) AS last_surgery_date, a.name AS agency_name
+                        FROM patients p
+                        LEFT JOIN surgeries s ON s.patient_id = p.id
+                        LEFT JOIN agencies a ON p.agency_id = a.id
+                        GROUP BY p.id
+                        ORDER BY p.name
+                    ");
+                }
+
                 return ['success' => true, 'patients' => $stmt->fetchAll(PDO::FETCH_ASSOC)];
             }
             break;

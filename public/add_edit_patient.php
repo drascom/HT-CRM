@@ -57,40 +57,46 @@ require_once 'includes/header.php';
             <?php endif; ?>
 
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4 col-12">
                     <div class="mb-3">
                         <label for="name" class="form-label">
                             <i class="fas fa-user me-1"></i>
                             Patient Name
                         </label>
-                        <input type="text" class="form-control" id="name" name="name"
-                               placeholder="Enter patient name" required>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter patient name"
+                            required>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4 col-12">
                     <div class="mb-3">
                         <label for="dob" class="form-label">
                             <i class="fas fa-calendar me-1"></i>
                             Date of Birth
                         </label>
-                        <input type="date" class="form-control" id="dob" name="dob">
+                        <input type="date" class="form-control" id="dob" name="dob" required>
                     </div>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
+                <?php if (is_admin() || is_editor()): ?>
+                <div class="col-md-4 col-12">
                     <div class="mb-3">
                         <label for="agency_id" class="form-label">
                             <i class="fas fa-building me-1"></i>
                             Agency
                         </label>
                         <select class="form-select" id="agency_id" name="agency_id">
-                            <option value="">Select Agency (Optional)</option>
+                            <!-- <option value="">Select Agency</option> -->
                             <!-- Agency options will be loaded dynamically -->
                         </select>
                     </div>
                 </div>
+                <?php elseif (is_agent()): ?>
+                <!-- Hidden field for agents - their agency_id will be set via JavaScript -->
+                <input type="hidden" id="agency_id" name="agency_id" value="">
+                <?php endif; ?>
+            </div>
+
+            <div class="row">
+
             </div>
 
             <div class="mb-4">
@@ -140,31 +146,76 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to fetch agencies from the API
     function fetchAgencies() {
-        fetch('api.php?entity=agencies&action=list')
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    allAgencies = data.agencies;
-                    populateAgencyDropdown();
-                } else {
-                    console.error('Error fetching agencies:', data.message);
-                }
-            })
-            .catch(error => {
-                console.error('Error fetching agencies:', error);
-            });
+        const userRole = '<?php echo get_user_role(); ?>';
+        const userAgencyId = '<?php echo get_user_agency_id(); ?>';
+
+        if (userRole === 'agent') {
+            // For agents, don't fetch agencies - just set their agency_id
+            populateAgencyDropdown();
+        } else {
+            // For admin and editor, fetch all agencies
+            fetch('api.php?entity=agencies&action=list')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        allAgencies = data.agencies;
+                        populateAgencyDropdown();
+                    } else {
+                        console.error('Error fetching agencies:', data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching agencies:', error);
+                });
+        }
     }
 
     // Function to populate agency dropdown
     function populateAgencyDropdown() {
         const agencySelect = document.getElementById('agency_id');
-        agencySelect.innerHTML = '<option value="">Select Agency (Optional)</option>';
-        allAgencies.forEach(agency => {
-            const option = document.createElement('option');
-            option.value = agency.id;
-            option.textContent = agency.name;
-            agencySelect.appendChild(option);
-        });
+        const userRole = '<?php echo get_user_role(); ?>';
+        const userAgencyId = '<?php echo get_user_agency_id(); ?>';
+
+        // For agents, set their agency_id in the hidden field
+        if (userRole === 'agent' && userAgencyId) {
+            agencySelect.value = userAgencyId;
+        } else {
+            // agencySelect.innerHTML = '<option value="">Select Agency </option>';
+            allAgencies.forEach(agency => {
+                const option = document.createElement('option');
+                option.value = agency.id;
+                option.textContent = agency.name;
+                agencySelect.appendChild(option);
+            });
+        }
+
+        // For editors, add edit protection for agency field
+        if (userRole === 'editor' && isEditing) {
+            agencySelect.disabled = true;
+
+            // Add edit button next to agency field
+            const agencyContainer = agencySelect.closest('.mb-3');
+            const editButton = document.createElement('button');
+            editButton.type = 'button';
+            editButton.className = 'btn btn-sm btn-outline-warning ms-2';
+            editButton.innerHTML = '<i class="fas fa-edit"></i>';
+            editButton.title = 'Enable agency editing';
+            editButton.onclick = function() {
+                agencySelect.disabled = false;
+                editButton.style.display = 'none';
+                warningText.style.display = 'block';
+            };
+
+            // Add warning text
+            const warningText = document.createElement('small');
+            warningText.className = 'form-text text-muted';
+            warningText.style.display = 'none';
+            warningText.innerHTML =
+                '<i class="fas fa-exclamation-triangle me-1"></i>Don\'t change agency if you are not sure!';
+
+            agencyContainer.appendChild(editButton);
+            agencyContainer.appendChild(warningText);
+        }
     }
 
     // Fetch agencies first
@@ -356,14 +407,17 @@ document.addEventListener('DOMContentLoaded', function() {
             // If there are files in the Dropzone queue, process them first
             if (avatarDropzone.getQueuedFiles().length > 0) {
                 // Process the Dropzone queue
+                console.log("Process the Dropzone queue")
                 avatarDropzone.processQueue();
 
                 // Listen for Dropzone completion before submitting the main form
                 avatarDropzone.on("queuecomplete", function() {
+                    console.log("Processed now go submitPatientForm")
                     // Now submit the main form data (excluding the avatar)
                     submitPatientForm();
                 });
             } else {
+                console.log("no files go  submitPatientForm")
                 // If no files in Dropzone, just submit the main form
                 submitPatientForm();
             }
@@ -372,6 +426,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Function to submit the main patient form data
         function submitPatientForm() {
             const formData = new FormData();
+            const userRole = '<?php echo get_user_role(); ?>';
+            const userAgencyId = '<?php echo get_user_agency_id(); ?>';
+
             formData.append('entity', 'patients');
             formData.append('action', isEditing ? 'update' : 'add');
             if (isEditing) {
@@ -381,6 +438,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             formData.append('name', document.getElementById('name').value);
             formData.append('dob', document.getElementById('dob').value);
+
+            // Agency ID is handled by the form field (hidden for agents, select for admin/editor)
             formData.append('agency_id', document.getElementById('agency_id').value);
             // Do NOT append avatar here, Dropzone handles it
 

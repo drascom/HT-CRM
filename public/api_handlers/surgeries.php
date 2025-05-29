@@ -75,12 +75,19 @@ function handle_surgeries($action, $method, $db)
                     $stmt->execute([$patient_id]);
                     return ['success' => true, 'surgeries' => $stmt->fetchAll(PDO::FETCH_ASSOC)];
                 } else {
-                    // Apply agency filtering for non-admin users
+                    // Apply agency filtering
                     $sql = "SELECT s.*, p.name as patient_name, a.name as agency_name FROM surgeries s LEFT JOIN patients p ON s.patient_id = p.id LEFT JOIN agencies a ON p.agency_id = a.id";
                     $params = [];
 
-                    // If user is not admin, restrict to their agency
-                    if ($_SESSION['role'] !== 'admin' && $_SESSION['agency_id']) {
+                    $agency_id = $_GET['agency'] ?? null;
+
+                    // If agency parameter is provided, filter by it
+                    if ($agency_id) {
+                        $sql .= " WHERE p.agency_id = ?";
+                        $params[] = $agency_id;
+                    }
+                    // If user is not admin and no agency parameter, restrict to their agency
+                    elseif ($_SESSION['role'] !== 'admin' && $_SESSION['agency_id']) {
                         $sql .= " WHERE p.agency_id = ?";
                         $params[] = $_SESSION['agency_id'];
                     }

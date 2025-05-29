@@ -22,7 +22,7 @@ Custom Calendar Styles .calendar-container {
 .calendar-header {
     background: linear-gradient(135deg, rgb(88, 88, 89) 0%, rgb(55, 78, 102) 50%);
     color: white;
-    padding: 1rem;
+    padding: 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,7 +40,7 @@ Custom Calendar Styles .calendar-container {
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
-    padding: 0.5rem 0.75rem;
+    /* padding: 0.5rem 0.75rem; */
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.2s;
@@ -65,7 +65,7 @@ Custom Calendar Styles .calendar-container {
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
-    padding: 0.5rem 0.75rem;
+    /* padding: 0.5rem 0.75rem; */
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.2s;
@@ -344,7 +344,7 @@ Custom Calendar Styles .calendar-container {
     }
 
     .calendar-nav button {
-        padding: 0.375rem 0.5rem;
+        /* padding: 0.375rem 0.5rem; */
         font-size: 0.875rem;
     }
 }
@@ -479,6 +479,8 @@ class CustomCalendar {
 
             if (data.success) {
                 this.surgeries = data.surgeries || [];
+                // Load room information for each surgery
+                await this.loadRoomInfo();
                 this.render();
             } else {
                 console.error('Error fetching surgeries:', data.error);
@@ -490,6 +492,35 @@ class CustomCalendar {
         } finally {
             this.isLoading = false;
             this.showLoading(false);
+        }
+    }
+
+    async loadRoomInfo() {
+        try {
+            // Load room reservations
+            const response = await fetch('api.php?entity=reservations&action=list');
+            const data = await response.json();
+
+            if (data.success) {
+                // Create a map of surgery_id to room info
+                const roomMap = {};
+                data.reservations.forEach(reservation => {
+                    roomMap[reservation.surgery_id] = {
+                        room_id: reservation.room_id,
+                        room_name: reservation.room_name
+                    };
+                });
+
+                // Add room info to surgeries
+                this.surgeries.forEach(surgery => {
+                    if (roomMap[surgery.id]) {
+                        surgery.room_name = roomMap[surgery.id].room_name;
+                        surgery.room_id = roomMap[surgery.id].room_id;
+                    }
+                });
+            }
+        } catch (error) {
+            console.error('Error loading room info:', error);
         }
     }
 
@@ -551,7 +582,7 @@ class CustomCalendar {
             year: 'numeric',
             month: 'long'
         };
-        this.calendarTitle.textContent = this.currentDate.toLocaleDateString('en-US', options);
+        this.calendarTitle.textContent = this.currentDate.toLocaleDateString('en-GB', options);
     }
 
     renderCalendarGrid() {
@@ -660,6 +691,17 @@ class CustomCalendar {
                     eventEl.appendChild(graftCountEl);
                 }
 
+                // Create room name element (if exists) and append to event link
+                if (surgery.room_name) {
+                    const roomEl = document.createElement('div'); // Use div for new line
+                    roomEl.className = 'room-name';
+                    roomEl.textContent = `Room: ${surgery.room_name}`;
+                    roomEl.style.fontSize = '0.7rem';
+                    roomEl.style.color = '#0d6efd';
+                    roomEl.style.fontWeight = 'bold';
+                    eventEl.appendChild(roomEl);
+                }
+
                 // Create agency name element (if exists) and append to event link
                 if (surgery.agency_name) {
                     const agencyEl = document.createElement('div'); // Use div for new line
@@ -668,7 +710,7 @@ class CustomCalendar {
                     agencyEl.style.fontSize = '0.65rem';
                     agencyEl.style.color = '#6c757d';
                     agencyEl.style.fontStyle = 'italic';
-                    <?php if (is_admin()): ?> eventEl.appendChild(agencyEl); <?php endif; ?>
+                    <?php if (is_admin() || is_editor()): ?> eventEl.appendChild(agencyEl); <?php endif; ?>
                 }
                 eventsEl.appendChild(eventEl);
             });
@@ -762,6 +804,7 @@ class CustomCalendar {
                             </div>
                             <div class="list-details">
                                 <span class="me-3">Graft: ${surgery.graft_count || 'N/A'}</span>
+                                ${surgery.room_name ? `<span class="me-3 text-primary fw-bold">Room: ${surgery.room_name}</span>` : ''}
                                 ${surgery.agency_name ? `<span class="me-3">Agency: ${surgery.agency_name}</span>` : ''}
                                 <span class="status-badge ${surgery.status}">${surgery.status}</span>
                             </div>
@@ -775,7 +818,11 @@ class CustomCalendar {
     }
 
     getSurgeriesForDate(date) {
-        const dateString = date.toISOString().split('T')[0];
+        // Use local date string to avoid timezone issues
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        const dateString = `${year}-${month}-${day}`;
         return this.surgeries.filter(surgery => surgery.date === dateString);
     }
 

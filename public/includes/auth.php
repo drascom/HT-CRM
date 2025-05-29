@@ -6,21 +6,6 @@ function is_logged_in()
 {
     return isset($_SESSION['user_id']);
 }
-// Function to check if the logged-in user has the admin role
-function is_admin()
-{
-    if (!is_logged_in()) {
-        return false;
-    }
-
-    global $pdo; // Use the PDO connection from db.php
-
-    $stmt = $pdo->prepare("SELECT role FROM users WHERE id = ?");
-    $stmt->execute([$_SESSION['user_id']]);
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    return $user && $user['role'] === 'admin';
-}
 
 // Function to attempt user login
 function login_user($email, $password)
@@ -54,6 +39,19 @@ if (!is_logged_in() && $current_page !== 'login.php' && $current_page !== 'signu
     header('Location: login.php');
     exit();
 }
+
+// Function to get current user's agency ID
+function get_user_agency_id()
+{
+    return $_SESSION['agency_id'] ?? null;
+}
+
+// Function to get current user's role
+function get_user_role()
+{
+    return $_SESSION['role'] ?? null;
+}
+
 // Function to register a new user
 function register_user($email, $username, $password, $agency_id = null)
 {
@@ -76,4 +74,42 @@ function register_user($email, $username, $password, $agency_id = null)
     } else {
         return false; // Registration failed
     }
+}
+
+// Function to check if current user is an admin
+function is_admin()
+{
+    global $pdo;
+    if (!isset($_SESSION['user_id'])) {
+        return false;
+    }
+    $stmt = $pdo->prepare("SELECT role FROM users WHERE id = ?");
+    $stmt->execute([$_SESSION['user_id']]);
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $user && $user['role'] === 'admin';
+}
+// Function to check if current user is an editor
+function is_editor()
+{
+    global $pdo;
+    if (!isset($_SESSION['user_id'])) {
+        return false;
+    }
+    $stmt = $pdo->prepare("SELECT role FROM users WHERE id = ?");
+    $stmt->execute([$_SESSION['user_id']]);
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $user && $user['role'] === 'editor';
+}
+
+// Function to check if current user is an agent
+function is_agent()
+{
+    global $pdo;
+    if (!isset($_SESSION['user_id'])) {
+        return false;
+    }
+    $stmt = $pdo->prepare("SELECT role FROM users WHERE id = ?");
+    $stmt->execute([$_SESSION['user_id']]);
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $user && $user['role'] === 'agent';
 }

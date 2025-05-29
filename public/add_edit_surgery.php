@@ -113,7 +113,17 @@ require_once 'includes/header.php';
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <!-- Empty column for spacing -->
+                    <div class="mb-3">
+                        <label for="room_id" class="form-label">
+                            <i class="fas fa-door-open me-1"></i>
+                            Operating Room
+                        </label>
+                        <select class="form-select" id="room_id" name="room_id">
+                            <option value="">Select Room</option>
+                            <!-- Room options will be loaded via JavaScript -->
+                        </select>
+                        <div class="form-text" id="room-availability-text"></div>
+                    </div>
                 </div>
             </div>
 
@@ -153,6 +163,25 @@ require_once 'includes/header.php';
             </div>
             <div class="modal-body">
                 <form id="new-patient-form">
+                    <?php if (is_admin() || is_editor()): ?>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label for="new_patient_agency_id" class="form-label">
+                                    <i class="fas fa-building me-1"></i>
+                                    Agency
+                                </label>
+                                <select class="form-select" id="new_patient_agency_id" name="agency_id">
+                                    <option value="">Select Agency (Optional)</option>
+                                    <!-- Agency options will be loaded dynamically -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <?php elseif (is_agent()): ?>
+                    <!-- Hidden field for agents - their agency_id will be set via JavaScript -->
+                    <input type="hidden" id="new_patient_agency_id" name="agency_id" value="">
+                    <?php endif; ?>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="mb-3">
@@ -201,11 +230,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const patientSelect = document.getElementById('patient_id'); // Get the patient select dropdown
     const patientIdHiddenInput = document.querySelector(
         '#surgery-form input[name="patient_id"]'); // Hidden patient_id for editing
+    const roomSelect = document.getElementById('room_id');
+    const dateInput = document.getElementById('date');
+    const roomAvailabilityText = document.getElementById('room-availability-text');
 
     const newPatientModal = document.getElementById('newPatientModal');
     const saveNewPatientButton = document.getElementById('save-new-patient');
     const newPatientForm = document.getElementById('new-patient-form');
     const newPatientStatusDiv = document.getElementById('new-patient-status');
+    let allAgencies = []; // Store all agencies for modal dropdown
 
 
     // Function to display messages
@@ -213,9 +246,192 @@ document.addEventListener('DOMContentLoaded', function() {
         statusMessagesDiv.innerHTML = `<div class="alert alert-${type}">${message}</div>`;
     }
 
+    // Function to fetch agencies for the modal
+    function fetchModalAgencies() {
+        const userRole = '<?php echo get_user_role(); ?>';
+        const userAgencyId = '<?php echo get_user_agency_id(); ?>';
+
+        if (userRole === 'agent') {
+            // For agents, just set their agency_id
+            populateModalAgencyDropdown();
+        } else {
+            // For admin and editor, fetch all agencies
+            fetch('api.php?entity=agencies&action=list')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        allAgencies = data.agencies;
+                        populateModalAgencyDropdown();
+                    } else {
+                        console.error('Error fetching agencies:', data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching agencies:', error);
+                });
+        }
+    }
+
+    // Function to populate agency dropdown in modal
+    function populateModalAgencyDropdown() {
+        const agencySelect = document.getElementById('new_patient_agency_id');
+        const userRole = '<?php echo get_user_role(); ?>';
+        const userAgencyId = '<?php echo get_user_agency_id(); ?>';
+
+        if (!agencySelect) return; // Field might not exist for all roles
+
+        // For agents, set their agency_id in the hidden field
+        if (userRole === 'agent' && userAgencyId) {
+            agencySelect.value = userAgencyId;
+        } else {
+            agencySelect.innerHTML = '<option value="">Select Agency (Optional)</option>';
+            allAgencies.forEach(agency => {
+                const option = document.createElement('option');
+                option.value = agency.id;
+                option.textContent = agency.name;
+                agencySelect.appendChild(option);
+            });
+        }
+    }
+
+    // Function to apply editor role restrictions
+    function applyEditorRestrictions(surgery) {
+        const userRole = '<?php echo get_user_role(); ?>';
+
+        if (userRole === 'editor' && isEditing) {
+            const isCompleted = surgery.status && surgery.status.toLowerCase() === 'completed';
+
+            // Disable all fields except status
+            document.getElementById('date').disabled = true;
+            document.getElementById('graft_count').disabled = true;
+            document.getElementById('room_id').disabled = true;
+            document.getElementById('notes').disabled = true;
+
+            // Disable save button if completed
+            const saveButton = document.querySelector('button[type="submit"]');
+            if (isCompleted && saveButton) {
+                saveButton.disabled = true;
+                saveButton.innerHTML = '<i class="fas fa-lock me-1"></i>Surgery Completed';
+                saveButton.title = 'Cannot edit completed surgery';
+            }
+
+            // Add visual indication
+            const form = document.getElementById('surgery-form');
+            const editorNotice = document.createElement('div');
+            editorNotice.className = 'alert alert-info mb-3';
+            editorNotice.innerHTML = `
+                <i class="fas fa-info-circle me-2"></i>
+                <strong>Editor Mode:</strong> You can only modify the status field.
+                ${isCompleted ? 'This surgery is completed and cannot be edited further.' : ''}
+            `;
+            form.insertBefore(editorNotice, form.firstChild);
+        }
+    }
+
+    // Function to load room options
+    function loadRoomOptions() {
+        fetch('api.php?entity=rooms&action=list')
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    roomSelect.innerHTML = '<option value="">Select Room</option>';
+                    data.rooms.forEach(room => {
+                        if (room.is_active) { // Only show active rooms
+                            const option = document.createElement('option');
+                            option.value = room.id;
+                            option.textContent = room.name + (room.capacity ? ` (${room.capacity} people)` : '');
+                            roomSelect.appendChild(option);
+                        }
+                    });
+                    // Check availability if date is already selected
+                    if (dateInput.value) {
+                        checkRoomAvailability();
+                    }
+                } else {
+                    console.error('Error fetching room options:', data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching room options:', error);
+            });
+    }
+
+    // Function to check room availability for selected date
+    function checkRoomAvailability() {
+        const selectedDate = dateInput.value;
+        if (!selectedDate) {
+            roomAvailabilityText.innerHTML = '';
+            return;
+        }
+
+        fetch(`api.php?entity=availability&action=byDate&date=${selectedDate}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log("avaliable: ",data)
+                if (data.success) {
+                    updateRoomAvailability(data.rooms);
+                } else {
+                    console.error('Error checking room availability:', data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error checking room availability:', error);
+            });
+    }
+
+    // Function to update room availability display
+    function updateRoomAvailability(rooms) {
+        const roomOptions = Array.from(roomSelect.options)
+        .filter(opt => opt.value !== '');
+        const currentSurgeryId = isEditing ? surgeryIdInput.value : null;
+
+        roomOptions.forEach(option => {
+            const roomId = parseInt(option.value);
+            const room = rooms.find(r => r.id === roomId);
+
+            if (room) {
+                // Don't disable room if it's booked by the current surgery being edited
+                const isBookedByCurrentSurgery = room.status === 'booked' &&
+                    currentSurgeryId && room.surgery_id == currentSurgeryId;
+
+                option.disabled = room.status === 'booked' && !isBookedByCurrentSurgery;
+
+                if (room.status === 'booked' && !isBookedByCurrentSurgery) {
+                    option.textContent = option.textContent.replace(' (Booked)', '') + ' (Booked)';
+                } else {
+                    option.textContent = option.textContent.replace(' (Booked)', '');
+                }
+            }
+        });
+
+        // Update availability text
+        const bookedRooms = rooms.filter(r => r.status === 'booked' &&
+            !(currentSurgeryId && r.surgery_id == currentSurgeryId));
+        if (bookedRooms.length > 0) {
+            roomAvailabilityText.innerHTML = `<small class="text-warning">
+                <i class="fas fa-exclamation-triangle me-1"></i>
+                ${bookedRooms.length} room(s) already booked for this date
+            </small>`;
+        } else {
+            roomAvailabilityText.innerHTML = `<small class="text-success">
+                <i class="fas fa-check me-1"></i>
+                All rooms available for this date
+            </small>`;
+        }
+    }
+
     // Fetch patient options for the dropdown
     function fetchPatientOptions(selectPatientId = null) {
-        fetch('api.php?entity=patients&action=list')
+        const userRole = '<?php echo get_user_role(); ?>';
+        const userAgencyId = '<?php echo get_user_agency_id(); ?>';
+
+        // Build API URL with agency filter for agents
+        let apiUrl = 'api.php?entity=patients&action=list';
+        if (userRole === 'agent' && userAgencyId) {
+            apiUrl += `&agency=${userAgencyId}`;
+        }
+
+        fetch(apiUrl)
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
@@ -249,16 +465,28 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 if (data.success) {
                     const surgery = data.surgery;
+
                     document.getElementById('date').value = surgery.date;
                     document.getElementById('status').value = surgery.status;
-                    document.getElementById('graft_count').value = surgery.graft_count; // Add this line
+                    document.getElementById('graft_count').value = surgery.graft_count;
                     document.getElementById('notes').value = surgery.notes;
+
                     // Set the hidden patient_id for editing
                     if (patientIdHiddenInput) {
                         patientIdHiddenInput.value = surgery.patient_id;
                     }
-                    // If editing, no patient select dropdown is shown, so no need to populate it here.
-                    // The patient_id is handled by the hidden input.
+                    // Set room selection if available
+                    if (surgery.room_id && roomSelect) {
+                        roomSelect.value = surgery.room_id;
+                        console.log("room select done ", roomSelect,surgery.room_id);
+                    }
+                    // Check room availability for the surgery date
+                    if (surgery.date) {
+                        checkRoomAvailability();
+                    }
+
+                    // Apply editor role restrictions
+                    applyEditorRestrictions(surgery);
 
                 } else {
                     displayMessage(`Error loading surgery: ${data.error}`, 'danger');
@@ -273,6 +501,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const patientIdFromUrl = <?php echo json_encode($patient_id_from_url); ?>;
         fetchPatientOptions(
             patientIdFromUrl); // Fetch and populate patient dropdown, pre-selecting if patient_id is in URL
+    }
+
+    // Load room options
+    loadRoomOptions();
+
+    // Fetch agencies for modal
+    fetchModalAgencies();
+
+    // Add event listener for date changes to check room availability
+    if (dateInput) {
+        dateInput.addEventListener('change', checkRoomAvailability);
     }
 
 
@@ -317,6 +556,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const formData = new FormData(newPatientForm);
             formData.append('entity', 'patients');
             formData.append('action', 'add'); // Change action from 'create' to 'add'
+
+            // Note: agency_id is now handled by the form field (hidden for agents, select for admin/editor)
 
             newPatientStatusDiv.innerHTML = ''; // Clear previous status
 

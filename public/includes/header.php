@@ -17,9 +17,6 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- FullCalendar CSS -->
-    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css' rel='stylesheet' />
-
     <!-- Dropzone CSS -->
     <link href="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css" rel="stylesheet" type="text/css" />
 
@@ -34,7 +31,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="/">
+            <a style="margin-right: 50px;" class="navbar-brand fw-bold" href="/">
                 <i class="fas fa-heartbeat me-2"></i>
                 <span class="d-none d-sm-inline">Surgery Patient Management</span>
                 <span class="d-inline d-sm-none">SPM</span>
@@ -51,45 +48,67 @@
                     <li class="nav-item">
                         <a class="nav-link" href="google.php">
                             <i class="fas fa-file-excel me-1"></i>
-                            <span class="d-lg-inline d-none">Sheet</span>
+                            <span class="d-lg-inline">Sheet</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="calendar.php">
                             <i class="fas fa-calendar me-1"></i>
-                            <span class="d-lg-inline d-none">Calendar</span>
+                            <span class="d-lg-inline">Calendar</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="surgeries.php">
                             <i class="fas fa-hospital me-1"></i>
-                            <span class="d-lg-inline d-none">Surgeries</span>
+                            <span class="d-lg-inline">Surgeries</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="room_availability.php">
+                            <i class="fas fa-calendar me-1"></i>
+                            <span class="d-lg-inline">Rooms</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="patients.php">
                             <i class="fas fa-users me-1"></i>
-                            <span class="d-lg-inline d-none">Patients</span>
+                            <span class="d-lg-inline">Patients</span>
                         </a>
                     </li>
                     <?php if (is_admin()): ?>
-                    <li class="nav-item">
-                        <a class="nav-link" href="users.php">
-                            <i class="fas fa-user-cog me-1"></i>
-                            <span class="d-lg-inline d-none">Users</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="agency.php">
-                            <i class="fas fa-building me-1"></i>
-                            <span class="d-lg-inline d-none">Agencies</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="settings.php">
+                   
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-cog me-1"></i>
-                            <span class="d-lg-inline d-none">Settings</span>
+                            Settings
                         </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="settings.php">
+                                    <i class="fas fa-cog me-1"></i>
+                                    Settings
+                                </a>
+                            </li>
+                            <li >
+                                <a class="dropdown-item" href="users.php">
+                                    <i class="fas fa-user-cog me-1"></i>
+                                   Users
+                                </a>
+                            </li>
+                            <li >
+                                <a class="dropdown-item" href="rooms.php">
+                                    <i class="fas fa-calendar me-1"></i>
+                                   Rooms
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="agency.php">
+                                    <i class="fas fa-building me-1"></i>
+                                    Agencies
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <?php endif; ?>
                 </ul>

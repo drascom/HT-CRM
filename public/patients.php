@@ -94,7 +94,16 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('loading-spinner').style.display = 'flex';
         patientsTable.style.display = 'none';
 
-        fetch('api.php?entity=patients&action=list')
+        const userRole = '<?php echo get_user_role(); ?>';
+        const userAgencyId = '<?php echo get_user_agency_id(); ?>';
+
+        // Build API URL with agency filter for agents
+        let apiUrl = 'api.php?entity=patients&action=list';
+        if (userRole === 'agent' && userAgencyId) {
+            apiUrl += `&agency=${userAgencyId}`;
+        }
+
+        fetch(apiUrl)
             .then(response => response.json())
             .then(data => {
                 // Hide loading spinner
@@ -123,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                  <td>
                                     <span class="text-truncate-mobile">${patient.dob || 'N/A'}</span>
                                 </td>
-                                 <?php if (is_admin()): ?> 
+                                 <?php if (is_admin()): ?>
                                 <td>
                                     <span class="text-truncate-mobile">${patient.agency_name || 'No Agency'}</span>
                                 </td>

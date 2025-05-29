@@ -136,7 +136,8 @@ include __DIR__ . '/includes/header.php';
                                     Role
                                 </label>
                                 <select class="form-select" id="role" required>
-                                    <option value="user">User</option>
+                                    <option value="agent">Agent</option>
+                                    <option value="editor">Editor</option>
                                     <option value="admin">Admin</option>
                                 </select>
                             </div>

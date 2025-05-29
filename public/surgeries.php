@@ -60,7 +60,7 @@ require_once 'includes/header.php';
                 <th>Date</th>
                 <th>Patient Name</th>
                 <?php if (is_admin()): ?><th>Agency</th> <?php endif; ?>
-                <th>Graft Count</th> 
+                <th>Graft Count</th>
                 <th>Status</th>
                 <th class="text-center">Actions</th>
             </tr>
@@ -105,7 +105,16 @@ require_once 'includes/header.php';
             document.getElementById('loading-spinner').style.display = 'flex';
             surgeriesTable.style.display = 'none';
 
-            fetch('api.php?entity=surgeries&action=list')
+            const userRole = '<?php echo get_user_role(); ?>';
+            const userAgencyId = '<?php echo get_user_agency_id(); ?>';
+
+            // Build API URL with agency filter for agents
+            let apiUrl = 'api.php?entity=surgeries&action=list';
+            if (userRole === 'agent' && userAgencyId) {
+                apiUrl += `&agency=${userAgencyId}`;
+            }
+
+            fetch(apiUrl)
                 .then(response => response.json())
                 .then(data => {
                     // Hide loading spinner
@@ -117,6 +126,10 @@ require_once 'includes/header.php';
                         let tableRows = '';
 
                         surgeries.forEach(surgery => {
+                            const userRole = '<?php echo get_user_role(); ?>';
+                            const isCompleted = surgery.status.toLowerCase() === 'completed';
+                            const canEdit = !(userRole === 'agent' && isCompleted);
+
                             tableRows += `
                             <tr data-surgery-id="${surgery.id}">
                                 <td>
@@ -144,12 +157,19 @@ require_once 'includes/header.php';
                                 </td>
                                 <td>
                                     <div class="btn-group" role="group" aria-label="Surgery Actions">
-                                        <a href="add_edit_surgery.php?id=${surgery.id}"
-                                           class="btn btn-sm btn-outline-warning"
-                                           title="Edit Surgery">
-                                            <i class="fas fa-edit"></i>
-                                            <span class="d-none d-lg-inline ms-1">Edit</span>
-                                        </a>
+                                        ${canEdit ?
+                                            `<a href="add_edit_surgery.php?id=${surgery.id}"
+                                               class="btn btn-sm btn-outline-warning"
+                                               title="Edit Surgery">
+                                                <i class="fas fa-edit"></i>
+                                                <span class="d-none d-lg-inline ms-1">Edit</span>
+                                            </a>` :
+                                            `<button class="btn btn-sm btn-outline-secondary" disabled
+                                                     title="Cannot edit completed surgery">
+                                                <i class="fas fa-edit"></i>
+                                                <span class="d-none d-lg-inline ms-1">Edit</span>
+                                            </button>`
+                                        }
                                         <?php if (is_admin()): ?>
                                         <button class="btn btn-sm btn-outline-danger delete-surgery-btn"
                                                 data-surgery-id="${surgery.id}"

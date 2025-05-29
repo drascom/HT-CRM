@@ -25555,3 +25555,1629 @@
 }
 ```
 ---
+
+## Debug Log - 2025-05-28 15:25:19
+
+**Level:** INFO
+**Message:** Starting Google Sheets workflow
+**Data:**
+```json
+{
+    "user_id": 1,
+    "timestamp": "2025-05-28 15:25:19",
+    "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/136.0.0.0 Safari\/537.36"
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:19
+
+**Level:** INFO
+**Message:** Authentication successful
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:19
+
+**Level:** INFO
+**Message:** Retrieving setting from database
+**Data:**
+```json
+{
+    "key": "spreadsheet_id"
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:19
+
+**Level:** INFO
+**Message:** Setting retrieved
+**Data:**
+```json
+{
+    "key": "spreadsheet_id",
+    "found": "YES",
+    "value_length": 44
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:19
+
+**Level:** INFO
+**Message:** Retrieving setting from database
+**Data:**
+```json
+{
+    "key": "cache_duration"
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:19
+
+**Level:** INFO
+**Message:** Setting retrieved
+**Data:**
+```json
+{
+    "key": "cache_duration",
+    "found": "YES",
+    "value_length": 3
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:19
+
+**Level:** INFO
+**Message:** Retrieving setting from database
+**Data:**
+```json
+{
+    "key": "cell_range"
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:19
+
+**Level:** INFO
+**Message:** Setting retrieved
+**Data:**
+```json
+{
+    "key": "cell_range",
+    "found": "YES",
+    "value_length": 6
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:19
+
+**Level:** INFO
+**Message:** Configuration loaded
+**Data:**
+```json
+{
+    "credentials_path": ".\/secrets\/liv-hsh-patients-18682cec86db.json",
+    "spreadsheet_id": "SET",
+    "cache_duration": 300,
+    "cell_range": "A1:I30"
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:19
+
+**Level:** INFO
+**Message:** Retrieving setting from database
+**Data:**
+```json
+{
+    "key": "cache_duration"
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:19
+
+**Level:** INFO
+**Message:** Setting retrieved
+**Data:**
+```json
+{
+    "key": "cache_duration",
+    "found": "YES",
+    "value_length": 3
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:19
+
+**Level:** INFO
+**Message:** Cache not available, fetching from Google Sheets API
+---
+
+## Debug Log - 2025-05-28 15:25:19
+
+**Level:** INFO
+**Message:** Initializing Google Client
+---
+
+## Debug Log - 2025-05-28 15:25:19
+
+**Level:** INFO
+**Message:** Google Client initialized successfully
+---
+
+## Debug Log - 2025-05-28 15:25:19
+
+**Level:** INFO
+**Message:** Fetching spreadsheet metadata
+**Data:**
+```json
+{
+    "spreadsheet_id": "1mP20et8Pe_RMQvEC-ra2mXi9aoAtTwK_jsMwcUn9tt0"
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:21
+
+**Level:** INFO
+**Message:** Spreadsheet metadata retrieved
+**Data:**
+```json
+{
+    "title": "Liv Harley Street HT Bookings",
+    "sheet_count": 11
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:21
+
+**Level:** INFO
+**Message:** Starting data processing for each sheet
+---
+
+## Debug Log - 2025-05-28 15:25:21
+
+**Level:** INFO
+**Message:** Fetching data for sheet
+**Data:**
+```json
+{
+    "sheet_index": 0,
+    "sheet_title": "MAR 25",
+    "escaped_title": "MAR 25",
+    "cell_range": "A1:I30",
+    "final_range": "'MAR 25'!A1:I30"
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:21
+
+**Level:** INFO
+**Message:** Sheet data retrieved successfully
+**Data:**
+```json
+{
+    "sheet_title": "MAR 25",
+    "row_count": 30,
+    "fetch_time_ms": 805.1
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:21
+
+**Level:** INFO
+**Message:** Fetching data for sheet
+**Data:**
+```json
+{
+    "sheet_index": 1,
+    "sheet_title": "APR 25",
+    "escaped_title": "APR 25",
+    "cell_range": "A1:I30",
+    "final_range": "'APR 25'!A1:I30"
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:22
+
+**Level:** INFO
+**Message:** Sheet data retrieved successfully
+**Data:**
+```json
+{
+    "sheet_title": "APR 25",
+    "row_count": 30,
+    "fetch_time_ms": 858.84
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:22
+
+**Level:** INFO
+**Message:** Fetching data for sheet
+**Data:**
+```json
+{
+    "sheet_index": 2,
+    "sheet_title": "MAY 25",
+    "escaped_title": "MAY 25",
+    "cell_range": "A1:I30",
+    "final_range": "'MAY 25'!A1:I30"
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:23
+
+**Level:** INFO
+**Message:** Sheet data retrieved successfully
+**Data:**
+```json
+{
+    "sheet_title": "MAY 25",
+    "row_count": 30,
+    "fetch_time_ms": 703.91
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:23
+
+**Level:** INFO
+**Message:** Fetching data for sheet
+**Data:**
+```json
+{
+    "sheet_index": 3,
+    "sheet_title": "JUN 25",
+    "escaped_title": "JUN 25",
+    "cell_range": "A1:I30",
+    "final_range": "'JUN 25'!A1:I30"
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:24
+
+**Level:** INFO
+**Message:** Sheet data retrieved successfully
+**Data:**
+```json
+{
+    "sheet_title": "JUN 25",
+    "row_count": 30,
+    "fetch_time_ms": 915.11
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:24
+
+**Level:** INFO
+**Message:** Fetching data for sheet
+**Data:**
+```json
+{
+    "sheet_index": 4,
+    "sheet_title": "JUL 25",
+    "escaped_title": "JUL 25",
+    "cell_range": "A1:I30",
+    "final_range": "'JUL 25'!A1:I30"
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:25
+
+**Level:** INFO
+**Message:** Sheet data retrieved successfully
+**Data:**
+```json
+{
+    "sheet_title": "JUL 25",
+    "row_count": 30,
+    "fetch_time_ms": 924.91
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:25
+
+**Level:** INFO
+**Message:** Fetching data for sheet
+**Data:**
+```json
+{
+    "sheet_index": 5,
+    "sheet_title": "AUG 25",
+    "escaped_title": "AUG 25",
+    "cell_range": "A1:I30",
+    "final_range": "'AUG 25'!A1:I30"
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:25
+
+**Level:** INFO
+**Message:** Sheet data retrieved successfully
+**Data:**
+```json
+{
+    "sheet_title": "AUG 25",
+    "row_count": 30,
+    "fetch_time_ms": 722.64
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:25
+
+**Level:** INFO
+**Message:** Fetching data for sheet
+**Data:**
+```json
+{
+    "sheet_index": 6,
+    "sheet_title": "SEP 25",
+    "escaped_title": "SEP 25",
+    "cell_range": "A1:I30",
+    "final_range": "'SEP 25'!A1:I30"
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:26
+
+**Level:** INFO
+**Message:** Sheet data retrieved successfully
+**Data:**
+```json
+{
+    "sheet_title": "SEP 25",
+    "row_count": 30,
+    "fetch_time_ms": 764.16
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:26
+
+**Level:** INFO
+**Message:** Fetching data for sheet
+**Data:**
+```json
+{
+    "sheet_index": 7,
+    "sheet_title": "OCT 25",
+    "escaped_title": "OCT 25",
+    "cell_range": "A1:I30",
+    "final_range": "'OCT 25'!A1:I30"
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:27
+
+**Level:** INFO
+**Message:** Sheet data retrieved successfully
+**Data:**
+```json
+{
+    "sheet_title": "OCT 25",
+    "row_count": 30,
+    "fetch_time_ms": 792.37
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:27
+
+**Level:** INFO
+**Message:** Fetching data for sheet
+**Data:**
+```json
+{
+    "sheet_index": 8,
+    "sheet_title": "NOV 25",
+    "escaped_title": "NOV 25",
+    "cell_range": "A1:I30",
+    "final_range": "'NOV 25'!A1:I30"
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:28
+
+**Level:** INFO
+**Message:** Sheet data retrieved successfully
+**Data:**
+```json
+{
+    "sheet_title": "NOV 25",
+    "row_count": 30,
+    "fetch_time_ms": 784.85
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:28
+
+**Level:** INFO
+**Message:** Fetching data for sheet
+**Data:**
+```json
+{
+    "sheet_index": 9,
+    "sheet_title": "DEC 25",
+    "escaped_title": "DEC 25",
+    "cell_range": "A1:I30",
+    "final_range": "'DEC 25'!A1:I30"
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:28
+
+**Level:** INFO
+**Message:** Sheet data retrieved successfully
+**Data:**
+```json
+{
+    "sheet_title": "DEC 25",
+    "row_count": 30,
+    "fetch_time_ms": 312.16
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:28
+
+**Level:** INFO
+**Message:** Fetching data for sheet
+**Data:**
+```json
+{
+    "sheet_index": 10,
+    "sheet_title": "JAN 26",
+    "escaped_title": "JAN 26",
+    "cell_range": "A1:I30",
+    "final_range": "'JAN 26'!A1:I30"
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Sheet data retrieved successfully
+**Data:**
+```json
+{
+    "sheet_title": "JAN 26",
+    "row_count": 30,
+    "fetch_time_ms": 873.09
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** All sheet data retrieved
+**Data:**
+```json
+{
+    "total_sheets": 11,
+    "total_rows": 330,
+    "total_api_time_ms": 9521.86
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Saving data to cache
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Cache saved
+**Data:**
+```json
+{
+    "cache_file": "sheet_data_d3150955807ecdc9b83bed9d480c6b56.json",
+    "cache_size_bytes": 17025,
+    "cache_size_kb": 16.63
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Starting display rendering
+**Data:**
+```json
+{
+    "using_cache": false,
+    "sheet_count": 11
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Performance metrics
+**Data:**
+```json
+{
+    "total_execution_time_ms": 9526.45,
+    "memory_used_mb": 0.27,
+    "peak_memory_mb": 0.62
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Rendering sheet tabs and content
+**Data:**
+```json
+{
+    "sheet_count": 11
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Starting patient/surgery lookup for sheet
+**Data:**
+```json
+{
+    "sheet_title": "MAR 25",
+    "data_rows": 29
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Patient/surgery lookup completed for sheet
+**Data:**
+```json
+{
+    "sheet_title": "MAR 25",
+    "patient_lookups": 15,
+    "surgery_lookups": 1,
+    "recorded_count": 1,
+    "buttons_created": 4
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Starting patient/surgery lookup for sheet
+**Data:**
+```json
+{
+    "sheet_title": "APR 25",
+    "data_rows": 29
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Patient/surgery lookup completed for sheet
+**Data:**
+```json
+{
+    "sheet_title": "APR 25",
+    "patient_lookups": 22,
+    "surgery_lookups": 0,
+    "recorded_count": 0,
+    "buttons_created": 11
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Starting patient/surgery lookup for sheet
+**Data:**
+```json
+{
+    "sheet_title": "MAY 25",
+    "data_rows": 29
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Patient/surgery lookup completed for sheet
+**Data:**
+```json
+{
+    "sheet_title": "MAY 25",
+    "patient_lookups": 29,
+    "surgery_lookups": 0,
+    "recorded_count": 0,
+    "buttons_created": 15
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Starting patient/surgery lookup for sheet
+**Data:**
+```json
+{
+    "sheet_title": "JUN 25",
+    "data_rows": 29
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Patient/surgery lookup completed for sheet
+**Data:**
+```json
+{
+    "sheet_title": "JUN 25",
+    "patient_lookups": 20,
+    "surgery_lookups": 0,
+    "recorded_count": 0,
+    "buttons_created": 11
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Starting patient/surgery lookup for sheet
+**Data:**
+```json
+{
+    "sheet_title": "JUL 25",
+    "data_rows": 29
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Patient/surgery lookup completed for sheet
+**Data:**
+```json
+{
+    "sheet_title": "JUL 25",
+    "patient_lookups": 20,
+    "surgery_lookups": 0,
+    "recorded_count": 0,
+    "buttons_created": 7
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Starting patient/surgery lookup for sheet
+**Data:**
+```json
+{
+    "sheet_title": "AUG 25",
+    "data_rows": 29
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Patient/surgery lookup completed for sheet
+**Data:**
+```json
+{
+    "sheet_title": "AUG 25",
+    "patient_lookups": 22,
+    "surgery_lookups": 0,
+    "recorded_count": 0,
+    "buttons_created": 7
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Starting patient/surgery lookup for sheet
+**Data:**
+```json
+{
+    "sheet_title": "SEP 25",
+    "data_rows": 29
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Patient/surgery lookup completed for sheet
+**Data:**
+```json
+{
+    "sheet_title": "SEP 25",
+    "patient_lookups": 15,
+    "surgery_lookups": 0,
+    "recorded_count": 0,
+    "buttons_created": 7
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Starting patient/surgery lookup for sheet
+**Data:**
+```json
+{
+    "sheet_title": "OCT 25",
+    "data_rows": 29
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Patient/surgery lookup completed for sheet
+**Data:**
+```json
+{
+    "sheet_title": "OCT 25",
+    "patient_lookups": 14,
+    "surgery_lookups": 0,
+    "recorded_count": 0,
+    "buttons_created": 6
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Starting patient/surgery lookup for sheet
+**Data:**
+```json
+{
+    "sheet_title": "NOV 25",
+    "data_rows": 29
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Patient/surgery lookup completed for sheet
+**Data:**
+```json
+{
+    "sheet_title": "NOV 25",
+    "patient_lookups": 12,
+    "surgery_lookups": 0,
+    "recorded_count": 0,
+    "buttons_created": 3
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Starting patient/surgery lookup for sheet
+**Data:**
+```json
+{
+    "sheet_title": "DEC 25",
+    "data_rows": 29
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Patient/surgery lookup completed for sheet
+**Data:**
+```json
+{
+    "sheet_title": "DEC 25",
+    "patient_lookups": 13,
+    "surgery_lookups": 0,
+    "recorded_count": 0,
+    "buttons_created": 3
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Starting patient/surgery lookup for sheet
+**Data:**
+```json
+{
+    "sheet_title": "JAN 26",
+    "data_rows": 29
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Patient/surgery lookup completed for sheet
+**Data:**
+```json
+{
+    "sheet_title": "JAN 26",
+    "patient_lookups": 12,
+    "surgery_lookups": 0,
+    "recorded_count": 0,
+    "buttons_created": 2
+}
+```
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Display rendering completed successfully
+---
+
+## Debug Log - 2025-05-28 15:25:29
+
+**Level:** INFO
+**Message:** Workflow completed successfully
+**Data:**
+```json
+{
+    "total_execution_time_ms": 9533.37,
+    "final_memory_usage_mb": 0.63,
+    "peak_memory_usage_mb": 0.63,
+    "cache_used": false,
+    "sheets_processed": 11
+}
+```
+---
+
+## Debug Log - 2025-05-29 14:56:02
+
+**Level:** INFO
+**Message:** Starting Google Sheets workflow
+**Data:**
+```json
+{
+    "user_id": 1,
+    "timestamp": "2025-05-29 14:56:02",
+    "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/136.0.0.0 Safari\/537.36"
+}
+```
+---
+
+## Debug Log - 2025-05-29 14:56:02
+
+**Level:** INFO
+**Message:** Authentication successful
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Debug Log - 2025-05-29 14:56:02
+
+**Level:** INFO
+**Message:** Initial page load completed
+**Data:**
+```json
+{
+    "total_execution_time_ms": 1.02,
+    "final_memory_usage_mb": 0.37,
+    "peak_memory_usage_mb": 0.44
+}
+```
+---
+
+## Debug Log - 2025-05-29 14:56:03
+
+**Level:** INFO
+**Message:** Cache not available, fetching from Google Sheets API in API endpoint
+---
+
+## Debug Log - 2025-05-29 14:56:07
+
+**Level:** INFO
+**Message:** All sheet data retrieved in API endpoint
+**Data:**
+```json
+{
+    "total_sheets": 12,
+    "total_api_time_ms": 4448.27
+}
+```
+---
+
+## Debug Log - 2025-05-29 14:56:07
+
+**Level:** INFO
+**Message:** Cache saved in API
+**Data:**
+```json
+{
+    "cache_file": "sheet_data_d3150955807ecdc9b83bed9d480c6b56.json",
+    "cache_size_bytes": 18220
+}
+```
+---
+
+## Debug Log - 2025-05-29 14:56:10
+
+**Level:** INFO
+**Message:** Starting Google Sheets workflow
+**Data:**
+```json
+{
+    "user_id": 1,
+    "timestamp": "2025-05-29 14:56:10",
+    "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/136.0.0.0 Safari\/537.36"
+}
+```
+---
+
+## Debug Log - 2025-05-29 14:56:10
+
+**Level:** INFO
+**Message:** Authentication successful
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Debug Log - 2025-05-29 14:56:10
+
+**Level:** INFO
+**Message:** Initial page load completed
+**Data:**
+```json
+{
+    "total_execution_time_ms": 1.08,
+    "final_memory_usage_mb": 0.36,
+    "peak_memory_usage_mb": 0.36
+}
+```
+---
+
+## Debug Log - 2025-05-29 14:56:10
+
+**Level:** INFO
+**Message:** Using cached data in API
+---
+
+## Debug Log - 2025-05-29 14:56:17
+
+**Level:** INFO
+**Message:** Starting Google Sheets workflow
+**Data:**
+```json
+{
+    "user_id": 1,
+    "timestamp": "2025-05-29 14:56:17",
+    "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/136.0.0.0 Safari\/537.36"
+}
+```
+---
+
+## Debug Log - 2025-05-29 14:56:17
+
+**Level:** INFO
+**Message:** Authentication successful
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Debug Log - 2025-05-29 14:56:17
+
+**Level:** INFO
+**Message:** Initial page load completed
+**Data:**
+```json
+{
+    "total_execution_time_ms": 0.51,
+    "final_memory_usage_mb": 0.36,
+    "peak_memory_usage_mb": 0.36
+}
+```
+---
+
+## Debug Log - 2025-05-29 14:56:17
+
+**Level:** INFO
+**Message:** Using cached data in API
+---
+
+## Debug Log - 2025-05-29 14:56:26
+
+**Level:** INFO
+**Message:** Starting Google Sheets workflow
+**Data:**
+```json
+{
+    "user_id": 1,
+    "timestamp": "2025-05-29 14:56:26",
+    "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/136.0.0.0 Safari\/537.36"
+}
+```
+---
+
+## Debug Log - 2025-05-29 14:56:26
+
+**Level:** INFO
+**Message:** Authentication successful
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Debug Log - 2025-05-29 14:56:26
+
+**Level:** INFO
+**Message:** Initial page load completed
+**Data:**
+```json
+{
+    "total_execution_time_ms": 0.73,
+    "final_memory_usage_mb": 0.36,
+    "peak_memory_usage_mb": 0.36
+}
+```
+---
+
+## Debug Log - 2025-05-29 14:56:26
+
+**Level:** INFO
+**Message:** Using cached data in API
+---
+
+## Debug Log - 2025-05-29 14:56:54
+
+**Level:** INFO
+**Message:** Starting Google Sheets workflow
+**Data:**
+```json
+{
+    "user_id": 1,
+    "timestamp": "2025-05-29 14:56:54",
+    "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/136.0.0.0 Safari\/537.36"
+}
+```
+---
+
+## Debug Log - 2025-05-29 14:56:54
+
+**Level:** INFO
+**Message:** Authentication successful
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Debug Log - 2025-05-29 14:56:54
+
+**Level:** INFO
+**Message:** Initial page load completed
+**Data:**
+```json
+{
+    "total_execution_time_ms": 0.56,
+    "final_memory_usage_mb": 0.36,
+    "peak_memory_usage_mb": 0.36
+}
+```
+---
+
+## Debug Log - 2025-05-29 14:56:55
+
+**Level:** INFO
+**Message:** Cache not available, fetching from Google Sheets API in API endpoint
+---
+
+## Debug Log - 2025-05-29 14:56:59
+
+**Level:** INFO
+**Message:** All sheet data retrieved in API endpoint
+**Data:**
+```json
+{
+    "total_sheets": 12,
+    "total_api_time_ms": 4186.06
+}
+```
+---
+
+## Debug Log - 2025-05-29 14:56:59
+
+**Level:** INFO
+**Message:** Cache saved in API
+**Data:**
+```json
+{
+    "cache_file": "sheet_data_d3150955807ecdc9b83bed9d480c6b56.json",
+    "cache_size_bytes": 18220
+}
+```
+---
+
+## Debug Log - 2025-05-29 15:00:21
+
+**Level:** INFO
+**Message:** Starting Google Sheets workflow
+**Data:**
+```json
+{
+    "user_id": 1,
+    "timestamp": "2025-05-29 15:00:21",
+    "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/136.0.0.0 Safari\/537.36"
+}
+```
+---
+
+## Debug Log - 2025-05-29 15:00:21
+
+**Level:** INFO
+**Message:** Authentication successful
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Debug Log - 2025-05-29 15:00:21
+
+**Level:** INFO
+**Message:** Initial page load completed
+**Data:**
+```json
+{
+    "total_execution_time_ms": 1.43,
+    "final_memory_usage_mb": 0.36,
+    "peak_memory_usage_mb": 0.43
+}
+```
+---
+
+## Debug Log - 2025-05-29 15:00:21
+
+**Level:** INFO
+**Message:** Cache not available, fetching from Google Sheets API in API endpoint
+---
+
+## Debug Log - 2025-05-29 15:00:24
+
+**Level:** INFO
+**Message:** All sheet data retrieved in API endpoint
+**Data:**
+```json
+{
+    "total_sheets": 12,
+    "total_api_time_ms": 3257.47
+}
+```
+---
+
+## Debug Log - 2025-05-29 15:00:24
+
+**Level:** INFO
+**Message:** Cache saved in API
+**Data:**
+```json
+{
+    "cache_file": "sheet_data_d3150955807ecdc9b83bed9d480c6b56.json",
+    "cache_size_bytes": 18220
+}
+```
+---
+
+## Debug Log - 2025-05-29 15:00:56
+
+**Level:** INFO
+**Message:** Starting Google Sheets workflow
+**Data:**
+```json
+{
+    "user_id": 1,
+    "timestamp": "2025-05-29 15:00:56",
+    "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/136.0.0.0 Safari\/537.36"
+}
+```
+---
+
+## Debug Log - 2025-05-29 15:00:56
+
+**Level:** INFO
+**Message:** Authentication successful
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Debug Log - 2025-05-29 15:00:56
+
+**Level:** INFO
+**Message:** Initial page load completed
+**Data:**
+```json
+{
+    "total_execution_time_ms": 0.85,
+    "final_memory_usage_mb": 0.36,
+    "peak_memory_usage_mb": 0.43
+}
+```
+---
+
+## Debug Log - 2025-05-29 15:00:56
+
+**Level:** INFO
+**Message:** Cache not available, fetching from Google Sheets API in API endpoint
+---
+
+## Debug Log - 2025-05-29 15:00:59
+
+**Level:** INFO
+**Message:** All sheet data retrieved in API endpoint
+**Data:**
+```json
+{
+    "total_sheets": 12,
+    "total_api_time_ms": 3339.11
+}
+```
+---
+
+## Debug Log - 2025-05-29 15:00:59
+
+**Level:** INFO
+**Message:** Cache saved in API
+**Data:**
+```json
+{
+    "cache_file": "sheet_data_d3150955807ecdc9b83bed9d480c6b56.json",
+    "cache_size_bytes": 18220
+}
+```
+---
+
+## Debug Log - 2025-05-29 15:01:27
+
+**Level:** INFO
+**Message:** Starting Google Sheets workflow
+**Data:**
+```json
+{
+    "user_id": 1,
+    "timestamp": "2025-05-29 15:01:27",
+    "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/136.0.0.0 Safari\/537.36"
+}
+```
+---
+
+## Debug Log - 2025-05-29 15:01:27
+
+**Level:** INFO
+**Message:** Authentication successful
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Debug Log - 2025-05-29 15:01:27
+
+**Level:** INFO
+**Message:** Initial page load completed
+**Data:**
+```json
+{
+    "total_execution_time_ms": 0.9,
+    "final_memory_usage_mb": 0.36,
+    "peak_memory_usage_mb": 0.43
+}
+```
+---
+
+## Debug Log - 2025-05-29 15:01:27
+
+**Level:** INFO
+**Message:** Cache not available, fetching from Google Sheets API in API endpoint
+---
+
+## Debug Log - 2025-05-29 15:01:30
+
+**Level:** INFO
+**Message:** All sheet data retrieved in API endpoint
+**Data:**
+```json
+{
+    "total_sheets": 12,
+    "total_api_time_ms": 3388.68
+}
+```
+---
+
+## Debug Log - 2025-05-29 15:01:30
+
+**Level:** INFO
+**Message:** Cache saved in API
+**Data:**
+```json
+{
+    "cache_file": "sheet_data_d3150955807ecdc9b83bed9d480c6b56.json",
+    "cache_size_bytes": 18220
+}
+```
+---
+
+## Debug Log - 2025-05-29 15:01:44
+
+**Level:** INFO
+**Message:** Starting Google Sheets workflow
+**Data:**
+```json
+{
+    "user_id": 1,
+    "timestamp": "2025-05-29 15:01:44",
+    "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/136.0.0.0 Safari\/537.36"
+}
+```
+---
+
+## Debug Log - 2025-05-29 15:01:44
+
+**Level:** INFO
+**Message:** Authentication successful
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Debug Log - 2025-05-29 15:01:44
+
+**Level:** INFO
+**Message:** Initial page load completed
+**Data:**
+```json
+{
+    "total_execution_time_ms": 1.11,
+    "final_memory_usage_mb": 0.36,
+    "peak_memory_usage_mb": 0.43
+}
+```
+---
+
+## Debug Log - 2025-05-29 15:01:44
+
+**Level:** INFO
+**Message:** Cache not available, fetching from Google Sheets API in API endpoint
+---
+
+## Debug Log - 2025-05-29 15:01:48
+
+**Level:** INFO
+**Message:** All sheet data retrieved in API endpoint
+**Data:**
+```json
+{
+    "total_sheets": 12,
+    "total_api_time_ms": 3707.86
+}
+```
+---
+
+## Debug Log - 2025-05-29 15:01:48
+
+**Level:** INFO
+**Message:** Cache saved in API
+**Data:**
+```json
+{
+    "cache_file": "sheet_data_d3150955807ecdc9b83bed9d480c6b56.json",
+    "cache_size_bytes": 18220
+}
+```
+---
+
+## Debug Log - 2025-05-29 16:09:45
+
+**Level:** INFO
+**Message:** Starting Google Sheets workflow
+**Data:**
+```json
+{
+    "user_id": 1,
+    "timestamp": "2025-05-29 16:09:45",
+    "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/136.0.0.0 Safari\/537.36"
+}
+```
+---
+
+## Debug Log - 2025-05-29 16:09:45
+
+**Level:** INFO
+**Message:** Authentication successful
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Debug Log - 2025-05-29 16:09:45
+
+**Level:** INFO
+**Message:** Initial page load completed
+**Data:**
+```json
+{
+    "total_execution_time_ms": 1,
+    "final_memory_usage_mb": 0.37,
+    "peak_memory_usage_mb": 0.44
+}
+```
+---
+
+## Debug Log - 2025-05-29 16:09:45
+
+**Level:** INFO
+**Message:** Cache not available, fetching from Google Sheets API in API endpoint
+---
+
+## Debug Log - 2025-05-29 16:09:54
+
+**Level:** INFO
+**Message:** All sheet data retrieved in API endpoint
+**Data:**
+```json
+{
+    "total_sheets": 12,
+    "total_api_time_ms": 8072.06
+}
+```
+---
+
+## Debug Log - 2025-05-29 16:09:54
+
+**Level:** INFO
+**Message:** Cache saved in API
+**Data:**
+```json
+{
+    "cache_file": "sheet_data_d3150955807ecdc9b83bed9d480c6b56.json",
+    "cache_size_bytes": 18220
+}
+```
+---
+
+## Debug Log - 2025-05-29 16:09:54
+
+**Level:** INFO
+**Message:** Starting Google Sheets workflow
+**Data:**
+```json
+{
+    "user_id": 1,
+    "timestamp": "2025-05-29 16:09:54",
+    "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/136.0.0.0 Safari\/537.36"
+}
+```
+---
+
+## Debug Log - 2025-05-29 16:09:54
+
+**Level:** INFO
+**Message:** Authentication successful
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Debug Log - 2025-05-29 16:09:54
+
+**Level:** INFO
+**Message:** Initial page load completed
+**Data:**
+```json
+{
+    "total_execution_time_ms": 0.48,
+    "final_memory_usage_mb": 0.36,
+    "peak_memory_usage_mb": 0.36
+}
+```
+---
+
+## Debug Log - 2025-05-29 16:09:54
+
+**Level:** INFO
+**Message:** Using cached data in API
+---
