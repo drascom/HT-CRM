@@ -136,8 +136,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const statusMessagesDiv = document.getElementById('status-messages');
     const patientIdInput = document.querySelector('#patient-form input[name="id"]');
     const isEditing = patientIdInput !== null;
-    const patientId = isEditing ? patientIdInput.value : null; // Get patientId if editing
+    let patientId = isEditing ? patientIdInput.value : null; // Make patientId mutable
     let allAgencies = []; // Store all agencies for dropdown
+    let uploadedAvatarUrl = null; // Store the uploaded avatar URL
 
     // Function to display messages
     function displayMessage(message, type = 'success') {
@@ -275,13 +276,50 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             init: function() {
                 const myDropzone = this;
+                // let currentPatientId = patientId; // Capture the initial patientId
+
+                // Override the params function to use the potentially updated currentPatientId
+                // myDropzone.options.params = function() {
+                //     return {
+                //         entity: 'patients',
+                //         action: 'upload_avatar',
+                //         id: currentPatientId // Use the captured/updated variable
+                //     };
+                // };
+
+                // Listen for successful patient creation to update currentPatientId
+                // This part relies on the logic in your form submission handling
+                // which is outside the init, but this structure makes the intent clear.
+                // The form submission success handler already updates the outer patientId variable,
+                // and this closure should capture that update when processQueue is called.
+
+                // Log when a file is about to be sent
+                myDropzone.on("sending", function(file, xhr, formData) {
+                    console.log("Dropzone 'sending' event triggered.");
+                    // Manually append parameters to the formData
+                    formData.append('entity', 'patients');
+                    formData.append('action', 'upload_avatar');
+                    // Ensure patientId is available. The outer patientId variable should be updated by now.
+                    if (patientId) {
+                        formData.append('id', patientId);
+                        console.log("Appending patientId to FormData:", patientId);
+                    } else {
+                        console.warn("patientId is null when sending avatar upload request.");
+                    }
+
+                    // console.log("FormData sent with request:", formData); // Keep this commented or use a method to inspect FormData content if needed later
+                });
 
                 // Handle successful upload
                 myDropzone.on("success", function(file, response) {
                     console.log("Avatar upload successful:", response);
                     if (response.success) {
                         displayMessage('Avatar uploaded successfully!', 'success');
-                        displayMessage('Avatar uploaded successfully!', 'success');
+                        // Store the uploaded avatar URL if available
+                        if (response.avatar_url) {
+                            uploadedAvatarUrl = response.avatar_url;
+                            console.log("Stored uploadedAvatarUrl:", uploadedAvatarUrl);
+                        }
                         // Remove the file from Dropzone's preview after successful upload
                         myDropzone.removeFile(file);
                     } else {
@@ -398,39 +436,103 @@ document.addEventListener('DOMContentLoaded', function() {
         patientForm.addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent default form submission
 
+            // Clear previous messages
+            statusMessagesDiv.innerHTML = '';
+
             const nameInput = document.getElementById('name');
             if (!nameInput.value.trim()) {
                 displayMessage('Patient name is required.', 'danger');
                 return; // Stop the form submission
             }
 
-            // If there are files in the Dropzone queue, process them first
-            if (avatarDropzone.getQueuedFiles().length > 0) {
-                // Process the Dropzone queue
-                console.log("Process the Dropzone queue")
-                avatarDropzone.processQueue();
+            // Determine if we are adding or editing
+            const action = isEditing ? 'update' : 'add';
+            const hasQueuedFiles = avatarDropzone.getQueuedFiles().length > 0;
 
+            if (action === 'add' && hasQueuedFiles) {
+                console.log("Adding new patient with avatar. Submitting main form first...");
+                // Submit the main form data first to create the patient record
+                submitPatientForm()
+                    .then(data => {
+                        if (data.success && data.patient && data.patient.id) {
+                            console.log("Patient created successfully with ID:", data.patient.id);
+                            // Update the patientId variable
+                            patientId = data.patient.id;
+                            console.log(
+                                "patientId variable updated with new patient ID:",
+                                patientId);
+
+                            // Listen for Dropzone completion after processing the queue
+                            const queueCompleteHandler = function() {
+                                console.log("Dropzone queue complete after adding patient.");
+                                // Redirect after a short delay on success
+                                setTimeout(() => {
+                                    window.location.href = 'patients.php';
+                                }, 500);
+                                // Remove the event listener after it has been triggered
+                                avatarDropzone.off("queuecomplete", queueCompleteHandler);
+                            };
+                            avatarDropzone.on("queuecomplete", queueCompleteHandler);
+
+                            console.log("Calling avatarDropzone.processQueue() after patient creation.");
+                            // Process the Dropzone queue to upload the avatar
+                            avatarDropzone.processQueue();
+
+                        } else if (data.success) {
+                            // Patient created but no patient object returned (unexpected but handle)
+                            displayMessage(data.message +
+                                ' (Avatar upload skipped due to missing patient data).',
+                                'warning'
+                            );
+                            // Redirect anyway
+                            setTimeout(() => {
+                                window.location.href = 'patients.php';
+                            }, 500);
+                        } else {
+                            // Handle main form submission error
+                            displayMessage(`Error creating patient: ${data.error || data.message}`,
+                                'danger');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error submitting main form for new patient:', error);
+                        displayMessage('An error occurred while creating the patient.', 'danger');
+                    });
+
+            } else if (action === 'update' && hasQueuedFiles) {
+                // If editing and a new avatar is uploaded, process it first
+                console.log("Processing Dropzone queue for existing patient update...");
                 // Listen for Dropzone completion before submitting the main form
-                avatarDropzone.on("queuecomplete", function() {
-                    console.log("Processed now go submitPatientForm")
-                    // Now submit the main form data (excluding the avatar)
+                const queueCompleteHandler = function() {
+                    console.log("Dropzone queue complete for update. Submitting main form.");
+                    // Submit the main form data (avatar update is handled by upload_avatar action)
                     submitPatientForm();
-                });
+                    // Remove the event listener after it has been triggered
+                    avatarDropzone.off("queuecomplete", queueCompleteHandler);
+                };
+                avatarDropzone.on("queuecomplete", queueCompleteHandler);
+                console.log("Calling avatarDropzone.processQueue() for existing patient update.");
+                // Process the Dropzone queue
+                avatarDropzone.processQueue();
             } else {
-                console.log("no files go  submitPatientForm")
-                // If no files in Dropzone, just submit the main form
+                console.log(
+                    "No files in Dropzone queue or editing without new avatar. Submitting main form directly."
+                );
+                // If no files in Dropzone or editing without a new avatar, just submit the main form
                 submitPatientForm();
             }
         });
 
         // Function to submit the main patient form data
-        function submitPatientForm() {
+        function submitPatientForm() { // Removed avatarUrl parameter as it's no longer passed here for 'add'
             const formData = new FormData();
             const userRole = '<?php echo get_user_role(); ?>';
             const userAgencyId = '<?php echo get_user_agency_id(); ?>';
 
+            const action = isEditing ? 'update' : 'add';
+
             formData.append('entity', 'patients');
-            formData.append('action', isEditing ? 'update' : 'add');
+            formData.append('action', action);
             if (isEditing) {
                 formData.append('id', patientIdInput.value);
             } else {
@@ -441,27 +543,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Agency ID is handled by the form field (hidden for agents, select for admin/editor)
             formData.append('agency_id', document.getElementById('agency_id').value);
-            // Do NOT append avatar here, Dropzone handles it
 
-            fetch('api.php', {
+            // Do NOT append avatar here for 'add' action, it's handled by Dropzone after patient creation
+            // For 'update', the avatar is handled by the 'upload_avatar' action triggered by Dropzone
+
+            return fetch('api.php', { // Return the fetch promise
                     method: 'POST',
                     body: formData
                 })
                 .then(response => response.json())
                 .then(data => {
-                    if (data.success) {
-                        displayMessage(data.message, 'success');
-                        // Redirect after a short delay on success
-                        setTimeout(() => {
-                            window.location.href = 'patients.php';
-                        }, 500);
-                    } else {
-                        displayMessage(`Error: ${data.error || data.message}`, 'danger');
+                    // Handle success/error messages for the main form submission
+                    if (action !== 'add' || !avatarDropzone.getQueuedFiles().length > 0) {
+                        // Only display message and redirect immediately if no avatar upload is pending for 'add'
+                        if (data.success) {
+                            displayMessage(data.message, 'success');
+                            setTimeout(() => {
+                                window.location.href = 'patients.php';
+                            }, 500);
+                        } else {
+                            displayMessage(`Error: ${data.error || data.message}`, 'danger');
+                        }
                     }
+                    return data; // Return data for chaining
                 })
                 .catch(error => {
                     console.error('Error submitting form:', error);
                     displayMessage('An error occurred while saving patient data.', 'danger');
+                    throw error; // Re-throw error for chaining
                 });
         }
 
@@ -473,3 +582,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
+```

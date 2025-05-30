@@ -11665,3 +11665,6008 @@
 ```
 ---
 
+## Request Log - 2025-05-30 00:58:57
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 00:58:57
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 11,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-29 23:51:25",
+            "updated_at": "2025-05-29 23:56:14",
+            "avatar": "uploads\/avatars\/avatar_6838f41e980e7.jpg",
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 12,
+            "name": "Nurcan Sahin",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-29 23:52:16",
+            "updated_at": "2025-05-29 23:52:16",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 00:59:00
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 00:59:00
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 00:59:42
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 00:59:42
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 00:59:54
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 00:59:54
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6838f4fa063ca.jpg"
+}
+```
+---
+
+## Request Log - 2025-05-30 00:59:54
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 00:59:54
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 13,
+        "name": "ayhan",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 00:59:54
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 00:59:54
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 11,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-29 23:51:25",
+            "updated_at": "2025-05-29 23:56:14",
+            "avatar": "uploads\/avatars\/avatar_6838f41e980e7.jpg",
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 12,
+            "name": "Nurcan Sahin",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-29 23:52:16",
+            "updated_at": "2025-05-29 23:52:16",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 13,
+            "name": "ayhan",
+            "dob": "2025-05-07",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-29 23:59:54",
+            "updated_at": "2025-05-29 23:59:54",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 00:59:59
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 00:59:59
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 00:59:59
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 00:59:59
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 11,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-29 23:51:25",
+            "updated_at": "2025-05-29 23:56:14",
+            "avatar": "uploads\/avatars\/avatar_6838f41e980e7.jpg",
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 13,
+            "name": "ayhan",
+            "dob": "2025-05-07",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-29 23:59:54",
+            "updated_at": "2025-05-29 23:59:54",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:00:04
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:00:04
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:00:04
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:00:04
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 11,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-29 23:51:25",
+            "updated_at": "2025-05-29 23:56:14",
+            "avatar": "uploads\/avatars\/avatar_6838f41e980e7.jpg",
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:00:07
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list&agency=2
+
+## Response Log - 2025-05-30 01:00:07
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:00:17
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:00:17
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6838f511be2b2.jpg"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:00:17
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:00:17
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 14,
+        "name": "test3",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:00:18
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list&agency=2
+
+## Response Log - 2025-05-30 01:00:18
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 14,
+            "name": "test3",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 3,
+            "created_at": "2025-05-30 00:00:17",
+            "updated_at": "2025-05-30 00:00:17",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:00:21
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list&agency=2
+
+## Response Log - 2025-05-30 01:00:21
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 14,
+            "name": "test3",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 3,
+            "created_at": "2025-05-30 00:00:17",
+            "updated_at": "2025-05-30 00:00:17",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:00:30
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list&agency=2
+
+## Response Log - 2025-05-30 01:00:30
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 14,
+            "name": "test3",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 3,
+            "created_at": "2025-05-30 00:00:17",
+            "updated_at": "2025-05-30 00:00:17",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:00:33
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list&agency=2
+
+## Response Log - 2025-05-30 01:00:33
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 14,
+            "name": "test3",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 3,
+            "created_at": "2025-05-30 00:00:17",
+            "updated_at": "2025-05-30 00:00:17",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:00:49
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:00:49
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6838f531ebd69.jpg"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:00:49
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:00:49
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 15,
+        "name": "acenta 1",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:00:50
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list&agency=2
+
+## Response Log - 2025-05-30 01:00:50
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 15,
+            "name": "acenta 1",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 3,
+            "created_at": "2025-05-30 00:00:49",
+            "updated_at": "2025-05-30 00:00:49",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        },
+        {
+            "id": 14,
+            "name": "test3",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 3,
+            "created_at": "2025-05-30 00:00:17",
+            "updated_at": "2025-05-30 00:00:17",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:01:11
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:01:11
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 11,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-29 23:51:25",
+            "updated_at": "2025-05-29 23:56:14",
+            "avatar": "uploads\/avatars\/avatar_6838f41e980e7.jpg",
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 15,
+            "name": "acenta 1",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 3,
+            "created_at": "2025-05-30 00:00:49",
+            "updated_at": "2025-05-30 00:00:49",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        },
+        {
+            "id": 14,
+            "name": "test3",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 3,
+            "created_at": "2025-05-30 00:00:17",
+            "updated_at": "2025-05-30 00:00:17",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:01:53
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list&agency=2
+
+## Response Log - 2025-05-30 01:01:53
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 15,
+            "name": "acenta 1",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 3,
+            "created_at": "2025-05-30 00:00:49",
+            "updated_at": "2025-05-30 00:00:49",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        },
+        {
+            "id": 14,
+            "name": "test3",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 3,
+            "created_at": "2025-05-30 00:00:17",
+            "updated_at": "2025-05-30 00:00:17",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:02:07
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:02:07
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6838f57f1659d.jpg"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:02:07
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:02:07
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 16,
+        "name": "acenta 1",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:02:07
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list&agency=2
+
+## Response Log - 2025-05-30 01:02:07
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 15,
+            "name": "acenta 1",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 3,
+            "created_at": "2025-05-30 00:00:49",
+            "updated_at": "2025-05-30 00:00:49",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        },
+        {
+            "id": 16,
+            "name": "acenta 1",
+            "dob": "2025-05-08",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 3,
+            "created_at": "2025-05-30 00:02:07",
+            "updated_at": "2025-05-30 00:02:07",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        },
+        {
+            "id": 14,
+            "name": "test3",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 3,
+            "created_at": "2025-05-30 00:00:17",
+            "updated_at": "2025-05-30 00:00:17",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:02:16
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:02:16
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 11,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-29 23:51:25",
+            "updated_at": "2025-05-29 23:56:14",
+            "avatar": "uploads\/avatars\/avatar_6838f41e980e7.jpg",
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 15,
+            "name": "acenta 1",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 3,
+            "created_at": "2025-05-30 00:00:49",
+            "updated_at": "2025-05-30 00:00:49",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        },
+        {
+            "id": 16,
+            "name": "acenta 1",
+            "dob": "2025-05-08",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 3,
+            "created_at": "2025-05-30 00:02:07",
+            "updated_at": "2025-05-30 00:02:07",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        },
+        {
+            "id": 14,
+            "name": "test3",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 3,
+            "created_at": "2025-05-30 00:00:17",
+            "updated_at": "2025-05-30 00:00:17",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:02:18
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:02:18
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:02:18
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:02:18
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 11,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-29 23:51:25",
+            "updated_at": "2025-05-29 23:56:14",
+            "avatar": "uploads\/avatars\/avatar_6838f41e980e7.jpg",
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 16,
+            "name": "acenta 1",
+            "dob": "2025-05-08",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 3,
+            "created_at": "2025-05-30 00:02:07",
+            "updated_at": "2025-05-30 00:02:07",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        },
+        {
+            "id": 14,
+            "name": "test3",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 3,
+            "created_at": "2025-05-30 00:00:17",
+            "updated_at": "2025-05-30 00:00:17",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:02:21
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:02:21
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:02:21
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:02:21
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 11,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-29 23:51:25",
+            "updated_at": "2025-05-29 23:56:14",
+            "avatar": "uploads\/avatars\/avatar_6838f41e980e7.jpg",
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 14,
+            "name": "test3",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 3,
+            "created_at": "2025-05-30 00:00:17",
+            "updated_at": "2025-05-30 00:00:17",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:02:24
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:02:24
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:02:24
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:02:24
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 11,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-29 23:51:25",
+            "updated_at": "2025-05-29 23:56:14",
+            "avatar": "uploads\/avatars\/avatar_6838f41e980e7.jpg",
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:02:26
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:02:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:02:26
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:02:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:02:27
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:02:27
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:02:33
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:02:33
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6838f599547ad.jpg"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:02:33
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:02:33
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 17,
+        "name": "ayhan",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:02:33
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:02:33
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 17,
+            "name": "ayhan",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:02:33",
+            "updated_at": "2025-05-30 00:02:33",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:03:37
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:03:37
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 17,
+            "name": "ayhan",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:02:33",
+            "updated_at": "2025-05-30 00:02:33",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:03:39
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:03:39
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:03:39
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:03:39
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:03:42
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:03:42
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:03:43
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:03:43
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:03:55
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:03:55
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6838f5eb1017e.jpg"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:03:55
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:03:55
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 18,
+        "name": "Emin ayhan colak",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:03:55
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:03:55
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 18,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:03:55",
+            "updated_at": "2025-05-30 00:03:55",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:09:21
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:09:21
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 18,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:03:55",
+            "updated_at": "2025-05-30 00:03:55",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:09:22
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:09:22
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 18,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:03:55",
+            "updated_at": "2025-05-30 00:03:55",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:09:27
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:09:27
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:09:35
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:09:35
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6838f73f12982.jpg"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:09:35
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:09:35
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 19,
+        "name": "ayhan",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:09:35
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:09:35
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 18,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:03:55",
+            "updated_at": "2025-05-30 00:03:55",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 19,
+            "name": "ayhan",
+            "dob": "2025-05-07",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:09:35",
+            "updated_at": "2025-05-30 00:09:35",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:09:46
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:09:46
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 18,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:03:55",
+            "updated_at": "2025-05-30 00:03:55",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 19,
+            "name": "ayhan",
+            "dob": "2025-05-07",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:09:35",
+            "updated_at": "2025-05-30 00:09:35",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:09:50
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:09:50
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:09:50
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:09:50
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 19,
+            "name": "ayhan",
+            "dob": "2025-05-07",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:09:35",
+            "updated_at": "2025-05-30 00:09:35",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:09:53
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:09:53
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:09:53
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:09:53
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:10:18
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:10:18
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:10:31
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:10:31
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6838f777dfa35.jpg"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:10:31
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:10:31
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 20,
+        "name": "Emin ayhan colak",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:10:32
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:10:32
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 20,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:10:31",
+            "updated_at": "2025-05-30 00:10:31",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:12:24
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:12:24
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 20,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:10:31",
+            "updated_at": "2025-05-30 00:10:31",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:12:26
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:12:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:12:34
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:12:34
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 21,
+        "name": "ayhan",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:12:35
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:12:35
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 20,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:10:31",
+            "updated_at": "2025-05-30 00:10:31",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        },
+        {
+            "id": 21,
+            "name": "ayhan",
+            "dob": "2025-05-08",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:12:34",
+            "updated_at": "2025-05-30 00:12:34",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:13:08
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:13:08
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 20,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:10:31",
+            "updated_at": "2025-05-30 00:10:31",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        },
+        {
+            "id": 21,
+            "name": "ayhan",
+            "dob": "2025-05-08",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:12:34",
+            "updated_at": "2025-05-30 00:12:34",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:13:09
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=20
+
+## Response Log - 2025-05-30 01:13:09
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 20,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-02",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 1,
+        "created_at": "2025-05-30 00:10:31",
+        "updated_at": "2025-05-30 00:10:31",
+        "avatar": null,
+        "agency_id": 2
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:13:11
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:13:11
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:13:11
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=20
+
+## Response Log - 2025-05-30 01:13:11
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 20,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-02",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 1,
+        "created_at": "2025-05-30 00:10:31",
+        "updated_at": "2025-05-30 00:10:31",
+        "avatar": null,
+        "agency_id": 2
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:13:11
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=20
+
+## Response Log - 2025-05-30 01:13:11
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 20,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-02",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 1,
+        "created_at": "2025-05-30 00:10:31",
+        "updated_at": "2025-05-30 00:10:31",
+        "avatar": null,
+        "agency_id": 2
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:13:14
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:13:14
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6838f81aa95c3.jpg"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:13:14
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:13:14
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:13:15
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:13:15
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 20,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:10:31",
+            "updated_at": "2025-05-30 00:13:14",
+            "avatar": "uploads\/avatars\/avatar_6838f81aa95c3.jpg",
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        },
+        {
+            "id": 21,
+            "name": "ayhan",
+            "dob": "2025-05-08",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:12:34",
+            "updated_at": "2025-05-30 00:12:34",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:20:52
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:20:52
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 20,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:10:31",
+            "updated_at": "2025-05-30 00:13:14",
+            "avatar": "uploads\/avatars\/avatar_6838f81aa95c3.jpg",
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        },
+        {
+            "id": 21,
+            "name": "ayhan",
+            "dob": "2025-05-08",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:12:34",
+            "updated_at": "2025-05-30 00:12:34",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:20:54
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:20:54
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:21:02
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:21:02
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 22,
+        "name": "Nurcan Sahin",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:21:02
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:21:02
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6838f9eee710e.jpg"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:21:03
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:21:03
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 20,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:10:31",
+            "updated_at": "2025-05-30 00:13:14",
+            "avatar": "uploads\/avatars\/avatar_6838f81aa95c3.jpg",
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Want Hair"
+        },
+        {
+            "id": 22,
+            "name": "Nurcan Sahin",
+            "dob": "2025-05-07",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:21:02",
+            "updated_at": "2025-05-30 00:21:02",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 21,
+            "name": "ayhan",
+            "dob": "2025-05-08",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:12:34",
+            "updated_at": "2025-05-30 00:12:34",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:21:16
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:21:16
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:21:16
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:21:16
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 22,
+            "name": "Nurcan Sahin",
+            "dob": "2025-05-07",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:21:02",
+            "updated_at": "2025-05-30 00:21:02",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 21,
+            "name": "ayhan",
+            "dob": "2025-05-08",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:12:34",
+            "updated_at": "2025-05-30 00:12:34",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:21:19
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:21:19
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:21:19
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:21:19
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 21,
+            "name": "ayhan",
+            "dob": "2025-05-08",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:12:34",
+            "updated_at": "2025-05-30 00:12:34",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:21:22
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:21:22
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:21:22
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:21:22
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:21:23
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:21:23
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:21:33
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:21:33
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 23,
+        "name": "ayhan",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:21:33
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:21:33
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6838fa0d4c2b2.jpg"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:21:33
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:21:33
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 23,
+            "name": "ayhan",
+            "dob": "2025-05-08",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:21:33",
+            "updated_at": "2025-05-30 00:21:33",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:21:56
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=23
+
+## Response Log - 2025-05-30 01:21:56
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 23,
+        "name": "ayhan",
+        "dob": "2025-05-08",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 1,
+        "created_at": "2025-05-30 00:21:33",
+        "updated_at": "2025-05-30 00:21:33",
+        "avatar": null,
+        "agency_id": 1
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:23:50
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=23
+
+## Response Log - 2025-05-30 01:23:50
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 23,
+        "name": "ayhan",
+        "dob": "2025-05-08",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 1,
+        "created_at": "2025-05-30 00:21:33",
+        "updated_at": "2025-05-30 00:21:33",
+        "avatar": null,
+        "agency_id": 1
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:23:52
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:23:52
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 23,
+            "name": "ayhan",
+            "dob": "2025-05-08",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:21:33",
+            "updated_at": "2025-05-30 00:21:33",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:23:54
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:23:54
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:24:01
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:24:01
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 24,
+        "name": "Emin ayhan colak",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:24:01
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:24:01
+
+**Status:** Error
+**Details:**
+```json
+{
+    "success": false,
+    "error": "Failed to update patient avatar in database."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:24:01
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:24:01
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 24,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:24:01",
+            "updated_at": "2025-05-30 00:24:01",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 23,
+            "name": "ayhan",
+            "dob": "2025-05-08",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:21:33",
+            "updated_at": "2025-05-30 00:21:33",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:26:16
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:26:16
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 24,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:24:01",
+            "updated_at": "2025-05-30 00:24:01",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 23,
+            "name": "ayhan",
+            "dob": "2025-05-08",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:21:33",
+            "updated_at": "2025-05-30 00:21:33",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:26:17
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:26:17
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:26:24
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:26:24
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 25,
+        "name": "Emin ayhan colak",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:26:24
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:26:24
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6838fb30ddc69.jpg"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:26:25
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:26:25
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 24,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:24:01",
+            "updated_at": "2025-05-30 00:24:01",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 25,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-08",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:26:24",
+            "updated_at": "2025-05-30 00:26:24",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 23,
+            "name": "ayhan",
+            "dob": "2025-05-08",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:21:33",
+            "updated_at": "2025-05-30 00:21:33",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:27:36
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:27:36
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 2,
+            "name": "acenta a",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-29 13:49:17",
+            "updated_at": "2025-05-29 21:32:20",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": "2025-05-30",
+            "agency_name": "Branch Office A"
+        },
+        {
+            "id": 3,
+            "name": "acenta b",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-29 18:10:07",
+            "updated_at": "2025-05-29 21:32:32",
+            "avatar": null,
+            "agency_id": 3,
+            "last_surgery_date": null,
+            "agency_name": "Branch Office B"
+        },
+        {
+            "id": 5,
+            "name": "acentali",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-29 21:45:40",
+            "updated_at": "2025-05-29 21:45:40",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": null,
+            "agency_name": null
+        },
+        {
+            "id": 4,
+            "name": "acentasiz",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-29 18:13:25",
+            "updated_at": "2025-05-29 21:32:44",
+            "avatar": null,
+            "agency_id": "",
+            "last_surgery_date": null,
+            "agency_name": null
+        },
+        {
+            "id": 1,
+            "name": "main",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-29 13:48:39",
+            "updated_at": "2025-05-29 21:32:09",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-30",
+            "agency_name": "Main Office"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:27:39
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:27:39
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:27:39
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:27:39
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 3,
+            "name": "acenta b",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-29 18:10:07",
+            "updated_at": "2025-05-29 21:32:32",
+            "avatar": null,
+            "agency_id": 3,
+            "last_surgery_date": null,
+            "agency_name": "Branch Office B"
+        },
+        {
+            "id": 5,
+            "name": "acentali",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-29 21:45:40",
+            "updated_at": "2025-05-29 21:45:40",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": null,
+            "agency_name": null
+        },
+        {
+            "id": 4,
+            "name": "acentasiz",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-29 18:13:25",
+            "updated_at": "2025-05-29 21:32:44",
+            "avatar": null,
+            "agency_id": "",
+            "last_surgery_date": null,
+            "agency_name": null
+        },
+        {
+            "id": 1,
+            "name": "main",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-29 13:48:39",
+            "updated_at": "2025-05-29 21:32:09",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-30",
+            "agency_name": "Main Office"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:27:41
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:27:41
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:27:41
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:27:41
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 5,
+            "name": "acentali",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-29 21:45:40",
+            "updated_at": "2025-05-29 21:45:40",
+            "avatar": null,
+            "agency_id": null,
+            "last_surgery_date": null,
+            "agency_name": null
+        },
+        {
+            "id": 4,
+            "name": "acentasiz",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-29 18:13:25",
+            "updated_at": "2025-05-29 21:32:44",
+            "avatar": null,
+            "agency_id": "",
+            "last_surgery_date": null,
+            "agency_name": null
+        },
+        {
+            "id": 1,
+            "name": "main",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-29 13:48:39",
+            "updated_at": "2025-05-29 21:32:09",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-30",
+            "agency_name": "Main Office"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:27:44
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:27:44
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:27:44
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:27:44
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 4,
+            "name": "acentasiz",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 2,
+            "created_at": "2025-05-29 18:13:25",
+            "updated_at": "2025-05-29 21:32:44",
+            "avatar": null,
+            "agency_id": "",
+            "last_surgery_date": null,
+            "agency_name": null
+        },
+        {
+            "id": 1,
+            "name": "main",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-29 13:48:39",
+            "updated_at": "2025-05-29 21:32:09",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-30",
+            "agency_name": "Main Office"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:27:47
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:27:47
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:27:47
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:27:47
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "main",
+            "dob": "2025-05-15",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": null,
+            "created_at": "2025-05-29 13:48:39",
+            "updated_at": "2025-05-29 21:32:09",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": "2025-05-30",
+            "agency_name": "Main Office"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:27:49
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:27:49
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:27:49
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:27:49
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:27:50
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:27:50
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 2,
+            "name": "Branch Office A"
+        },
+        {
+            "id": 3,
+            "name": "Branch Office B"
+        },
+        {
+            "id": 1,
+            "name": "Main Office"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:27:56
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:27:56
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 7,
+        "name": "Emin ayhan colak",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:27:56
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:27:56
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6838fb8ccd2d1.jpg"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:27:57
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:27:57
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 7,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:27:56",
+            "updated_at": "2025-05-30 00:27:56",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Branch Office A"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:28:06
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:28:06
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 2,
+            "name": "Branch Office A"
+        },
+        {
+            "id": 3,
+            "name": "Branch Office B"
+        },
+        {
+            "id": 1,
+            "name": "Main Office"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:28:09
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:28:09
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 2,
+            "name": "Branch Office A"
+        },
+        {
+            "id": 3,
+            "name": "Branch Office B"
+        },
+        {
+            "id": 1,
+            "name": "Main Office"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:28:27
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:28:27
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 8,
+        "name": "Emin ayhan colak",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:28:27
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:28:27
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6838fbab35da9.jpg"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:28:27
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:28:27
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 7,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:27:56",
+            "updated_at": "2025-05-30 00:27:56",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Branch Office A"
+        },
+        {
+            "id": 8,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:28:27",
+            "updated_at": "2025-05-30 00:28:27",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Main Office"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:28:52
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=7
+
+## Response Log - 2025-05-30 01:28:52
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 7,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-01",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 1,
+        "created_at": "2025-05-30 00:27:56",
+        "updated_at": "2025-05-30 00:27:56",
+        "avatar": null,
+        "agency_id": 2
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:28:53
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:28:53
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 2,
+            "name": "Branch Office A"
+        },
+        {
+            "id": 3,
+            "name": "Branch Office B"
+        },
+        {
+            "id": 1,
+            "name": "Main Office"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:28:53
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=7
+
+## Response Log - 2025-05-30 01:28:53
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 7,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-01",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 1,
+        "created_at": "2025-05-30 00:27:56",
+        "updated_at": "2025-05-30 00:27:56",
+        "avatar": null,
+        "agency_id": 2
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:28:53
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=7
+
+## Response Log - 2025-05-30 01:28:53
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 7,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-01",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 1,
+        "created_at": "2025-05-30 00:27:56",
+        "updated_at": "2025-05-30 00:27:56",
+        "avatar": null,
+        "agency_id": 2
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:31:13
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:31:13
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 7,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:27:56",
+            "updated_at": "2025-05-30 00:27:56",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Branch Office A"
+        },
+        {
+            "id": 8,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:28:27",
+            "updated_at": "2025-05-30 00:28:27",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Main Office"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:31:15
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:31:15
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 7,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:27:56",
+            "updated_at": "2025-05-30 00:27:56",
+            "avatar": null,
+            "agency_id": 2,
+            "last_surgery_date": null,
+            "agency_name": "Branch Office A"
+        },
+        {
+            "id": 8,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:28:27",
+            "updated_at": "2025-05-30 00:28:27",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Main Office"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:31:20
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:31:20
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:31:20
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:31:20
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 8,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:28:27",
+            "updated_at": "2025-05-30 00:28:27",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Main Office"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:31:22
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:31:22
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:31:22
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:31:22
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:31:29
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:31:29
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:31:31
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:31:31
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 2,
+            "name": "Branch Office A"
+        },
+        {
+            "id": 3,
+            "name": "Branch Office B"
+        },
+        {
+            "id": 1,
+            "name": "Main Office"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:33:34
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:33:34
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:33:37
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:33:37
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:33:58
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-30 01:33:58
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:33:58
+
+**Method:** GET
+**URL:** /api.php?entity=reservations&action=list
+
+## Response Log - 2025-05-30 01:33:58
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "reservations": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:34:00
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:34:00
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:34:04
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:34:04
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:34:23
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:34:23
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:34:23
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:34:23
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6838fd0f5fa2b.jpg"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:34:23
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:34:23
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:34:23",
+            "updated_at": "2025-05-30 00:34:23",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:36:24
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:36:24
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:36:24
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-30 01:36:24
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-02",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 1,
+        "created_at": "2025-05-30 00:34:23",
+        "updated_at": "2025-05-30 00:34:23",
+        "avatar": null,
+        "agency_id": 1
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:36:24
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=1
+
+## Response Log - 2025-05-30 01:36:24
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 1,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-02",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 1,
+        "created_at": "2025-05-30 00:34:23",
+        "updated_at": "2025-05-30 00:34:23",
+        "avatar": null,
+        "agency_id": 1
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:36:28
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:36:28
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6838fd8c29551.jpg"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:36:28
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:36:28
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:36:28
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:36:28
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:34:23",
+            "updated_at": "2025-05-30 00:36:28",
+            "avatar": "uploads\/avatars\/avatar_6838fd8c29551.jpg",
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:40:59
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:40:59
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:34:23",
+            "updated_at": "2025-05-30 00:36:28",
+            "avatar": "uploads\/avatars\/avatar_6838fd8c29551.jpg",
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:41:03
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:41:03
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:41:11
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:41:11
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 2,
+        "name": "ayhan",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:41:12
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:41:12
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6838fea80032e.jpg"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:41:12
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:41:12
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:34:23",
+            "updated_at": "2025-05-30 00:36:28",
+            "avatar": "uploads\/avatars\/avatar_6838fd8c29551.jpg",
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 2,
+            "name": "ayhan",
+            "dob": "2025-05-07",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:41:11",
+            "updated_at": "2025-05-30 00:41:11",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:42:13
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:42:13
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:42:20
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:42:20
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 3,
+        "name": "Nurcan Sahin",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:42:20
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:42:20
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6838feec2dbd3.jpg-null"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:42:20
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:42:20
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:34:23",
+            "updated_at": "2025-05-30 00:36:28",
+            "avatar": "uploads\/avatars\/avatar_6838fd8c29551.jpg",
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Nurcan Sahin",
+            "dob": "2025-05-08",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:42:20",
+            "updated_at": "2025-05-30 00:42:20",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 2,
+            "name": "ayhan",
+            "dob": "2025-05-07",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:41:11",
+            "updated_at": "2025-05-30 00:41:11",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:44:01
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:44:01
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 1,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:34:23",
+            "updated_at": "2025-05-30 00:36:28",
+            "avatar": "uploads\/avatars\/avatar_6838fd8c29551.jpg",
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Nurcan Sahin",
+            "dob": "2025-05-08",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:42:20",
+            "updated_at": "2025-05-30 00:42:20",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 2,
+            "name": "ayhan",
+            "dob": "2025-05-07",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:41:11",
+            "updated_at": "2025-05-30 00:41:11",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:44:03
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:44:03
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:44:03
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:44:03
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 3,
+            "name": "Nurcan Sahin",
+            "dob": "2025-05-08",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:42:20",
+            "updated_at": "2025-05-30 00:42:20",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 2,
+            "name": "ayhan",
+            "dob": "2025-05-07",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:41:11",
+            "updated_at": "2025-05-30 00:41:11",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:44:07
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:44:07
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:44:07
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:44:07
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 2,
+            "name": "ayhan",
+            "dob": "2025-05-07",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:41:11",
+            "updated_at": "2025-05-30 00:41:11",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:44:10
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:44:10
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:44:10
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:44:10
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:44:11
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:44:11
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:44:21
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:44:21
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 4,
+        "name": "ayhan",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:44:21
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:44:21
+
+**Status:** Error
+**Details:**
+```json
+{
+    "success": false,
+    "error": "null"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:44:22
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:44:22
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 4,
+            "name": "ayhan",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:44:21",
+            "updated_at": "2025-05-30 00:44:21",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:52:18
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:52:18
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 4,
+            "name": "ayhan",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:44:21",
+            "updated_at": "2025-05-30 00:44:21",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:53:33
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:53:33
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 4,
+            "name": "ayhan",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:44:21",
+            "updated_at": "2025-05-30 00:44:21",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:53:37
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:53:37
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:53:46
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:53:46
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 5,
+        "name": "Emin ayhan colak",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:53:46
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:53:46
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6839019aa229d.jpg-null"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:53:47
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:53:47
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 5,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:53:46",
+            "updated_at": "2025-05-30 00:53:46",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 4,
+            "name": "ayhan",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:44:21",
+            "updated_at": "2025-05-30 00:44:21",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:54:23
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:54:23
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 5,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:53:46",
+            "updated_at": "2025-05-30 00:53:46",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 4,
+            "name": "ayhan",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:44:21",
+            "updated_at": "2025-05-30 00:44:21",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:54:26
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:54:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:54:34
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:54:34
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 6,
+        "name": "ayhan",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:54:34
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:54:34
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_683901ca7b62f.jpg-null"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:54:35
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:54:35
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 5,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:53:46",
+            "updated_at": "2025-05-30 00:53:46",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 4,
+            "name": "ayhan",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:44:21",
+            "updated_at": "2025-05-30 00:44:21",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 6,
+            "name": "ayhan",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:54:34",
+            "updated_at": "2025-05-30 00:54:34",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:21
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:56:21
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:21
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:56:21
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 4,
+            "name": "ayhan",
+            "dob": "2025-05-01",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:44:21",
+            "updated_at": "2025-05-30 00:44:21",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        },
+        {
+            "id": 6,
+            "name": "ayhan",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:54:34",
+            "updated_at": "2025-05-30 00:54:34",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:23
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:56:23
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:23
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:56:23
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 6,
+            "name": "ayhan",
+            "dob": "2025-05-02",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:54:34",
+            "updated_at": "2025-05-30 00:54:34",
+            "avatar": null,
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:25
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:56:25
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:25
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:56:25
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:28
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:56:28
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:30
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:56:30
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:37
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:56:37
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 7,
+        "name": "Emin ayhan colak",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:37
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:56:37
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6839024546860.jpg-7"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:37
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:56:37
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 7,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-16",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:56:37",
+            "updated_at": "2025-05-30 00:56:37",
+            "avatar": "uploads\/avatars\/avatar_6839024546860.jpg",
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:40
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:56:40
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:40
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=7
+
+## Response Log - 2025-05-30 01:56:40
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 7,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-16",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 1,
+        "created_at": "2025-05-30 00:56:37",
+        "updated_at": "2025-05-30 00:56:37",
+        "avatar": "uploads\/avatars\/avatar_6839024546860.jpg",
+        "agency_id": 1
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:40
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=get&id=7
+
+## Response Log - 2025-05-30 01:56:40
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patient": {
+        "id": 7,
+        "name": "Emin ayhan colak",
+        "dob": "2025-05-16",
+        "surgery_id": null,
+        "photo_album_id": null,
+        "user_id": 1,
+        "created_at": "2025-05-30 00:56:37",
+        "updated_at": "2025-05-30 00:56:37",
+        "avatar": "uploads\/avatars\/avatar_6839024546860.jpg",
+        "agency_id": 1
+    },
+    "surgeries": [],
+    "photos": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:42
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:56:42
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar deleted successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:45
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:56:45
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Avatar uploaded successfully.",
+    "avatar_url": "uploads\/avatars\/avatar_6839024d64c2a.png-7"
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:45
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:56:45
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient updated successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:45
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:56:45
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 7,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-16",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:56:37",
+            "updated_at": "2025-05-30 00:56:45",
+            "avatar": "uploads\/avatars\/avatar_6839024d64c2a.png",
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:50
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-30 01:56:50
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": []
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:52
+
+**Method:** GET
+**URL:** /api.php?entity=patients&action=list
+
+## Response Log - 2025-05-30 01:56:52
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "patients": [
+        {
+            "id": 7,
+            "name": "Emin ayhan colak",
+            "dob": "2025-05-16",
+            "surgery_id": null,
+            "photo_album_id": null,
+            "user_id": 1,
+            "created_at": "2025-05-30 00:56:37",
+            "updated_at": "2025-05-30 00:56:45",
+            "avatar": "uploads\/avatars\/avatar_6839024d64c2a.png",
+            "agency_id": 1,
+            "last_surgery_date": null,
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:52
+
+**Method:** GET
+**URL:** /api.php?entity=rooms&action=list
+
+## Response Log - 2025-05-30 01:56:52
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "rooms": [
+        {
+            "id": 4,
+            "name": "Consultation",
+            "notes": "Consultation",
+            "is_active": 1
+        },
+        {
+            "id": 5,
+            "name": "Cosmetology",
+            "notes": "Cosmetology",
+            "is_active": 1
+        },
+        {
+            "id": 1,
+            "name": "Surgery 1",
+            "notes": "Surgery 1",
+            "is_active": 1
+        },
+        {
+            "id": 2,
+            "name": "Surgery 2",
+            "notes": "Surgery 2",
+            "is_active": 0
+        },
+        {
+            "id": 3,
+            "name": "Surgery 3",
+            "notes": "Surgery 3",
+            "is_active": 0
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:56:52
+
+**Method:** GET
+**URL:** /api.php?entity=agencies&action=list
+
+## Response Log - 2025-05-30 01:56:52
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:57:10
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:57:10
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "message": "Patient added successfully.",
+    "patient": {
+        "id": 8,
+        "name": "test",
+        "avatar": null
+    }
+}
+```
+---
+
+## Request Log - 2025-05-30 01:57:16
+
+**Method:** GET
+**URL:** /api.php?entity=availability&action=byDate&date=2025-05-17
+
+## Response Log - 2025-05-30 01:57:16
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "date": "2025-05-17",
+    "rooms": [
+        {
+            "id": 4,
+            "name": "Consultation",
+            "notes": "Consultation",
+            "status": "available",
+            "patient_name": null,
+            "graft_count": null,
+            "surgery_id": null,
+            "reservation_surgery_id": null
+        },
+        {
+            "id": 5,
+            "name": "Cosmetology",
+            "notes": "Cosmetology",
+            "status": "available",
+            "patient_name": null,
+            "graft_count": null,
+            "surgery_id": null,
+            "reservation_surgery_id": null
+        },
+        {
+            "id": 1,
+            "name": "Surgery 1",
+            "notes": "Surgery 1",
+            "status": "available",
+            "patient_name": null,
+            "graft_count": null,
+            "surgery_id": null,
+            "reservation_surgery_id": null
+        },
+        {
+            "id": 2,
+            "name": "Surgery 2",
+            "notes": "Surgery 2",
+            "status": "inactive",
+            "patient_name": null,
+            "graft_count": null,
+            "surgery_id": null,
+            "reservation_surgery_id": null
+        },
+        {
+            "id": 3,
+            "name": "Surgery 3",
+            "notes": "Surgery 3",
+            "status": "inactive",
+            "patient_name": null,
+            "graft_count": null,
+            "surgery_id": null,
+            "reservation_surgery_id": null
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:57:22
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-05-30 01:57:22
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "id": "1",
+    "message": "Surgery added successfully."
+}
+```
+---
+
+## Request Log - 2025-05-30 01:57:23
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-30 01:57:23
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-17",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 1111,
+            "created_at": "2025-05-30 00:57:22",
+            "updated_at": "2025-05-30 00:57:22",
+            "patient_id": 8,
+            "is_recorded": 1,
+            "patient_name": "test",
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:57:26
+
+**Method:** GET
+**URL:** /api.php?entity=surgeries&action=list
+
+## Response Log - 2025-05-30 01:57:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgeries": [
+        {
+            "id": 1,
+            "date": "2025-05-17",
+            "notes": "",
+            "status": "completed",
+            "graft_count": 1111,
+            "created_at": "2025-05-30 00:57:22",
+            "updated_at": "2025-05-30 00:57:22",
+            "patient_id": 8,
+            "is_recorded": 1,
+            "patient_name": "test",
+            "agency_name": "Hospital"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-05-30 01:57:26
+
+**Method:** GET
+**URL:** /api.php?entity=reservations&action=list
+
+## Response Log - 2025-05-30 01:57:26
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "reservations": []
+}
+```
+---
+
