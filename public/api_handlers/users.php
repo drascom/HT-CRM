@@ -9,6 +9,7 @@ function handle_users($action, $method, $db, $request_data = [])
             if ($method === 'POST') {
                 $email = trim($input['email'] ?? '');
                 $username = trim($input['username'] ?? '');
+                $username = ucwords($username);
                 $password = trim($input['password'] ?? '');
                 $role = trim($input['role'] ?? 'user'); // Default role to 'user'
                 $agency_id = $input['agency_id'] ?? null;
@@ -29,6 +30,7 @@ function handle_users($action, $method, $db, $request_data = [])
                 $id = $input['id'] ?? null;
                 $email = trim($input['email'] ?? '');
                 $username = trim($input['username'] ?? '');
+                $username = ucwords($username);
                 $password = trim($input['password'] ?? '');
                 $role = trim($input['role'] ?? 'user'); // Default role to 'user'
                 $agency_id = $input['agency_id'] ?? null;

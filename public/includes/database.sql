@@ -66,10 +66,10 @@ CREATE TABLE users (
   updated_at TEXT,
   agency_id INTEGER
 );
-INSERT INTO users (email, username, password,role, created_at, updated_at, agency_id) VALUES ('a@b.com', 'admin', '$2y$10$aEtcftk7GMX3bP3DqIRxQ.DmbuVMC.b18q96ziMwSQWyQO/TWuG5a','admin', datetime('now'), datetime('now'),1);
-INSERT INTO users (email, username, password,role, created_at, updated_at, agency_id) VALUES ('b@b.com', 'editor', '$2y$10$aEtcftk7GMX3bP3DqIRxQ.DmbuVMC.b18q96ziMwSQWyQO/TWuG5a','editor', datetime('now'), datetime('now'),1);
-INSERT INTO users (email, username, password,role, created_at, updated_at, agency_id) VALUES ('c@c.com', 'agent 1', '$2y$10$aEtcftk7GMX3bP3DqIRxQ.DmbuVMC.b18q96ziMwSQWyQO/TWuG5a','agent', datetime('now'), datetime('now'),2);
-INSERT INTO users (email, username, password,role, created_at, updated_at, agency_id) VALUES ('d@d.com', 'agent 2', '$2y$10$aEtcftk7GMX3bP3DqIRxQ.DmbuVMC.b18q96ziMwSQWyQO/TWuG5a','agent', datetime('now'), datetime('now'),3);
+INSERT INTO users (email, username, password,role, created_at, updated_at, agency_id) VALUES ('a@b.com', 'Admin', '$2y$10$aEtcftk7GMX3bP3DqIRxQ.DmbuVMC.b18q96ziMwSQWyQO/TWuG5a','admin', datetime('now'), datetime('now'),1);
+INSERT INTO users (email, username, password,role, created_at, updated_at, agency_id) VALUES ('b@b.com', 'Editor', '$2y$10$aEtcftk7GMX3bP3DqIRxQ.DmbuVMC.b18q96ziMwSQWyQO/TWuG5a','editor', datetime('now'), datetime('now'),1);
+INSERT INTO users (email, username, password,role, created_at, updated_at, agency_id) VALUES ('c@c.com', 'Agent', '$2y$10$aEtcftk7GMX3bP3DqIRxQ.DmbuVMC.b18q96ziMwSQWyQO/TWuG5a','agent', datetime('now'), datetime('now'),2);
+INSERT INTO users (email, username, password,role, created_at, updated_at, agency_id) VALUES ('d@d.com', 'Technician', '$2y$10$aEtcftk7GMX3bP3DqIRxQ.DmbuVMC.b18q96ziMwSQWyQO/TWuG5a','technician', datetime('now'), datetime('now'),3);
 
 CREATE TABLE settings (
   key TEXT PRIMARY KEY UNIQUE,
