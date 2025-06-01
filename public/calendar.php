@@ -10,345 +10,8 @@ if (!is_logged_in()) {
 $page_title = "Calendar";
 require_once 'includes/header.php';
 ?>
+<link rel="stylesheet" href="assets/css/calendar.css">
 
-<style>
-Custom Calendar Styles .calendar-container {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-.calendar-header {
-    background: linear-gradient(135deg, rgb(88, 88, 89) 0%, rgb(55, 78, 102) 50%);
-    color: white;
-    padding: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.calendar-nav {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.calendar-nav button {
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    /* padding: 0.5rem 0.75rem; */
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.calendar-nav button:hover {
-    background: rgba(255, 255, 255, 0.3);
-}
-
-.calendar-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 0;
-}
-
-.view-toggle {
-    display: flex;
-    gap: 0.25rem;
-}
-
-.view-toggle button {
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    /* padding: 0.5rem 0.75rem; */
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s;
-    font-size: 0.875rem;
-}
-
-.view-toggle button.active {
-    background: white;
-    color: #0d6efd;
-}
-
-.view-toggle button:hover:not(.active) {
-    background: rgba(255, 255, 255, 0.3);
-}
-
-/* Calendar Grid */
-.calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 1px;
-    background: #e9ecef;
-}
-
-.calendar-day-header {
-    background: #f0f0f0;
-    padding: 0.75rem 0.5rem;
-    text-align: center;
-    font-weight: 600;
-    color: #495057;
-    font-size: 0.875rem;
-}
-
-.calendar-day {
-    background: white;
-    min-height: 120px;
-    padding: 0.5rem;
-    position: relative;
-    border: 1px solid transparent;
-    transition: all 0.2s;
-}
-
-.calendar-day:hover {
-    background: #f8f9fa;
-    border-color: #dee2e6;
-}
-
-.calendar-day.other-month {
-    background: #f8f9fa;
-    color: #6c757d;
-}
-
-.calendar-day.today {
-    background: #e3f2fd;
-    border-color: #2196f3;
-}
-
-.day-number {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    font-size: 0.875rem;
-}
-
-.day-events {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-
-.event-item {
-    display: flex;
-    flex-direction: column;
-    /* Stack children vertically */
-    color: #212529;
-    /* Change text color to dark for better contrast with badge */
-    background: #e9ecef;
-    /* Add a light background to the event item */
-    padding: 2px 0;
-    /* Remove horizontal padding from the item itself */
-    border-radius: 3px;
-    font-size: 0.75rem;
-    text-decoration: none;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    transition: all 0.2s;
-}
-
-.event-item>div {
-    /* Target direct child divs (event-header and graft-count) */
-    padding-left: 6px;
-    /* Add left padding to the content inside */
-    padding-right: 6px;
-    /* Add right padding to the content inside */
-}
-
-.event-item:hover {
-    background: #dee2e6;
-    /* Lighter hover background */
-    color: #212529;
-    text-decoration: none;
-}
-
-.event-item.status-completed,
-.event-item.status-canceled,
-.event-item.status-booked {
-    background: none;
-}
-
-/* List View */
-.list-view {
-    display: none;
-}
-
-.list-view.active {
-    display: block;
-}
-
-.calendar-view {
-    display: block;
-}
-
-.calendar-view.active {
-    display: block;
-}
-
-.list-item {
-    border-bottom: 1px solid #e9ecef;
-    padding: 1rem;
-    transition: background-color 0.2s;
-}
-
-.list-item:hover {
-    background: #f8f9fa;
-}
-
-.list-item:last-child {
-    border-bottom: none;
-}
-
-.list-date {
-    background: #e9ecef;
-    padding: 0.75rem 1rem;
-    font-weight: 600;
-    color: #495057;
-    border-bottom: 1px solid #dee2e6;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.list-time {
-    font-size: 0.875rem;
-    color: #6c757d;
-    margin-bottom: 0.25rem;
-}
-
-.list-patient {
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-}
-
-.list-details {
-    font-size: 0.875rem;
-    color: #6c757d;
-}
-
-.status-badge {
-    padding: 0;
-    border-radius: 3px;
-    font-size: 0.75rem;
-    font-weight: 500;
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    flex-shrink: 0;
-    margin-right: 5px;
-    /* Add margin to the right to separate from text */
-}
-
-/* Use the background colors from the old .event-item.status-* rules */
-.status-badge.booked {
-    background: #0d6efd;
-    /* Blue */
-}
-
-.status-badge.completed {
-    background: #198754;
-    /* Green */
-}
-
-.status-badge.canceled {
-    background: #dc3545;
-    /* Red */
-}
-
-/* Loading Spinner */
-.loading-spinner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem;
-}
-
-.spinner {
-    width: 40px;
-    height: 40px;
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #0d6efd;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .calendar-header {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.75rem;
-    }
-
-    .calendar-nav {
-        order: 2;
-    }
-
-    .calendar-title {
-        order: 1;
-        font-size: 1.25rem;
-    }
-
-    .view-toggle {
-        order: 3;
-    }
-
-    .calendar-day {
-        min-height: 80px;
-        padding: 0.25rem;
-    }
-
-    .day-number {
-        font-size: 0.75rem;
-    }
-
-    .event-item {
-        font-size: 0.625rem;
-        padding: 1px 4px;
-    }
-
-    .calendar-day-header {
-        padding: 0.5rem 0.25rem;
-        font-size: 0.75rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .calendar-grid {
-        font-size: 0.75rem;
-    }
-
-    .calendar-day {
-        min-height: 60px;
-    }
-
-    .view-toggle button {
-        padding: 0.375rem 0.5rem;
-        font-size: 0.75rem;
-    }
-
-    .calendar-nav button {
-        /* padding: 0.375rem 0.5rem; */
-        font-size: 0.875rem;
-    }
-}
-</style>
 
 <!-- Page Header -->
 <!-- <div class="d-flex justify-content-between align-items-center mb-4">
@@ -474,53 +137,36 @@ class CustomCalendar {
         this.showLoading(true);
 
         try {
-            const response = await fetch('api.php?entity=surgeries&action=list');
-            const data = await response.json();
+            // Load surgeries and rooms in parallel
+            const [surgeriesResponse, roomsResponse] = await Promise.all([
+                fetch('api.php?entity=surgeries&action=list'),
+                fetch('api.php?entity=rooms&action=list')
+            ]);
 
-            if (data.success) {
-                this.surgeries = data.surgeries || [];
-                // Load room information for each surgery
-                await this.loadRoomInfo();
-                this.render();
+            const surgeriesData = await surgeriesResponse.json();
+            const roomsData = await roomsResponse.json();
+
+            if (surgeriesData.success) {
+                this.surgeries = surgeriesData.surgeries || [];
             } else {
-                console.error('Error fetching surgeries:', data.error);
+                console.error('Error fetching surgeries:', surgeriesData.error);
                 this.showError('Failed to load surgeries');
             }
+
+            if (roomsData.success) {
+                this.rooms = roomsData.rooms || [];
+            } else {
+                console.error('Error fetching rooms:', roomsData.error);
+                this.showError('Failed to load rooms');
+            }
+
+            this.render();
         } catch (error) {
-            console.error('Error fetching surgeries:', error);
-            this.showError('Failed to load surgeries');
+            console.error('Error fetching data:', error);
+            this.showError('Failed to load data');
         } finally {
             this.isLoading = false;
             this.showLoading(false);
-        }
-    }
-
-    async loadRoomInfo() {
-        try {
-            // Load room reservations
-            const response = await fetch('api.php?entity=reservations&action=list');
-            const data = await response.json();
-
-            if (data.success) {
-                // Create a map of surgery_id to room info
-                const roomMap = {};
-                data.reservations.forEach(reservation => {
-                    roomMap[reservation.surgery_id] = {
-                        room_id: reservation.room_id,
-                        room_name: reservation.room_name
-                    };
-                });
-
-                // Add room info to surgeries
-                this.surgeries.forEach(surgery => {
-                    if (roomMap[surgery.id]) {
-                        surgery.room_name = roomMap[surgery.id].room_name;
-                        surgery.room_id = roomMap[surgery.id].room_id;
-                    }
-                });
-            }
-        } catch (error) {
-            console.error('Error loading room info:', error);
         }
     }
 
@@ -643,80 +289,51 @@ class CustomCalendar {
             dayNumberEl.className = 'day-number';
             dayNumberEl.textContent = dayNumber;
 
-            const eventsEl = document.createElement('div');
-            eventsEl.className = 'day-events';
+            // Create room slots container
+            const roomSlotsEl = document.createElement('div');
+            roomSlotsEl.className = 'room-slots';
 
-            // Add events for this day
-            const dayEvents = this.getSurgeriesForDate(dayDate);
-            dayEvents.forEach(surgery => {
-                const eventEl = document.createElement('a');
-                eventEl.className = `event-item`;
-                eventEl.href = `patient.php?id=${surgery.patient_id}`;
-                eventEl.title =
-                    `${surgery.patient_name}\n${surgery.status}${surgery.graft_count ? ` (${surgery.graft_count} grafts)` : ''}`
-                eventEl.style.display = 'flex'; /* Use flexbox for the event item */
-                eventEl.style.flexDirection = 'column'; /* Stack children vertically */
+            // Add room slots for current month days only
+            if (isCurrentMonth && this.rooms) {
+                this.rooms.forEach(room => {
+                    if (room.is_active) {
+                        const roomSlot = document.createElement('div');
+                        roomSlot.className = 'room-slot-container';
+                        roomSlot.dataset.roomId = room.id;
+                        roomSlot.dataset.date = this.formatDateForAPI(dayDate);
 
+                        // Get surgery for this room and date
+                        const roomSurgery = this.getSurgeryForRoomAndDate(room.id, dayDate);
 
-                // Create a container for the first line (badge and name)
-                const eventHeaderEl = document.createElement('div');
-                eventHeaderEl.className = 'event-header';
-                eventHeaderEl.style.display = 'flex'; /* Use flexbox for the header */
-                eventHeaderEl.style.justifyContent = 'flex-start'; /* Align items to the left */
-                eventHeaderEl.style.alignItems = 'center'; /* Vertically align items in header */
-                eventHeaderEl.style.gap = '5px'; /* Space between badge and name */
+                        if (roomSurgery) {
+                            // Room is booked - show surgery details
+                            roomSlot.classList.add('booked');
+                            roomSlot.innerHTML = this.createSurgerySlotContent(room, roomSurgery);
 
+                            // Make it clickable to view patient
+                            roomSlot.addEventListener('click', (e) => {
+                                e.preventDefault();
+                                window.location.href = `patient.php?id=${roomSurgery.patient_id}`;
+                            });
+                        } else {
+                            // Room is available - show empty slot
+                            roomSlot.classList.add('available');
+                            roomSlot.innerHTML = this.createEmptySlotContent(room);
 
-                // Create status badge element
-                const statusBadgeEl = document.createElement('span');
-                statusBadgeEl.className = `status-badge ${surgery.status}`;
+                            // Make it clickable to add surgery
+                            roomSlot.addEventListener('click', (e) => {
+                                e.preventDefault();
+                                this.openSurgeryForm(room.id, this.formatDateForAPI(dayDate));
+                            });
+                        }
 
-                // Create patient name element
-                const patientNameEl = document.createElement('span');
-                patientNameEl.className = 'patient-name';
-                patientNameEl.textContent = surgery.patient_name;
-
-                // Append badge and name to the header container
-                eventHeaderEl.appendChild(statusBadgeEl);
-                eventHeaderEl.appendChild(patientNameEl);
-
-                // Append header container to the event link
-                eventEl.appendChild(eventHeaderEl);
-
-                // Create graft count element (if exists) and append to event link
-                if (surgery.graft_count) {
-                    const graftCountEl = document.createElement('div'); // Use div for new line
-                    graftCountEl.className = 'graft-count';
-                    graftCountEl.textContent = `(${surgery.graft_count} grafts)`;
-                    eventEl.appendChild(graftCountEl);
-                }
-
-                // Create room name element (if exists) and append to event link
-                if (surgery.room_name) {
-                    const roomEl = document.createElement('div'); // Use div for new line
-                    roomEl.className = 'room-name';
-                    roomEl.textContent = `Room: ${surgery.room_name}`;
-                    roomEl.style.fontSize = '0.7rem';
-                    roomEl.style.color = '#0d6efd';
-                    roomEl.style.fontWeight = 'bold';
-                    eventEl.appendChild(roomEl);
-                }
-
-                // Create agency name element (if exists) and append to event link
-                if (surgery.agency_name) {
-                    const agencyEl = document.createElement('div'); // Use div for new line
-                    agencyEl.className = 'agency-name';
-                    agencyEl.textContent = surgery.agency_name;
-                    agencyEl.style.fontSize = '0.65rem';
-                    agencyEl.style.color = '#6c757d';
-                    agencyEl.style.fontStyle = 'italic';
-                    <?php if (is_admin() || is_editor()): ?> eventEl.appendChild(agencyEl); <?php endif; ?>
-                }
-                eventsEl.appendChild(eventEl);
-            });
+                        roomSlotsEl.appendChild(roomSlot);
+                    }
+                });
+            }
 
             dayElement.appendChild(dayNumberEl);
-            dayElement.appendChild(eventsEl);
+            dayElement.appendChild(roomSlotsEl);
             this.calendarGrid.appendChild(dayElement);
         }
     }
@@ -824,6 +441,50 @@ class CustomCalendar {
         const day = String(date.getDate()).padStart(2, '0');
         const dateString = `${year}-${month}-${day}`;
         return this.surgeries.filter(surgery => surgery.date === dateString);
+    }
+
+    getSurgeryForRoomAndDate(roomId, date) {
+        const dateString = this.formatDateForAPI(date);
+        return this.surgeries.find(surgery =>
+            surgery.room_id == roomId && surgery.date === dateString
+        );
+    }
+
+    formatDateForAPI(date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    }
+
+    openSurgeryForm(roomId, date) {
+        // Open add surgery form with pre-selected room and date
+        const url = `add_edit_surgery.php?room_id=${roomId}&date=${date}`;
+        window.location.href = url;
+    }
+
+    createSurgerySlotContent(room, surgery) {
+        return `
+            <div class="room-badge">${room.name}</div>
+            <div class="surgery-content">
+                <div class="surgery-header">
+                    <span class="status-badge ${surgery.status}"></span>
+                    <span class="patient-name">${surgery.patient_name}</span>
+                </div>
+                ${surgery.graft_count ? `<div class="graft-count">${surgery.graft_count} grafts</div>` : ''}
+                ${surgery.technician_names ? `<div class="technician-names">${surgery.technician_names}</div>` : ''}
+                ${surgery.agency_name ? `<div class="agency-name">${surgery.agency_name}</div>` : ''}
+            </div>
+        `;
+    }
+
+    createEmptySlotContent(room) {
+        return `
+            <div class="room-badge available">${room.name}</div>
+            <div class="empty-slot">
+                <div class="add-surgery-text">+ </div>
+            </div>
+        `;
     }
 
     formatDate(dateString) {

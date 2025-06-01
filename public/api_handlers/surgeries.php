@@ -6,64 +6,368 @@ function handle_surgeries($action, $method, $db)
             if ($method === 'POST') {
                 $date = trim($_POST['date'] ?? '');
                 $notes = trim($_POST['notes'] ?? '');
-                $status = trim($_POST['status'] ?? '');
-                $graft_count = $_POST['graft_count'] ?? null; // Retrieve graft_count
+                $status = trim($_POST['status'] ?? 'reserved'); // Default to 'reserved'
+                $room_id = trim($_POST['room_id'] ?? '');
+                $graft_count = $_POST['graft_count'] ?? null;
                 $patient_id = $_POST['patient_id'] ?? null;
+                $technician_ids = $_POST['technician_ids'] ?? [];
+                $period = $_POST['period'] ?? 'full'; // Surgery period (am, pm, full)
 
-                if ($date && $status && $patient_id) {
-                    $stmt = $db->prepare("INSERT INTO surgeries (date, notes, status, graft_count, patient_id, is_recorded, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'))");
-                    $stmt->execute([$date, $notes, $status, $graft_count, $patient_id, TRUE]); // Include graft_count and set is_recorded to TRUE
-                    return ['success' => true, 'id' => $db->lastInsertId(), 'message' => 'Surgery added successfully.']; // Add success message
+                if (!$date || !$patient_id) {
+                    return ['success' => false, 'error' => 'Date and patient_id are required.'];
                 }
-                return ['success' => false, 'error' => 'Date, status, and patient_id are required.'];
+
+                // Validate technicians (minimum 2)
+                if (count($technician_ids) < 2) {
+                    return ['success' => false, 'error' => 'At least 2 technicians must be assigned.'];
+                }
+
+                // Validate date format
+                if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $date)) {
+                    return ['success' => false, 'error' => 'Invalid date format. Use YYYY-MM-DD.'];
+                }
+
+                try {
+                    $db->beginTransaction();
+
+                    // Check if patient exists
+                    $stmt = $db->prepare("SELECT id FROM patients WHERE id = ?");
+                    $stmt->execute([$patient_id]);
+                    if (!$stmt->fetch()) {
+                        $db->rollBack();
+                        return ['success' => false, 'error' => 'Patient not found.'];
+                    }
+
+                    // Validate room availability if room is specified
+                    if ($room_id) {
+                        $room_check = $db->prepare("
+                            SELECT r.id, r.is_active, rr.id as reservation_id
+                            FROM rooms r
+                            LEFT JOIN room_reservations rr ON r.id = rr.room_id AND rr.reserved_date = ?
+                            WHERE r.id = ?
+                        ");
+                        $room_check->execute([$date, $room_id]);
+                        $room_data = $room_check->fetch(PDO::FETCH_ASSOC);
+
+                        if (!$room_data) {
+                            $db->rollBack();
+                            return ['success' => false, 'error' => 'Room not found.'];
+                        }
+
+                        if (!$room_data['is_active']) {
+                            $db->rollBack();
+                            return ['success' => false, 'error' => 'Room is not active.'];
+                        }
+
+                        if ($room_data['reservation_id']) {
+                            $db->rollBack();
+                            return ['success' => false, 'error' => 'Room is already booked for this date.'];
+                        }
+                    }
+
+                    // Validate technician availability
+                    foreach ($technician_ids as $tech_id) {
+                        $tech_check = $db->prepare("
+                            SELECT t.id, t.is_active, ta.id as availability_id
+                            FROM technicians t
+                            LEFT JOIN technician_availability ta ON t.id = ta.tech_id
+                                AND ta.available_on = ?
+                                AND (ta.period = ? OR ta.period = 'full')
+                            WHERE t.id = ?
+                        ");
+                        $tech_check->execute([$date, $period, $tech_id]);
+                        $tech_data = $tech_check->fetch(PDO::FETCH_ASSOC);
+
+                        if (!$tech_data) {
+                            $db->rollBack();
+                            return ['success' => false, 'error' => "Technician with ID {$tech_id} not found."];
+                        }
+
+                        if (!$tech_data['is_active']) {
+                            $db->rollBack();
+                            return ['success' => false, 'error' => "Technician with ID {$tech_id} is not active."];
+                        }
+
+                        if (!$tech_data['availability_id']) {
+                            $db->rollBack();
+                            return ['success' => false, 'error' => "Technician with ID {$tech_id} is not available for the selected date and period."];
+                        }
+                    }
+
+                    // Auto-determine status based on business rules
+                    if ($room_id && count($technician_ids) >= 2) {
+                        $status = 'confirmed'; // Auto-confirm when room and 2+ technicians assigned
+                    } else {
+                        $status = 'reserved'; // Default status for new surgeries
+                    }
+
+                    // Insert surgery
+                    $stmt = $db->prepare("INSERT INTO surgeries (date, notes, status, room_id, graft_count, patient_id, is_recorded, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'))");
+                    $stmt->execute([$date, $notes, $status, $room_id, $graft_count, $patient_id, TRUE]);
+                    $surgery_id = $db->lastInsertId();
+
+                    // Reserve room if provided
+                    if ($room_id) {
+                        $reserve_stmt = $db->prepare("INSERT INTO room_reservations (room_id, surgery_id, reserved_date) VALUES (?, ?, ?)");
+                        $reserve_stmt->execute([$room_id, $surgery_id, $date]);
+                    }
+
+                    // Assign technicians
+                    foreach ($technician_ids as $tech_id) {
+                        $tech_stmt = $db->prepare("INSERT INTO surgery_technicians (surgery_id, tech_id) VALUES (?, ?)");
+                        $tech_stmt->execute([$surgery_id, $tech_id]);
+                    }
+
+                    $db->commit();
+                    return ['success' => true, 'message' => 'Surgery added successfully.', 'id' => $surgery_id, 'status' => $status];
+                } catch (PDOException $e) {
+                    $db->rollBack();
+                    if ($e->getCode() == 23000) { // UNIQUE constraint violation
+                        return ['success' => false, 'error' => 'Room is already booked for this date or technician is already assigned.'];
+                    }
+                    return ['success' => false, 'error' => 'Database error: ' . $e->getMessage()];
+                }
             }
             break;
 
         case 'update':
+        case 'edit':
             if ($method === 'POST') {
                 $id = $_POST['id'] ?? null;
                 $date = trim($_POST['date'] ?? '');
+                $room_id = trim($_POST['room_id'] ?? '');
                 $notes = trim($_POST['notes'] ?? '');
                 $status = trim($_POST['status'] ?? '');
-                $graft_count = $_POST['graft_count'] ?? null; // Retrieve graft_count
+                $graft_count = $_POST['graft_count'] ?? null;
                 $patient_id = $_POST['patient_id'] ?? null;
+                $technician_ids = $_POST['technician_ids'] ?? [];
+                $period = $_POST['period'] ?? 'full';
 
-                if ($id && $date && $status && $patient_id) {
-                    $stmt = $db->prepare("UPDATE surgeries SET date = ?, notes = ?, status = ?, graft_count = ?, patient_id = ?, updated_at = datetime('now') WHERE id = ?");
-                    $stmt->execute([$date, $notes, $status, $graft_count, $patient_id, $id]); // Include graft_count in execute
-                    return ['success' => true, 'message' => 'Surgery updated successfully.']; // Add success message
+                if (!$id || !$date || !$patient_id) {
+                    return ['success' => false, 'error' => 'ID, date, and patient_id are required.'];
                 }
-                return ['success' => false, 'error' => 'id, date, status, and patient_id are required.'];
+
+                // Validate technicians (minimum 2)
+                if (count($technician_ids) < 2) {
+                    return ['success' => false, 'error' => 'At least 2 technicians must be assigned.'];
+                }
+
+                // Validate date format
+                if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $date)) {
+                    return ['success' => false, 'error' => 'Invalid date format. Use YYYY-MM-DD.'];
+                }
+
+                try {
+                    $db->beginTransaction();
+
+                    // Check if surgery exists and get current data
+                    $check_stmt = $db->prepare("SELECT id, room_id, date FROM surgeries WHERE id = ?");
+                    $check_stmt->execute([$id]);
+                    $current_surgery = $check_stmt->fetch(PDO::FETCH_ASSOC);
+                    if (!$current_surgery) {
+                        $db->rollBack();
+                        return ['success' => false, 'error' => 'Surgery not found.'];
+                    }
+
+                    // Check if patient exists
+                    $stmt = $db->prepare("SELECT id FROM patients WHERE id = ?");
+                    $stmt->execute([$patient_id]);
+                    if (!$stmt->fetch()) {
+                        $db->rollBack();
+                        return ['success' => false, 'error' => 'Patient not found.'];
+                    }
+
+                    // Validate room availability if room is specified and different from current
+                    if ($room_id && ($room_id != $current_surgery['room_id'] || $date != $current_surgery['date'])) {
+                        $room_check = $db->prepare("
+                            SELECT r.id, r.is_active, rr.id as reservation_id, rr.surgery_id
+                            FROM rooms r
+                            LEFT JOIN room_reservations rr ON r.id = rr.room_id AND rr.reserved_date = ?
+                            WHERE r.id = ?
+                        ");
+                        $room_check->execute([$date, $room_id]);
+                        $room_data = $room_check->fetch(PDO::FETCH_ASSOC);
+
+                        if (!$room_data) {
+                            $db->rollBack();
+                            return ['success' => false, 'error' => 'Room not found.'];
+                        }
+
+                        if (!$room_data['is_active']) {
+                            $db->rollBack();
+                            return ['success' => false, 'error' => 'Room is not active.'];
+                        }
+
+                        // Room is booked by another surgery
+                        if ($room_data['reservation_id'] && $room_data['surgery_id'] != $id) {
+                            $db->rollBack();
+                            return ['success' => false, 'error' => 'Room is already booked for this date.'];
+                        }
+                    }
+
+                    // Validate technician availability
+                    foreach ($technician_ids as $tech_id) {
+                        $tech_check = $db->prepare("
+                            SELECT t.id, t.is_active, ta.id as availability_id
+                            FROM technicians t
+                            LEFT JOIN technician_availability ta ON t.id = ta.tech_id
+                                AND ta.available_on = ?
+                                AND (ta.period = ? OR ta.period = 'full')
+                            WHERE t.id = ?
+                        ");
+                        $tech_check->execute([$date, $period, $tech_id]);
+                        $tech_data = $tech_check->fetch(PDO::FETCH_ASSOC);
+
+                        if (!$tech_data) {
+                            $db->rollBack();
+                            return ['success' => false, 'error' => "Technician with ID {$tech_id} not found."];
+                        }
+
+                        if (!$tech_data['is_active']) {
+                            $db->rollBack();
+                            return ['success' => false, 'error' => "Technician with ID {$tech_id} is not active."];
+                        }
+
+                        if (!$tech_data['availability_id']) {
+                            $db->rollBack();
+                            return ['success' => false, 'error' => "Technician with ID {$tech_id} is not available for the selected date and period."];
+                        }
+                    }
+
+                    // Auto-determine status based on business rules (unless manually overridden)
+                    if (!$status) {
+                        if ($room_id && count($technician_ids) >= 2) {
+                            $status = 'confirmed';
+                        } else {
+                            $status = 'reserved';
+                        }
+                    }
+
+                    // Remove old room reservation if room changed
+                    if ($current_surgery['room_id'] && $current_surgery['room_id'] != $room_id) {
+                        $remove_reservation = $db->prepare("DELETE FROM room_reservations WHERE surgery_id = ?");
+                        $remove_reservation->execute([$id]);
+                    }
+
+                    // Update surgery
+                    $stmt = $db->prepare("UPDATE surgeries SET date = ?, notes = ?, status = ?, graft_count = ?, room_id = ?, patient_id = ?, updated_at = datetime('now') WHERE id = ?");
+                    $stmt->execute([$date, $notes, $status, $graft_count, $room_id, $patient_id, $id]);
+
+                    // Add new room reservation if room is specified
+                    if ($room_id) {
+                        // Check if reservation already exists for this surgery
+                        $existing_reservation = $db->prepare("SELECT id FROM room_reservations WHERE surgery_id = ?");
+                        $existing_reservation->execute([$id]);
+                        if (!$existing_reservation->fetch()) {
+                            $reserve_stmt = $db->prepare("INSERT INTO room_reservations (room_id, surgery_id, reserved_date) VALUES (?, ?, ?)");
+                            $reserve_stmt->execute([$room_id, $id, $date]);
+                        } else {
+                            // Update existing reservation
+                            $update_reservation = $db->prepare("UPDATE room_reservations SET room_id = ?, reserved_date = ? WHERE surgery_id = ?");
+                            $update_reservation->execute([$room_id, $date, $id]);
+                        }
+                    }
+
+                    // Remove old technician assignments
+                    $remove_techs = $db->prepare("DELETE FROM surgery_technicians WHERE surgery_id = ?");
+                    $remove_techs->execute([$id]);
+
+                    // Add new technician assignments
+                    foreach ($technician_ids as $tech_id) {
+                        $tech_stmt = $db->prepare("INSERT INTO surgery_technicians (surgery_id, tech_id) VALUES (?, ?)");
+                        $tech_stmt->execute([$id, $tech_id]);
+                    }
+
+                    $db->commit();
+                    return ['success' => true, 'message' => 'Surgery updated successfully.', 'status' => $status];
+                } catch (PDOException $e) {
+                    $db->rollBack();
+                    if ($e->getCode() == 23000) { // UNIQUE constraint violation
+                        return ['success' => false, 'error' => 'Room is already booked for this date or technician is already assigned.'];
+                    }
+                    return ['success' => false, 'error' => 'Database error: ' . $e->getMessage()];
+                }
             }
             break;
 
         case 'delete':
             if ($method === 'POST') {
                 $id = $_POST['id'] ?? null;
-                error_log("Surgeries delete handler reached. ID: " . $id); // Add logging
-                if ($id) {
+
+                if (!$id) {
+                    return ['success' => false, 'error' => 'ID is required.'];
+                }
+
+                try {
+                    $db->beginTransaction();
+
+                    // Check if surgery exists
+                    $check_stmt = $db->prepare("SELECT id FROM surgeries WHERE id = ?");
+                    $check_stmt->execute([$id]);
+                    if (!$check_stmt->fetch()) {
+                        $db->rollBack();
+                        return ['success' => false, 'error' => 'Surgery not found.'];
+                    }
+
+                    // Delete related records (foreign key constraints will handle this automatically, but being explicit)
+                    $db->prepare("DELETE FROM room_reservations WHERE surgery_id = ?")->execute([$id]);
+                    $db->prepare("DELETE FROM surgery_technicians WHERE surgery_id = ?")->execute([$id]);
+
+                    // Delete the surgery
                     $stmt = $db->prepare("DELETE FROM surgeries WHERE id = ?");
                     $stmt->execute([$id]);
-                    $response = ['success' => true];
-                    error_log("Surgeries delete successful. Response: " . json_encode($response)); // Add logging
-                    return $response;
+
+                    $db->commit();
+                    return ['success' => true, 'message' => 'Surgery deleted successfully.'];
+                } catch (PDOException $e) {
+                    $db->rollBack();
+                    return ['success' => false, 'error' => 'Database error: ' . $e->getMessage()];
                 }
-                $response = ['success' => false, 'error' => 'ID is required.'];
-                error_log("Surgeries delete failed: ID missing. Response: " . json_encode($response)); // Add logging
-                return $response;
             }
             break;
 
         case 'get':
             if ($method === 'GET') {
                 $id = $_GET['id'] ?? null;
-                if ($id) {
-                    $stmt = $db->prepare("SELECT s.*, p.name as patient_name, a.name as agency_name FROM surgeries s LEFT JOIN patients p ON s.patient_id = p.id LEFT JOIN agencies a ON p.agency_id = a.id WHERE s.id = ?");
-                    $stmt->execute([$id]);
-                    $data = $stmt->fetch(PDO::FETCH_ASSOC);
-                    return $data ? ['success' => true, 'surgery' => $data] : ['success' => false, 'error' => "Surgery not found with ID: {$id}"];
+                if (!$id) {
+                    return ['success' => false, 'error' => 'ID is required.'];
                 }
-                return ['success' => false, 'error' => 'ID is required.'];
+
+                try {
+                    // Get surgery details with patient and agency info
+                    $stmt = $db->prepare("
+                        SELECT s.*, p.name as patient_name, a.name as agency_name, r.name as room_name
+                        FROM surgeries s
+                        LEFT JOIN patients p ON s.patient_id = p.id
+                        LEFT JOIN agencies a ON p.agency_id = a.id
+                        LEFT JOIN rooms r ON s.room_id = r.id
+                        WHERE s.id = ?
+                    ");
+                    $stmt->execute([$id]);
+                    $surgery = $stmt->fetch(PDO::FETCH_ASSOC);
+
+                    if (!$surgery) {
+                        return ['success' => false, 'error' => "Surgery not found with ID: {$id}"];
+                    }
+
+                    // Get assigned technicians
+                    $tech_stmt = $db->prepare("
+                        SELECT t.id, t.name, t.specialty, t.phone
+                        FROM surgery_technicians st
+                        JOIN technicians t ON st.tech_id = t.id
+                        WHERE st.surgery_id = ?
+                        ORDER BY t.name
+                    ");
+                    $tech_stmt->execute([$id]);
+                    $technicians = $tech_stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                    $surgery['technicians'] = $technicians;
+                    $surgery['technician_ids'] = array_column($technicians, 'id');
+
+                    return ['success' => true, 'surgery' => $surgery];
+                } catch (PDOException $e) {
+                    return ['success' => false, 'error' => 'Database error: ' . $e->getMessage()];
+                }
             }
             break;
 
@@ -71,12 +375,12 @@ function handle_surgeries($action, $method, $db)
             if ($method === 'GET') {
                 $patient_id = $_GET['patient_id'] ?? null;
                 if ($patient_id) {
-                    $stmt = $db->prepare("SELECT s.*, p.name as patient_name, a.name as agency_name FROM surgeries s JOIN patients p ON s.patient_id = p.id LEFT JOIN agencies a ON p.agency_id = a.id WHERE s.patient_id = ? ORDER BY s.date DESC");
+                    $stmt = $db->prepare("SELECT s.*, p.name as patient_name, a.name as agency_name, r.name as room_name FROM surgeries s JOIN patients p ON s.patient_id = p.id LEFT JOIN agencies a ON p.agency_id = a.id LEFT JOIN rooms r ON s.room_id = r.id WHERE s.patient_id = ? ORDER BY s.date DESC");
                     $stmt->execute([$patient_id]);
                     return ['success' => true, 'surgeries' => $stmt->fetchAll(PDO::FETCH_ASSOC)];
                 } else {
                     // Apply agency filtering
-                    $sql = "SELECT s.*, p.name as patient_name, a.name as agency_name FROM surgeries s LEFT JOIN patients p ON s.patient_id = p.id LEFT JOIN agencies a ON p.agency_id = a.id";
+                    $sql = "SELECT s.*, p.name as patient_name, a.name as agency_name, r.name as room_name FROM surgeries s LEFT JOIN patients p ON s.patient_id = p.id LEFT JOIN agencies a ON p.agency_id = a.id LEFT JOIN rooms r ON s.room_id = r.id";
                     $params = [];
 
                     $agency_id = $_GET['agency'] ?? null;
@@ -87,7 +391,7 @@ function handle_surgeries($action, $method, $db)
                         $params[] = $agency_id;
                     }
                     // If user is not admin and no agency parameter, restrict to their agency
-                    elseif ($_SESSION['role'] !== 'admin' && $_SESSION['agency_id']) {
+                    elseif (isset($_SESSION['role']) && $_SESSION['role'] !== 'admin' && isset($_SESSION['agency_id'])) {
                         $sql .= " WHERE p.agency_id = ?";
                         $params[] = $_SESSION['agency_id'];
                     }

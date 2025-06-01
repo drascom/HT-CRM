@@ -34,6 +34,13 @@ function handle_users($action, $method, $db, $request_data = [])
                 $agency_id = $input['agency_id'] ?? null;
 
                 if ($id && $email && $username) {
+                    // Check if user exists
+                    $check_stmt = $db->prepare("SELECT id FROM users WHERE id = ?");
+                    $check_stmt->execute([$id]);
+                    if (!$check_stmt->fetch()) {
+                        return ['success' => false, 'error' => 'User not found.'];
+                    }
+
                     if ($password) {
                         $hashed = password_hash($password, PASSWORD_DEFAULT);
                         $stmt = $db->prepare("UPDATE users SET email = ?, username = ?, password = ?, role = ?, agency_id = ?, updated_at = datetime('now') WHERE id = ?");
@@ -59,6 +66,13 @@ function handle_users($action, $method, $db, $request_data = [])
                 $agency_id = $input['agency_id'] ?? null;
                 error_log("User update handler - ID: " . ($id ?? 'NULL') . ", Email: " . ($email ?? 'NULL') . ", Username: " . ($username ?? 'NULL')); // Added logging
                 if ($id && $email && $username) {
+                    // Check if user exists
+                    $check_stmt = $db->prepare("SELECT id FROM users WHERE id = ?");
+                    $check_stmt->execute([$id]);
+                    if (!$check_stmt->fetch()) {
+                        return ['success' => false, 'error' => 'User not found.'];
+                    }
+
                     if ($password) {
                         $hashed = password_hash($password, PASSWORD_DEFAULT);
                         $stmt = $db->prepare("UPDATE users SET email = ?, username = ?, password = ?, role = ?, agency_id = ?, updated_at = datetime('now') WHERE id = ?");
@@ -78,6 +92,13 @@ function handle_users($action, $method, $db, $request_data = [])
             if ($method === 'POST') {
                 $id = $input['id'] ?? null;
                 if ($id) {
+                    // Check if user exists
+                    $check_stmt = $db->prepare("SELECT id FROM users WHERE id = ?");
+                    $check_stmt->execute([$id]);
+                    if (!$check_stmt->fetch()) {
+                        return ['success' => false, 'error' => 'User not found.'];
+                    }
+
                     $stmt = $db->prepare("DELETE FROM users WHERE id = ?");
                     $stmt->execute([$id]);
                     return ['success' => true];

@@ -224,8 +224,18 @@ require_once 'includes/header.php';
 
         // Add new agency
         document.getElementById('save-agency-btn').addEventListener('click', function() {
+            const form = document.getElementById('add-agency-form');
             const agencyName = document.getElementById('agency-name').value.trim();
             const statusDiv = document.getElementById('add-agency-status');
+
+            // Add Bootstrap validation classes
+            form.classList.add('was-validated');
+
+            // Check form validity
+            if (!form.checkValidity()) {
+                statusDiv.innerHTML = '<div class="alert alert-danger">Please fill in all required fields correctly.</div>';
+                return;
+            }
 
             if (!agencyName) {
                 statusDiv.innerHTML = '<div class="alert alert-danger">Agency name is required</div>';
@@ -292,9 +302,19 @@ require_once 'includes/header.php';
 
         // Update agency
         document.getElementById('update-agency-btn').addEventListener('click', function() {
+            const form = document.getElementById('edit-agency-form');
             const agencyId = document.getElementById('edit-agency-id').value;
             const agencyName = document.getElementById('edit-agency-name').value.trim();
             const statusDiv = document.getElementById('edit-agency-status');
+
+            // Add Bootstrap validation classes
+            form.classList.add('was-validated');
+
+            // Check form validity
+            if (!form.checkValidity()) {
+                statusDiv.innerHTML = '<div class="alert alert-danger">Please fill in all required fields correctly.</div>';
+                return;
+            }
 
             if (!agencyName) {
                 statusDiv.innerHTML = '<div class="alert alert-danger">Agency name is required</div>';
@@ -389,6 +409,18 @@ require_once 'includes/header.php';
             if (event.key === 'Enter') {
                 document.getElementById('search-agency-btn').click();
             }
+        });
+
+        // Reset forms when modals are shown
+        document.getElementById('addAgencyModal').addEventListener('show.bs.modal', function() {
+            const form = document.getElementById('add-agency-form');
+            form.reset();
+            form.classList.remove('was-validated');
+        });
+
+        document.getElementById('editAgencyModal').addEventListener('show.bs.modal', function() {
+            const form = document.getElementById('edit-agency-form');
+            form.classList.remove('was-validated');
         });
 
         // Clear status messages when modals are hidden

@@ -33,7 +33,8 @@ require_once 'includes/header.php';
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
             <div class="d-flex align-items-center mb-3 mb-md-0">
                 <a href="add_edit_patient.php?id=<?php echo htmlspecialchars($patient_id); ?>" class="me-3">
-                    <img id="patient-avatar" src="" alt="Patient Avatar" class="avatar" style="display: none; width: 60px; height: 60px;">
+                    <img id="patient-avatar" src="" alt="Patient Avatar" class="avatar"
+                        style="display: none; width: 60px; height: 60px;">
                 </a>
                 <div>
                     <h2 id="page-title" class="mb-0">Patient Profile</h2>
@@ -75,6 +76,7 @@ require_once 'includes/header.php';
                 <thead>
                     <tr>
                         <th>Date</th>
+                        <th>Room</th>
                         <th>Status</th>
                         <th>Graft Count</th>
                         <th class="d-none d-md-table-cell">Notes</th>
@@ -151,8 +153,7 @@ require_once 'includes/header.php';
             </div>
             <div class="modal-body">
                 <form action="upload.php" id="photo-upload-form" enctype="multipart/form-data">
-                    <input type="hidden" name="patient_id" id="upload-patient-id"
-                        value="<?php echo $patient_id; ?>">
+                    <input type="hidden" name="patient_id" id="upload-patient-id" value="<?php echo $patient_id; ?>">
                     <div class="mb-3">
                         <label for="photo_album_type_id" class="form-label">Album Type</label>
                         <select class="form-select" id="photo_album_type_id" name="photo_album_type_id" required>
@@ -218,12 +219,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Helper function to get status color for badges
     function getStatusColor(status) {
-        switch(status.toLowerCase()) {
-            case 'completed': return 'success';
-            case 'booked': return 'primary';
-            case 'cancelled': return 'danger';
-            case 'in-progress': return 'warning';
-            default: return 'secondary';
+        switch (status.toLowerCase()) {
+            case 'completed':
+                return 'success';
+            case 'booked':
+                return 'primary';
+            case 'cancelled':
+                return 'danger';
+            case 'in-progress':
+                return 'warning';
+            default:
+                return 'secondary';
         }
     }
 
@@ -234,8 +240,6 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        console.log('Fetching patient data with URL:', 'api.php?entity=patients&action=get&id=' +
-            patientId);
         const data = await fetchData('api.php?entity=patients&action=get&id=' + patientId);
 
         if (data && data.success) {
@@ -271,7 +275,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     row.setAttribute('data-surgery-id', surgery.id);
                     row.innerHTML = `
                             <td><span class="fw-medium">${formatDate(surgery.date)}</span></td>
-                            <td><span class="badge bg-${getStatusColor(surgery.status)} status-${sanitizeHTML(surgery.status)}">${sanitizeHTML(surgery.status)}</span></td>
+                             <td>${surgery.room_name}</td>
+                             <td><span class="badge bg-${getStatusColor(surgery.status)} status-${sanitizeHTML(surgery.status)}">${sanitizeHTML(surgery.status)}</span></td>
                             <td>${sanitizeHTML(surgery.graft_count || '0')}</td>
                             <td class="d-none d-md-table-cell">${sanitizeHTML(surgery.notes || '')}</td>
                             <td>

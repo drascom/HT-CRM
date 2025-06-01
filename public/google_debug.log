@@ -1,0 +1,216 @@
+
+## Debug Log - 2025-05-30 23:38:05
+
+**Level:** INFO
+**Message:** Starting Google Sheets workflow
+**Data:**
+```json
+{
+    "user_id": 1,
+    "timestamp": "2025-05-30 23:38:05",
+    "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/136.0.0.0 Safari\/537.36"
+}
+```
+---
+
+## Debug Log - 2025-05-30 23:38:05
+
+**Level:** INFO
+**Message:** Authentication successful
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Debug Log - 2025-05-30 23:38:05
+
+**Level:** INFO
+**Message:** Initial page load completed
+**Data:**
+```json
+{
+    "total_execution_time_ms": 0.86,
+    "final_memory_usage_mb": 0.37,
+    "peak_memory_usage_mb": 0.44
+}
+```
+---
+
+## Debug Log - 2025-05-30 23:38:05
+
+**Level:** INFO
+**Message:** Cache not available, fetching from Google Sheets API in API endpoint
+---
+
+## Debug Log - 2025-05-30 23:38:16
+
+**Level:** INFO
+**Message:** All sheet data retrieved in API endpoint
+**Data:**
+```json
+{
+    "total_sheets": 12,
+    "total_api_time_ms": 10473.03
+}
+```
+---
+
+## Debug Log - 2025-05-30 23:38:16
+
+**Level:** INFO
+**Message:** Cache saved in API
+**Data:**
+```json
+{
+    "cache_file": "sheet_data_d3150955807ecdc9b83bed9d480c6b56.json",
+    "cache_size_bytes": false
+}
+```
+---
+
+## Debug Log - 2025-06-01 21:40:46
+
+**Level:** INFO
+**Message:** Starting Google Sheets workflow
+**Data:**
+```json
+{
+    "user_id": 1,
+    "timestamp": "2025-06-01 21:40:46",
+    "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/136.0.0.0 Safari\/537.36"
+}
+```
+---
+
+## Debug Log - 2025-06-01 21:40:46
+
+**Level:** INFO
+**Message:** Authentication successful
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Debug Log - 2025-06-01 21:40:46
+
+**Level:** INFO
+**Message:** Initial page load completed
+**Data:**
+```json
+{
+    "total_execution_time_ms": 1.08,
+    "final_memory_usage_mb": 0.36,
+    "peak_memory_usage_mb": 0.36
+}
+```
+---
+
+## Debug Log - 2025-06-01 21:40:46
+
+**Level:** INFO
+**Message:** Cache not available, fetching from Google Sheets API in API endpoint
+---
+
+## Debug Log - 2025-06-01 21:40:54
+
+**Level:** INFO
+**Message:** All sheet data retrieved in API endpoint
+**Data:**
+```json
+{
+    "total_sheets": 12,
+    "total_api_time_ms": 8455.81
+}
+```
+---
+
+## Debug Log - 2025-06-01 21:40:54
+
+**Level:** INFO
+**Message:** Cache saved in API
+**Data:**
+```json
+{
+    "cache_file": "sheet_data_d3150955807ecdc9b83bed9d480c6b56.json",
+    "cache_size_bytes": false
+}
+```
+---
+
+## Debug Log - 2025-06-01 21:40:54
+
+**Level:** INFO
+**Message:** Starting Google Sheets workflow
+**Data:**
+```json
+{
+    "user_id": 1,
+    "timestamp": "2025-06-01 21:40:54",
+    "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/136.0.0.0 Safari\/537.36"
+}
+```
+---
+
+## Debug Log - 2025-06-01 21:40:54
+
+**Level:** INFO
+**Message:** Authentication successful
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Debug Log - 2025-06-01 21:40:54
+
+**Level:** INFO
+**Message:** Initial page load completed
+**Data:**
+```json
+{
+    "total_execution_time_ms": 1.08,
+    "final_memory_usage_mb": 0.36,
+    "peak_memory_usage_mb": 0.36
+}
+```
+---
+
+## Debug Log - 2025-06-01 21:40:54
+
+**Level:** INFO
+**Message:** Cache not available, fetching from Google Sheets API in API endpoint
+---
+
+## Debug Log - 2025-06-01 21:41:00
+
+**Level:** INFO
+**Message:** All sheet data retrieved in API endpoint
+**Data:**
+```json
+{
+    "total_sheets": 12,
+    "total_api_time_ms": 5885.21
+}
+```
+---
+
+## Debug Log - 2025-06-01 21:41:00
+
+**Level:** INFO
+**Message:** Cache saved in API
+**Data:**
+```json
+{
+    "cache_file": "sheet_data_d3150955807ecdc9b83bed9d480c6b56.json",
+    "cache_size_bytes": false
+}
+```
+---

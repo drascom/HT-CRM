@@ -195,7 +195,9 @@ function openRoomModal(roomId = null) {
     const submitBtn = document.getElementById('room-submit-btn');
     
     // Reset form
-    document.getElementById('room-form').reset();
+    const form = document.getElementById('room-form');
+    form.reset();
+    form.classList.remove('was-validated');
     document.getElementById('room-id').value = '';
     
     if (isEditing) {
@@ -231,7 +233,18 @@ function loadRoomData(roomId) {
 }
 
 function saveRoom() {
-    const formData = new FormData(document.getElementById('room-form'));
+    const form = document.getElementById('room-form');
+
+    // Add Bootstrap validation classes
+    form.classList.add('was-validated');
+
+    // Check form validity
+    if (!form.checkValidity()) {
+        displayMessage('Please fill in all required fields correctly.', 'danger');
+        return;
+    }
+
+    const formData = new FormData(form);
     formData.append('entity', 'rooms');
     formData.append('action', isEditing ? 'update' : 'create');
     

@@ -3,6 +3,7 @@ function handle_photos($action, $method, $db)
 {
     switch ($action) {
         case 'add':
+        case 'upload':
             if ($method === 'POST') {
                 $patient_id = $_POST['patient_id'] ?? null;
                 $album_type_id = $_POST['photo_album_type_id'] ?? null;
@@ -11,7 +12,19 @@ function handle_photos($action, $method, $db)
                 if ($patient_id && $album_type_id && $file_path) {
                     $stmt = $db->prepare("INSERT INTO patient_photos (patient_id, photo_album_type_id, file_path, created_at, updated_at) VALUES (?, ?, ?, datetime('now'), datetime('now'))");
                     $stmt->execute([$patient_id, $album_type_id, $file_path]);
-                    return ['success' => true, 'id' => $db->lastInsertId()];
+                    $photo_id = $db->lastInsertId();
+
+                    // Fetch the created photo
+                    $stmt = $db->prepare("
+                        SELECT pp.*, pat.name AS album_type
+                        FROM patient_photos pp
+                        LEFT JOIN photo_album_types pat ON pp.photo_album_type_id = pat.id
+                        WHERE pp.id = ?
+                    ");
+                    $stmt->execute([$photo_id]);
+                    $photo = $stmt->fetch(PDO::FETCH_ASSOC);
+
+                    return ['success' => true, 'id' => $photo_id, 'photo' => $photo];
                 }
                 return ['success' => false, 'error' => 'patient_id, photo_album_type_id, and file_path are required.'];
             }
@@ -24,6 +37,13 @@ function handle_photos($action, $method, $db)
                 $file_path = trim($_POST['file_path'] ?? '');
 
                 if ($id && $album_type_id && $file_path) {
+                    // Check if photo exists
+                    $check_stmt = $db->prepare("SELECT id FROM patient_photos WHERE id = ?");
+                    $check_stmt->execute([$id]);
+                    if (!$check_stmt->fetch()) {
+                        return ['success' => false, 'error' => 'Photo not found.'];
+                    }
+
                     $stmt = $db->prepare("UPDATE patient_photos SET photo_album_type_id = ?, file_path = ?, updated_at = datetime('now') WHERE id = ?");
                     $stmt->execute([$album_type_id, $file_path, $id]);
                     return ['success' => true];

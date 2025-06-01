@@ -29,12 +29,20 @@ function handle_agencies($action, $method, $db, $input = [])
             break;
 
         case 'update':
+        case 'edit':
             if ($method === 'POST') {
                 $id = $_POST['id'] ?? null;
                 $name = $_POST['name'] ?? null;
 
                 if (!$id || !$name) {
                     return ['success' => false, 'error' => 'Agency ID and name are required.'];
+                }
+
+                // Check if agency exists
+                $check_stmt = $db->prepare("SELECT id FROM agencies WHERE id = ?");
+                $check_stmt->execute([$id]);
+                if (!$check_stmt->fetch()) {
+                    return ['success' => false, 'error' => 'Agency not found.'];
                 }
 
                 // Check if agency name already exists for a different agency
@@ -57,6 +65,13 @@ function handle_agencies($action, $method, $db, $input = [])
 
                 if (!$id) {
                     return ['success' => false, 'error' => 'Agency ID is required.'];
+                }
+
+                // Check if agency exists
+                $check_stmt = $db->prepare("SELECT id FROM agencies WHERE id = ?");
+                $check_stmt->execute([$id]);
+                if (!$check_stmt->fetch()) {
+                    return ['success' => false, 'error' => 'Agency not found.'];
                 }
 
                 // Check if agency is associated with users or patients

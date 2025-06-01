@@ -32,10 +32,10 @@ function logout_user()
     session_destroy();
 }
 
-// Redirect to login page if not logged in (except for login page itself)
+// Redirect to login page if not logged in (except for login page itself and API calls)
 $current_page = basename($_SERVER['PHP_SELF']);
-// Allow access to login.php and signup.php without being logged in
-if (!is_logged_in() && $current_page !== 'login.php' && $current_page !== 'signup.php') {
+// Allow access to login.php, signup.php, and api.php without automatic redirect
+if (!is_logged_in() && $current_page !== 'login.php' && $current_page !== 'signup.php' && $current_page !== 'api.php') {
     header('Location: login.php');
     exit();
 }

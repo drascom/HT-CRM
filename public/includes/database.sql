@@ -5,6 +5,7 @@ CREATE TABLE surgeries (
   notes TEXT,
   status TEXT,
   graft_count INTEGER,
+  room_id INTEGER,
   created_at TEXT,
   updated_at TEXT,
   patient_id INTEGER,
@@ -119,6 +120,10 @@ CREATE TABLE IF NOT EXISTS technicians (
     name TEXT NOT NULL UNIQUE,
     specialty TEXT NULL,
     phone TEXT NULL,
+    availability TEXT NULL,
+    status TEXT NULL CHECK (status IN ('Self Employed', 'Sponsorlu', 'Employed')),
+    period TEXT NULL CHECK (period IN ('Full Time', 'Part Time')),
+    notes TEXT NULL,
     is_active INTEGER DEFAULT 1,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
@@ -131,6 +136,21 @@ CREATE TABLE IF NOT EXISTS technician_availability (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     UNIQUE (tech_id, available_on, period)
 );
+
+-- New table for surgery-technician assignments
+CREATE TABLE IF NOT EXISTS surgery_technicians (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    surgery_id INTEGER NOT NULL,
+    tech_id INTEGER NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (surgery_id) REFERENCES surgeries(id) ON DELETE CASCADE,
+    FOREIGN KEY (tech_id) REFERENCES technicians(id) ON DELETE CASCADE,
+    UNIQUE (surgery_id, tech_id)
+);
+
+-- Add indexes for better performance
+CREATE INDEX IF NOT EXISTS idx_surgery_technicians_surgery_id ON surgery_technicians(surgery_id);
+CREATE INDEX IF NOT EXISTS idx_surgery_technicians_tech_id ON surgery_technicians(tech_id);
 
 -- Create indexes for better performance
 CREATE INDEX IF NOT EXISTS idx_room_reservations_room_id ON room_reservations(room_id);
@@ -150,10 +170,19 @@ INSERT OR IGNORE INTO rooms (name, notes, is_active) VALUES
 ('Consultation',  'Consultation', 1),
 ('Cosmetology',  'Cosmetology', 1);
 
--- Insert sample technicians for testing
-INSERT OR IGNORE INTO technicians (name, specialty, phone, is_active) VALUES
-('Shefu', 'Hair Transplant Specialist', '+44 7700 900123', 1),
-('Panindra', 'Surgical Assistant', '+44 7700 900124', 1),
-('Enye', 'Anesthesia Technician', '+44 7700 900125', 1),
-('Meryem', 'Recovery Specialist', '+44 7700 900126', 1),
-('somebody', 'Equipment Technician', '+44 7700 900127', 1);
+-- Insert technicians from CSV data
+INSERT OR IGNORE INTO technicians (name, phone, availability, status, period, notes, is_active) VALUES
+('Shefiu', '07508400686', 'All Days', 'Self Employed', 'Full Time', '', 1),
+('Phandira', '07424722738', 'Mon-Tue-Wed', 'Sponsorlu', 'Part Time', '8 Vaka alabiliyoruz per month', 1),
+('Eniye', '07405497373', 'All Days', 'Self Employed', 'Full Time', 'Only implantions yapabiliyor, extractions helping', 1),
+('Nava', '07435525455', 'Bizi Yari yolda birakti', 'Sponsorlu', 'Part Time', '', 0),
+('Chandu', '07435525358', 'Bizi Yari yolda birakti', 'Sponsorlu', 'Part Time', '', 0),
+('Maryam', '07775541099', 'Manchestarda yasiyor', 'Self Employed', 'Full Time', 'Konaklama & Yol dahil 400-450 £', 1),
+('Milena', '07857273383', 'Fazla graft calismak istemiyor', 'Self Employed', 'Full Time', '', 1),
+('Mahsa – Zahra', '07914262872', 'Tue-Friday', 'Self Employed', 'Full Time', '', 1),
+('Beverly', '07775434126', 'Available all', 'Self Employed', 'Full Time', 'DHI Fue biliyor sadece', 1),
+('Claduio', '00393341817614', '2 days available // Mon & Tuesday', 'Self Employed', 'Part Time', 'From September 3 days, Can work payroll from September', 1),
+('Sahnaz', '07404324662', 'Fully available', 'Self Employed', 'Part Time', '', 1),
+('Sravani', '07508858512', 'Fully available', 'Sponsorlu', 'Part Time', 'We can sponsor her', 1),
+('Sagun Khadka', '07380576839', 'Fully available', 'Self Employed', 'Part Time', 'Istemiyor Calismak', 0),
+('Monisha', '07436422647', 'Fully available', 'Self Employed', '', 'Ekime gelecek sadece, 14 £ per hour', 1);

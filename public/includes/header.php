@@ -70,13 +70,19 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="technicians.php">
+                            <i class="fas fa-users me-1"></i>
+                            <span class="d-lg-inline">Technicians</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="patients.php">
                             <i class="fas fa-users me-1"></i>
                             <span class="d-lg-inline">Patients</span>
                         </a>
                     </li>
                     <?php if (is_admin()): ?>
-                   
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -90,16 +96,16 @@
                                     Settings
                                 </a>
                             </li>
-                            <li >
+                            <li>
                                 <a class="dropdown-item" href="users.php">
                                     <i class="fas fa-user-cog me-1"></i>
-                                   Users
+                                    Users
                                 </a>
                             </li>
-                            <li >
+                            <li>
                                 <a class="dropdown-item" href="rooms.php">
                                     <i class="fas fa-calendar me-1"></i>
-                                   Rooms
+                                    Rooms
                                 </a>
                             </li>
                             <li>

@@ -304,7 +304,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         formData.append('id', patientId);
                         console.log("Appending patientId to FormData:", patientId);
                     } else {
-                        console.warn("patientId is null when sending avatar upload request.");
+                        console.warn(
+                            "patientId is null when sending avatar upload request.");
                     }
 
                     // console.log("FormData sent with request:", formData); // Keep this commented or use a method to inspect FormData content if needed later
@@ -439,6 +440,15 @@ document.addEventListener('DOMContentLoaded', function() {
             // Clear previous messages
             statusMessagesDiv.innerHTML = '';
 
+            // Add Bootstrap validation classes
+            patientForm.classList.add('was-validated');
+
+            // Check form validity
+            if (!patientForm.checkValidity()) {
+                displayMessage('Please fill in all required fields correctly.', 'danger');
+                return;
+            }
+
             const nameInput = document.getElementById('name');
             if (!nameInput.value.trim()) {
                 displayMessage('Patient name is required.', 'danger');
@@ -474,7 +484,8 @@ document.addEventListener('DOMContentLoaded', function() {
                             };
                             avatarDropzone.on("queuecomplete", queueCompleteHandler);
 
-                            console.log("Calling avatarDropzone.processQueue() after patient creation.");
+                            console.log(
+                                "Calling avatarDropzone.processQueue() after patient creation.");
                             // Process the Dropzone queue to upload the avatar
                             avatarDropzone.processQueue();
 

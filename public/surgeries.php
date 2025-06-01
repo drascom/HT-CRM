@@ -60,6 +60,7 @@ require_once 'includes/header.php';
                 <th>Date</th>
                 <th>Patient Name</th>
                 <?php if (is_admin()): ?><th>Agency</th> <?php endif; ?>
+                <th>Room</th>
                 <th>Graft Count</th>
                 <th>Status</th>
                 <th class="text-center">Actions</th>
@@ -79,58 +80,58 @@ require_once 'includes/header.php';
     <p class="mt-3 text-muted">Loading surgeries...</p>
 </div>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const surgeriesTable = document.getElementById('surgeries-table');
-        const statusMessagesDiv = document.getElementById('status-messages');
+document.addEventListener('DOMContentLoaded', function() {
+    const surgeriesTable = document.getElementById('surgeries-table');
+    const statusMessagesDiv = document.getElementById('status-messages');
 
-        // Function to display messages
-        function displayMessage(message, type = 'success') {
-            statusMessagesDiv.innerHTML = `<div class="alert alert-${type}">${message}</div>`;
+    // Function to display messages
+    function displayMessage(message, type = 'success') {
+        statusMessagesDiv.innerHTML = `<div class="alert alert-${type}">${message}</div>`;
+    }
+
+    // Function to fetch and display surgeries
+    // Function to format date as DD, MMM / YY
+    function formatDate(dateString) {
+        const options = {
+            day: '2-digit',
+            month: 'short',
+            year: '2-digit'
+        };
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-GB', options).replace(/\//g, ' / ');
+    }
+
+    function fetchAndDisplaySurgeries() {
+        // Show loading spinner
+        document.getElementById('loading-spinner').style.display = 'flex';
+        surgeriesTable.style.display = 'none';
+
+        const userRole = '<?php echo get_user_role(); ?>';
+        const userAgencyId = '<?php echo get_user_agency_id(); ?>';
+
+        // Build API URL with agency filter for agents
+        let apiUrl = 'api.php?entity=surgeries&action=list';
+        if (userRole === 'agent' && userAgencyId) {
+            apiUrl += `&agency=${userAgencyId}`;
         }
 
-        // Function to fetch and display surgeries
-        // Function to format date as DD, MMM / YY
-        function formatDate(dateString) {
-            const options = {
-                day: '2-digit',
-                month: 'short',
-                year: '2-digit'
-            };
-            const date = new Date(dateString);
-            return date.toLocaleDateString('en-GB', options).replace(/\//g, ' / ');
-        }
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                // Hide loading spinner
+                document.getElementById('loading-spinner').style.display = 'none';
+                surgeriesTable.style.display = 'table';
 
-        function fetchAndDisplaySurgeries() {
-            // Show loading spinner
-            document.getElementById('loading-spinner').style.display = 'flex';
-            surgeriesTable.style.display = 'none';
+                if (data.success) {
+                    const surgeries = data.surgeries;
+                    let tableRows = '';
 
-            const userRole = '<?php echo get_user_role(); ?>';
-            const userAgencyId = '<?php echo get_user_agency_id(); ?>';
+                    surgeries.forEach(surgery => {
+                        const userRole = '<?php echo get_user_role(); ?>';
+                        const isCompleted = surgery.status.toLowerCase() === 'completed';
+                        const canEdit = !(userRole === 'agent' && isCompleted);
 
-            // Build API URL with agency filter for agents
-            let apiUrl = 'api.php?entity=surgeries&action=list';
-            if (userRole === 'agent' && userAgencyId) {
-                apiUrl += `&agency=${userAgencyId}`;
-            }
-
-            fetch(apiUrl)
-                .then(response => response.json())
-                .then(data => {
-                    // Hide loading spinner
-                    document.getElementById('loading-spinner').style.display = 'none';
-                    surgeriesTable.style.display = 'table';
-
-                    if (data.success) {
-                        const surgeries = data.surgeries;
-                        let tableRows = '';
-
-                        surgeries.forEach(surgery => {
-                            const userRole = '<?php echo get_user_role(); ?>';
-                            const isCompleted = surgery.status.toLowerCase() === 'completed';
-                            const canEdit = !(userRole === 'agent' && isCompleted);
-
-                            tableRows += `
+                        tableRows += `
                             <tr data-surgery-id="${surgery.id}">
                                 <td>
                                     <span class="fw-medium">${formatDate(surgery.date)}</span>
@@ -143,11 +144,13 @@ require_once 'includes/header.php';
                                         '<span class="text-muted">N/A</span>'
                                     }
                                 </td>
+                                
                                  <?php if (is_admin()): ?>
                                 <td>
                                     <span class="text-truncate-mobile">${surgery.agency_name || 'No Agency'}</span>
                                 </td>
                                   <?php endif; ?>
+                                   <td>${surgery.room_name || '-'}</td>
                                  <td>
                                     <span class="fw-medium">${surgery.graft_count || '0'}</span>
                                 </td><td>
@@ -182,112 +185,112 @@ require_once 'includes/header.php';
                                 </td>
                             </tr>
                         `;
-                        });
+                    });
 
-                        surgeriesTable.querySelector('tbody').innerHTML = tableRows;
+                    surgeriesTable.querySelector('tbody').innerHTML = tableRows;
 
-                        // Update surgery count
-                        document.getElementById('surgery-count').textContent = surgeries.length;
-                    } else {
-                        displayMessage(`Error loading surgeries: ${data.error}`, 'danger');
-                        document.getElementById('surgery-count').textContent = '0';
-                    }
-                })
-                .catch(error => {
-                    // Hide loading spinner
-                    document.getElementById('loading-spinner').style.display = 'none';
-                    surgeriesTable.style.display = 'table';
-
-                    console.error('Error fetching surgeries:', error);
-                    displayMessage('An error occurred while loading surgery data.', 'danger');
+                    // Update surgery count
+                    document.getElementById('surgery-count').textContent = surgeries.length;
+                } else {
+                    displayMessage(`Error loading surgeries: ${data.error}`, 'danger');
                     document.getElementById('surgery-count').textContent = '0';
-                });
-        }
+                }
+            })
+            .catch(error => {
+                // Hide loading spinner
+                document.getElementById('loading-spinner').style.display = 'none';
+                surgeriesTable.style.display = 'table';
 
-        // Helper function to get status color for badges
-        function getStatusColor(status) {
-            switch (status.toLowerCase()) {
-                case 'completed':
-                    return 'success';
-                case 'booked':
-                    return 'primary';
-                case 'cancelled':
-                    return 'danger';
-                case 'in-progress':
-                    return 'warning';
-                default:
-                    return 'secondary';
+                console.error('Error fetching surgeries:', error);
+                displayMessage('An error occurred while loading surgery data.', 'danger');
+                document.getElementById('surgery-count').textContent = '0';
+            });
+    }
+
+    // Helper function to get status color for badges
+    function getStatusColor(status) {
+        switch (status.toLowerCase()) {
+            case 'completed':
+                return 'success';
+            case 'booked':
+                return 'primary';
+            case 'cancelled':
+                return 'danger';
+            case 'in-progress':
+                return 'warning';
+            default:
+                return 'secondary';
+        }
+    }
+
+    // Delete surgery function
+    surgeriesTable.addEventListener('click', function(event) {
+        if (event.target.classList.contains('delete-surgery-btn')) {
+            const surgeryId = event.target.dataset.surgeryId;
+            if (confirm('Are you sure you want to delete this surgery?')) {
+                const formData = new FormData();
+                formData.append('entity', 'surgeries');
+                formData.append('action', 'delete');
+                formData.append('id', surgeryId);
+
+                fetch('api.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            displayMessage(data.message, 'success');
+                            fetchAndDisplaySurgeries(); // Refresh the surgery list
+                        } else {
+                            displayMessage(`Error deleting surgery: ${data.error}`, 'danger');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error deleting surgery:', error);
+                        displayMessage('An error occurred while deleting the surgery.', 'danger');
+                    });
             }
         }
+    });
 
-        // Delete surgery function
-        surgeriesTable.addEventListener('click', function(event) {
-            if (event.target.classList.contains('delete-surgery-btn')) {
-                const surgeryId = event.target.dataset.surgeryId;
-                if (confirm('Are you sure you want to delete this surgery?')) {
-                    const formData = new FormData();
-                    formData.append('entity', 'surgeries');
-                    formData.append('action', 'delete');
-                    formData.append('id', surgeryId);
+    fetchAndDisplaySurgeries(); // Initial load of surgeries
 
-                    fetch('api.php', {
-                            method: 'POST',
-                            body: formData
-                        })
-                        .then(response => response.json())
-                        .then(data => {
-                            if (data.success) {
-                                displayMessage(data.message, 'success');
-                                fetchAndDisplaySurgeries(); // Refresh the surgery list
-                            } else {
-                                displayMessage(`Error deleting surgery: ${data.error}`, 'danger');
-                            }
-                        })
-                        .catch(error => {
-                            console.error('Error deleting surgery:', error);
-                            displayMessage('An error occurred while deleting the surgery.', 'danger');
-                        });
-                }
+    // Search functionality
+    const surgerySearchInput = document.getElementById('surgery-search');
+    const searchSurgeryBtn = document.getElementById('search-surgery-btn');
+
+    function filterSurgeries() {
+        const searchTerm = surgerySearchInput.value.toLowerCase();
+        const rows = surgeriesTable.querySelectorAll('tbody tr');
+
+        rows.forEach(row => {
+            const date = row.cells[0].textContent.toLowerCase();
+            const patientName = row.cells[1].textContent.toLowerCase();
+            const agencyName = row.cells[2].textContent.toLowerCase();
+            const status = row.cells[3].textContent.toLowerCase();
+
+            if (date.includes(searchTerm) || patientName.includes(searchTerm) ||
+                agencyName.includes(searchTerm) || status.includes(searchTerm)) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
             }
         });
+    }
 
-        fetchAndDisplaySurgeries(); // Initial load of surgeries
-
-        // Search functionality
-        const surgerySearchInput = document.getElementById('surgery-search');
-        const searchSurgeryBtn = document.getElementById('search-surgery-btn');
-
-        function filterSurgeries() {
-            const searchTerm = surgerySearchInput.value.toLowerCase();
+    surgerySearchInput.addEventListener('keyup', function(event) {
+        const searchTerm = surgerySearchInput.value.toLowerCase();
+        if (searchTerm.length >= 2 || searchTerm.length === 0) {
+            filterSurgeries();
+        } else if (searchTerm.length === 1) {
+            // If only one character, clear the filter
             const rows = surgeriesTable.querySelectorAll('tbody tr');
-
             rows.forEach(row => {
-                const date = row.cells[0].textContent.toLowerCase();
-                const patientName = row.cells[1].textContent.toLowerCase();
-                const agencyName = row.cells[2].textContent.toLowerCase();
-                const status = row.cells[3].textContent.toLowerCase();
-
-                if (date.includes(searchTerm) || patientName.includes(searchTerm) ||
-                    agencyName.includes(searchTerm) || status.includes(searchTerm)) {
-                    row.style.display = '';
-                } else {
-                    row.style.display = 'none';
-                }
+                row.style.display = '';
             });
         }
-
-        surgerySearchInput.addEventListener('keyup', function(event) {
-            const searchTerm = surgerySearchInput.value.toLowerCase();
-            if (searchTerm.length >= 2 || searchTerm.length === 0) {
-                filterSurgeries();
-            } else if (searchTerm.length === 1) {
-                // If only one character, clear the filter
-                const rows = surgeriesTable.querySelectorAll('tbody tr');
-                rows.forEach(row => {
-                    row.style.display = '';
-                });
-            }
-        });
     });
+});
 </script>
 <?php require_once 'includes/footer.php'; ?>

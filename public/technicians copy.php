@@ -195,24 +195,6 @@ document.addEventListener('DOMContentLoaded', function() {
         closeDeleteModal();
     });
 });
-// Listen for tech modal hidden event to manage focus
-const techModalElement = document.getElementById('techModal');
-techModalElement.addEventListener('hidden.bs.modal', function() {
-    // Explicitly move focus to the body to prevent focus remaining inside the hidden modal
-    document.body.focus();
-    // Listen for tech modal hide event to blur focus
-    techModalElement.addEventListener('hide.bs.modal', function() {
-        const focusedElement = document.activeElement;
-        // Check if the currently focused element is inside the modal
-        if (techModalElement.contains(focusedElement)) {
-            // Set focus to the first field when the tech modal is fully shown
-            techModalElement.addEventListener('shown.bs.modal', function() {
-                document.getElementById('tech-name').focus();
-            });
-            focusedElement.blur();
-        }
-    });
-});
 
 function loadTechnicians() {
     showLoading(true);
@@ -324,9 +306,7 @@ function openTechModal(techId = null) {
         submitBtn.textContent = 'Save Technician';
     }
 
-    const modalElement = document.getElementById('techModal');
-    const modalInstance = bootstrap.Modal.getInstance(modalElement) || new bootstrap.Modal(modalElement);
-    modalInstance.show();
+    new bootstrap.Modal(modal).show();
 }
 
 function loadTechData(techId) {
@@ -396,7 +376,24 @@ function closeModal() {
     const modal = bootstrap.Modal.getInstance(document.getElementById('techModal'));
     if (modal) {
         modal.hide();
+    } else {
+        // If no instance exists, try to hide it directly
+        const modalElement = document.getElementById('techModal');
+        if (modalElement) {
+            modalElement.style.display = 'none';
+            modalElement.classList.remove('show');
+            modalElement.setAttribute('aria-hidden', 'true');
+        }
     }
+
+    // Force remove any remaining backdrop
+    setTimeout(() => {
+        const backdrops = document.querySelectorAll('.modal-backdrop');
+        backdrops.forEach(backdrop => backdrop.remove());
+        document.body.classList.remove('modal-open');
+        document.body.style.removeProperty('padding-right');
+        document.body.style.removeProperty('overflow');
+    }, 300);
 }
 
 function archiveTechnician(techId, techName) {
@@ -407,7 +404,7 @@ function archiveTechnician(techId, techName) {
 
     const formData = new FormData();
     formData.append('entity', 'techs');
-    formData.append('action', 'deactivate');
+    formData.append('action', 'archive');
     formData.append('id', techId);
 
     fetch('api.php', {
@@ -435,8 +432,7 @@ function openDeleteModal(techId, techName) {
 
     document.getElementById('delete-tech-name').textContent = techName;
 
-    const deleteModalElement = document.getElementById('deleteModal');
-    const deleteModal = bootstrap.Modal.getInstance(deleteModalElement) || new bootstrap.Modal(deleteModalElement);
+    const deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'));
     deleteModal.show();
 }
 
@@ -446,6 +442,13 @@ function closeDeleteModal() {
         modal.hide();
     }
 
+    // Force remove any remaining backdrop
+    setTimeout(() => {
+        const backdrops = document.querySelectorAll('.modal-backdrop');
+        backdrops.forEach(backdrop => backdrop.remove());
+        document.body.classList.remove('modal-open');
+        document.body.style.removeProperty('padding-right');
+    }, 300);
 }
 
 function permanentDeleteTechnician(techId, techName) {
@@ -457,7 +460,7 @@ function permanentDeleteTechnician(techId, techName) {
 
     const formData = new FormData();
     formData.append('entity', 'techs');
-    formData.append('action', 'delete');
+    formData.append('action', 'permanent_delete');
     formData.append('id', techId);
 
     fetch('api.php', {

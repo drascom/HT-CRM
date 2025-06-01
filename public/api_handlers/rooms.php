@@ -19,7 +19,7 @@ function handle_rooms($action, $method, $db, $input = [])
                     $stmt->execute([$date]);
                 } else {
                     // Get all rooms
-                    $stmt = $db->prepare("SELECT id, name, 
+                    $stmt = $db->prepare("SELECT id, name,
                      notes, is_active FROM rooms ORDER BY name");
                     $stmt->execute();
                 }
@@ -30,6 +30,7 @@ function handle_rooms($action, $method, $db, $input = [])
             break;
 
         case 'create':
+        case 'add':
             if ($method === 'POST') {
                 $name = trim($_POST['name'] ?? '');
                 $notes = trim($_POST['notes'] ?? '');
@@ -39,7 +40,7 @@ function handle_rooms($action, $method, $db, $input = [])
                 }
 
                 try {
-                    $stmt = $db->prepare("INSERT INTO rooms (name,  notes, created_at, updated_at) VALUES (?, ?, ?, datetime('now'), datetime('now'))");
+                    $stmt = $db->prepare("INSERT INTO rooms (name, notes, created_at, updated_at) VALUES (?, ?, datetime('now'), datetime('now'))");
                     $stmt->execute([$name, $notes]);
                     $room_id = $db->lastInsertId();
 
@@ -59,6 +60,7 @@ function handle_rooms($action, $method, $db, $input = [])
             break;
 
         case 'update':
+        case 'edit':
             if ($method === 'POST' || $method === 'PUT') {
                 $id = $_POST['id'] ?? $input['id'] ?? null;
                 $name = trim($_POST['name'] ?? $input['name'] ?? '');
@@ -69,7 +71,7 @@ function handle_rooms($action, $method, $db, $input = [])
                 }
 
                 try {
-                    $stmt = $db->prepare("UPDATE rooms SET name = ?,  notes = ?, updated_at = datetime('now') WHERE id = ?");
+                    $stmt = $db->prepare("UPDATE rooms SET name = ?, notes = ?, updated_at = datetime('now') WHERE id = ?");
                     $stmt->execute([$name, $notes, $id]);
 
                     if ($stmt->rowCount() === 0) {

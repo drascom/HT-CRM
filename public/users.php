@@ -303,6 +303,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function resetUserForm() {
         userIdInput.value = '';
         userForm.reset();
+        userForm.classList.remove('was-validated');
         passwordInput.required = true; // Password is required for new users
         showPasswordHelp(true);
         document.getElementById('userModalLabel').textContent = 'Add User';
@@ -330,6 +331,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Editing existing user
                 document.getElementById('userModalLabel').textContent = 'Edit User';
                 userIdInput.value = userId;
+                userForm.classList.remove('was-validated');
                 passwordInput.required = false; // Password is not required when editing
                 showPasswordHelp(false); // Hide password help when editing
 
@@ -368,6 +370,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listener for the Save User button
     if (saveUserBtn) {
         saveUserBtn.addEventListener('click', function() {
+            // Add Bootstrap validation classes
+            userForm.classList.add('was-validated');
+
             if (!userForm.checkValidity()) {
                 userForm.reportValidity();
                 return;

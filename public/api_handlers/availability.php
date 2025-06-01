@@ -22,15 +22,16 @@ function handle_availability($action, $method, $db, $input = [])
                             r.id,
                             r.name,
                             r.notes,
+                            r.is_active,
                             CASE
                                 WHEN rr.id IS NOT NULL THEN 'booked'
                                 WHEN r.is_active = 0 THEN 'inactive'
                                 ELSE 'available'
                             END as status,
-                            p.name as patient_name,
                             s.graft_count,
                             s.id as surgery_id,
-                            rr.surgery_id as reservation_surgery_id
+                            rr.surgery_id as reservation_surgery_id,
+                            p.name as patient_name
                         FROM rooms r
                         LEFT JOIN room_reservations rr ON r.id = rr.room_id AND rr.reserved_date = ?
                         LEFT JOIN surgeries s ON rr.surgery_id = s.id
@@ -42,7 +43,28 @@ function handle_availability($action, $method, $db, $input = [])
                     $stmt->execute([$date]);
                     $rooms = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                    return ['success' => true, 'date' => $date, 'rooms' => $rooms];
+                    // Calculate availability statistics
+                    $total_rooms = count($rooms);
+                    $active_rooms = array_filter($rooms, function($room) {
+                        return $room['is_active'] == 1;
+                    });
+                    $total_active = count($active_rooms);
+                    $available_rooms = array_filter($active_rooms, function($room) {
+                        return $room['status'] === 'available';
+                    });
+                    $available_count = count($available_rooms);
+
+                    return [
+                        'success' => true,
+                        'date' => $date,
+                        'rooms' => $rooms,
+                        'statistics' => [
+                            'total_rooms' => $total_rooms,
+                            'active_rooms' => $total_active,
+                            'available_rooms' => $available_count,
+                            'booked_rooms' => $total_active - $available_count
+                        ]
+                    ];
                 } catch (PDOException $e) {
                     return ['success' => false, 'error' => 'Database error: ' . $e->getMessage()];
                 }

@@ -1,4 +1,11 @@
 <?php
+// Suppress all PHP errors and warnings to prevent them from interfering with JSON output
+error_reporting(0);
+ini_set('display_errors', 0);
+
+// Start output buffering to catch any unexpected output
+ob_start();
+
 require_once 'includes/db.php';
 require_once 'includes/auth.php';
 
@@ -66,31 +73,40 @@ if ($method === 'POST') {
 
 $response = ['success' => false, 'message' => "Invalid request: Missing entity or action.", 'details' => ['entity' => $entity, 'action' => $action, 'method' => $method]];
 
-if ($entity && $action) {
-    $handler_file = __DIR__ . "/api_handlers/{$entity}.php";
-    $handler_function = "handle_{$entity}";
+try {
+    if ($entity && $action) {
+        $handler_file = __DIR__ . "/api_handlers/{$entity}.php";
+        $handler_function = "handle_{$entity}";
 
-    // Log file check
-    if (file_exists($handler_file)) {
-        include_once $handler_file;
+        // Log file check
+        if (file_exists($handler_file)) {
+            include_once $handler_file;
 
-        // Log function check
-        if (function_exists($handler_function)) {
-            $db = get_db();
-            // Pass the decoded input data to the handler function if available
-            $handler_input = ($method === 'POST' && strpos($_SERVER['CONTENT_TYPE'] ?? '', 'application/json') !== false) || $method === 'PUT' ? ($input ?? []) : [];
-            $response = $handler_function($action, $method, $db, $handler_input);
+            // Log function check
+            if (function_exists($handler_function)) {
+                $db = get_db();
+                // Pass the decoded input data to the handler function if available
+                $handler_input = ($method === 'POST' && strpos($_SERVER['CONTENT_TYPE'] ?? '', 'application/json') !== false) || $method === 'PUT' ? ($input ?? []) : [];
+                $response = $handler_function($action, $method, $db, $handler_input);
+            } else {
+                $log_message = "Handler function not found for entity '{$entity}', action '{$action}', method '{$method}': " . $handler_function;
+                log_response(['log' => $log_message]);
+                $response = ['success' => false, 'message' => "Function {$handler_function} not found."];
+            }
         } else {
-            $log_message = "Handler function not found for entity '{$entity}', action '{$action}', method '{$method}': " . $handler_function;
+            $log_message = "Handler file not found for entity '{$entity}', action '{$action}', method '{$method}': " . $handler_file;
             log_response(['log' => $log_message]);
-            $response = ['success' => false, 'message' => "Function {$handler_function} not found."];
+            $response = ['success' => false, 'message' => "Handler for {$entity} not found."];
         }
-    } else {
-        $log_message = "Handler file not found for entity '{$entity}', action '{$action}', method '{$method}': " . $handler_file;
-        log_response(['log' => $log_message]);
-        $response = ['success' => false, 'message' => "Handler for {$entity} not found."];
     }
+} catch (Exception $e) {
+    $response = ['success' => false, 'error' => 'Internal server error: ' . $e->getMessage()];
+} catch (Error $e) {
+    $response = ['success' => false, 'error' => 'Fatal error: ' . $e->getMessage()];
 }
+
+// Clean any unexpected output
+ob_clean();
 
 // Log and return the response
 log_response($response);
@@ -100,6 +116,7 @@ echo json_encode($response);
 // Helper: response logger
 function log_response($response)
 {
+    $log_file = 'log.md';
     $timestamp = date('Y-m-d H:i:s');
     $status = 'Error';
     if (isset($response['success'])) {
@@ -112,5 +129,15 @@ function log_response($response)
     $log .= "**Status:** {$status}\n";
     $log .= "**Details:**\n```json\n{$json}\n```\n";
     $log .= "---\n\n";
-    file_put_contents('log.md', $log, FILE_APPEND | LOCK_EX);
+
+    // Count existing log entries
+    $existing_content = file_exists($log_file) ? file_get_contents($log_file) : '';
+    $entry_count = substr_count($existing_content, "## Response Log -");
+
+    // Clear file if entry count is 10 or more
+    if ($entry_count >= 10) {
+        file_put_contents($log_file, ''); // Clear the file
+    }
+
+    file_put_contents($log_file, $log, FILE_APPEND | LOCK_EX);
 }

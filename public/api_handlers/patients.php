@@ -1,5 +1,5 @@
 <?php
-function handle_patients($action, $method, $db)
+function handle_patients($action, $method, $db, $input = [])
 {
     switch ($action) {
         case 'add':
@@ -17,7 +17,7 @@ function handle_patients($action, $method, $db)
                     $stmt_fetch = $db->prepare("SELECT id, name, avatar FROM patients WHERE id = ?");
                     $stmt_fetch->execute([$new_patient_id]);
                     $new_patient = $stmt_fetch->fetch(PDO::FETCH_ASSOC);
-                    return ['success' => true, 'message' => 'Patient added successfully.', 'patient' => $new_patient]; // Return patient object
+                    return ['success' => true, 'message' => 'Patient added successfully.', 'id' => $new_patient_id, 'patient' => $new_patient]; // Return patient object
                 }
 
                 return ['success' => false, 'error' => 'Name is required.'];
@@ -25,6 +25,7 @@ function handle_patients($action, $method, $db)
             break;
 
         case 'update':
+        case 'edit':
             if ($method === 'POST') {
                 $id = $_POST['id'] ?? null;
                 $name = trim($_POST['name'] ?? '');
@@ -144,8 +145,8 @@ function handle_patients($action, $method, $db)
                     $patient = $stmt->fetch(PDO::FETCH_ASSOC);
 
                     if ($patient) {
-                        // Get all surgeries for this patient
-                        $stmt2 = $db->prepare("SELECT * FROM surgeries WHERE patient_id = ? ORDER BY date DESC");
+                        // Get all surgeries for this patient with room names
+                        $stmt2 = $db->prepare("SELECT s.*, r.name as room_name FROM surgeries s LEFT JOIN rooms r ON s.room_id = r.id WHERE s.patient_id = ? ORDER BY s.date DESC");
                         $stmt2->execute([$id]);
                         $surgeries = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 
