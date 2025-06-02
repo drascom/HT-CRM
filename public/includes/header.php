@@ -58,6 +58,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="appointments.php">
+                            <i class="fas fa-calendar-check me-1"></i>
+                            <span class="d-lg-inline">Appointments</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="surgeries.php">
                             <i class="fas fa-hospital me-1"></i>
                             <span class="d-lg-inline">Surgeries</span>
@@ -65,7 +71,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="room_availability.php">
-                            <i class="fas fa-calendar me-1"></i>
+                            <i class="fas fa-door-open me-1"></i>
                             <span class="d-lg-inline">Rooms</span>
                         </a>
                     </li>
@@ -104,8 +110,8 @@
                             </li>
                             <li>
                                 <a class="dropdown-item" href="rooms.php">
-                                    <i class="fas fa-calendar me-1"></i>
-                                    Rooms
+                                    <i class="fas fa-door-open me-1"></i>
+                                    Manage Rooms
                                 </a>
                             </li>
                             <li>

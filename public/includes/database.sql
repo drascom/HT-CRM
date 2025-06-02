@@ -97,7 +97,7 @@ INSERT INTO agencies (name, created_at, updated_at) VALUES ('Other Agency', date
 CREATE TABLE IF NOT EXISTS rooms (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL UNIQUE,
-    notes TEXT,
+    types TEXT,
     is_active INTEGER DEFAULT 1,
     created_at TEXT DEFAULT (datetime('now')),
     updated_at TEXT DEFAULT (datetime('now'))
@@ -163,12 +163,12 @@ CREATE INDEX IF NOT EXISTS idx_technician_availability_period ON technician_avai
 CREATE INDEX IF NOT EXISTS idx_technicians_active ON technicians(is_active);
 
 -- Insert sample rooms for testing
-INSERT OR IGNORE INTO rooms (name, notes, is_active) VALUES
-('Surgery 1',  'Surgery 1', 1),
-('Surgery 2',  'Surgery 2', 0),
-('Surgery 3',  'Surgery 3', 0),
-('Consultation',  'Consultation', 1),
-('Cosmetology',  'Cosmetology', 1);
+INSERT OR IGNORE INTO rooms (name, types, is_active) VALUES
+('Surgery 1',  'surgery', 1),
+('Surgery 2',  'surgery', 0),
+('Surgery 3',  'surgery', 0),
+('Consultation',  'consultation', 1),
+('Cosmetology',  'treatment', 1);
 
 -- Insert technicians from CSV data
 INSERT OR IGNORE INTO technicians (name, phone, availability, status, period, notes, is_active) VALUES
@@ -186,3 +186,19 @@ INSERT OR IGNORE INTO technicians (name, phone, availability, status, period, no
 ('Sravani', '07508858512', 'Fully available', 'Sponsorlu', 'Part Time', 'We can sponsor her', 1),
 ('Sagun Khadka', '07380576839', 'Fully available', 'Self Employed', 'Part Time', 'Istemiyor Calismak', 0),
 ('Monisha', '07436422647', 'Fully available', 'Self Employed', '', 'Ekime gelecek sadece, 14 £ per hour', 1);
+
+CREATE TABLE IF NOT EXISTS appointments (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    room_id INTEGER NOT NULL,
+    patient_id INTEGER NOT NULL,
+    appointment_date DATE NOT NULL,
+    start_time TEXT NOT NULL,
+    end_time TEXT NOT NULL,
+    type TEXT NOT NULL,
+    subtype TEXT,
+    notes TEXT,
+    created_at TEXT DEFAULT (datetime('now')),
+    updated_at TEXT DEFAULT (datetime('now')),
+    FOREIGN KEY (room_id) REFERENCES rooms(id) ON DELETE CASCADE,
+    FOREIGN KEY (patient_id) REFERENCES patients(id) ON DELETE CASCADE
+);

@@ -223,6 +223,43 @@
     text-align: center;
 }
 
+/* Appointment Summary */
+.appointment-summary {
+    padding-top: 15px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.appointment-type {
+    font-size: 0.6rem;
+    margin-bottom: 2px;
+    padding: 1px 0;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    color: #495057;
+}
+
+.appointment-type::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 1px;
+    margin-right: 4px;
+    flex-shrink: 0;
+}
+
+.appointment-type.consult::before {
+    background: #0d6efd;
+}
+
+.appointment-type.cosmetic::before {
+    background: #198754;
+}
+
+.appointment-type.surgery::before {
+    background: #dc3545;
+}
 .day-events {
     display: flex;
     flex-direction: column;

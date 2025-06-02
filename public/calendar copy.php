@@ -549,7 +549,7 @@ class CustomCalendar {
     createSurgerySlotContent(room, surgery) {
         console.log("surgery: ", surgery)
         return `
-            <div class="room-badge">${room.name} ----</div>
+            <div class="room-badge">${room.name}</div>
             <div class="surgery-content">
                 <div class="surgery-header">
                     <span class="status-badge ${surgery.status}"></span>
@@ -582,14 +582,14 @@ class CustomCalendar {
     }
 
     createCombinedSlotContent(room, summary) {
-        let content = `<div class="appointment-summary">`;
+        let content = `<div class="room-badge">${room.name}</div><div class="appointment-summary">`;
 
         if (summary.consult_count > 0) {
-            content += `<div class="appointment-type consult">Consultations: ${summary.consult_count}</div>`;
+            content += `<div class="appointment-type consult">Consults: ${summary.consult_count}</div>`;
         }
 
         if (summary.cosmetic_count > 0) {
-            content += `<div class="appointment-type cosmetic">Cosmetics: ${summary.cosmetic_count}</div>`;
+            content += `<div class="appointment-type cosmetic">Cosmetic: ${summary.cosmetic_count}</div>`;
         }
 
         if (summary.surgery) {
