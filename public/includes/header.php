@@ -25,16 +25,19 @@
 
     <!-- Dropzone JS -->
     <script src="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone-min.js"></script>
+
+    <!-- API Helper for secure POST requests -->
+    <script src="/assets/js/api-helper.js"></script>
 </head>
 
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
-        <div class="container">
-            <a style="margin-right: 50px;" class="navbar-brand fw-bold" href="/">
+        <div class="container-fluid px-2">
+            <a class="navbar-brand fw-bold" href="/">
                 <i class="fas fa-heartbeat me-2"></i>
-                <span class="d-none d-sm-inline">Surgery Patient Management</span>
-                <span class="d-inline d-sm-none">SPM</span>
+                <span class="d-none d-sm-inline">Liv Patient Management</span>
+                <span class="d-inline d-sm-none">LivPM</span>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

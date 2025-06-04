@@ -4,8 +4,8 @@ function handle_techAvail($action, $method, $db, $input = [])
     switch ($action) {
         case 'byRange':
             if ($method === 'GET') {
-                $start = $_GET['start'] ?? null;
-                $end = $_GET['end'] ?? null;
+                $start = $input['start'] ?? null;
+                $end = $input['end'] ?? null;
 
                 if (!$start || !$end) {
                     return ['success' => false, 'error' => 'Start and end dates are required.'];
@@ -45,8 +45,8 @@ function handle_techAvail($action, $method, $db, $input = [])
 
         case 'byDate':
             if ($method === 'GET') {
-                $date = $_GET['date'] ?? null;
-                $period = $_GET['period'] ?? null; // Optional period filter for surgery scheduling
+                $date = $input['date'] ?? null;
+                $period = $input['period'] ?? null; // Optional period filter for surgery scheduling
 
                 if (!$date) {
                     return ['success' => false, 'error' => 'Date is required.'];
@@ -286,9 +286,9 @@ function handle_techAvail($action, $method, $db, $input = [])
             break;
 
         case 'list':
-            if ($method === 'GET') {
-                $tech_id = $_GET['tech_id'] ?? null;
-                $date = $_GET['date'] ?? null;
+            if ($method === 'POST') {
+                $tech_id = $input['tech_id'] ?? null;
+                $date = $input['date'] ?? null;
 
                 $sql = "
                     SELECT

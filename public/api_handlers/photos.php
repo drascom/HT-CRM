@@ -105,7 +105,7 @@ function handle_photos($action, $method, $db)
 
         case 'get':
             if ($method === 'GET') {
-                $id = $_GET['id'] ?? null;
+                $id = $input['id'] ?? null;
                 if ($id) {
                     $stmt = $db->prepare("
                         SELECT pp.*, pat.name AS album_type

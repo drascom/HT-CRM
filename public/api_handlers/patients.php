@@ -4,10 +4,10 @@ function handle_patients($action, $method, $db, $input = [])
     switch ($action) {
         case 'add':
             if ($method === 'POST') {
-                $name = trim($_POST['name'] ?? '');
-                $dob = trim($_POST['dob'] ?? '');
-                $user_id = $_POST['user_id'] ?? null;
-                $agency_id = $_POST['agency_id'] ?? null;
+                $name = trim($input['name'] ?? '');
+                $dob = trim($input['dob'] ?? '');
+                $user_id = $input['user_id'] ?? null;
+                $agency_id = $input['agency_id'] ?? null;
 
                 if (!empty($name)) {
                     $stmt = $db->prepare("INSERT INTO patients (name, dob, user_id, created_at, updated_at, agency_id) VALUES (?, ?, ?, datetime('now'), datetime('now'), ?)");
@@ -50,7 +50,7 @@ function handle_patients($action, $method, $db, $input = [])
             break;
         case 'delete':
             if ($method === 'POST') {
-                $id = $_POST['id'] ?? null;
+                $id = $input['id'] ?? null;
                 if ($id) {
                     $stmt = $db->prepare("DELETE FROM patients WHERE id = ?");
                     $stmt->execute([$id]);
@@ -63,7 +63,7 @@ function handle_patients($action, $method, $db, $input = [])
 
         case 'upload_avatar':
             if ($method === 'POST') {
-                $patient_id = $_POST['id'] ?? null; // Assuming 'id' is used for patient_id in the upload request
+                $patient_id = $input['id'] ?? null; // Assuming 'id' is used for patient_id in the upload request
                 if ($patient_id && isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK) {
                     $upload_dir = __DIR__ . '/../uploads/avatars/';
                     if (!is_dir($upload_dir)) {
@@ -136,8 +136,8 @@ function handle_patients($action, $method, $db, $input = [])
             break;
 
         case 'get':
-            if ($method === 'GET') {
-                $id = $_GET['id'] ?? null;
+            if ($method === 'POST') {
+                $id = $input['id'] ?? null;
                 if ($id) {
                     // Get patient info
                     $stmt = $db->prepare("SELECT * FROM patients WHERE id = ?");
@@ -177,7 +177,7 @@ function handle_patients($action, $method, $db, $input = [])
             break;
 
         case 'list':
-            if ($method === 'GET') {
+            if ($method === 'POST') {
                 $agency_id = $_GET['agency'] ?? null;
 
                 if ($agency_id) {
@@ -209,8 +209,8 @@ function handle_patients($action, $method, $db, $input = [])
             break;
 
         case 'find_by_name':
-            if ($method === 'GET') {
-                $name = trim($_GET['name'] ?? '');
+            if ($method === 'POST') {
+                $name = trim($input['name'] ?? '');
                 if (!empty($name)) {
                     $stmt = $db->prepare("SELECT id, name, avatar FROM patients WHERE name = ?");
                     $stmt->execute([$name]);

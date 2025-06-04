@@ -3,8 +3,8 @@ function handle_rooms($action, $method, $db, $input = [])
 {
     switch ($action) {
         case 'get':
-            if ($method === 'GET') {
-                $id = $_GET['id'] ?? null;
+            if ($method === 'POST') {
+                $id = $input['id'] ?? null;
 
                 if (!$id) {
                     return ['success' => false, 'error' => 'Room ID is required.'];
@@ -23,8 +23,8 @@ function handle_rooms($action, $method, $db, $input = [])
             break;
 
         case 'list':
-            if ($method === 'GET') {
-                $date = $_GET['date'] ?? null;
+            if ($method === 'POST') {
+                $date = $input['date'] ?? null;
 
                 if ($date) {
                     // Get only available rooms for the specified date

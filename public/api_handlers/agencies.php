@@ -118,7 +118,7 @@ function handle_agencies($action, $method, $db, $input = [])
             break;
 
         case 'get_all':
-            if ($method === 'GET') {
+            if ($method === 'POST') {
                 // Only admin can see all agencies
                 if ($_SESSION['role'] !== 'admin') {
                     return ['success' => false, 'error' => 'Unauthorized access.'];
@@ -132,7 +132,7 @@ function handle_agencies($action, $method, $db, $input = [])
             break;
 
         case 'list':
-            if ($method === 'GET') {
+            if ($method === 'POST') {
                 // Anyone can get the list of agencies for dropdown purposes
                 $stmt = $db->query("SELECT id, name FROM agencies ORDER BY name");
                 $agencies = $stmt->fetchAll(PDO::FETCH_ASSOC);

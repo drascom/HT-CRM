@@ -109,14 +109,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const userRole = '<?php echo get_user_role(); ?>';
         const userAgencyId = '<?php echo get_user_agency_id(); ?>';
 
-        // Build API URL with agency filter for agents
-        let apiUrl = 'api.php?entity=surgeries&action=list';
+        // Build API request data with agency filter for agents
+        let requestData = {};
         if (userRole === 'agent' && userAgencyId) {
-            apiUrl += `&agency=${userAgencyId}`;
+            requestData.agency = userAgencyId;
         }
 
-        fetch(apiUrl)
-            .then(response => response.json())
+        apiRequest('surgeries', 'list', requestData)
             .then(data => {
                 // Hide loading spinner
                 document.getElementById('loading-spinner').style.display = 'none';

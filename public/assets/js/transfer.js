@@ -81,8 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 debugLogJS('Checking if patient exists');
                 this.textContent = 'Checking patient...';
 
-                const lookupResponse = await fetch(`api.php?entity=patient_lookup&action=find_by_name&name=${encodeURIComponent(cleanedPatientName)}`);
-                const lookupData = await lookupResponse.json();
+                const lookupData = await apiRequest('patient_lookup', 'find_by_name', { name: cleanedPatientName });
 
                 debugLogJS('Patient lookup response', {
                     success: lookupData.success,

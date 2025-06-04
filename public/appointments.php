@@ -197,15 +197,11 @@ async function loadInitialData() {
     
     try {
         // Load rooms, patients, and appointments in parallel
-        const [roomsResponse, patientsResponse, appointmentsResponse] = await Promise.all([
-            fetch('api.php?entity=rooms&action=list'),
-            fetch('api.php?entity=patients&action=list'),
-            fetch('api.php?entity=appointments&action=list')
+        const [roomsData, patientsData, appointmentsData] = await Promise.all([
+            apiRequest('rooms', 'list'),
+            apiRequest('patients', 'list'),
+            apiRequest('appointments', 'list')
         ]);
-
-        const roomsData = await roomsResponse.json();
-        const patientsData = await patientsResponse.json();
-        const appointmentsData = await appointmentsResponse.json();
 
         if (roomsData.success) {
             rooms = roomsData.rooms || [];
@@ -316,22 +312,15 @@ function applyFilters() {
     const date = document.getElementById('filter-date').value;
     const roomId = document.getElementById('filter-room').value;
     const type = document.getElementById('filter-type').value;
-    
-    let url = 'api.php?entity=appointments&action=list';
-    const params = [];
-    
-    if (date) params.push(`date=${date}`);
-    if (roomId) params.push(`room_id=${roomId}`);
-    if (type) params.push(`type=${type}`);
-    
-    if (params.length > 0) {
-        url += '&' + params.join('&');
-    }
-    
+
+    const filterData = {};
+    if (date) filterData.date = date;
+    if (roomId) filterData.room_id = roomId;
+    if (type) filterData.type = type;
+
     showLoading(true);
-    
-    fetch(url)
-        .then(response => response.json())
+
+    apiRequest('appointments', 'list', filterData)
         .then(data => {
             if (data.success) {
                 appointments = data.appointments || [];

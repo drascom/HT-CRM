@@ -251,8 +251,7 @@ class RoomAvailability {
 
         try {
             // Load rooms
-            const roomsResponse = await fetch('api.php?entity=rooms&action=list');
-            const roomsData = await roomsResponse.json();
+            const roomsData = await apiRequest('rooms', 'list');
 
             if (!roomsData.success) {
                 throw new Error(roomsData.error || 'Failed to load rooms');
@@ -267,8 +266,7 @@ class RoomAvailability {
             const startDate = this.formatDate(this.currentWeekStart);
             const endDate = this.formatDate(weekEnd);
 
-            const availResponse = await fetch(`api.php?entity=availability&action=range&start=${startDate}&end=${endDate}`);
-            const availData = await availResponse.json();
+            const availData = await apiRequest('availability', 'range', { start: startDate, end: endDate });
 
             if (!availData.success) {
                 throw new Error(availData.error || 'Failed to load availability');

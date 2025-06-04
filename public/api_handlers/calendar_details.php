@@ -1,9 +1,9 @@
 <?php
 function handle_calendar_details($action, $method, $db, $input = [])
 {
-    if ($method === 'GET') {
-        $room_id = $_GET['room_id'] ?? null;
-        $date = $_GET['date'] ?? null;
+    if ($method === 'POST') {
+        $room_id = $input['room_id'] ?? null;
+        $date = $input['date'] ?? null;
         
         if (!$room_id || !$date) {
             return ['success' => false, 'error' => 'Room ID and date are required'];

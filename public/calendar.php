@@ -156,13 +156,10 @@ class CustomCalendar {
 
         try {
             // Load surgeries and rooms in parallel
-            const [surgeriesResponse, roomsResponse] = await Promise.all([
-                fetch('api.php?entity=surgeries&action=list'),
-                fetch('api.php?entity=rooms&action=list')
+            const [surgeriesData, roomsData] = await Promise.all([
+                apiRequest('surgeries', 'list'),
+                apiRequest('rooms', 'list')
             ]);
-
-            const surgeriesData = await surgeriesResponse.json();
-            const roomsData = await roomsResponse.json();
 
             if (surgeriesData.success) {
                 this.surgeries = surgeriesData.surgeries || [];
@@ -178,8 +175,8 @@ class CustomCalendar {
                 this.showError('Failed to load rooms');
             }
 
-            // Initialize appointment summaries cache
-            this.appointmentSummaries = new Map();
+            // Load appointment summaries for the current month
+            await this.loadMonthAppointments();
 
             await this.render();
         } catch (error) {
@@ -188,6 +185,28 @@ class CustomCalendar {
         } finally {
             this.isLoading = false;
             this.showLoading(false);
+        }
+    }
+
+    async loadMonthAppointments() {
+        const year = this.currentDate.getFullYear();
+        const month = this.currentDate.getMonth() + 1; // JavaScript months are 0-indexed
+
+        try {
+            const data = await apiRequest('calendar_summary', 'get', { year: year, month: month });
+
+            if (data.success) {
+                this.monthAppointments = data.appointments || {};
+                this.monthSurgeries = data.surgeries || {};
+            } else {
+                console.error('Error fetching month appointments:', data.error);
+                this.monthAppointments = {};
+                this.monthSurgeries = {};
+            }
+        } catch (error) {
+            console.error('Error fetching month appointments:', error);
+            this.monthAppointments = {};
+            this.monthSurgeries = {};
         }
     }
 
@@ -200,70 +219,35 @@ class CustomCalendar {
         console.error(message);
     }
 
-    async getAppointmentSummary(roomId, date) {
-        const cacheKey = `${roomId}-${date}`;
+    getAppointmentSummary(roomId, date) {
+        const key = `${roomId}-${date}`;
 
-        // Check cache first
-        if (this.appointmentSummaries.has(cacheKey)) {
-            return this.appointmentSummaries.get(cacheKey);
-        }
+        // Get appointment data from cached month data
+        const appointmentData = this.monthAppointments[key] || {
+            consult_count: 0,
+            cosmetic_count: 0
+        };
 
-        try {
-            const url = `api.php?entity=calendar_summary&action=get&room_id=${roomId}&date=${date}`;
-            const response = await fetch(url);
+        // Get surgery data from cached month data
+        const surgeryData = this.monthSurgeries[key] || null;
 
-            if (!response.ok) {
-                console.error('HTTP error:', response.status, response.statusText);
-                return {
-                    consult_count: 0,
-                    cosmetic_count: 0,
-                    surgery: false
-                };
-            }
-
-            const text = await response.text();
-            let data;
-
-            try {
-                data = JSON.parse(text);
-            } catch (parseError) {
-                console.error('JSON parse error:', parseError, 'Response text:', text);
-                return {
-                    consult_count: 0,
-                    cosmetic_count: 0,
-                    surgery: false
-                };
-            }
-
-            if (data && data.success) {
-                // Cache the result
-                this.appointmentSummaries.set(cacheKey, data);
-                return data;
-            } else {
-                console.error('API error response:', data);
-                return {
-                    consult_count: 0,
-                    cosmetic_count: 0,
-                    surgery: false
-                };
-            }
-        } catch (error) {
-            console.error('Error fetching appointment summary:', error);
-            return {
-                consult_count: 0,
-                cosmetic_count: 0,
-                surgery: false
-            };
-        }
+        return {
+            consult_count: appointmentData.consult_count,
+            cosmetic_count: appointmentData.cosmetic_count,
+            surgery: surgeryData ? true : false,
+            surgery_label: surgeryData ? surgeryData.patient_name : null
+        };
     }
 
-    navigateMonth(direction) {
+    async navigateMonth(direction) {
         this.currentDate.setMonth(this.currentDate.getMonth() + direction);
+        await this.loadMonthAppointments();
         this.render().catch(console.error);
     }
 
-    goToToday() {
+    async goToToday() {
         this.currentDate = new Date();
+        await this.loadMonthAppointments();
         this.render().catch(console.error);
     }
 
@@ -381,7 +365,7 @@ class CustomCalendar {
                         roomSlot.dataset.date = this.formatDateForAPI(dayDate);
 
                         // Get appointment summary for this room and date
-                        const summary = await this.getAppointmentSummary(room.id, this.formatDateForAPI(dayDate));
+                        const summary = this.getAppointmentSummary(room.id, this.formatDateForAPI(dayDate));
 
                         // Get surgery for this room and date
                         const roomSurgery = this.getSurgeryForRoomAndDate(room.id, dayDate);
@@ -391,23 +375,87 @@ class CustomCalendar {
 
                         if (hasActivity) {
                             roomSlot.classList.add('booked');
-                            roomSlot.innerHTML = this.createCombinedSlotContent(room, {
-                                consult_count: summary.consult_count,
-                                cosmetic_count: summary.cosmetic_count,
-                                surgery: roomSurgery,
-                                surgery_label: roomSurgery ? `${roomSurgery.patient_name}` : null
-                            });
 
-                            // Make it clickable to view details
-                            roomSlot.addEventListener('click', (e) => {
-                                e.preventDefault();
-                                this.openRoomDetailsModal(room.id, this.formatDateForAPI(dayDate), room
-                                    .name);
-                            });
+                            // Check user role for display content
+                            const userRole = getCookie('user_role') || '<?php echo get_user_role(); ?>';
+
+                            if (userRole === 'agent') {
+                                // For agents, check if surgery belongs to their agency
+                                const userAgencyId = '<?php echo get_user_agency_id(); ?>';
+
+                                // If there's a surgery, check if agent can view it
+                                if (roomSurgery) {
+                                    const canViewSurgery = this.canAgentViewSurgery(roomSurgery, userAgencyId);
+
+                                    if (canViewSurgery) {
+                                        // Agent can see this surgery - show details
+                                        roomSlot.innerHTML = this.createCombinedSlotContent(room, {
+                                            consult_count: summary.consult_count,
+                                            cosmetic_count: summary.cosmetic_count,
+                                            surgery: roomSurgery,
+                                            surgery_label: `${roomSurgery.patient_name}`
+                                        });
+
+                                        // Make it clickable to view details
+                                        roomSlot.addEventListener('click', (e) => {
+                                            e.preventDefault();
+                                            this.openRoomDetailsModal(room.id, this.formatDateForAPI(
+                                                dayDate), room.name);
+                                        });
+                                    } else {
+                                        // Agent cannot see this surgery - show "Not Available"
+                                        roomSlot.innerHTML = this.createNotAvailableSlotContent(room);
+                                        // No click event for agents on other agency's slots
+                                    }
+                                } else {
+                                    // No surgery but has other activities (consultations/cosmetic)
+                                    // For now, show the activities (agents can see consultations/cosmetic)
+                                    roomSlot.innerHTML = this.createCombinedSlotContent(room, {
+                                        consult_count: summary.consult_count,
+                                        cosmetic_count: summary.cosmetic_count,
+                                        surgery: null,
+                                        surgery_label: null
+                                    });
+
+                                    // Make it clickable to view details
+                                    roomSlot.addEventListener('click', (e) => {
+                                        e.preventDefault();
+                                        this.openRoomDetailsModal(room.id, this.formatDateForAPI(dayDate),
+                                            room.name);
+                                    });
+                                }
+                            } else {
+                                // For admin/editor, show full details
+                                roomSlot.innerHTML = this.createCombinedSlotContent(room, {
+                                    consult_count: summary.consult_count,
+                                    cosmetic_count: summary.cosmetic_count,
+                                    surgery: roomSurgery,
+                                    surgery_label: roomSurgery ? `${roomSurgery.patient_name}` : null
+                                });
+
+                                // Make it clickable to view details
+                                roomSlot.addEventListener('click', (e) => {
+                                    e.preventDefault();
+                                    this.openRoomDetailsModal(room.id, this.formatDateForAPI(dayDate), room
+                                        .name);
+                                });
+                            }
                         } else {
                             // Room is available - show empty slot
                             roomSlot.classList.add('available');
                             roomSlot.innerHTML = this.createEmptySlotContent(room);
+
+                            // Make it clickable to open add surgery form
+                            roomSlot.addEventListener('click', (e) => {
+                                e.preventDefault();
+
+                                const dateForAPI = this.formatDateForAPI(dayDate);
+                                if (room.types === 'surgery') {
+                                    this.openSurgeryForm(room.id, dateForAPI);
+                                } else {
+                                    this.openAppointmentForm(room.id, dateForAPI, room.types);
+                                }
+                            });
                         }
 
                         roomSlotsEl.appendChild(roomSlot);
@@ -541,13 +589,29 @@ class CustomCalendar {
     }
 
     openSurgeryForm(roomId, date) {
-        // Open add surgery form with pre-selected room and date
-        const url = `add_edit_surgery.php?room_id=${roomId}&date=${date}`;
+        // Check user role and redirect accordingly
+        const userRole = getCookie('user_role') || '<?php echo get_user_role(); ?>';
+
+        if (userRole === 'agent') {
+            // Agents use the quick add surgery form
+            const url = `quick_add_surgery.php?room_id=${roomId}&date=${date}`;
+            window.location.href = url;
+        } else {
+            // Admin/Editor use the full add surgery form
+            const url = `add_edit_surgery.php?room_id=${roomId}&date=${date}`;
+            window.location.href = url;
+        }
+    }
+    openAppointmentForm(roomId, date, roomType) {
+        // Open add appointment form with pre-selected room, date, and type
+        let url = `add_appointment.php?room_id=${roomId}&date=${date}`;
+        if (roomType) {
+            url += `&room_type=${encodeURIComponent(roomType)}`;
+        }
         window.location.href = url;
     }
 
     createSurgerySlotContent(room, surgery) {
-        console.log("surgery: ", surgery)
         return `
             <div class="room-badge">${room.name} ----</div>
             <div class="surgery-content">
@@ -566,9 +630,38 @@ class CustomCalendar {
         return `
             <div class="room-badge available">${room.name}</div>
             <div class="empty-slot">
-                <div class="add-surgery-text">+ </div>
             </div>
         `;
+    }
+
+    createNotAvailableSlotContent(room) {
+        return `
+            <div class="room-badge booked">${room.name}</div>
+            <div class="not-available-slot">
+                <div class="not-available-text">Not Available</div>
+            </div>
+        `;
+    }
+
+    canAgentViewSurgery(surgery, userAgencyId) {
+        // If no surgery, agent can't view anything
+        if (!surgery) {
+            return false;
+        }
+
+        // If no agency ID for user, can't determine access
+        if (!userAgencyId) {
+            return false;
+        }
+
+        // Check if surgery belongs to agent's agency
+        // Convert both to strings for comparison to avoid type issues
+
+        if (surgery.agency_id && String(surgery.agency_id) === String(userAgencyId)) {
+            return true;
+        }
+
+        return false;
     }
 
     formatDate(dateString) {
@@ -613,9 +706,7 @@ class CustomCalendar {
             modal.show();
 
             // Fetch detailed appointment data
-            const response = await fetch(
-                `api.php?entity=calendar_details&action=get&room_id=${roomId}&date=${date}`);
-            const data = await response.json();
+            const data = await apiRequest('calendar_details', 'get', { room_id: roomId, date: date });
 
             if (data.success) {
                 modalBody.innerHTML = this.createModalContent(data);
@@ -713,6 +804,14 @@ class CustomCalendar {
             day: 'numeric'
         });
     }
+}
+
+// Helper function to get cookie value
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+    return null;
 }
 
 // Initialize calendar when DOM is loaded

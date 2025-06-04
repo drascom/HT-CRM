@@ -3,8 +3,8 @@ function handle_availability($action, $method, $db, $input = [])
 {
     switch ($action) {
         case 'byDate':
-            if ($method === 'GET') {
-                $date = $_GET['date'] ?? null;
+            if ($method === 'POST') {
+                $date = $input['date'] ?? null;
 
                 if (!$date) {
                     return ['success' => false, 'error' => 'Date is required.'];
@@ -72,9 +72,9 @@ function handle_availability($action, $method, $db, $input = [])
             break;
 
         case 'range':
-            if ($method === 'GET') {
-                $start = $_GET['start'] ?? null;
-                $end = $_GET['end'] ?? null;
+            if ($method === 'POST') {
+                $start = $input['start'] ?? null;
+                $end = $input['end'] ?? null;
 
                 if (!$start || !$end) {
                     return ['success' => false, 'error' => 'Start and end dates are required.'];

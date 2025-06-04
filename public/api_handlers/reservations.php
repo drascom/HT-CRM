@@ -4,9 +4,9 @@ function handle_reservations($action, $method, $db, $input = [])
     switch ($action) {
         case 'reserve':
             if ($method === 'POST') {
-                $room_id = $_POST['room_id'] ?? $input['room_id'] ?? null;
-                $surgery_id = $_POST['surgery_id'] ?? $input['surgery_id'] ?? null;
-                $reserved_date = $_POST['reserved_date'] ?? $input['reserved_date'] ?? null;
+                $room_id = $input['room_id'] ?? null;
+                $surgery_id = $input['surgery_id'] ?? null;
+                $reserved_date = $input['reserved_date'] ?? null;
 
                 if (!$room_id || !$surgery_id || !$reserved_date) {
                     return ['success' => false, 'error' => 'Room ID, surgery ID, and reserved date are required.'];

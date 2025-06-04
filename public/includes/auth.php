@@ -1,5 +1,8 @@
 <?php
-session_start();
+// Start session only if one isn't already active
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 // Function to check if a user is logged in
 function is_logged_in()
@@ -43,13 +46,13 @@ if (!is_logged_in() && $current_page !== 'login.php' && $current_page !== 'signu
 // Function to get current user's agency ID
 function get_user_agency_id()
 {
-    return $_SESSION['agency_id'] ?? null;
+    return $_SESSION['agency_id'] ?? '';
 }
 
 // Function to get current user's role
 function get_user_role()
 {
-    return $_SESSION['role'] ?? null;
+    return $_SESSION['role'] ?? '';
 }
 
 // Function to register a new user
@@ -76,40 +79,32 @@ function register_user($email, $username, $password, $agency_id = null)
     }
 }
 
+// Function to get current user's ID
+function get_user_id()
+{
+    return $_SESSION['user_id'] ?? null;
+}
+
 // Function to check if current user is an admin
 function is_admin()
 {
-    global $pdo;
-    if (!isset($_SESSION['user_id'])) {
-        return false;
-    }
-    $stmt = $pdo->prepare("SELECT role FROM users WHERE id = ?");
-    $stmt->execute([$_SESSION['user_id']]);
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
-    return $user && $user['role'] === 'admin';
+    return isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
 }
+
 // Function to check if current user is an editor
 function is_editor()
 {
-    global $pdo;
-    if (!isset($_SESSION['user_id'])) {
-        return false;
-    }
-    $stmt = $pdo->prepare("SELECT role FROM users WHERE id = ?");
-    $stmt->execute([$_SESSION['user_id']]);
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
-    return $user && $user['role'] === 'editor';
+    return isset($_SESSION['role']) && $_SESSION['role'] === 'editor';
 }
 
 // Function to check if current user is an agent
 function is_agent()
 {
-    global $pdo;
-    if (!isset($_SESSION['user_id'])) {
-        return false;
-    }
-    $stmt = $pdo->prepare("SELECT role FROM users WHERE id = ?");
-    $stmt->execute([$_SESSION['user_id']]);
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
-    return $user && $user['role'] === 'agent';
+    return isset($_SESSION['role']) && $_SESSION['role'] === 'agent';
+}
+
+// Function to check if current user is a technician
+function is_technician()
+{
+    return isset($_SESSION['role']) && $_SESSION['role'] === 'technician';
 }

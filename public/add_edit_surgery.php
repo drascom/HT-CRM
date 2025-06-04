@@ -44,10 +44,42 @@ require_once 'includes/header.php';
 <!-- Surgery Form -->
 <div class="card">
     <div class="card-header">
-        <h5 class="mb-0">
-            <i class="fas fa-hospital me-2"></i>
-            Surgery Information
-        </h5>
+        <div class="d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">
+                <i class="fas fa-hospital me-2"></i>
+                Surgery Information
+            </h5>
+            <div class="d-flex align-items-center">
+                <!-- Status Display -->
+                <div class="me-3">
+                    <span class="text-muted small">Status:</span>
+                    <span id="status-display" class="badge bg-secondary ms-1">Loading...</span>
+                    <?php if (is_admin()): ?>
+                    <button type="button" class="btn btn-sm btn-outline-secondary ms-1" id="edit-status-btn"
+                        title="Edit Status">
+                        <i class="fas fa-pen fa-xs"></i>
+                    </button>
+                    <?php endif; ?>
+                    <!-- Inline Status Edit (Hidden by default) -->
+                    <div id="status-edit-container" class="ms-1" style="display: none;">
+                        <select class="form-select form-select-sm d-inline-block" id="status-inline"
+                            style="width: auto;">
+                            <option value="scheduled">Scheduled</option>
+                            <option value="confirmed">Confirmed</option>
+                            <option value="completed">Completed</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+                        <button type="button" class="btn btn-sm btn-success ms-1" id="save-status-btn" title="Save">
+                            <i class="fas fa-check fa-xs"></i>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-secondary ms-1" id="cancel-status-btn"
+                            title="Cancel">
+                            <i class="fas fa-times fa-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="card-body">
         <form id="surgery-form">
@@ -57,110 +89,122 @@ require_once 'includes/header.php';
             <input type="hidden" name="entity" value="surgeries">
             <input type="hidden" name="action" value="<?php echo $is_editing ? 'update' : 'add'; ?>">
 
-            <?php if (!$is_editing): // Only show patient selection when adding 
-            ?>
-            <div class="mb-3">
-                <label for="patient_id" class="form-label">
-                    <i class="fas fa-user me-1"></i>
-                    Patient
-                </label>
-                <div class="input-group">
-                    <select class="form-select" id="patient_id" name="patient_id" required>
-                        <option value="">Select Patient</option>
-                        <!-- Patient options will be loaded via JavaScript -->
-                    </select>
-                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                        data-bs-target="#newPatientModal">
-                        <i class="fas fa-plus me-1"></i>
-                        <span class="d-none d-sm-inline">New Patient</span>
-                    </button>
+            <!-- Date and Room Section -->
+            <div class="border rounded p-3 mb-4 bg-light">
+                <h6 class="text-muted mb-3">
+                    <i class="fas fa-calendar-alt me-2"></i>Date & Room Selection
+                </h6>
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Date Field -->
+                        <div class="mb-3" <?php echo !empty($date_from_url) ? 'style="display: none;"' : ''; ?>>
+                            <label for="date" class="form-label">Surgery Date *</label>
+                            <input type="date" class="form-control" id="date" name="date"
+                                value="<?php echo $date_from_url; ?>" required>
+                        </div>
+                        <?php if (!empty($date_from_url)): ?>
+                        <div class="mb-3">
+                            <label class="form-label">Selected Date</label>
+                            <div class="form-control-plaintext fw-bold text-primary">
+                                <i
+                                    class="fas fa-calendar me-2"></i><?php echo date('F j, Y', strtotime($date_from_url)); ?>
+                            </div>
+                            <input type="hidden" name="date" value="<?php echo $date_from_url; ?>">
+                        </div>
+                        <?php endif; ?>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Room Field -->
+                        <div class="mb-3" <?php echo !empty($room_id_from_url) ? 'style="display: none;"' : ''; ?>>
+                            <label for="room_id" class="form-label">Operating Room</label>
+                            <select class="form-select" id="room_id" name="room_id">
+                                <option value="">Select Room</option>
+                                <!-- Room options will be loaded via JavaScript -->
+                            </select>
+                            <div class="form-text" id="room-availability-text"></div>
+                        </div>
+                        <?php if (!empty($room_id_from_url)): ?>
+                        <div class="mb-3">
+                            <label class="form-label">Selected Room</label>
+                            <div class="form-control-plaintext fw-bold text-success">
+                                <i class="fas fa-door-open me-2"></i><span id="selected-room-name">Loading...</span>
+                            </div>
+                            <input type="hidden" name="room_id" value="<?php echo $room_id_from_url; ?>">
+                        </div>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
-            <?php else: // If editing, patient_id is part of the surgery data fetched via API 
-            ?>
+
+            <!-- Patient Selection -->
+            <?php if (!$is_editing): // Only show patient selection when adding ?>
+            <div class="mb-4">
+                <div class="mb-3">
+                    <label for="patient_id" class="form-label">Patient *</label>
+                    <div class="input-group">
+                        <select class="form-select" id="patient_id" name="patient_id" required>
+                            <option value="">Select Patient</option>
+                            <!-- Patient options will be loaded via JavaScript -->
+                        </select>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                            data-bs-target="#newPatientModal">
+                            <i class="fas fa-plus me-1"></i>
+                            <span class="d-none d-sm-inline">New Patient</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <?php else: // If editing, patient_id is part of the surgery data fetched via API ?>
             <input type="hidden" name="patient_id" id="patient_id">
             <?php endif; ?>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="mb-3">
-                        <label for="date" class="form-label">
-                            <i class="fas fa-calendar me-1"></i>
-                            Surgery Date
-                        </label>
-                        <input type="date" class="form-control" id="date" name="date" required>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="mb-3">
-                        <label for="status" class="form-label">
-                            <i class="fas fa-info-circle me-1"></i>
-                            Status
-                        </label>
-                        <select class="form-select" id="status" name="status" required>
-                            <option value="scheduled">Scheduled</option>
-                            <option value="confirmed">Confirmed</option>
-                            <option value="completed">Completed</option>
-                            <option value="cancelled">Cancelled</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="mb-3">
-                        <label for="graft_count" class="form-label">
-                            <i class="fas fa-hashtag me-1"></i>
-                            Graft Count
-                        </label>
-                        <input type="number" class="form-control" id="graft_count" name="graft_count" min="0"
-                            placeholder="Enter graft count">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="mb-3">
-                        <label for="room_id" class="form-label">
-                            <i class="fas fa-door-open me-1"></i>
-                            Operating Room
-                        </label>
-                        <select class="form-select" id="room_id" name="room_id">
-                            <option value="">Select Room</option>
-                            <!-- Room options will be loaded via JavaScript -->
-                        </select>
-                        <div class="form-text" id="room-availability-text"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="mb-3">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <label for="technicians" class="form-label mb-0">
-                                <i class="fas fa-user-md me-1"></i>
-                                Assigned Technicians <span class="text-danger">*</span>
-                                <small class="text-muted">(minimum 2 required)</small>
-                            </label>
-                            <button type="button" class="btn btn-primary btn-sm" id="add-technicians-btn">
-                                <i class="fas fa-plus me-1"></i>
-                                Add
-                            </button>
-                        </div>
-                        <select class="form-select" id="technicians" name="technicians[]" multiple
-                            style="display: none;">
-                            <!-- This select is hidden - technician selection happens via modal -->
-                        </select>
-                        <div id="technicians-feedback" class="invalid-feedback">
-                            At least 2 technicians must be assigned to this surgery.
-                        </div>
-                        <div id="assigned-technicians" class="mt-2">
-                            <!-- Assigned technicians will be displayed here -->
+            <!-- Surgery Details -->
+            <fieldset class="border rounded p-3 mb-4">
+                <legend class="h6 text-muted mb-3">
+                    <i class="fas fa-hospital me-2"></i>Surgery Details
+                </legend>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="graft_count" class="form-label">Graft Count</label>
+                            <input type="number" class="form-control" id="graft_count" name="graft_count" min="0"
+                                placeholder="Enter graft count">
                         </div>
                     </div>
                 </div>
-            </div>
+                <!-- Hidden status field for form submission -->
+                <input type="hidden" id="status" name="status" value="scheduled">
+            </fieldset>
 
+            <!-- Technicians Section -->
+            <fieldset class="border rounded p-3 mb-4">
+                <legend class="h6 text-muted mb-3">
+                    <i class="fas fa-user-md me-2"></i>Assigned Technicians
+                </legend>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <label for="technicians" class="form-label mb-0">
+                            Select Technicians <span class="text-danger">*</span>
+                            <small class="text-muted">(minimum 2 required)</small>
+                        </label>
+                        <button type="button" class="btn btn-primary btn-sm" id="add-technicians-btn">
+                            <i class="fas fa-plus me-1"></i>
+                            Add Technicians
+                        </button>
+                    </div>
+                    <select class="form-select" id="technicians" name="technicians[]" multiple style="display: none;">
+                        <!-- This select is hidden - technician selection happens via modal -->
+                    </select>
+                    <div id="technicians-feedback" class="invalid-feedback">
+                        At least 2 technicians must be assigned to this surgery.
+                    </div>
+                    <div id="assigned-technicians" class="mt-2">
+                        <!-- Assigned technicians will be displayed here -->
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Notes Section -->
             <div class="mb-4">
                 <label for="notes" class="form-label">
                     <i class="fas fa-sticky-note me-1"></i>
@@ -307,6 +351,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const newPatientStatusDiv = document.getElementById('new-patient-status');
     let allAgencies = []; // Store all agencies for modal dropdown
 
+    // Global function to update status display (accessible from surgery data loading)
+    window.updateStatusDisplayFromData = function(status) {
+        const statusDisplay = document.getElementById('status-display');
+        const statusColors = {
+            'scheduled': 'bg-warning text-dark',
+            'confirmed': 'bg-info',
+            'completed': 'bg-success',
+            'cancelled': 'bg-danger'
+        };
+
+        if (statusDisplay) {
+            const statusText = status.charAt(0).toUpperCase() + status.slice(1);
+            const colorClass = statusColors[status] || 'bg-secondary';
+            statusDisplay.className = `badge ${colorClass} ms-1`;
+            statusDisplay.textContent = statusText;
+        }
+    };
 
     // Function to display messages
     function displayMessage(message, type = 'success') {
@@ -323,8 +384,7 @@ document.addEventListener('DOMContentLoaded', function() {
             populateModalAgencyDropdown();
         } else {
             // For admin and editor, fetch all agencies
-            fetch('api.php?entity=agencies&action=list')
-                .then(response => response.json())
+            apiRequest('agencies', 'list')
                 .then(data => {
                     if (data.success) {
                         allAgencies = data.agencies;
@@ -397,8 +457,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to load room options
     function loadRoomOptions(selectRoomId = null) { // Add parameter
-        fetch('api.php?entity=rooms&action=list')
-            .then(response => response.json())
+        apiRequest('rooms', 'list')
             .then(data => {
                 if (data.success) {
                     roomSelect.innerHTML = '<option value="">Select Room</option>';
@@ -419,16 +478,21 @@ document.addEventListener('DOMContentLoaded', function() {
                         checkRoomAvailability();
                     }
 
-                    console.log("All room options:", Array.from(roomSelect.options).map(opt => [opt.value,
-                        opt.text
-                    ])); // Added log
-                    console.log("roomToSelect to assign:", selectRoomId, typeof selectRoomId); // Added log
-
                     // Select the room if selectRoomId is provided
                     if (selectRoomId && roomSelect) {
                         roomSelect.value = String(selectRoomId); // Ensure type match
-                        console.log("room select done ", roomSelect,
-                            selectRoomId); // Add console log for verification
+                    }
+
+                    // Update the selected room name display if room is pre-selected from URL
+                    const roomIdFromUrl = <?php echo json_encode($room_id_from_url); ?>;
+                    if (roomIdFromUrl) {
+                        const selectedRoomNameSpan = document.getElementById('selected-room-name');
+                        if (selectedRoomNameSpan) {
+                            const selectedRoom = data.rooms.find(room => room.id == roomIdFromUrl);
+                            if (selectedRoom) {
+                                selectedRoomNameSpan.textContent = selectedRoom.name;
+                            }
+                        }
                     }
                 } else {
                     console.error('Error fetching room options:', data.error);
@@ -447,8 +511,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        fetch(`api.php?entity=availability&action=byDate&date=${selectedDate}`)
-            .then(response => response.json())
+        apiRequest('availability', 'byDate', { date: selectedDate })
             .then(data => {
                 if (data.success) {
                     const statistics = data.statistics;
@@ -534,14 +597,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const userRole = '<?php echo get_user_role(); ?>';
         const userAgencyId = '<?php echo get_user_agency_id(); ?>';
 
-        // Build API URL with agency filter for agents
-        let apiUrl = 'api.php?entity=patients&action=list';
+        // Build API request data with agency filter for agents
+        let requestData = {};
         if (userRole === 'agent' && userAgencyId) {
-            apiUrl += `&agency=${userAgencyId}`;
+            requestData.agency = userAgencyId;
         }
 
-        fetch(apiUrl)
-            .then(response => response.json())
+        apiRequest('patients', 'list', requestData)
             .then(data => {
                 if (data.success) {
                     patientSelect.innerHTML =
@@ -571,8 +633,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fetch surgery data if editing
     if (isEditing) {
         const surgeryId = surgeryIdInput.value;
-        fetch(`api.php?entity=surgeries&action=get&id=${surgeryId}`)
-            .then(response => response.json())
+        apiRequest('surgeries', 'get', { id: surgeryId })
             .then(data => {
                 if (data.success) {
                     const surgery = data.surgery;
@@ -581,6 +642,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.getElementById('status').value = surgery.status;
                     document.getElementById('graft_count').value = surgery.graft_count;
                     document.getElementById('notes').value = surgery.notes;
+
+                    // Update status display in header
+                    updateStatusDisplayFromData(surgery.status);
 
                     // Set the hidden patient_id for editing
                     if (patientIdHiddenInput) {
@@ -646,6 +710,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fetch agencies for modal
     fetchModalAgencies();
 
+    // Initialize status display and inline editing
+    initializeStatusDisplay();
+
     // Add event listener for date changes to check room availability
     if (dateInput) {
         dateInput.addEventListener('change', checkRoomAvailability);
@@ -674,8 +741,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // For now, we'll load all available technicians for the date
         // In the future, we could add period selection to the UI
-        fetch(`api.php?entity=techAvail&action=byDate&date=${selectedDate}`)
-            .then(response => response.json())
+        apiRequest('techAvail', 'byDate', { date: selectedDate })
             .then(data => {
                 if (data.success && data.technicians && data.technicians.length > 0) {
                     renderTechnicianList(data.technicians);
@@ -969,6 +1035,146 @@ document.addEventListener('DOMContentLoaded', function() {
             newPatientForm.reset();
             newPatientStatusDiv.innerHTML = '';
         });
+    }
+
+    // Initialize status display and inline editing functionality
+    function initializeStatusDisplay() {
+        const statusDisplay = document.getElementById('status-display');
+        const editStatusBtn = document.getElementById('edit-status-btn');
+        const statusEditContainer = document.getElementById('status-edit-container');
+        const statusInline = document.getElementById('status-inline');
+        const saveStatusBtn = document.getElementById('save-status-btn');
+        const cancelStatusBtn = document.getElementById('cancel-status-btn');
+        const statusHidden = document.getElementById('status');
+
+        // Status badge color mapping
+        const statusColors = {
+            'scheduled': 'bg-warning text-dark',
+            'confirmed': 'bg-info',
+            'completed': 'bg-success',
+            'cancelled': 'bg-danger'
+        };
+
+        // Function to update status display
+        function updateStatusDisplay(status) {
+            const statusText = status.charAt(0).toUpperCase() + status.slice(1);
+            const colorClass = statusColors[status] || 'bg-secondary';
+
+            statusDisplay.className = `badge ${colorClass} ms-1`;
+            statusDisplay.textContent = statusText;
+
+            // Update hidden field
+            statusHidden.value = status;
+
+            // Update inline select
+            if (statusInline) {
+                statusInline.value = status;
+            }
+        }
+
+        // Function to enter edit mode
+        function enterEditMode() {
+            console.log('Entering edit mode');
+            // Hide status display and edit button
+            if (statusDisplay) statusDisplay.style.display = 'none';
+            if (editStatusBtn) editStatusBtn.style.display = 'none';
+
+            // Show edit container
+            if (statusEditContainer) {
+                statusEditContainer.style.display = 'inline-block';
+                statusEditContainer.classList.add('d-inline-block');
+            }
+            console.log('edit container displayed');
+            if (statusInline) {
+                statusInline.value = statusHidden.value;
+                statusInline.focus();
+            }
+        }
+
+        // Function to exit edit mode
+        function exitEditMode() {
+            // Show status display and edit button
+            if (statusDisplay) {
+                statusDisplay.style.display = 'inline';
+            }
+            if (editStatusBtn) {
+                editStatusBtn.style.display = 'inline-block';
+            }
+
+            // Hide edit container
+            if (statusEditContainer) {
+                statusEditContainer.style.display = 'none';
+                statusEditContainer.classList.remove('d-inline-block');
+            }
+        }
+
+        // Function to save status
+        function saveStatus() {
+            const newStatus = statusInline.value;
+
+            // If editing existing surgery, save via API
+            if (isEditing) {
+                const formData = new FormData();
+                formData.append('entity', 'surgeries');
+                formData.append('action', 'updateStatus');
+                formData.append('id', surgeryIdInput.value);
+                formData.append('status', newStatus);
+
+                fetch('api.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            updateStatusDisplay(newStatus);
+                            exitEditMode();
+                            displayMessage('Status updated successfully!', 'success');
+                        } else {
+                            displayMessage(`Error updating status: ${data.error}`, 'danger');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error updating status:', error);
+                        displayMessage('Failed to update status. Please try again.', 'danger');
+                    });
+            } else {
+                // For new surgery, just update the display and hidden field
+                updateStatusDisplay(newStatus);
+                exitEditMode();
+            }
+        }
+
+        // Event listeners
+        if (editStatusBtn) {
+            editStatusBtn.addEventListener('click', enterEditMode);
+        }
+
+        if (saveStatusBtn) {
+            saveStatusBtn.addEventListener('click', saveStatus);
+        }
+
+        if (cancelStatusBtn) {
+            cancelStatusBtn.addEventListener('click', exitEditMode);
+        }
+
+        // Handle Enter and Escape keys in inline select
+        if (statusInline) {
+            statusInline.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    saveStatus();
+                } else if (e.key === 'Escape') {
+                    e.preventDefault();
+                    exitEditMode();
+                }
+            });
+        }
+
+        // Initialize with default status for new surgeries
+        if (!isEditing) {
+            updateStatusDisplay('scheduled');
+        }
     }
 });
 </script>

@@ -34,7 +34,7 @@ async function loadPatientProfileData(patientId) {
     }
 
     // Fetch patient details
-    const patient = await fetchData('api.php?entity=patients&action=get&id=' + patientId);
+    const patient = await apiRequest('patients', 'get', { id: patientId });
     if (patient && patient.patient && patient.patient.name) { // Access nested patient object
         document.getElementById('patient-name').innerText = sanitizeHTML(patient.name);
     } else {
@@ -43,7 +43,7 @@ async function loadPatientProfileData(patientId) {
 
 
     // Fetch surgeries
-    const surgeriesData = await fetchData('api.php?entity=surgeries&action=list&patient_id=' + patientId);
+    const surgeriesData = await apiRequest('surgeries', 'list', { patient_id: patientId });
     const surgeriesList = document.getElementById('surgeries-list');
     surgeriesList.innerHTML = ''; // Clear existing list
     if (surgeriesData && surgeriesData.surgeries && surgeriesData.surgeries.length > 0) { // Access nested surgeries array
@@ -61,7 +61,7 @@ async function loadPatientProfileData(patientId) {
 
 
     // Fetch photos
-    const photosData = await fetchData('api.php?entity=photos&action=list&patient_id=' + patientId);
+    const photosData = await apiRequest('photos', 'list', { patient_id: patientId });
     const photosList = document.getElementById('photos-list');
     photosList.innerHTML = ''; // Clear existing list
 

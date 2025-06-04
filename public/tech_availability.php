@@ -195,8 +195,7 @@ class TechAvailability {
 
         try {
             // Load technicians
-            const techsResponse = await fetch('api.php?entity=techs&action=list');
-            const techsData = await techsResponse.json();
+            const techsData = await apiRequest('techs', 'list');
 
             if (!techsData.success) {
                 throw new Error(techsData.error || 'Failed to load technicians');
@@ -421,8 +420,7 @@ class TechAvailability {
 
     async findAvailabilityId(techId, date, period) {
         try {
-            const response = await fetch(`api.php?entity=techAvail&action=list&tech_id=${techId}&date=${date}`);
-            const result = await response.json();
+            const result = await apiRequest('techAvail', 'list', { tech_id: techId, date: date });
 
             if (result.success) {
                 const avail = result.availability.find(a => a.period === period);

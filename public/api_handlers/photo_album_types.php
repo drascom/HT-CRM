@@ -41,7 +41,7 @@ function handle_photo_album_types($action, $method, $db)
 
         case 'get':
             if ($method === 'GET') {
-                $id = $_GET['id'] ?? null;
+                $id = $input['id'] ?? null;
                 if ($id) {
                     $stmt = $db->prepare("SELECT * FROM photo_album_types WHERE id = ?");
                     $stmt->execute([$id]);

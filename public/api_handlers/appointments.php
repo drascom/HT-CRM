@@ -113,8 +113,8 @@ function handle_appointments($action, $method, $db, $input = [])
             break;
 
         case 'get':
-            if ($method === 'GET') {
-                $id = $_GET['id'] ?? null;
+            if ($method === 'POST') {
+                $id = $input['id'] ?? null;
 
                 if (!$id) {
                     return ['success' => false, 'error' => 'Appointment ID is required'];
@@ -143,10 +143,10 @@ function handle_appointments($action, $method, $db, $input = [])
             break;
 
         case 'list':
-            if ($method === 'GET') {
-                $date = $_GET['date'] ?? null;
-                $room_id = $_GET['room_id'] ?? null;
-                $type = $_GET['type'] ?? null;
+            if ($method === 'POST') {
+                $date = $input['date'] ?? null;
+                $room_id = $input['room_id'] ?? null;
+                $type = $input['type'] ?? null;
 
                 try {
                     $sql = "

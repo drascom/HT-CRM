@@ -122,8 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function loadRooms() {
     showLoading(true);
 
-    fetch('api.php?entity=rooms&action=list')
-        .then(response => response.json())
+    apiRequest('rooms', 'list')
         .then(data => {
             if (data.success) {
                 renderRoomsTable(data.rooms);
@@ -216,8 +215,7 @@ function openRoomModal(roomId = null) {
 }
 
 function loadRoomData(roomId) {
-    fetch(`api.php?entity=rooms&action=get&id=${roomId}`)
-        .then(response => response.json())
+    apiRequest('rooms', 'get', { id: roomId })
         .then(data => {
             if (data.success) {
                 const room = data.room;

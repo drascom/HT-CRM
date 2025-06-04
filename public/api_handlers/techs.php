@@ -3,7 +3,7 @@ function handle_techs($action, $method, $db, $input = [])
 {
     switch ($action) {
         case 'list':
-            if ($method === 'GET') {
+            if ($method === 'POST') {
                 $stmt = $db->prepare("SELECT id, name, phone, availability, status, period, notes, is_active FROM technicians ORDER BY name");
                 $stmt->execute();
                 $techs = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -170,8 +170,8 @@ function handle_techs($action, $method, $db, $input = [])
             }
             break;
         case 'get':
-            if ($method === 'GET') {
-                $id = $_GET['id'] ?? null;
+            if ($method === 'POST') {
+                $id = $input['id'] ?? null;
 
                 if (!$id) {
                     return ['success' => false, 'error' => 'Technician ID is required.'];

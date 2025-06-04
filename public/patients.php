@@ -97,14 +97,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const userRole = '<?php echo get_user_role(); ?>';
         const userAgencyId = '<?php echo get_user_agency_id(); ?>';
 
-        // Build API URL with agency filter for agents
-        let apiUrl = 'api.php?entity=patients&action=list';
+        // Build API request data with agency filter for agents
+        let requestData = {};
         if (userRole === 'agent' && userAgencyId) {
-            apiUrl += `&agency=${userAgencyId}`;
+            requestData.agency = userAgencyId;
         }
 
-        fetch(apiUrl)
-            .then(response => response.json())
+        apiRequest('patients', 'list', requestData)
             .then(data => {
                 // Hide loading spinner
                 document.getElementById('loading-spinner').style.display = 'none';
@@ -266,8 +265,7 @@ document.addEventListener('DOMContentLoaded', function() {
             surgeriesListDiv.innerHTML = 'Loading surgeries...';
 
             // Fetch surgeries via AJAX
-            fetch(`api.php?entity=surgeries&action=list&patient_id=${patientId}`)
-                .then(response => response.json())
+            apiRequest('surgeries', 'list', { patient_id: patientId })
                 .then(data => {
                     surgeriesListDiv.innerHTML = ''; // Clear loading message
 

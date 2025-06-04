@@ -180,8 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function UserData(id) {
-        fetch(`api.php?entity=users&action=get&id=${id}`)
-            .then(response => response.json())
+        apiRequest('users', 'get', { id: id })
             .then(data => {
                 if (data.success) {
                     const user = data.user;
@@ -200,3 +199,5 @@ document.addEventListener('DOMContentLoaded', function() {
     UserData(user_id);
 });
 </script>
+
+<?php require_once 'includes/footer.php'; ?>

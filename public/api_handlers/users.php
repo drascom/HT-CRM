@@ -110,8 +110,8 @@ function handle_users($action, $method, $db, $request_data = [])
             break;
 
         case 'get':
-            if ($method === 'GET') {
-                $id = $_GET['id'] ?? null; // GET parameter for get_user
+            if ($method === 'POST') {
+                $id = $input['id'] ?? null;
                 if ($id) {
                     $stmt = $db->prepare("SELECT id, email, username, role, agency_id, created_at, updated_at FROM users WHERE id = ?");
                     $stmt->execute([$id]);
@@ -123,7 +123,7 @@ function handle_users($action, $method, $db, $request_data = [])
             break;
 
         case 'list':
-            if ($method === 'GET') {
+            if ($method === 'POST') {
                 $stmt = $db->query("SELECT id, email, username, role, agency_id, created_at, updated_at FROM users ORDER BY username");
                 return ['success' => true, 'users' => $stmt->fetchAll(PDO::FETCH_ASSOC)];
             }

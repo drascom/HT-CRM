@@ -206,8 +206,7 @@ include __DIR__ . '/includes/header.php';
 
         // Function to fetch agencies from the API
         function fetchAgencies() {
-            fetch('api.php?entity=agencies&action=list')
-                .then(response => response.json())
+            apiRequest('agencies', 'list')
                 .then(data => {
                     if (data.success) {
                         allAgencies = data.agencies;
@@ -241,8 +240,7 @@ include __DIR__ . '/includes/header.php';
 
         // Function to fetch users from the API
         function fetchUsers() {
-            fetch('api.php?entity=users&action=list')
-                .then(response => response.json())
+            apiRequest('users', 'list')
                 .then(data => {
                     if (data.success) {
                         allUsers = data.users; // Store fetched users
@@ -335,8 +333,7 @@ include __DIR__ . '/includes/header.php';
                     showPasswordHelp(false); // Hide password help when editing
 
                     // Fetch user data to populate the form
-                    fetch(`api.php?entity=users&action=get&id=${userId}`)
-                        .then(response => response.json())
+                    apiRequest('users', 'get', { id: userId })
                         .then(data => {
                             if (data.success && data.user) {
                                 emailInput.value = data.user.email;

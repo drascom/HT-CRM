@@ -55,9 +55,10 @@ if ($method === 'POST') {
             $action = $input['action'] ?? null;
         }
     } else {
-        // For standard form-encoded POST requests, entity and action should be in $_POST
-        $entity = $_POST['entity'] ?? null;
-        $action = $_POST['action'] ?? null;
+        // For standard form-encoded POST requests, merge all $_POST data
+        $input = $_POST;
+        $entity = $input['entity'] ?? null;
+        $action = $input['action'] ?? null;
     }
 } elseif ($method === 'PUT') {
     // For PUT requests, read from the request body (assuming JSON)
@@ -85,9 +86,8 @@ try {
             // Log function check
             if (function_exists($handler_function)) {
                 $db = get_db();
-                // Pass the decoded input data to the handler function if available
-                $handler_input = ($method === 'POST' && strpos($_SERVER['CONTENT_TYPE'] ?? '', 'application/json') !== false) || $method === 'PUT' ? ($input ?? []) : [];
-                $response = $handler_function($action, $method, $db, $handler_input);
+                // Pass the input data to the handler function
+                $response = $handler_function($action, $method, $db, $input ?? []);
             } else {
                 $log_message = "Handler function not found for entity '{$entity}', action '{$action}', method '{$method}': " . $handler_function;
                 log_response(['log' => $log_message]);

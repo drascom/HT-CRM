@@ -3,7 +3,7 @@ require_once __DIR__ . '/../includes/db.php'; // Include database connection
 
 function handle_patient_lookup($action, $method, $db)
 {
-    if ($method === 'GET' && $action === 'find_by_name') {
+    if ($method === 'POST' && $action === 'find_by_name') {
         $name = trim($_GET['name'] ?? '');
         if (!empty($name)) {
             $stmt = $db->prepare("SELECT id, name FROM patients WHERE name = ?");

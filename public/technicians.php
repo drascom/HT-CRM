@@ -217,8 +217,7 @@ techModalElement.addEventListener('hidden.bs.modal', function() {
 function loadTechnicians() {
     showLoading(true);
 
-    fetch('api.php?entity=techs&action=list')
-        .then(response => response.json())
+    apiRequest('techs', 'list')
         .then(data => {
             if (data.success) {
                 renderTechsTable(data.technicians);
@@ -330,8 +329,7 @@ function openTechModal(techId = null) {
 }
 
 function loadTechData(techId) {
-    fetch(`api.php?entity=techs&action=get&id=${techId}`)
-        .then(response => response.json())
+    apiRequest('techs', 'get', { id: techId })
         .then(data => {
             if (data.success) {
                 const tech = data.technician;

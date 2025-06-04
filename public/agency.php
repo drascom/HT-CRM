@@ -172,8 +172,7 @@ require_once 'includes/header.php';
             loadingSpinner.style.display = 'block';
             agenciesTable.style.display = 'none';
 
-            fetch('api.php?entity=agencies&action=get_all')
-                .then(response => response.json())
+            apiRequest('agencies', 'get_all')
                 .then(data => {
                     loadingSpinner.style.display = 'none';
                     agenciesTable.style.display = 'table';

@@ -327,8 +327,8 @@ function handle_surgeries($action, $method, $db)
             break;
 
         case 'get':
-            if ($method === 'GET') {
-                $id = $_GET['id'] ?? null;
+            if ($method === 'POST') {
+                $id = $input['id'] ?? null;
                 if (!$id) {
                     return ['success' => false, 'error' => 'ID is required.'];
                 }
@@ -372,8 +372,8 @@ function handle_surgeries($action, $method, $db)
             break;
 
         case 'list':
-            if ($method === 'GET') {
-                $patient_id = $_GET['patient_id'] ?? null;
+            if ($method === 'POST') {
+                $patient_id = $input['patient_id'] ?? null;
                 if ($patient_id) {
                     $stmt = $db->prepare("SELECT s.*, p.name as patient_name, a.name as agency_name, r.name as room_name FROM surgeries s JOIN patients p ON s.patient_id = p.id LEFT JOIN agencies a ON p.agency_id = a.id LEFT JOIN rooms r ON s.room_id = r.id WHERE s.patient_id = ? ORDER BY s.date DESC");
                     $stmt->execute([$patient_id]);
@@ -383,7 +383,7 @@ function handle_surgeries($action, $method, $db)
                     $sql = "SELECT s.*, p.name as patient_name, a.name as agency_name, r.name as room_name FROM surgeries s LEFT JOIN patients p ON s.patient_id = p.id LEFT JOIN agencies a ON p.agency_id = a.id LEFT JOIN rooms r ON s.room_id = r.id";
                     $params = [];
 
-                    $agency_id = $_GET['agency'] ?? null;
+                    $agency_id = $input['agency'] ?? null;
 
                     // If agency parameter is provided, filter by it
                     if ($agency_id) {

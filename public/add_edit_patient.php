@@ -155,8 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
             populateAgencyDropdown();
         } else {
             // For admin and editor, fetch all agencies
-            fetch('api.php?entity=agencies&action=list')
-                .then(response => response.json())
+            apiRequest('agencies', 'list')
                 .then(data => {
                     if (data.success) {
                         allAgencies = data.agencies;
@@ -224,8 +223,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fetch patient data if editing
     if (isEditing) {
-        fetch(`api.php?entity=patients&action=get&id=${patientId}`)
-            .then(response => response.json())
+        apiRequest('patients', 'get', { id: patientId })
             .then(data => {
                 if (data.success) {
                     const patient = data.patient;
@@ -389,8 +387,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // When in editing mode, add existing avatar as a mock file
                 if (isEditing && patientId) {
-                    fetch(`api.php?entity=patients&action=get&id=${patientId}`)
-                        .then(response => response.json())
+                    apiRequest('patients', 'get', { id: patientId })
                         .then(data => {
                             if (data.success && data.patient && data.patient.avatar) {
                                 const avatarUrl = data.patient.avatar;
