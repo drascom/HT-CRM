@@ -193,8 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
     async function loadInitialData() {
         try {
             // Load patients
-            const patientsResponse = await fetch('api.php?entity=patients&action=list');
-            const patientsData = await patientsResponse.json();
+            const patientsData = await apiRequest('patients', 'list');
             
             if (patientsData.success && patientsData.patients) {
                 patientSelect.innerHTML = '<option value="">Select Patient</option>';
@@ -208,8 +207,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Load room name if room_id is provided
             if (roomSelect.value) {
-                const roomsResponse = await fetch('api.php?entity=rooms&action=list');
-                const roomsData = await roomsResponse.json();
+                const roomsData = await apiRequest('rooms', 'list');
                 
                 if (roomsData.success && roomsData.rooms) {
                     const room = roomsData.rooms.find(r => r.id == roomSelect.value);

@@ -57,60 +57,62 @@ require_once 'includes/header.php';
             <?php endif; ?>
 
             <div class="row">
-                <div class="col-md-4 col-12">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">
-                            <i class="fas fa-user me-1"></i>
-                            Patient Name
-                        </label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter patient name"
-                            required>
-                    </div>
-                </div>
-                <div class="col-md-4 col-12">
-                    <div class="mb-3">
-                        <label for="dob" class="form-label">
-                            <i class="fas fa-calendar me-1"></i>
-                            Date of Birth
-                        </label>
-                        <input type="date" class="form-control" id="dob" name="dob" required>
-                    </div>
-                </div>
-                <?php if (is_admin() || is_editor()): ?>
-                <div class="col-md-4 col-12">
-                    <div class="mb-3">
-                        <label for="agency_id" class="form-label">
-                            <i class="fas fa-building me-1"></i>
-                            Agency
-                        </label>
-                        <select class="form-select" id="agency_id" name="agency_id">
-                            <!-- <option value="">Select Agency</option> -->
-                            <!-- Agency options will be loaded dynamically -->
-                        </select>
-                    </div>
-                </div>
-                <?php elseif (is_agent()): ?>
-                <!-- Hidden field for agents - their agency_id will be set via JavaScript -->
-                <input type="hidden" id="agency_id" name="agency_id" value="">
-                <?php endif; ?>
-            </div>
+                <!-- Left Column -->
+                <div class="col-5">
+                    <fieldset class="border rounded p-3 mb-3">
+                        <legend class="w-auto px-2 mb-3" style="font-size: 1rem;">
+                            <i class="fas fa-user me-2"></i>Basic Information
+                        </legend>
 
-            <div class="row">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">
+                                <i class="fas fa-user me-1"></i>
+                                Patient Name *
+                            </label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter patient name" required>
+                        </div>
 
-            </div>
+                        <div class="mb-3">
+                            <label for="dob" class="form-label">
+                                <i class="fas fa-calendar me-1"></i>
+                                Date of Birth *
+                            </label>
+                            <input type="date" class="form-control" id="dob" name="dob" required>
+                        </div>
 
-            <div class="mb-4">
-                <label class="form-label">
-                    <i class="fas fa-image me-1"></i>
-                    Patient Avatar
-                </label>
-                <div id="avatar-dropzone" class="dropzone">
-                    <div class="dz-message">
-                        <span class="note needsclick">
-                            <i class="fas fa-cloud-upload-alt fa-2x mb-2"></i><br>
-                            Drag and drop avatar here or click to upload.
-                        </span>
-                    </div>
+                        <?php if (is_admin() || is_editor()): ?>
+                        <div class="mb-3">
+                            <label for="agency_id" class="form-label">
+                                <i class="fas fa-building me-1"></i>
+                                Agency
+                            </label>
+                            <select class="form-select" id="agency_id" name="agency_id">
+                                <!-- Agency options will be loaded dynamically -->
+                            </select>
+                        </div>
+                        <?php elseif (is_agent()): ?>
+                        <!-- Hidden field for agents - their agency_id will be set via JavaScript -->
+                        <input type="hidden" id="agency_id" name="agency_id" value="">
+                        <?php endif; ?>
+                    </fieldset>
+                </div>
+
+                <!-- Right Column -->
+                <div class="col-7">
+                    <fieldset class="border rounded p-3 mb-3">
+                        <legend class="w-auto px-2 mb-3" style="font-size: 1rem;">
+                            <i class="fas fa-image me-2"></i>Patient Avatar
+                        </legend>
+
+                        <div id="avatar-dropzone" class="dropzone">
+                            <div class="dz-message">
+                                <span class="note needsclick">
+                                    <i class="fas fa-cloud-upload-alt fa-2x mb-2"></i><br>
+                                    Drag and drop avatar here or click to upload.
+                                </span>
+                            </div>
+                        </div>
+                    </fieldset>
                 </div>
             </div>
 

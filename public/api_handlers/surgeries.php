@@ -1,5 +1,5 @@
 <?php
-function handle_surgeries($action, $method, $db)
+function handle_surgeries($action, $method, $db, $input = [])
 {
     switch ($action) {
         case 'add':

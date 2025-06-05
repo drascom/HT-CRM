@@ -178,7 +178,7 @@ function handle_patients($action, $method, $db, $input = [])
 
         case 'list':
             if ($method === 'POST') {
-                $agency_id = $_GET['agency'] ?? null;
+                $agency_id = $input['agency'] ?? null;
 
                 if ($agency_id) {
                     // Filter by agency

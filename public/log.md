@@ -1,4 +1,4 @@
-## Response Log - 2025-06-04 16:43:06
+## Response Log - 2025-06-05 17:47:06
 
 **Status:** Success
 **Details:**
@@ -41,50 +41,171 @@
 ```
 ---
 
-## Request Log - 2025-06-04 16:43:06
+## Request Log - 2025-06-05 17:47:06
 
 **Method:** POST
 **URL:** /api.php
 
-## Response Log - 2025-06-04 16:43:06
+## Response Log - 2025-06-05 17:47:06
 
 **Status:** Success
 **Details:**
 ```json
 {
     "success": true,
-    "appointments": {
-        "4-2025-06-03": {
-            "room_id": 4,
-            "date": "2025-06-03",
-            "consult_count": 1,
-            "cosmetic_count": 0
-        }
-    },
-    "surgeries": {
-        "1-2025-06-01": {
-            "room_id": 1,
-            "date": "2025-06-01",
-            "patient_name": "agenta 1",
-            "status": "confirmed"
+    "date": "2025-06-01",
+    "rooms": [
+        {
+            "id": 4,
+            "name": "Consultation",
+            "types": "consultation",
+            "is_active": 1,
+            "status": "available",
+            "graft_count": null,
+            "surgery_id": null,
+            "reservation_surgery_id": null,
+            "patient_name": null
         },
-        "1-2025-06-02": {
-            "room_id": 1,
-            "date": "2025-06-02",
-            "patient_name": "dsadadas",
-            "status": "confirmed"
+        {
+            "id": 5,
+            "name": "Cosmetology",
+            "types": "treatment",
+            "is_active": 1,
+            "status": "available",
+            "graft_count": null,
+            "surgery_id": null,
+            "reservation_surgery_id": null,
+            "patient_name": null
+        },
+        {
+            "id": 1,
+            "name": "Surgery 1",
+            "types": "surgery",
+            "is_active": 1,
+            "status": "booked",
+            "graft_count": "",
+            "surgery_id": 1,
+            "reservation_surgery_id": 1,
+            "patient_name": "Emin ayhan colak"
+        },
+        {
+            "id": 2,
+            "name": "Surgery 2",
+            "types": "surgery",
+            "is_active": 0,
+            "status": "inactive",
+            "graft_count": null,
+            "surgery_id": null,
+            "reservation_surgery_id": null,
+            "patient_name": null
+        },
+        {
+            "id": 3,
+            "name": "Surgery 3",
+            "types": "surgery",
+            "is_active": 0,
+            "status": "inactive",
+            "graft_count": null,
+            "surgery_id": null,
+            "reservation_surgery_id": null,
+            "patient_name": null
         }
+    ],
+    "statistics": {
+        "total_rooms": 5,
+        "active_rooms": 3,
+        "available_rooms": 2,
+        "booked_rooms": 1
     }
 }
 ```
 ---
 
-## Request Log - 2025-06-04 16:43:09
+## Request Log - 2025-06-05 17:47:30
 
 **Method:** POST
 **URL:** /api.php
 
-## Response Log - 2025-06-04 16:43:09
+## Response Log - 2025-06-05 17:47:30
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "surgery": {
+        "id": 1,
+        "date": "2025-06-01",
+        "notes": "",
+        "status": "confirmed",
+        "graft_count": "",
+        "room_id": 1,
+        "created_at": "2025-06-05 15:35:26",
+        "updated_at": "2025-06-05 15:37:36",
+        "patient_id": 1,
+        "is_recorded": 1,
+        "patient_name": "Emin ayhan colak",
+        "agency_name": "Hospital",
+        "room_name": "Surgery 1",
+        "technicians": [
+            {
+                "id": 9,
+                "name": "Beverly",
+                "specialty": null,
+                "phone": "07775434126"
+            },
+            {
+                "id": 10,
+                "name": "Claduio",
+                "specialty": null,
+                "phone": "00393341817614"
+            }
+        ],
+        "technician_ids": [
+            9,
+            10
+        ]
+    }
+}
+```
+---
+
+## Request Log - 2025-06-05 17:47:30
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-06-05 17:47:30
+
+**Status:** Success
+**Details:**
+```json
+{
+    "success": true,
+    "agencies": [
+        {
+            "id": 1,
+            "name": "Hospital"
+        },
+        {
+            "id": 3,
+            "name": "Other Agency"
+        },
+        {
+            "id": 2,
+            "name": "Want Hair"
+        }
+    ]
+}
+```
+---
+
+## Request Log - 2025-06-05 17:47:30
+
+**Method:** POST
+**URL:** /api.php
+
+## Response Log - 2025-06-05 17:47:30
 
 **Status:** Success
 **Details:**
@@ -127,257 +248,113 @@
 ```
 ---
 
-## Request Log - 2025-06-04 16:43:09
+## Request Log - 2025-06-05 17:47:30
 
 **Method:** POST
 **URL:** /api.php
 
-## Response Log - 2025-06-04 16:43:09
+## Response Log - 2025-06-05 17:47:30
 
 **Status:** Success
 **Details:**
 ```json
 {
     "success": true,
-    "patients": [
-        {
-            "id": 5,
-            "name": "Test Patient 1748974160746",
-            "dob": "1990-01-01",
-            "surgery_id": null,
-            "photo_album_id": null,
-            "user_id": null,
-            "created_at": "2025-06-03 18:09:20",
-            "updated_at": "2025-06-03 18:09:20",
-            "avatar": null,
-            "agency_id": null,
-            "last_surgery_date": null,
-            "agency_name": null
-        },
+    "date": "2025-06-01",
+    "rooms": [
         {
             "id": 4,
-            "name": "agenta 1",
-            "dob": "2025-06-04",
+            "name": "Consultation",
+            "types": "consultation",
+            "is_active": 1,
+            "status": "available",
+            "graft_count": null,
             "surgery_id": null,
-            "photo_album_id": null,
-            "user_id": null,
-            "created_at": "2025-06-03 11:59:00",
-            "updated_at": "2025-06-03 15:45:11",
-            "avatar": null,
-            "agency_id": 2,
-            "last_surgery_date": "2025-06-01",
-            "agency_name": "Want Hair"
+            "reservation_surgery_id": null,
+            "patient_name": null
+        },
+        {
+            "id": 5,
+            "name": "Cosmetology",
+            "types": "treatment",
+            "is_active": 1,
+            "status": "available",
+            "graft_count": null,
+            "surgery_id": null,
+            "reservation_surgery_id": null,
+            "patient_name": null
         },
         {
             "id": 1,
-            "name": "dsadadas",
-            "dob": "2025-06-04",
-            "surgery_id": null,
-            "photo_album_id": null,
-            "user_id": null,
-            "created_at": "2025-06-02 01:08:00",
-            "updated_at": "2025-06-02 01:08:00",
-            "avatar": null,
-            "agency_id": 1,
-            "last_surgery_date": "2025-06-02",
-            "agency_name": "Hospital"
-        },
-        {
-            "id": 3,
-            "name": "qqqq",
-            "dob": "",
-            "surgery_id": null,
-            "photo_album_id": null,
-            "user_id": null,
-            "created_at": "2025-06-02 16:17:47",
-            "updated_at": "2025-06-02 16:17:47",
-            "avatar": null,
-            "agency_id": 1,
-            "last_surgery_date": null,
-            "agency_name": "Hospital"
+            "name": "Surgery 1",
+            "types": "surgery",
+            "is_active": 1,
+            "status": "booked",
+            "graft_count": "",
+            "surgery_id": 1,
+            "reservation_surgery_id": 1,
+            "patient_name": "Emin ayhan colak"
         },
         {
             "id": 2,
-            "name": "test",
-            "dob": "2025-06-04",
+            "name": "Surgery 2",
+            "types": "surgery",
+            "is_active": 0,
+            "status": "inactive",
+            "graft_count": null,
             "surgery_id": null,
-            "photo_album_id": null,
-            "user_id": null,
-            "created_at": "2025-06-02 11:02:18",
-            "updated_at": "2025-06-02 11:02:18",
-            "avatar": null,
-            "agency_id": "",
-            "last_surgery_date": null,
-            "agency_name": null
+            "reservation_surgery_id": null,
+            "patient_name": null
+        },
+        {
+            "id": 3,
+            "name": "Surgery 3",
+            "types": "surgery",
+            "is_active": 0,
+            "status": "inactive",
+            "graft_count": null,
+            "surgery_id": null,
+            "reservation_surgery_id": null,
+            "patient_name": null
         }
-    ]
+    ],
+    "statistics": {
+        "total_rooms": 5,
+        "active_rooms": 3,
+        "available_rooms": 2,
+        "booked_rooms": 1
+    }
 }
 ```
 ---
 
-## Request Log - 2025-06-04 16:43:09
+## Request Log - 2025-06-05 17:47:38
 
 **Method:** POST
 **URL:** /api.php
 
-## Response Log - 2025-06-04 16:43:09
+## Response Log - 2025-06-05 17:47:38
 
 **Status:** Success
 **Details:**
 ```json
 {
     "success": true,
-    "appointments": [
+    "surgeries": [
         {
-            "id": 4,
-            "room_id": 4,
-            "patient_id": 4,
-            "appointment_date": "2025-06-03",
-            "start_time": "10:00",
-            "end_time": "11:00",
-            "type": "consult",
-            "subtype": "",
+            "id": 1,
+            "date": "2025-06-01",
             "notes": "",
-            "created_at": "2025-06-03 18:00:22",
-            "updated_at": "2025-06-03 18:00:22",
-            "patient_name": "agenta 1",
-            "room_name": "Consultation"
-        }
-    ]
-}
-```
----
-
-## Request Log - 2025-06-04 16:43:11
-
-**Method:** POST
-**URL:** /api.php
-
-## Response Log - 2025-06-04 16:43:11
-
-**Status:** Success
-**Details:**
-```json
-{
-    "success": true,
-    "rooms": [
-        {
-            "id": 4,
-            "name": "Consultation",
-            "types": "consultation",
-            "is_active": 1
-        },
-        {
-            "id": 5,
-            "name": "Cosmetology",
-            "types": "treatment",
-            "is_active": 1
-        },
-        {
-            "id": 1,
-            "name": "Surgery 1",
-            "types": "surgery",
-            "is_active": 1
-        },
-        {
-            "id": 2,
-            "name": "Surgery 2",
-            "types": "surgery",
-            "is_active": 0
-        },
-        {
-            "id": 3,
-            "name": "Surgery 3",
-            "types": "surgery",
-            "is_active": 0
-        }
-    ]
-}
-```
----
-
-## Request Log - 2025-06-04 16:43:11
-
-**Method:** POST
-**URL:** /api.php
-
-## Response Log - 2025-06-04 16:43:11
-
-**Status:** Success
-**Details:**
-```json
-{
-    "success": true,
-    "patients": [
-        {
-            "id": 5,
-            "name": "Test Patient 1748974160746",
-            "dob": "1990-01-01",
-            "surgery_id": null,
-            "photo_album_id": null,
-            "user_id": null,
-            "created_at": "2025-06-03 18:09:20",
-            "updated_at": "2025-06-03 18:09:20",
-            "avatar": null,
-            "agency_id": null,
-            "last_surgery_date": null,
-            "agency_name": null
-        },
-        {
-            "id": 4,
-            "name": "agenta 1",
-            "dob": "2025-06-04",
-            "surgery_id": null,
-            "photo_album_id": null,
-            "user_id": null,
-            "created_at": "2025-06-03 11:59:00",
-            "updated_at": "2025-06-03 15:45:11",
-            "avatar": null,
-            "agency_id": 2,
-            "last_surgery_date": "2025-06-01",
-            "agency_name": "Want Hair"
-        },
-        {
-            "id": 1,
-            "name": "dsadadas",
-            "dob": "2025-06-04",
-            "surgery_id": null,
-            "photo_album_id": null,
-            "user_id": null,
-            "created_at": "2025-06-02 01:08:00",
-            "updated_at": "2025-06-02 01:08:00",
-            "avatar": null,
-            "agency_id": 1,
-            "last_surgery_date": "2025-06-02",
-            "agency_name": "Hospital"
-        },
-        {
-            "id": 3,
-            "name": "qqqq",
-            "dob": "",
-            "surgery_id": null,
-            "photo_album_id": null,
-            "user_id": null,
-            "created_at": "2025-06-02 16:17:47",
-            "updated_at": "2025-06-02 16:17:47",
-            "avatar": null,
-            "agency_id": 1,
-            "last_surgery_date": null,
-            "agency_name": "Hospital"
-        },
-        {
-            "id": 2,
-            "name": "test",
-            "dob": "2025-06-04",
-            "surgery_id": null,
-            "photo_album_id": null,
-            "user_id": null,
-            "created_at": "2025-06-02 11:02:18",
-            "updated_at": "2025-06-02 11:02:18",
-            "avatar": null,
-            "agency_id": "",
-            "last_surgery_date": null,
-            "agency_name": null
+            "status": "confirmed",
+            "graft_count": "",
+            "room_id": 1,
+            "created_at": "2025-06-05 15:35:26",
+            "updated_at": "2025-06-05 15:37:36",
+            "patient_id": 1,
+            "is_recorded": 1,
+            "patient_name": "Emin ayhan colak",
+            "agency_name": "Hospital",
+            "room_name": "Surgery 1"
         }
     ]
 }

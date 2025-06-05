@@ -32,7 +32,7 @@ function handle_calendar_details($action, $method, $db, $input = [])
             $stmt->execute([$room_id, $date]);
             $cosmetics = $stmt->fetchAll(PDO::FETCH_ASSOC);
             
-            // Get surgery details
+            // Get surgery details with technicians
             $stmt = $db->prepare("
                 SELECT s.id, p.name as patient_name, s.graft_count, s.status
                 FROM room_reservations rr
@@ -42,15 +42,27 @@ function handle_calendar_details($action, $method, $db, $input = [])
             ");
             $stmt->execute([$room_id, $date]);
             $surgery = $stmt->fetch(PDO::FETCH_ASSOC);
-            
+
             $surgery_details = null;
             if ($surgery) {
+                // Get assigned technicians for this surgery
+                $stmt = $db->prepare("
+                    SELECT t.name
+                    FROM surgery_technicians st
+                    JOIN technicians t ON st.id = t.id
+                    WHERE st.surgery_id = ?
+                    ORDER BY t.name
+                ");
+                $stmt->execute([$surgery['id']]);
+                $technicians = $stmt->fetchAll(PDO::FETCH_COLUMN);
+
                 $surgery_details = [
                     'patient_name' => $surgery['patient_name'],
                     'procedure' => 'Hair Transplant',
                     'graft_count' => $surgery['graft_count'],
                     'status' => $surgery['status'],
-                    'time' => '08:00-17:00' // Default time for surgeries
+                    'time' => '08:00-17:00', // Default time for surgeries
+                    'technicians' => $technicians
                 ];
             }
             

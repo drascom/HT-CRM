@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        const data = await fetchData('api.php?entity=patients&action=get&id=' + patientId);
+        const data = await apiRequest('patients', 'get', { id: patientId });
 
         if (data && data.success) {
             // Update page title with patient name and display avatar
@@ -443,13 +443,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     // Function to fetch and populate photo album types
     function fetchPhotoAlbumTypes() {
-        fetch('api.php?entity=photo_album_types&action=list')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
+        apiRequest('photo_album_types', 'list')
             .then(data => {
                 photoAlbumTypeSelect.innerHTML =
                     '<option value="">Select Album Type</option>'; // Clear existing options

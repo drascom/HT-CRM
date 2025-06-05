@@ -3,7 +3,7 @@ function handle_techAvail($action, $method, $db, $input = [])
 {
     switch ($action) {
         case 'byRange':
-            if ($method === 'GET') {
+            if ($method === 'POST') {
                 $start = $input['start'] ?? null;
                 $end = $input['end'] ?? null;
 
@@ -44,7 +44,7 @@ function handle_techAvail($action, $method, $db, $input = [])
             break;
 
         case 'byDate':
-            if ($method === 'GET') {
+            if ($method === 'POST') {
                 $date = $input['date'] ?? null;
                 $period = $input['period'] ?? null; // Optional period filter for surgery scheduling
 

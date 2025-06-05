@@ -187,6 +187,38 @@ INSERT OR IGNORE INTO technicians (name, phone, availability, status, period, no
 ('Sagun Khadka', '07380576839', 'Fully available', 'Self Employed', 'Part Time', 'Istemiyor Calismak', 0),
 ('Monisha', '07436422647', 'Fully available', 'Self Employed', '', 'Ekime gelecek sadece, 14 £ per hour', 1);
 
+CREATE TABLE IF NOT EXISTS procedures (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL UNIQUE,
+    is_active INTEGER DEFAULT 1,
+    created_at TEXT DEFAULT (datetime('now')),
+    updated_at TEXT DEFAULT (datetime('now'))
+);
+
+-- Insert default procedures
+INSERT OR IGNORE INTO procedures (name, is_active) VALUES
+('Botox', 1),
+('Dermal Fillers', 1),
+('PRP (Platelet-Rich Plasma)', 1),
+('Microneedling', 1),
+('HydraFacial', 1),
+('Chemical Peel', 1),
+('Laser Hair Removal', 1),
+('Skin Rejuvenation', 1),
+('Carbon Laser Peel', 1),
+('Mesotherapy', 1),
+('Facial Cleansing', 1),
+('Radiofrequency Skin Tightening', 1),
+('Cryolipolysis (Fat Freezing)', 1),
+('Ultherapy', 1),
+('LED Light Therapy', 1),
+('OxyGeneo Facial', 1),
+('Hollywood Peel', 1),
+('Aqualyx Fat Dissolving', 1),
+('Carboxytherapy', 1),
+('Lip Augmentation', 1),
+('Jawline Contouring', 1);
+
 CREATE TABLE IF NOT EXISTS appointments (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     room_id INTEGER NOT NULL,
@@ -194,11 +226,11 @@ CREATE TABLE IF NOT EXISTS appointments (
     appointment_date DATE NOT NULL,
     start_time TEXT NOT NULL,
     end_time TEXT NOT NULL,
-    type TEXT NOT NULL,
-    subtype TEXT,
+    procedure_id INTEGER,
     notes TEXT,
     created_at TEXT DEFAULT (datetime('now')),
     updated_at TEXT DEFAULT (datetime('now')),
     FOREIGN KEY (room_id) REFERENCES rooms(id) ON DELETE CASCADE,
-    FOREIGN KEY (patient_id) REFERENCES patients(id) ON DELETE CASCADE
+    FOREIGN KEY (patient_id) REFERENCES patients(id) ON DELETE CASCADE,
+    FOREIGN KEY (procedure_id) REFERENCES procedures(id) ON DELETE SET NULL
 );

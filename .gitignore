@@ -10,7 +10,7 @@ node_modules/
 # OS files
 .DS_Store
 Thumbs.db
-
+rules.md
 # Optional: SQLite database file
 database.sqlite
 

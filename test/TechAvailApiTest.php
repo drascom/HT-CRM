@@ -129,7 +129,7 @@ class TechAvailApiTest extends TestBase
     {
         $this->setSession();
         
-        $response = $this->makeApiRequest('techAvail', 'byRange', 'GET', [
+        $response = $this->makeApiRequest('techAvail', 'byRange', 'POST', [
             'start' => '2024-02-01',
             'end' => '2024-02-28'
         ]);
@@ -145,7 +145,7 @@ class TechAvailApiTest extends TestBase
     {
         $this->setSession();
         
-        $response = $this->makeApiRequest('techAvail', 'byRange', 'GET', [
+        $response = $this->makeApiRequest('techAvail', 'byRange', 'POST', [
             'start' => 'invalid-start',
             'end' => 'invalid-end'
         ]);
@@ -158,7 +158,7 @@ class TechAvailApiTest extends TestBase
     {
         $this->setSession();
         
-        $response = $this->makeApiRequest('techAvail', 'list', 'GET');
+        $response = $this->makeApiRequest('techAvail', 'list', 'POST');
 
         $this->assertTrue($response['success'], 'Should successfully list tech availability', 'testListTechAvailability');
         $this->assertArrayHasKey('availability', $response, 'Response should contain availability array', 'testListTechAvailability');
@@ -170,13 +170,13 @@ class TechAvailApiTest extends TestBase
         $this->setSession();
         
         // Test with tech filter
-        $response = $this->makeApiRequest('techAvail', 'list', 'GET', [
+        $response = $this->makeApiRequest('techAvail', 'list', 'POST', [
             'tech_id' => $this->test_tech_id
         ]);
         $this->assertTrue($response['success'], 'Should successfully list availability with tech filter', 'testListTechAvailabilityWithFilters_Tech');
 
         // Test with date filter
-        $response = $this->makeApiRequest('techAvail', 'list', 'GET', [
+        $response = $this->makeApiRequest('techAvail', 'list', 'POST', [
             'date' => '2024-02-15'
         ]);
         $this->assertTrue($response['success'], 'Should successfully list availability with date filter', 'testListTechAvailabilityWithFilters_Date');
@@ -249,13 +249,13 @@ class TechAvailApiTest extends TestBase
         // Test agent role access
         $this->setSession($this->test_user_id, 'agent', $this->test_agency_id);
         
-        $response = $this->makeApiRequest('techAvail', 'list', 'GET');
+        $response = $this->makeApiRequest('techAvail', 'list', 'POST');
         $this->assertTrue($response['success'], 'Agent should be able to list tech availability', 'testRoleBasedAccess_Agent');
 
         // Test editor role access
         $this->setSession($this->test_user_id, 'editor', $this->test_agency_id);
-        
-        $response = $this->makeApiRequest('techAvail', 'byRange', 'GET', [
+
+        $response = $this->makeApiRequest('techAvail', 'byRange', 'POST', [
             'start' => '2024-02-01',
             'end' => '2024-02-28'
         ]);
@@ -263,8 +263,8 @@ class TechAvailApiTest extends TestBase
 
         // Test admin role access
         $this->setSession($this->test_user_id, 'admin', $this->test_agency_id);
-        
-        $response = $this->makeApiRequest('techAvail', 'list', 'GET');
+
+        $response = $this->makeApiRequest('techAvail', 'list', 'POST');
         $this->assertTrue($response['success'], 'Admin should be able to list tech availability', 'testRoleBasedAccess_Admin');
     }
 }

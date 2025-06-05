@@ -130,6 +130,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         const isCompleted = surgery.status.toLowerCase() === 'completed';
                         const canEdit = !(userRole === 'agent' && isCompleted);
 
+                        const isAdmin = <?php echo is_admin() ? 'true' : 'false'; ?>;
+
                         tableRows += `
                             <tr data-surgery-id="${surgery.id}">
                                 <td>
@@ -143,16 +145,15 @@ document.addEventListener('DOMContentLoaded', function() {
                                         '<span class="text-muted">N/A</span>'
                                     }
                                 </td>
-                                
-                                 <?php if (is_admin()): ?>
+                                ${isAdmin ? `
                                 <td>
                                     <span class="text-truncate-mobile">${surgery.agency_name || 'No Agency'}</span>
-                                </td>
-                                  <?php endif; ?>
-                                   <td>${surgery.room_name || '-'}</td>
-                                 <td>
+                                </td>` : ''}
+                                <td>${surgery.room_name || '-'}</td>
+                                <td>
                                     <span class="fw-medium">${surgery.graft_count || '0'}</span>
-                                </td><td>
+                                </td>
+                                <td>
                                     <span class="badge bg-${getStatusColor(surgery.status)} status-${surgery.status}">
                                         ${surgery.status}
                                     </span>
@@ -172,14 +173,13 @@ document.addEventListener('DOMContentLoaded', function() {
                                                 <span class="d-none d-lg-inline ms-1">Edit</span>
                                             </button>`
                                         }
-                                        <?php if (is_admin()): ?>
+                                        ${isAdmin ? `
                                         <button class="btn btn-sm btn-outline-danger delete-surgery-btn"
                                                 data-surgery-id="${surgery.id}"
                                                 title="Delete Surgery">
                                             <i class="fas fa-trash-alt"></i>
                                             <span class="d-none d-lg-inline ms-1">Delete</span>
-                                        </button>
-                                        <?php endif; ?>
+                                        </button>` : ''}
                                     </div>
                                 </td>
                             </tr>
@@ -262,15 +262,17 @@ document.addEventListener('DOMContentLoaded', function() {
     function filterSurgeries() {
         const searchTerm = surgerySearchInput.value.toLowerCase();
         const rows = surgeriesTable.querySelectorAll('tbody tr');
+        const isAdmin = <?php echo is_admin() ? 'true' : 'false'; ?>;
 
         rows.forEach(row => {
             const date = row.cells[0].textContent.toLowerCase();
             const patientName = row.cells[1].textContent.toLowerCase();
-            const agencyName = row.cells[2].textContent.toLowerCase();
-            const status = row.cells[3].textContent.toLowerCase();
+            const agencyName = isAdmin ? row.cells[2].textContent.toLowerCase() : '';
+            const roomName = isAdmin ? row.cells[3].textContent.toLowerCase() : row.cells[2].textContent.toLowerCase();
+            const status = isAdmin ? row.cells[5].textContent.toLowerCase() : row.cells[4].textContent.toLowerCase();
 
             if (date.includes(searchTerm) || patientName.includes(searchTerm) ||
-                agencyName.includes(searchTerm) || status.includes(searchTerm)) {
+                agencyName.includes(searchTerm) || roomName.includes(searchTerm) || status.includes(searchTerm)) {
                 row.style.display = '';
             } else {
                 row.style.display = 'none';

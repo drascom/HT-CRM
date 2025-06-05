@@ -112,6 +112,12 @@
                                 </a>
                             </li>
                             <li>
+                                <a class="dropdown-item" href="procedures.php">
+                                    <i class="fas fa-user-cog me-1"></i>
+                                    Procedures
+                                </a>
+                            </li>
+                            <li>
                                 <a class="dropdown-item" href="rooms.php">
                                     <i class="fas fa-door-open me-1"></i>
                                     Manage Rooms

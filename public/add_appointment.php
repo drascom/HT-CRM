@@ -20,35 +20,36 @@ $page_title = "Add Appointment";
 require_once 'includes/header.php';
 ?>
 
-<div class="container-fluid mt-4">
-    <!-- Page Header -->
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 class="mb-0">
-            <i class="fas fa-calendar-plus me-2 text-success"></i>
-            Add New Appointment
-        </h2>
-        <div class="btn-group" role="group">
-            <a href="appointments.php" class="btn btn-secondary">
-                <i class="fas fa-list me-1"></i>
-                View All Appointments
-            </a>
-            <a href="calendar.php" class="btn btn-primary">
-                <i class="fas fa-calendar me-1"></i>
-                Calendar View
-            </a>
-        </div>
-    </div>
 
-    <!-- Status Messages -->
-    <div id="status-messages"></div>
+<!-- Status Messages -->
+<div id="status-messages"></div>
+<div class="row justify-content-center mt-2">
+    <div class="col-md-12 col-lg-10 col-xl-8 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <!-- Page Header -->
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="appointments.php" class="btn btn-outline-secondary btn-sm">
+                        <i class="far fa-arrow-left me-1"></i>
+                        <span class="d-none d-sm-inline">Appointments</span>
 
-    <?php if ($flow_type === 'calendar'): ?>
-    <!-- CALENDAR FLOW: Quick appointment creation with pre-filled data -->
-    <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <div class="card border-success">
+                    </a>
+                    <h5 class="mb-0">
+                        <i class="far fa-calendar-plus me-2 text-success"></i>
+                        Add New
+                    </h5>
+                    <a href="calendar.php" class="btn btn-outline-primary btn-sm">
+                        <i class="far fa-calendar-alt me-1"></i>
+                        <span class="d-none d-sm-inline">Calendar</span>
+                    </a>
+                </div>
+                <!-- /.page-header -->
+            </div>
+            <div class="card-body">
+                <?php if ($flow_type === 'calendar'): ?>
+                <!-- CALENDAR FLOW: Quick appointment creation with pre-filled data -->
                 <div class="card-header bg-success text-white">
-                    <i class="fas fa-calendar-check me-2"></i> <small class="opacity-75">Pre-selected from
+                    <i class="far fa-calendar-check me-2"></i> <small class="opacity-75">Pre-selected from
                         calendar</small>
                 </div>
                 <div class="card-body">
@@ -56,206 +57,234 @@ require_once 'includes/header.php';
                     <div class="row mb-2">
                         <div class="col-md-6">
                             <div class="alert alert-info mb-2">
-                                <i class="fas fa-calendar me-2"></i>
+                                <i class="far fa-calendar me-2"></i>
                                 <strong>Date:</strong> <?php echo date('F j, Y', strtotime($date)); ?>
                                 <input type="hidden" id="appointment-date" value="<?php echo $date; ?>">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="alert alert-success mb-2">
-                                <i class="fas fa-door-open me-2"></i>
+                                <i class="far fa-door-open me-2"></i>
                                 <strong>Room:</strong> <span id="selected-room-name">Loading...</span>
                                 <input type="hidden" id="room-id" value="<?php echo $room_id; ?>">
                             </div>
                         </div>
                     </div>
-
-                    <form id="calendar-appointment-form">
-                        <!-- Time Selection Section -->
-                        <div class="border rounded p-2 mb-4 bg-light">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h6 class="card-title mb-0">
-                                        <i class="fas fa-clock me-2"></i>Time Selection
-                                    </h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="justify-content-center row g-2 mb-3">
-                                        <div class="col-auto">
-                                            <button type="button" class="btn btn-outline-primary btn-sm"
-                                                onclick="setTimeSlot('09:00', '10:00')">09:00 - 10:00</button>
-                                        </div>
-                                        <div class="col-auto">
-                                            <button type="button" class="btn btn-outline-primary btn-sm"
-                                                onclick="setTimeSlot('10:00', '11:00')">10:00 - 11:00</button>
-                                        </div>
-                                        <div class="col-auto">
-                                            <button type="button" class="btn btn-outline-primary btn-sm"
-                                                onclick="setTimeSlot('11:00', '12:00')">11:00 - 12:00</button>
-                                        </div>
-                                        <div class="col-auto">
-                                            <button type="button" class="btn btn-outline-primary btn-sm"
-                                                onclick="setTimeSlot('14:00', '15:00')">14:00 - 15:00</button>
-                                        </div>
-                                        <div class="col-auto">
-                                            <button type="button" class="btn btn-outline-primary btn-sm"
-                                                onclick="setTimeSlot('15:00', '16:00')">15:00 - 16:00</button>
-                                        </div>
-                                        <div class="col-auto">
-                                            <button type="button" class="btn btn-outline-primary btn-sm"
-                                                onclick="setTimeSlot('16:00', '17:00')">16:00 - 17:00</button>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4 ms-auto">
-                                            <div class="mb-3">
-                                                <label for="start-time" class="form-label">Start Time *</label>
-                                                <input type="time" class="form-control" id="start-time">
-                                                <div class="invalid-feedback"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 me-auto">
-                                            <div class="mb-3">
-                                                <label for="end-time" class="form-label">End Time *</label>
-                                                <input type="time" class="form-control" id="end-time">
-                                                <div class="invalid-feedback"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Patient Selection & Appointment Type Section -->
-                        <div class="card-body border rounded bg-light p-2 mb-3 row">
-                            <div class="col-md-6">
-                                <label for="patient-id" class="form-label">Patient *</label>
-                                <div class="input-group">
-                                    <select class="form-select" id="patient-id">
-                                        <option value="">Select Patient</option>
-                                    </select>
-                                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                                        data-bs-target="#newPatientModal">
-                                        <i class="fas fa-plus me-1"></i>
-                                        <span class="d-none d-sm-inline">New Patient</span>
-                                    </button>
-                                </div>
-                                <div class="invalid-feedback" style="display: none;">lease selec a patient.</div>
-                            </div>
-                            <div class="col-md-6">
-                                <!-- Appointment Type (Pre-selected) -->
-                                <div class="row mb-4">
-                                    <div class="mb-3">
-                                        <label for="type" class="form-label">Procedure *</label>
-                                        <select class="form-select" id="type">
-                                            <option value="">Select Type</option>
-                                            <option value="consult"
-                                                <?php echo ($room_type === 'consultation') ? 'selected' : ''; ?>>
-                                                Consultation</option>
-                                            <option value="cosmetic"
-                                                <?php echo ($room_type === 'treatment') ? 'selected' : ''; ?>>Cosmetic
-                                            </option>
-                                        </select>
-                                        <div class="invalid-feedback"></div>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="subtype" class="form-label">Subject</label>
-                                        <input type="text" class="form-control" id="subtype"
-                                            placeholder="e.g., Online, Botox, PRP">
-                                        <div class="form-text">Optional: Specify consultation method or cosmetic
-                                            procedure</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-4">
-                                <label for="notes" class="form-label">Notes</label>
-                                <textarea class="form-control" id="notes" rows="3"
-                                    placeholder="Additional notes or special instructions"></textarea>
-                            </div>
-                        </div>
-
-                        <!-- Action Buttons -->
-                        <div class="d-flex justify-content-between">
-                            <a href="calendar.php" class="btn btn-secondary">
-                                <i class="fas fa-arrow-left me-1"></i>Back to Calendar
-                            </a>
-                            <button type="submit" class="btn btn-success">
-                                <i class="fas fa-save me-1"></i>Create Appointment
-                            </button>
-                        </div>
-                    </form>
                 </div>
-            </div>
-        </div>
-    </div>
+                <form id="calendar-appointment-form">
+                    <!-- Time Selection Section -->
+                    <div class="border rounded p-2 mb-4 bg-light">
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="card-title mb-0">
+                                    <i class="far fa-clock me-2"></i>Time Selection
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="justify-content-center row g-2 mb-3">
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-primary btn-sm"
+                                            onclick="setTimeSlot('09:00', '10:00')">09:00 - 10:00</button>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-primary btn-sm"
+                                            onclick="setTimeSlot('10:00', '11:00')">10:00 - 11:00</button>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-primary btn-sm"
+                                            onclick="setTimeSlot('11:00', '12:00')">11:00 - 12:00</button>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-primary btn-sm"
+                                            onclick="setTimeSlot('14:00', '15:00')">14:00 - 15:00</button>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-primary btn-sm"
+                                            onclick="setTimeSlot('15:00', '16:00')">15:00 - 16:00</button>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-primary btn-sm"
+                                            onclick="setTimeSlot('16:00', '17:00')">16:00 - 17:00</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 ms-auto">
+                                        <div class="mb-3">
+                                            <label for="start-time" class="form-label">Start Time *</label>
+                                            <input type="time" class="form-control" id="start-time">
+                                            <div class="invalid-feedback"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 me-auto">
+                                        <div class="mb-3">
+                                            <label for="end-time" class="form-label">End Time *</label>
+                                            <input type="time" class="form-control" id="end-time">
+                                            <div class="invalid-feedback"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <?php else: ?>
-    <!-- MANUAL FLOW: Full appointment creation form -->
-    <div class="row justify-content-center">
-        <div class="col-md-10 col-lg-8 ">
-            <div class="card">
+                    <!-- Patient Selection & Appointment Type Section -->
+                    <div class="card-body border rounded bg-light p-2 mb-3 row">
+                        <div class="col-md-6">
+                            <label for="patient-id" class="form-label">Patient *</label>
+                            <div class="input-group">
+                                <select class="form-select" id="patient-id">
+                                    <option value="">Select Patient</option>
+                                </select>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#newPatientModal">
+                                    <i class="far fa-plus me-1"></i>
+                                    <span class="d-none d-sm-inline">New Patient</span>
+                                </button>
+                            </div>
+                            <div class="invalid-feedback" style="display: none;">lease selec a patient.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Procedure select -->
+                            <div class="row mb-4">
+                                <div class="mb-3">
+                                    <label for="type" class="form-label">Procedure *</label>
+                                    <div class="input-group">
+                                        <select class="form-select" id="type">
+                                            <option value="">Select procedure</option>
+                                            <!-- Procedures will be loaded dynamically -->
+                                        </select>
+                                        <button type="button" class="btn btn-link btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#newProcedureModal">
+                                            <i class="far fa-plus me-1"></i>
+                                            <span class="d-none d-sm-inline">Add New</span>
+                                        </button>
+                                    </div>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="notes" class="form-label">Notes</label>
+                            <textarea class="form-control" id="notes" rows="3"
+                                placeholder="Additional notes or special instructions"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="d-flex justify-content-between">
+                        <a href="calendar.php" class="btn btn-secondary">
+                            <i class="far fa-arrow-left me-1"></i>Back to Calendar
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="far fa-save me-1"></i>Create Appointment
+                        </button>
+                    </div>
+                </form>
+                <?php else: ?>
+                <!-- MANUAL FLOW: Full appointment creation form -->
                 <form id="manual-appointment-form">
-                    <div class="card-body">
+                    <div>
                         <!-- Date and Room Selection -->
-                        <div class=" rounded p-3 mb-4 bg-light">
-                            <div class="row gutter-2">
-                                <div class="col-md-4 border pt-2 rounded bg-light">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <fieldset class="border rounded p-3 mb-4 bg-light">
+                                    <legend class="w-auto px-2 mb-3" style="font-size: 1rem;">
+                                        <i class="far fa-calendar-alt me-2"></i>Date &amp; Room Selection
+                                    </legend>
                                     <div class="mb-3">
-                                        <h6 class="card-title">
-                                            <i class="fas fa-calendar-alt me-2"></i>Room & Date Selection
-                                        </h6>
+
                                         <input type="date" class="form-control" id="manual-appointment-date">
                                         <div class="invalid-feedback"></div>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="manual-room-id" class="form-label">Room *</label>
                                         <select class="form-select" id="manual-room-id">
                                             <option value="">Select Room</option>
                                         </select>
                                         <div class="invalid-feedback"></div>
                                     </div>
-                                </div>
-
-                                <div class="border rounded col-md-7 mx-auto pt-2 bg-light">
-                                    <div class="row g-2 mb-3 justify-content-center">
-                                        <h6 class="card-title mb-0">
-                                            <i class="fas fa-clock me-2"></i>Time Selection
-                                        </h6>
-                                        <div class="col-auto">
-                                            <button type="button" class="p-1 btn btn-outline-primary btn-sm"
-                                                onclick="setManualTimeSlot('09:00', '10:00')">09:00 - 10:00</button>
-                                        </div>
-                                        <div class="col-auto">
-                                            <button type="button" class="p-1 btn btn-outline-primary btn-sm"
-                                                onclick="setManualTimeSlot('10:00', '11:00')">10:00 - 11:00</button>
-                                        </div>
-                                        <div class="col-auto">
-                                            <button type="button" class="p-1 btn btn-outline-primary btn-sm"
-                                                onclick="setManualTimeSlot('11:00', '12:00')">11:00 - 12:00</button>
-                                        </div>
-                                        <div class="col-auto">
-                                            <button type="button" class="p-1 btn btn-outline-primary btn-sm"
-                                                onclick="setManualTimeSlot('14:00', '15:00')">14:00 - 15:00</button>
-                                        </div>
-                                        <div class="col-auto">
-                                            <button type="button" class="p-1 btn btn-outline-primary btn-sm"
-                                                onclick="setManualTimeSlot('15:00', '16:00')">15:00 - 16:00</button>
-                                        </div>
-                                        <div class="col-auto">
-                                            <button type="button" class="p-1 btn btn-outline-primary btn-sm"
-                                                onclick="setManualTimeSlot('16:00', '17:00')">16:00 - 17:00</button>
-                                        </div>
+                                </fieldset>
+                                <fieldset class="border rounded p-3 mb-3 bg-light shadow-sm">
+                                    <legend class="w-auto px-2 mb-3" style="font-size: 1rem;">
+                                        <i class="far fa-user me-2"></i>Patient Selection
+                                    </legend>
+                                    <div class="input-group">
+                                        <select class="form-select" id="manual-patient-id">
+                                            <option value="">Select Patient</option>
+                                        </select>
+                                        <button type="button" class="btn btn-link btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#newPatientModal">
+                                            <i class="far fa-plus me-1"></i>
+                                            <span class="d-none d-sm-inline">Add New</span>
+                                        </button>
                                     </div>
+                                    <div class="invalid-feedback"></div>
+                                </fieldset>
+                                <fieldset class="border rounded p-3 mb-3 bg-light shadow-sm">
+                                    <legend class="w-auto px-2 mb-3" style="font-size: 1rem;">
+                                        <i class="fas fa-procedures me-2"></i>Procedure Selection
+                                    </legend>
+                                    <div class="input-group">
+                                        <select class="form-select" id="manual-type">
+                                            <option value="">Select procedure</option>
+                                            <!-- Procedures will be loaded dynamically -->
+                                        </select>
+                                        <button type="button" class="btn btn-link btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#newProcedureModal">
+                                            <i class="far fa-plus me-1"></i>
+                                            <span class="d-none d-sm-inline">Add New</span>
+                                        </button>
+                                        <div class="invalid-feedback"></div>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-md-7">
+                                <fieldset class="border rounded p-3 mb-3 bg-light shadow-sm">
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
+                                            <div class="row g-2 mb-3 justify-content-center">
+                                                <h6 class="card-title mb-0">
+                                                    <i class="far fa-clock me-2"></i>Time Selection
+                                                </h6>
+                                                <div class="col-auto">
+                                                    <button type="button" class="p-1 btn btn-outline-primary btn-sm"
+                                                        onclick="setManualTimeSlot('09:00', '10:00')">09:00 -
+                                                        10:00</button>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <button type="button" class="p-1 btn btn-outline-primary btn-sm"
+                                                        onclick="setManualTimeSlot('10:00', '11:00')">10:00 -
+                                                        11:00</button>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <button type="button" class="p-1 btn btn-outline-primary btn-sm"
+                                                        onclick="setManualTimeSlot('11:00', '12:00')">11:00 -
+                                                        12:00</button>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <button type="button" class="p-1 btn btn-outline-primary btn-sm"
+                                                        onclick="setManualTimeSlot('14:00', '15:00')">14:00 -
+                                                        15:00</button>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <button type="button" class="p-1 btn btn-outline-primary btn-sm"
+                                                        onclick="setManualTimeSlot('15:00', '16:00')">15:00 -
+                                                        16:00</button>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <button type="button" class="p-1 btn btn-outline-primary btn-sm"
+                                                        onclick="setManualTimeSlot('16:00', '17:00')">16:00 -
+                                                        17:00</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
                                             <div class="mb-3">
                                                 <label for="manual-start-time" class="form-label">Start Time *</label>
                                                 <input type="time" class="form-control" id="manual-start-time">
                                                 <div class="invalid-feedback"></div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6">
+
                                             <div class="mb-3">
                                                 <label for="manual-end-time" class="form-label">End Time *</label>
                                                 <input type="time" class="form-control" id="manual-end-time">
@@ -263,53 +292,18 @@ require_once 'includes/header.php';
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="border rounded bg-light p-2 mb-3 row">
-                            <div class="col-md-6">
-                                <label for="manual-patient-id" class="form-label">Patient *</label>
-                                <div class="input-group">
-                                    <select class="form-select" id="manual-patient-id">
-                                        <option value="">Select Patient</option>
-                                    </select>
-                                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                                        data-bs-target="#newPatientModal">
-                                        <i class="fas fa-plus me-1"></i>
-                                        <span class="d-none d-sm-inline">New Patient</span>
-                                    </button>
-                                </div>
-                                <div class="invalid-feedback">Please select a patient.</div>
-                            </div>
-                            <div class="col-md-6">
-                                <!-- Appointment Type -->
-                                <div class="row mb-4">
-                                    <div class="mb-3">
-                                        <label for="manual-type" class="form-label">Procedure *</label>
-                                        <select class="form-select" id="manual-type">
-                                            <option value="">Select Type</option>
-                                            <option value="consult">Consultation</option>
-                                            <option value="cosmetic">Cosmetic</option>
-                                        </select>
-                                        <div class="invalid-feedback"></div>
+
+                                </fieldset>
+                                <fieldset class="col-12 border rounded p-3 mb-3 bg-light shadow-sm">
+                                    <legend><i class="far fa-sticky-note me-2"></i>Notes</legend>
+                                    <div class="mb-4">
+                                        <textarea class="form-control" id="manual-notes" rows="3"
+                                            placeholder="Additional notes or special instructions"></textarea>
                                     </div>
+                                </fieldset>
 
-                                    <div class="mb-3">
-                                        <label for="manual-subtype" class="form-label">Subject</label>
-                                        <input type="text" class="form-control" id="manual-subtype"
-                                            placeholder="e.g., Online, Botox, PRP">
-                                        <div class="form-text">Optional: Specify consultation method or cosmetic
-                                            procedure </div>
-                                    </div>
-                                </div>
                             </div>
-                            <div class="mb-4">
-                                <label for="manual-notes" class="form-label">Notes</label>
-                                <textarea class="form-control" id="manual-notes" rows="3"
-                                    placeholder="Additional notes or special instructions"></textarea>
-                            </div>
-
                         </div>
                     </div>
                     <!-- Action Buttons -->
@@ -317,8 +311,8 @@ require_once 'includes/header.php';
                         <a href="appointments.php" class="btn btn-secondary">
                             <i class="fas fa-times me-1"></i>Cancel
                         </a>
-                        <button type="submit" class="btn btn-success">
-                            <i class="fas fa-save me-1"></i>Create Appointment
+                        <button type="submit" class="btn btn-primary">
+                            <i class="far fa-save me-1"></i>Create Appointment
                         </button>
                     </div>
                 </form>
@@ -327,7 +321,7 @@ require_once 'includes/header.php';
     </div>
 </div>
 <?php endif; ?>
-</div>
+
 
 <!-- New Patient Modal -->
 <div class="modal fade" id="newPatientModal" tabindex="-1" aria-labelledby="newPatientModalLabel" aria-hidden="true">
@@ -335,7 +329,7 @@ require_once 'includes/header.php';
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="newPatientModalLabel">
-                    <i class="fas fa-user-plus me-2"></i>
+                    <i class="far fa-user-plus me-2"></i>
                     Create New Patient
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -347,7 +341,7 @@ require_once 'includes/header.php';
                         <div class="col-md-12">
                             <div class="mb-3">
                                 <label for="new_patient_agency_id" class="form-label">
-                                    <i class="fas fa-building me-1"></i>
+                                    <i class="far fa-building me-1"></i>
                                     Agency
                                 </label>
                                 <select class="form-select" id="new_patient_agency_id" name="agency_id">
@@ -365,7 +359,7 @@ require_once 'includes/header.php';
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="new_patient_name" class="form-label">
-                                    <i class="fas fa-user me-1"></i>
+                                    <i class="far fa-user me-1"></i>
                                     Patient Name *
                                 </label>
                                 <input type="text" class="form-control" id="new_patient_name" name="name"
@@ -375,7 +369,7 @@ require_once 'includes/header.php';
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="new_patient_dob" class="form-label">
-                                    <i class="fas fa-calendar me-1"></i>
+                                    <i class="far fa-calendar me-1"></i>
                                     Date of Birth
                                 </label>
                                 <input type="date" class="form-control" id="new_patient_dob" name="dob">
@@ -387,17 +381,55 @@ require_once 'includes/header.php';
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                    <i class="fas fa-times me-1"></i>Cancel
+                    <i class="far fa-times me-1"></i>Cancel
                 </button>
                 <button type="button" class="btn btn-primary" id="save-new-patient">
-                    <i class="fas fa-save me-1"></i>Create Patient
+                    <i class="far fa-save me-1"></i>Create Patient
                 </button>
             </div>
         </div>
     </div>
 </div>
 
+<!-- New Procedure Modal -->
+<div class="modal fade" id="newProcedureModal" tabindex="-1" aria-labelledby="newProcedureModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newProcedureModalLabel">
+                    <i class="far fa-plus-circle me-2"></i>
+                    Create New Procedure
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="new-procedure-form">
+                    <div class="mb-3">
+                        <label for="new_procedure_name" class="form-label">
+                            <i class="far fa-stethoscope me-1"></i>
+                            Procedure Name *
+                        </label>
+                        <input type="text" class="form-control" id="new_procedure_name" name="name"
+                            placeholder="Enter procedure name" required>
+                        <div class="form-text">Enter a unique name for the new procedure</div>
+                    </div>
+                </form>
+                <div id="new-procedure-status"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <i class="far fa-times me-1"></i>Cancel
+                </button>
+                <button type="button" class="btn btn-primary" id="save-new-procedure">
+                    <i class="far fa-save me-1"></i>Create Procedure
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
+
+
 
 <script>
 // ============================================================================
@@ -405,6 +437,7 @@ require_once 'includes/header.php';
 // ============================================================================
 let rooms = [];
 let patients = [];
+let procedures = [];
 let allAgencies = [];
 let formWasSubmitted = false;
 const flowType = '<?php echo $flow_type; ?>';
@@ -499,13 +532,15 @@ function initManualFlow() {
 // ============================================================================
 async function loadInitialData() {
     try {
-        const [roomsResponse, patientsResponse] = await Promise.all([
+        const [roomsResponse, patientsResponse, proceduresResponse] = await Promise.all([
             apiRequest('rooms', 'list'),
-            apiRequest('patients', 'list')
+            apiRequest('patients', 'list'),
+            apiRequest('procedures', 'active')
         ]);
 
         const roomsData = roomsResponse;
         const patientsData = patientsResponse;
+        const proceduresData = proceduresResponse;
 
         if (roomsData.success) {
             rooms = roomsData.rooms || [];
@@ -527,6 +562,13 @@ async function loadInitialData() {
             }
         } else {
             displayMessage('Error loading patients: ' + (patientsData.error || 'Unknown error'), 'danger');
+        }
+
+        if (proceduresData.success) {
+            procedures = proceduresData.procedures || [];
+            populateTypeSelects();
+        } else {
+            displayMessage('Error loading procedures: ' + (proceduresData.error || 'Unknown error'), 'danger');
         }
     } catch (error) {
         console.error('Error loading data:', error);
@@ -596,6 +638,52 @@ function setManualTimeSlot(startTime, endTime) {
 }
 
 // ============================================================================
+// UTILITY FUNCTIONS
+// ============================================================================
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+// ============================================================================
+// PROCEDURE POPULATION FUNCTIONS
+// ============================================================================
+function populateTypeSelects() {
+    const calendarTypeSelect = document.getElementById('type');
+    const manualTypeSelect = document.getElementById('manual-type');
+
+    const procedureOptions = procedures.map(procedure =>
+        `<option value="${procedure.id}">${escapeHtml(procedure.name)}</option>`
+    ).join('');
+
+    if (calendarTypeSelect) {
+        calendarTypeSelect.innerHTML = '<option value="">Select procedure</option>' + procedureOptions;
+    }
+
+    if (manualTypeSelect) {
+        manualTypeSelect.innerHTML = '<option value="">Select procedure</option>' + procedureOptions;
+    }
+}
+
+function populateProcedureSelects() {
+    const calendarProcedureSelect = document.getElementById('procedure');
+    const manualProcedureSelect = document.getElementById('manual-procedure');
+
+    const procedureOptions = procedures.map(procedure =>
+        `<option value="${procedure.id}">${escapeHtml(procedure.name)}</option>`
+    ).join('');
+
+    if (calendarProcedureSelect) {
+        calendarProcedureSelect.innerHTML = '<option value="">Select Procedure (Optional)</option>' + procedureOptions;
+    }
+
+    if (manualProcedureSelect) {
+        manualProcedureSelect.innerHTML = '<option value="">Select Procedure (Optional)</option>' + procedureOptions;
+    }
+}
+
+// ============================================================================
 // VALIDATION FUNCTIONS - CALENDAR FLOW
 // ============================================================================
 function validateCalendarForm() {
@@ -620,7 +708,7 @@ function validateCalendarForm() {
         },
         {
             id: 'type',
-            message: 'Please select a type.'
+            message: 'Please select a procedure.'
         }
     ];
 
@@ -666,7 +754,7 @@ function validateCalendarSingleField(fieldId) {
                 feedback.textContent = 'Please enter an end time.';
                 break;
             case 'type':
-                feedback.textContent = 'Please select a type.';
+                feedback.textContent = 'Please select a procedure.';
                 break;
         }
     } else {
@@ -722,7 +810,7 @@ function validateManualForm() {
         },
         {
             id: 'manual-type',
-            message: 'Please select a type.'
+            message: 'Please select a procedure.'
         }
     ];
 
@@ -774,7 +862,7 @@ function validateManualSingleField(fieldId) {
                 feedback.textContent = 'Please enter an end time.';
                 break;
             case 'manual-type':
-                feedback.textContent = 'Please select a type.';
+                feedback.textContent = 'Please select a procedure.';
                 break;
         }
     } else {
@@ -807,8 +895,7 @@ function createCalendarAppointment() {
         appointment_date: '<?php echo $date; ?>',
         start_time: document.getElementById('start-time').value,
         end_time: document.getElementById('end-time').value,
-        type: document.getElementById('type').value,
-        subtype: document.getElementById('subtype').value,
+        procedure_id: document.getElementById('type').value || null,
         notes: document.getElementById('notes').value
     };
 
@@ -822,8 +909,7 @@ function createManualAppointment() {
         appointment_date: document.getElementById('manual-appointment-date').value,
         start_time: document.getElementById('manual-start-time').value,
         end_time: document.getElementById('manual-end-time').value,
-        type: document.getElementById('manual-type').value,
-        subtype: document.getElementById('manual-subtype').value,
+        procedure_id: document.getElementById('manual-type').value || null,
         notes: document.getElementById('manual-notes').value
     };
 
@@ -964,7 +1050,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Disable button to prevent double submission
             const originalText = saveNewPatientButton.innerHTML;
             saveNewPatientButton.disabled = true;
-            saveNewPatientButton.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i>Creating...';
+            saveNewPatientButton.innerHTML = '<i class="far fa-spinner fa-spin me-1"></i>Creating...';
 
             apiRequest('patients', 'add', Object.fromEntries(formData))
                 .then(data => {
@@ -1014,6 +1100,94 @@ document.addEventListener('DOMContentLoaded', function() {
         newPatientModal.addEventListener('show.bs.modal', function() {
             // Fetch agencies when modal opens
             fetchModalAgencies();
+        });
+    }
+
+    // Handle new procedure modal
+    const newProcedureModal = document.getElementById('newProcedureModal');
+    const newProcedureForm = document.getElementById('new-procedure-form');
+    const saveNewProcedureButton = document.getElementById('save-new-procedure');
+    const newProcedureStatusDiv = document.getElementById('new-procedure-status');
+
+    // Handle new procedure modal submission
+    if (saveNewProcedureButton) {
+        saveNewProcedureButton.addEventListener('click', function() {
+            const procedureName = document.getElementById('new_procedure_name').value.trim();
+
+            if (!procedureName) {
+                newProcedureStatusDiv.innerHTML =
+                    '<div class="alert alert-danger">Please enter a procedure name.</div>';
+                return;
+            }
+
+            newProcedureStatusDiv.innerHTML = ''; // Clear previous status
+
+            // Disable button to prevent double submission
+            const originalText = saveNewProcedureButton.innerHTML;
+            saveNewProcedureButton.disabled = true;
+            saveNewProcedureButton.innerHTML = '<i class="far fa-spinner fa-spin me-1"></i>Creating...';
+
+            apiRequest('procedures', 'create', {
+                    name: procedureName
+                })
+                .then(data => {
+                    if (data.success) {
+                        newProcedureStatusDiv.innerHTML =
+                            '<div class="alert alert-success">Procedure created successfully!</div>';
+
+                        // Add the new procedure to the procedures array
+                        const newProcedure = {
+                            id: data.id,
+                            name: procedureName
+                        };
+                        procedures.push(newProcedure);
+
+                        // Refresh the procedure dropdowns
+                        populateTypeSelects();
+
+                        // Select the new procedure in the appropriate dropdown based on flow
+                        let procedureSelect;
+                        if (flowType === 'calendar') {
+                            procedureSelect = document.getElementById('type');
+                        } else {
+                            procedureSelect = document.getElementById('manual-type');
+                        }
+
+                        if (procedureSelect) {
+                            procedureSelect.value = data.id;
+                        }
+
+                        // Clear the form
+                        document.getElementById('new_procedure_name').value = '';
+
+                        // Close the modal after a short delay
+                        setTimeout(() => {
+                            const modal = bootstrap.Modal.getInstance(newProcedureModal);
+                            modal.hide();
+                        }, 1000);
+                    } else {
+                        newProcedureStatusDiv.innerHTML =
+                            `<div class="alert alert-danger">${data.error || 'An error occurred.'}</div>`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error creating procedure:', error);
+                    newProcedureStatusDiv.innerHTML =
+                        '<div class="alert alert-danger">An error occurred while creating the procedure.</div>';
+                })
+                .finally(() => {
+                    // Re-enable button
+                    saveNewProcedureButton.disabled = false;
+                    saveNewProcedureButton.innerHTML = originalText;
+                });
+        });
+    }
+
+    // Clear procedure modal when it's hidden
+    if (newProcedureModal) {
+        newProcedureModal.addEventListener('hidden.bs.modal', function() {
+            document.getElementById('new_procedure_name').value = '';
+            newProcedureStatusDiv.innerHTML = '';
         });
     }
 });

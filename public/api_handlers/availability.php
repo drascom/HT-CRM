@@ -21,7 +21,7 @@ function handle_availability($action, $method, $db, $input = [])
                         SELECT
                             r.id,
                             r.name,
-                            r.notes,
+                            r.types,
                             r.is_active,
                             CASE
                                 WHEN rr.id IS NOT NULL THEN 'booked'

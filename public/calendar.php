@@ -193,7 +193,10 @@ class CustomCalendar {
         const month = this.currentDate.getMonth() + 1; // JavaScript months are 0-indexed
 
         try {
-            const data = await apiRequest('calendar_summary', 'get', { year: year, month: month });
+            const data = await apiRequest('calendar_summary', 'get', {
+                year: year,
+                month: month
+            });
 
             if (data.success) {
                 this.monthAppointments = data.appointments || {};
@@ -706,7 +709,10 @@ class CustomCalendar {
             modal.show();
 
             // Fetch detailed appointment data
-            const data = await apiRequest('calendar_details', 'get', { room_id: roomId, date: date });
+            const data = await apiRequest('calendar_details', 'get', {
+                room_id: roomId,
+                date: date
+            });
 
             if (data.success) {
                 modalBody.innerHTML = this.createModalContent(data);
@@ -734,7 +740,25 @@ class CustomCalendar {
                             <p class="mb-1"><strong>Procedure:</strong> ${data.surgery.procedure}</p>
                             <p class="mb-1"><strong>Graft Count:</strong> ${data.surgery.graft_count || 'N/A'}</p>
                             <p class="mb-1"><strong>Status:</strong> <span class="badge bg-primary">${data.surgery.status}</span></p>
-                            <p class="mb-0"><strong>Time:</strong> ${data.surgery.time}</p>
+                            <p class="mb-1"><strong>Time:</strong> ${data.surgery.time}</p>
+            `;
+
+            // Add technicians if available
+            if (data.surgery.technicians && data.surgery.technicians.length > 0) {
+                content += `
+                    <p class="mb-0"><strong>Assigned Technicians:</strong></p>
+                    <div class="mt-1">
+                `;
+                data.surgery.technicians.forEach(tech => {
+                    content += `<span class="badge bg-secondary me-1">${tech}</span>`;
+                });
+                content += `</div>`;
+            } else {
+                content +=
+                    `<p class="mb-0"><strong>Technicians:</strong> <span class="text-muted">None assigned</span></p>`;
+            }
+
+            content += `
                         </div>
                     </div>
                 </div>

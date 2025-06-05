@@ -28,203 +28,196 @@ require_once 'includes/header.php';
 <div id="status-messages">
     <!-- Success or error messages will be displayed here -->
 </div>
+<div class="row mt-2">
+    <div class="col-md-12 col-lg-10 col-xl-8 mx-auto">
 
-<!-- Page Header -->
-<div class="d-flex justify-content-between align-items-center mb-4">
-    <h2 class="mb-0">
-        <i class="fas fa-hospital me-2 text-primary"></i>
-        <?php echo $page_title; ?>
-    </h2>
-    <a href="<?php echo $is_editing ? 'surgeries.php' : 'surgeries.php'; ?>" class="btn btn-outline-secondary">
-        <i class="fas fa-arrow-left me-1"></i>
-        <span class="d-none d-sm-inline">Back to Surgeries</span>
-    </a>
-</div>
-
-<!-- Surgery Form -->
-<div class="card">
-    <div class="card-header">
-        <div class="d-flex justify-content-between align-items-center">
-            <h5 class="mb-0">
-                <i class="fas fa-hospital me-2"></i>
-                Surgery Information
-            </h5>
-            <div class="d-flex align-items-center">
-                <!-- Status Display -->
-                <div class="me-3">
-                    <span class="text-muted small">Status:</span>
-                    <span id="status-display" class="badge bg-secondary ms-1">Loading...</span>
-                    <?php if (is_admin()): ?>
-                    <button type="button" class="btn btn-sm btn-outline-secondary ms-1" id="edit-status-btn"
-                        title="Edit Status">
-                        <i class="fas fa-pen fa-xs"></i>
-                    </button>
-                    <?php endif; ?>
-                    <!-- Inline Status Edit (Hidden by default) -->
-                    <div id="status-edit-container" class="ms-1" style="display: none;">
-                        <select class="form-select form-select-sm d-inline-block" id="status-inline"
-                            style="width: auto;">
-                            <option value="scheduled">Scheduled</option>
-                            <option value="confirmed">Confirmed</option>
-                            <option value="completed">Completed</option>
-                            <option value="cancelled">Cancelled</option>
-                        </select>
-                        <button type="button" class="btn btn-sm btn-success ms-1" id="save-status-btn" title="Save">
-                            <i class="fas fa-check fa-xs"></i>
-                        </button>
-                        <button type="button" class="btn btn-sm btn-secondary ms-1" id="cancel-status-btn"
-                            title="Cancel">
-                            <i class="fas fa-times fa-xs"></i>
-                        </button>
+        <!-- Surgery Form -->
+        <div class="card">
+            <!-- Page Header -->
+            <div class="card-header">
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="surgeries.php" class="btn btn-outline-secondary btn-sm">
+                        <i class="fas fa-arrow-left me-1"></i>
+                        <span class="d-none d-sm-inline">Back to Surgeries</span>
+                    </a>
+                    <h5 class="mb-0">
+                        <i class="far fa-hospital me-2"></i>
+                        <?php echo $page_title; ?>
+                    </h5>
+                    <div class="d-flex align-items-center">
+                        <!-- Status Display -->
+                        <div class="me-3">
+                            <span class="text-muted small">Status:</span>
+                            <span id="status-display" class="badge bg-secondary ms-1">Loading...</span>
+                            <?php if (is_admin()): ?>
+                            <button type="button" class="btn btn-sm btn-link text-primary ms-1" id="edit-status-btn"
+                                title="Edit Status">
+                                <i class="fas fa-pen fa-xs"></i>
+                            </button>
+                            <?php endif; ?>
+                            <!-- Inline Status Edit (Hidden by default) -->
+                            <div id="status-edit-container" class="ms-1" style="display: none;">
+                                <select class="form-select form-select-sm d-inline-block" id="status-inline"
+                                    style="width: auto;">
+                                    <option value="scheduled">Scheduled</option>
+                                    <option value="confirmed">Confirmed</option>
+                                    <option value="completed">Completed</option>
+                                    <option value="cancelled">Cancelled</option>
+                                </select>
+                                <button type="button" class="btn btn-sm btn-primary ms-1" id="save-status-btn"
+                                    title="Save">
+                                    <i class="far fa-check fa-xs"></i>
+                                </button>
+                                <button type="button" class="btn btn-sm btn-secondary ms-1" id="cancel-status-btn"
+                                    title="Cancel">
+                                    <i class="far fa-times fa-xs"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="card-body">
+                <form id="surgery-form">
+                    <?php if ($is_editing): ?>
+                    <input type="hidden" name="id" value="<?php echo htmlspecialchars($surgery_id); ?>">
+                    <?php endif; ?>
+                    <input type="hidden" name="entity" value="surgeries">
+                    <input type="hidden" name="action" value="<?php echo $is_editing ? 'update' : 'add'; ?>">
+
+                    <div class="row">
+                        <!-- Left Column -->
+                        <div class="col-md-5">
+                            <!-- Date and Room Section -->
+                            <fieldset class="border rounded p-3 mb-4 bg-light">
+                                <legend class="w-auto px-2 mb-3" style="font-size: 1rem;">
+                                    <i class="far fa-calendar-alt me-2"></i>Date & Room Selection
+                                </legend>
+                                <?php if (!empty($date_from_url) && !empty($room_id_from_url)): ?>
+                                <div class="align-items-center">
+                                    <div class="alert alert-info mb-2">
+                                        <i class="far fa-calendar me-2"></i> Date:
+                                        <span class="text-primary">
+                                            <?php echo date('F j, Y', strtotime($date_from_url)); ?></span>
+                                        <input type="hidden" name="date" value="<?php echo $date_from_url; ?>">
+                                    </div>
+                                    <div class="alert alert-info mb-2">
+                                        <i class="far fa-door-open me-2"></i> Room: <span class="text-primary"
+                                            id="selected-room-name">Loading...</span>
+                                    </div>
+                                    <input type="hidden" name="room_id" value="<?php echo $room_id_from_url; ?>">
+                                </div>
+                                <?php endif; ?>
+
+                                <!-- Date Field -->
+                                <div class="mb-3" <?php echo !empty($date_from_url) ? 'style="display: none;"' : ''; ?>>
+                                    <input type="date" class="form-control" id="date" name="date"
+                                        value="<?php echo $date_from_url; ?>" required>
+                                </div>
+
+                                <!-- Room Field -->
+                                <div class="mb-3"
+                                    <?php echo !empty($room_id_from_url) ? 'style="display: none;"' : ''; ?>>
+                                    <select class="form-select" id="room_id" name="room_id">
+                                        <option value="">Select Room</option>
+                                        <!-- Room options will be loaded via JavaScript -->
+                                    </select>
+                                    <div class="form-text" id="room-availability-text"></div>
+                                </div>
+                            </fieldset>
+                            <!-- Patient Selection -->
+                            <?php if (!$is_editing): ?>
+                            <fieldset class="border rounded p-3 mb-3 bg-light shadow-sm">
+                                <legend class="w-auto px-2 mb-3" style="font-size: 1rem;">
+                                    <i class="far fa-user me-2"></i>Patient Selection
+                                </legend>
+
+                                <div class="mb-3">
+                                    <div class="input-group">
+                                        <select class="form-select" id="patient_id" name="patient_id" required>
+                                            <option value="">Select Patient</option>
+                                        </select>
+                                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                                            data-bs-target="#newPatientModal">
+                                            <i class="far fa-plus me-1"></i>
+                                            <span class="d-none d-sm-inline">New Patient</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <?php else: ?>
+                            <input type="hidden" name="patient_id" id="patient_id">
+                            <?php endif; ?>
+
+                        </div>
+
+                        <!-- Right Column -->
+                        <div class="col-md-7">
+                            <!-- Technicians Section -->
+                            <fieldset class="border rounded p-3 mb-3 bg-light shadow-sm">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <legend class="w-auto " style="font-size: 1rem;">
+                                        <i class="fas fa-user-md me-2"></i>Assigned Technicians
+                                    </legend>
+                                    <button type="button" class="btn p-0 btn-sm btn-link" id="add-technicians-btn">
+                                        <i class="far fa-plus me-1"></i>Add Technicians
+                                    </button>
+                                </div>
+
+                                <div class="mb-3">
+
+                                    <select class="form-select" id="technicians" name="technicians[]" multiple
+                                        style="display: none;"></select>
+                                    <div id="technicians-feedback" class="invalid-feedback">
+                                        <label for="technicians" class="form-label mb-0">
+                                            Select Technicians <span class="text-danger">*</span>
+                                            <small class="text-muted">(minimum 2 required)</small>
+                                        </label>
+                                    </div>
+                                    <div id="assigned-technicians" class="mt-2"></div>
+                                </div>
+                            </fieldset>
+                            <!-- Surgery Details -->
+                            <fieldset class="border rounded p-3 mb-3 bg-light shadow-sm">
+                                <legend class="w-auto px-2 mb-3" style="font-size: 1rem;">
+                                    <i class="far fa-hospital me-2"></i>Surgery Details
+                                </legend>
+
+                                <div class="mb-3">
+                                    <input type="number" class="form-control" id="graft_count" name="graft_count"
+                                        min="0" placeholder="Enter graft count">
+                                </div>
+
+                                <input type="hidden" id="status" name="status" value="scheduled">
+                            </fieldset>
+                            <!-- Notes Section -->
+                            <fieldset class="border rounded p-3 mb-3 bg-light shadow-sm">
+                                <legend class="w-auto px-2 mb-3" style="font-size: 1rem;">
+                                    <i class="far fa-sticky-note me-2"></i>Notes
+                                </legend>
+
+                                <textarea class="form-control" id="notes" name="notes" rows="6"
+                                    placeholder="Enter any additional notes about the surgery..."></textarea>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="d-flex justify-content-end gap-2">
+                        <a href="<?php echo $is_editing ? 'surgeries.php' : 'surgeries.php'; ?>"
+                            class="btn btn-secondary">
+                            <i class="far fa-times me-1"></i>Cancel
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="far fa-save me-1"></i>
+                            <span
+                                id="save-button-text"><?php echo $is_editing ? 'Update Surgery' : 'Add Surgery'; ?></span>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
-    </div>
-    <div class="card-body">
-        <form id="surgery-form">
-            <?php if ($is_editing): ?>
-            <input type="hidden" name="id" value="<?php echo htmlspecialchars($surgery_id); ?>">
-            <?php endif; ?>
-            <input type="hidden" name="entity" value="surgeries">
-            <input type="hidden" name="action" value="<?php echo $is_editing ? 'update' : 'add'; ?>">
 
-            <!-- Date and Room Section -->
-            <div class="border rounded p-3 mb-4 bg-light">
-                <h6 class="text-muted mb-3">
-                    <i class="fas fa-calendar-alt me-2"></i>Date & Room Selection
-                </h6>
-                <div class="row">
-                    <div class="col-md-6">
-                        <!-- Date Field -->
-                        <div class="mb-3" <?php echo !empty($date_from_url) ? 'style="display: none;"' : ''; ?>>
-                            <label for="date" class="form-label">Surgery Date *</label>
-                            <input type="date" class="form-control" id="date" name="date"
-                                value="<?php echo $date_from_url; ?>" required>
-                        </div>
-                        <?php if (!empty($date_from_url)): ?>
-                        <div class="mb-3">
-                            <label class="form-label">Selected Date</label>
-                            <div class="form-control-plaintext fw-bold text-primary">
-                                <i
-                                    class="fas fa-calendar me-2"></i><?php echo date('F j, Y', strtotime($date_from_url)); ?>
-                            </div>
-                            <input type="hidden" name="date" value="<?php echo $date_from_url; ?>">
-                        </div>
-                        <?php endif; ?>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- Room Field -->
-                        <div class="mb-3" <?php echo !empty($room_id_from_url) ? 'style="display: none;"' : ''; ?>>
-                            <label for="room_id" class="form-label">Operating Room</label>
-                            <select class="form-select" id="room_id" name="room_id">
-                                <option value="">Select Room</option>
-                                <!-- Room options will be loaded via JavaScript -->
-                            </select>
-                            <div class="form-text" id="room-availability-text"></div>
-                        </div>
-                        <?php if (!empty($room_id_from_url)): ?>
-                        <div class="mb-3">
-                            <label class="form-label">Selected Room</label>
-                            <div class="form-control-plaintext fw-bold text-success">
-                                <i class="fas fa-door-open me-2"></i><span id="selected-room-name">Loading...</span>
-                            </div>
-                            <input type="hidden" name="room_id" value="<?php echo $room_id_from_url; ?>">
-                        </div>
-                        <?php endif; ?>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Patient Selection -->
-            <?php if (!$is_editing): // Only show patient selection when adding ?>
-            <div class="mb-4">
-                <div class="mb-3">
-                    <label for="patient_id" class="form-label">Patient *</label>
-                    <div class="input-group">
-                        <select class="form-select" id="patient_id" name="patient_id" required>
-                            <option value="">Select Patient</option>
-                            <!-- Patient options will be loaded via JavaScript -->
-                        </select>
-                        <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                            data-bs-target="#newPatientModal">
-                            <i class="fas fa-plus me-1"></i>
-                            <span class="d-none d-sm-inline">New Patient</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <?php else: // If editing, patient_id is part of the surgery data fetched via API ?>
-            <input type="hidden" name="patient_id" id="patient_id">
-            <?php endif; ?>
-
-            <!-- Surgery Details -->
-            <fieldset class="border rounded p-3 mb-4">
-                <legend class="h6 text-muted mb-3">
-                    <i class="fas fa-hospital me-2"></i>Surgery Details
-                </legend>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="graft_count" class="form-label">Graft Count</label>
-                            <input type="number" class="form-control" id="graft_count" name="graft_count" min="0"
-                                placeholder="Enter graft count">
-                        </div>
-                    </div>
-                </div>
-                <!-- Hidden status field for form submission -->
-                <input type="hidden" id="status" name="status" value="scheduled">
-            </fieldset>
-
-            <!-- Technicians Section -->
-            <fieldset class="border rounded p-3 mb-4">
-                <legend class="h6 text-muted mb-3">
-                    <i class="fas fa-user-md me-2"></i>Assigned Technicians
-                </legend>
-                <div class="mb-3">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <label for="technicians" class="form-label mb-0">
-                            Select Technicians <span class="text-danger">*</span>
-                            <small class="text-muted">(minimum 2 required)</small>
-                        </label>
-                        <button type="button" class="btn btn-primary btn-sm" id="add-technicians-btn">
-                            <i class="fas fa-plus me-1"></i>
-                            Add Technicians
-                        </button>
-                    </div>
-                    <select class="form-select" id="technicians" name="technicians[]" multiple style="display: none;">
-                        <!-- This select is hidden - technician selection happens via modal -->
-                    </select>
-                    <div id="technicians-feedback" class="invalid-feedback">
-                        At least 2 technicians must be assigned to this surgery.
-                    </div>
-                    <div id="assigned-technicians" class="mt-2">
-                        <!-- Assigned technicians will be displayed here -->
-                    </div>
-                </div>
-            </fieldset>
-
-            <!-- Notes Section -->
-            <div class="mb-4">
-                <label for="notes" class="form-label">
-                    <i class="fas fa-sticky-note me-1"></i>
-                    Notes
-                </label>
-                <textarea class="form-control" id="notes" name="notes" rows="4"
-                    placeholder="Enter any additional notes about the surgery..."></textarea>
-            </div>
-
-            <div class="d-flex flex-column flex-sm-row gap-2">
-                <button type="submit" class="btn btn-primary">
-                    <i class="fas fa-save me-1"></i>
-                    <span id="save-button-text"><?php echo $is_editing ? 'Update Surgery' : 'Add Surgery'; ?></span>
-                </button>
-                <a href="<?php echo $is_editing ? 'surgeries.php' : 'surgeries.php'; ?>" class="btn btn-secondary">
-                    <i class="fas fa-times me-1"></i>
-                    Cancel
-                </a>
-            </div>
-        </form>
     </div>
 </div>
 
@@ -234,7 +227,7 @@ require_once 'includes/header.php';
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="newPatientModalLabel">
-                    <i class="fas fa-user-plus me-2"></i>
+                    <i class="far fa-user-plus me-2"></i>
                     Create New Patient
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -246,7 +239,7 @@ require_once 'includes/header.php';
                         <div class="col-md-12">
                             <div class="mb-3">
                                 <label for="new_patient_agency_id" class="form-label">
-                                    <i class="fas fa-building me-1"></i>
+                                    <i class="far fa-building me-1"></i>
                                     Agency
                                 </label>
                                 <select class="form-select" id="new_patient_agency_id" name="agency_id">
@@ -264,7 +257,7 @@ require_once 'includes/header.php';
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="new_patient_name" class="form-label">
-                                    <i class="fas fa-user me-1"></i>
+                                    <i class="far fa-user me-1"></i>
                                     Patient Name
                                 </label>
                                 <input type="text" class="form-control" id="new_patient_name" name="name"
@@ -274,7 +267,7 @@ require_once 'includes/header.php';
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="new_patient_dob" class="form-label">
-                                    <i class="fas fa-calendar me-1"></i>
+                                    <i class="far fa-calendar me-1"></i>
                                     Date of Birth
                                 </label>
                                 <input type="date" class="form-control" id="new_patient_dob" name="dob">
@@ -286,10 +279,10 @@ require_once 'includes/header.php';
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                    <i class="fas fa-times me-1"></i>Cancel
+                    <i class="far fa-times me-1"></i>Cancel
                 </button>
                 <button type="button" class="btn btn-primary" id="save-new-patient">
-                    <i class="fas fa-save me-1"></i>Create Patient
+                    <i class="far fa-save me-1"></i>Create Patient
                 </button>
             </div>
         </div>
@@ -302,7 +295,7 @@ require_once 'includes/header.php';
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="technicianModalLabel">
-                    <i class="fas fa-user-md me-2"></i>
+                    <i class="far fa-user-md me-2"></i>
                     Select Available Technicians
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -438,7 +431,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const saveButton = document.querySelector('button[type="submit"]');
             if (isCompleted && saveButton) {
                 saveButton.disabled = true;
-                saveButton.innerHTML = '<i class="fas fa-lock me-1"></i>Surgery Completed';
+                saveButton.innerHTML = '<i class="far fa-lock me-1"></i>Surgery Completed';
                 saveButton.title = 'Cannot edit completed surgery';
             }
 
@@ -447,7 +440,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const editorNotice = document.createElement('div');
             editorNotice.className = 'alert alert-info mb-3';
             editorNotice.innerHTML = `
-                <i class="fas fa-info-circle me-2"></i>
+                <i class="far fa-info-circle me-2"></i>
                 <strong>Editor Mode:</strong> You can only modify the status field.
                 ${isCompleted ? 'This surgery is completed and cannot be edited further.' : ''}
             `;
@@ -511,7 +504,9 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        apiRequest('availability', 'byDate', { date: selectedDate })
+        apiRequest('availability', 'byDate', {
+                date: selectedDate
+            })
             .then(data => {
                 if (data.success) {
                     const statistics = data.statistics;
@@ -521,13 +516,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Update availability text with count
                     if (availableCount > 0) {
                         roomAvailabilityText.innerHTML = `<small class="text-success">
-                            <i class="fas fa-check me-1"></i>
+                            <i class="far fa-check me-1"></i>
                             ${availableCount} out of ${totalActive} rooms available for the selected date.
                         </small>`;
                         roomSelect.classList.remove('is-invalid');
                     } else {
                         roomAvailabilityText.innerHTML = `<small class="text-danger">
-                            <i class="fas fa-exclamation-triangle me-1"></i>
+                            <i class="far fa-exclamation-triangle me-1"></i>
                             There is no available room. Please select another date.
                         </small>`;
                         roomSelect.classList.add('is-invalid');
@@ -537,7 +532,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     console.error('Error checking room availability:', data.error);
                     roomAvailabilityText.innerHTML = `<small class="text-danger">
-                        <i class="fas fa-exclamation-triangle me-1"></i>
+                        <i class="far fa-exclamation-triangle me-1"></i>
                         Error checking room availability.
                     </small>`;
                 }
@@ -545,7 +540,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(error => {
                 console.error('Error checking room availability:', error);
                 roomAvailabilityText.innerHTML = `<small class="text-danger">
-                    <i class="fas fa-exclamation-triangle me-1"></i>
+                    <i class="far fa-exclamation-triangle me-1"></i>
                     Error checking room availability.
                 </small>`;
             });
@@ -581,7 +576,7 @@ document.addEventListener('DOMContentLoaded', function() {
             !(currentSurgeryId && r.surgery_id == currentSurgeryId));
         if (bookedRooms.length > 0) {
             roomAvailabilityText.innerHTML = `<small class="text-warning">
-                <i class="fas fa-exclamation-triangle me-1"></i>
+                <i class="far fa-exclamation-triangle me-1"></i>
                 ${bookedRooms.length} room(s) already booked for this date
             </small>`;
         } else {
@@ -633,12 +628,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fetch surgery data if editing
     if (isEditing) {
         const surgeryId = surgeryIdInput.value;
-        apiRequest('surgeries', 'get', { id: surgeryId })
+        apiRequest('surgeries', 'get', {
+                id: surgeryId
+            })
             .then(data => {
                 if (data.success) {
                     const surgery = data.surgery;
 
-                    document.getElementById('date').value = surgery.date;
+                    const dateInput = document.getElementById('date');
+                    if (dateInput) {
+                        dateInput.value = surgery.date;
+                    }
                     document.getElementById('status').value = surgery.status;
                     document.getElementById('graft_count').value = surgery.graft_count;
                     document.getElementById('notes').value = surgery.notes;
@@ -700,7 +700,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Pre-fill date if provided from URL
         if (dateFromUrl) {
-            document.getElementById('date').value = dateFromUrl;
+            const dateInput = document.getElementById('date');
+            if (dateInput) {
+                dateInput.value = dateFromUrl;
+            }
         }
 
         // If adding, load room options and pre-select if provided
@@ -729,7 +732,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Load available technicians for the selected date
     function loadAvailableTechnicians() {
-        const selectedDate = dateInput.value;
+        // Get date from either visible input or hidden input (calendar flow)
+        let selectedDate;
+        if (dateInput) {
+            selectedDate = dateInput.value;
+        } else {
+            // For calendar flow, get date from hidden input or URL parameter
+            const hiddenDateInput = document.querySelector('input[name="date"]');
+            selectedDate = hiddenDateInput ? hiddenDateInput.value : '<?php echo $date_from_url; ?>';
+        }
+
         if (!selectedDate) {
             alert('Please select a surgery date first');
             return;
@@ -741,7 +753,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // For now, we'll load all available technicians for the date
         // In the future, we could add period selection to the UI
-        apiRequest('techAvail', 'byDate', { date: selectedDate })
+        apiRequest('techAvail', 'byDate', {
+                date: selectedDate
+            })
             .then(data => {
                 if (data.success && data.technicians && data.technicians.length > 0) {
                     renderTechnicianList(data.technicians);
@@ -749,13 +763,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     // Update modal title with count
                     document.getElementById('technicianModalLabel').innerHTML = `
-                        <i class="fas fa-user-md me-2"></i>
+                        <i class="far fa-user-md me-2"></i>
                         Select Available Technicians (${data.count} available)
                     `;
                 } else {
                     document.getElementById('no-technicians').classList.remove('d-none');
                     document.getElementById('technicianModalLabel').innerHTML = `
-                        <i class="fas fa-user-md me-2"></i>
+                        <i class="far fa-user-md me-2"></i>
                         Select Available Technicians (0 available)
                     `;
                 }
@@ -904,11 +918,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Add event listener for date changes to check technician availability
-    dateInput.addEventListener('change', function() {
-        // Clear selected technicians when date changes
-        selectedTechnicians.clear();
-        updateAssignedTechnicians();
-    });
+    if (dateInput) {
+        dateInput.addEventListener('change', function() {
+            // Clear selected technicians when date changes
+            selectedTechnicians.clear();
+            updateAssignedTechnicians();
+        });
+    }
 
     // Handle surgery form submission
     surgeryForm.addEventListener('submit', function(event) {

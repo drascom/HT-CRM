@@ -34,37 +34,21 @@ require_once 'includes/header.php';
     <!-- Status Messages -->
     <div id="status-messages"></div>
 
-    <!-- Filters -->
+    <!-- Search Bar -->
     <div class="card mb-4">
         <div class="card-body">
-            <div class="row g-3">
-                <div class="col-md-3">
-                    <label for="filter-date" class="form-label">Date</label>
-                    <input type="date" class="form-control" id="filter-date">
-                </div>
-                <div class="col-md-3">
-                    <label for="filter-room" class="form-label">Room</label>
-                    <select class="form-select" id="filter-room">
-                        <option value="">All Rooms</option>
-                    </select>
-                </div>
-                <div class="col-md-3">
-                    <label for="filter-type" class="form-label">Type</label>
-                    <select class="form-select" id="filter-type">
-                        <option value="">All Types</option>
-                        <option value="consult">Consultation</option>
-                        <option value="cosmetic">Cosmetic</option>
-                    </select>
-                </div>
-                <div class="col-md-3 d-flex align-items-end">
-                    <button type="button" class="btn btn-outline-primary me-2" onclick="applyFilters()">
-                        <i class="fas fa-search me-1"></i>
-                        Filter
-                    </button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="clearFilters()">
-                        <i class="fas fa-times me-1"></i>
-                        Clear
-                    </button>
+            <div class="row">
+                <div class="col-12">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-search"></i>
+                        </span>
+                        <input type="text" class="form-control" id="search-input"
+                            placeholder="Search appointments by patient name, room, date, procedure, or notes...">
+                        <button class="btn btn-outline-secondary" type="button" id="clear-search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -88,8 +72,7 @@ require_once 'includes/header.php';
                             <th>Time</th>
                             <th>Patient</th>
                             <th>Room</th>
-                            <th>Type</th>
-                            <th>Subtype</th>
+                            <th>Procedure</th>
                             <th>Notes</th>
                             <th>Actions</th>
                         </tr>
@@ -104,7 +87,8 @@ require_once 'includes/header.php';
 </div>
 
 <!-- Edit Appointment Modal -->
-<div class="modal fade" id="editAppointmentModal" tabindex="-1" aria-labelledby="editAppointmentModalLabel" aria-hidden="true">
+<div class="modal fade" id="editAppointmentModal" tabindex="-1" aria-labelledby="editAppointmentModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -114,7 +98,7 @@ require_once 'includes/header.php';
             <form id="edit-appointment-form">
                 <div class="modal-body">
                     <input type="hidden" id="edit-appointment-id">
-                    
+
                     <div class="mb-3">
                         <label for="edit-patient-id" class="form-label">Patient *</label>
                         <select class="form-select" id="edit-patient-id" required>
@@ -150,17 +134,18 @@ require_once 'includes/header.php';
                     </div>
 
                     <div class="mb-3">
-                        <label for="edit-type" class="form-label">Type *</label>
-                        <select class="form-select" id="edit-type" required>
-                            <option value="">Select Type</option>
-                            <option value="consult">Consultation</option>
-                            <option value="cosmetic">Cosmetic</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="edit-subtype" class="form-label">Subtype</label>
-                        <input type="text" class="form-control" id="edit-subtype" placeholder="e.g., Online, Botox, PRP">
+                        <label for="edit-procedure-id" class="form-label">Procedure *</label>
+                        <div class="input-group">
+                            <select class="form-select" id="edit-procedure-id" required>
+                                <option value="">Select Procedure</option>
+                                <!-- Procedures will be loaded dynamically -->
+                            </select>
+                            <button type="button" class="btn btn-link btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#newProcedureModal">
+                                <i class="fas fa-plus me-1"></i>
+                                <span class="d-none d-sm-inline">Add New</span>
+                            </button>
+                        </div>
                     </div>
 
                     <div class="mb-3">
@@ -184,7 +169,17 @@ let patients = [];
 
 document.addEventListener('DOMContentLoaded', function() {
     loadInitialData();
-    
+
+    // Search functionality
+    const searchInput = document.getElementById('search-input');
+    const clearSearchBtn = document.getElementById('clear-search');
+
+    searchInput.addEventListener('input', searchAppointments);
+    clearSearchBtn.addEventListener('click', function() {
+        searchInput.value = '';
+        renderAppointmentsTable();
+    });
+
     // Edit form submission
     document.getElementById('edit-appointment-form').addEventListener('submit', function(e) {
         e.preventDefault();
@@ -194,12 +189,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 async function loadInitialData() {
     showLoading(true);
-    
+
     try {
-        // Load rooms, patients, and appointments in parallel
-        const [roomsData, patientsData, appointmentsData] = await Promise.all([
+        // Load rooms, patients, procedures, and appointments in parallel
+        const [roomsData, patientsData, proceduresData, appointmentsData] = await Promise.all([
             apiRequest('rooms', 'list'),
             apiRequest('patients', 'list'),
+            apiRequest('procedures', 'active'),
             apiRequest('appointments', 'list')
         ]);
 
@@ -211,6 +207,11 @@ async function loadInitialData() {
         if (patientsData.success) {
             patients = patientsData.patients || [];
             populatePatientSelects();
+        }
+
+        if (proceduresData.success) {
+            procedures = proceduresData.procedures || [];
+            populateProcedureSelects();
         }
 
         if (appointmentsData.success) {
@@ -228,18 +229,14 @@ async function loadInitialData() {
 }
 
 function populateRoomSelects() {
-    const filterSelect = document.getElementById('filter-room');
     const editSelect = document.getElementById('edit-room-id');
-    
+
     // Clear existing options (except first)
-    filterSelect.innerHTML = '<option value="">All Rooms</option>';
     editSelect.innerHTML = '<option value="">Select Room</option>';
-    
+
     rooms.forEach(room => {
         if (room.is_active) {
-            const filterOption = new Option(room.name, room.id);
             const editOption = new Option(room.name, room.id);
-            filterSelect.add(filterOption);
             editSelect.add(editOption);
         }
     });
@@ -247,23 +244,35 @@ function populateRoomSelects() {
 
 function populatePatientSelects() {
     const editSelect = document.getElementById('edit-patient-id');
-    
+
     // Clear existing options (except first)
     editSelect.innerHTML = '<option value="">Select Patient</option>';
-    
+
     patients.forEach(patient => {
         const option = new Option(patient.name, patient.id);
         editSelect.add(option);
     });
 }
 
+function populateProcedureSelects() {
+    const editSelect = document.getElementById('edit-procedure-id');
+
+    if (editSelect) {
+        editSelect.innerHTML = '<option value="">Select Procedure</option>';
+        procedures.forEach(procedure => {
+            const editOption = new Option(procedure.name, procedure.id);
+            editSelect.add(editOption);
+        });
+    }
+}
+
 function renderAppointmentsTable() {
     const tbody = document.getElementById('appointments-tbody');
-    
+
     if (appointments.length === 0) {
         tbody.innerHTML = `
             <tr>
-                <td colspan="8" class="text-center text-muted py-4">
+                <td colspan="6" class="text-center text-muted py-4">
                     <i class="fas fa-calendar-times fa-2x mb-2"></i><br>
                     No appointments found
                 </td>
@@ -279,11 +288,10 @@ function renderAppointmentsTable() {
             <td>${appointment.patient_name}</td>
             <td>${appointment.room_name}</td>
             <td>
-                <span class="badge ${appointment.type === 'consult' ? 'bg-info' : 'bg-success'}">
-                    ${appointment.type === 'consult' ? 'Consultation' : 'Cosmetic'}
+                <span class="badge bg-primary">
+                    ${appointment.procedure_name || 'No Procedure'}
                 </span>
             </td>
-            <td>${appointment.subtype || '-'}</td>
             <td>${appointment.notes || '-'}</td>
             <td>
                 <div class="btn-group btn-group-sm" role="group">
@@ -308,43 +316,66 @@ function formatDate(dateString) {
     });
 }
 
-function applyFilters() {
-    const date = document.getElementById('filter-date').value;
-    const roomId = document.getElementById('filter-room').value;
-    const type = document.getElementById('filter-type').value;
+function searchAppointments() {
+    const searchTerm = document.getElementById('search-input').value.toLowerCase().trim();
 
-    const filterData = {};
-    if (date) filterData.date = date;
-    if (roomId) filterData.room_id = roomId;
-    if (type) filterData.type = type;
+    if (!searchTerm) {
+        renderAppointmentsTable();
+        return;
+    }
 
-    showLoading(true);
+    const filteredAppointments = appointments.filter(appointment => {
+        return (
+            appointment.patient_name.toLowerCase().includes(searchTerm) ||
+            appointment.room_name.toLowerCase().includes(searchTerm) ||
+            appointment.appointment_date.includes(searchTerm) ||
+            (appointment.procedure_name && appointment.procedure_name.toLowerCase().includes(searchTerm)) ||
+            (appointment.notes && appointment.notes.toLowerCase().includes(searchTerm))
+        );
+    });
 
-    apiRequest('appointments', 'list', filterData)
-        .then(data => {
-            if (data.success) {
-                appointments = data.appointments || [];
-                renderAppointmentsTable();
-            } else {
-                displayMessage('Error filtering appointments: ' + (data.error || 'Unknown error'), 'danger');
-            }
-        })
-        .catch(error => {
-            console.error('Error filtering appointments:', error);
-            displayMessage('Failed to filter appointments. Please try again.', 'danger');
-        })
-        .finally(() => {
-            showLoading(false);
-        });
+    renderFilteredAppointmentsTable(filteredAppointments);
 }
 
-function clearFilters() {
-    document.getElementById('filter-date').value = '';
-    document.getElementById('filter-room').value = '';
-    document.getElementById('filter-type').value = '';
-    
-    // Reload all appointments
-    loadInitialData();
+function renderFilteredAppointmentsTable(filteredAppointments) {
+    const tbody = document.getElementById('appointments-tbody');
+
+    if (filteredAppointments.length === 0) {
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="6" class="text-center text-muted py-4">
+                    <i class="fas fa-search fa-2x mb-2"></i><br>
+                    No appointments found matching your search
+                </td>
+            </tr>
+        `;
+        return;
+    }
+
+    tbody.innerHTML = filteredAppointments.map(appointment => `
+        <tr>
+            <td>${formatDate(appointment.appointment_date)}</td>
+            <td>${appointment.start_time} - ${appointment.end_time}</td>
+            <td>${appointment.patient_name}</td>
+            <td>${appointment.room_name}</td>
+            <td>
+                <span class="badge bg-primary">
+                    ${appointment.procedure_name || 'No Procedure'}
+                </span>
+            </td>
+            <td>${appointment.notes || '-'}</td>
+            <td>
+                <div class="btn-group btn-group-sm" role="group">
+                    <button type="button" class="btn btn-outline-primary" onclick="editAppointment(${appointment.id})" title="Edit">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-danger" onclick="deleteAppointment(${appointment.id}, '${appointment.patient_name}')" title="Delete">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </td>
+        </tr>
+    `).join('');
 }
 
 function editAppointment(appointmentId) {
@@ -353,7 +384,7 @@ function editAppointment(appointmentId) {
         displayMessage('Appointment not found', 'danger');
         return;
     }
-    
+
     // Populate form
     document.getElementById('edit-appointment-id').value = appointment.id;
     document.getElementById('edit-patient-id').value = appointment.patient_id;
@@ -361,10 +392,9 @@ function editAppointment(appointmentId) {
     document.getElementById('edit-appointment-date').value = appointment.appointment_date;
     document.getElementById('edit-start-time').value = appointment.start_time;
     document.getElementById('edit-end-time').value = appointment.end_time;
-    document.getElementById('edit-type').value = appointment.type;
-    document.getElementById('edit-subtype').value = appointment.subtype || '';
+    document.getElementById('edit-procedure-id').value = appointment.procedure_id || '';
     document.getElementById('edit-notes').value = appointment.notes || '';
-    
+
     // Show modal
     const modal = new bootstrap.Modal(document.getElementById('editAppointmentModal'));
     modal.show();
@@ -380,57 +410,56 @@ function updateAppointment() {
     formData.append('appointment_date', document.getElementById('edit-appointment-date').value);
     formData.append('start_time', document.getElementById('edit-start-time').value);
     formData.append('end_time', document.getElementById('edit-end-time').value);
-    formData.append('type', document.getElementById('edit-type').value);
-    formData.append('subtype', document.getElementById('edit-subtype').value);
+    formData.append('procedure_id', document.getElementById('edit-procedure-id').value);
     formData.append('notes', document.getElementById('edit-notes').value);
-    
+
     fetch('api.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            displayMessage(data.message, 'success');
-            bootstrap.Modal.getInstance(document.getElementById('editAppointmentModal')).hide();
-            loadInitialData(); // Reload appointments
-        } else {
-            displayMessage('Error: ' + (data.error || 'Unknown error'), 'danger');
-        }
-    })
-    .catch(error => {
-        console.error('Error updating appointment:', error);
-        displayMessage('Failed to update appointment. Please try again.', 'danger');
-    });
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                displayMessage(data.message, 'success');
+                bootstrap.Modal.getInstance(document.getElementById('editAppointmentModal')).hide();
+                loadInitialData(); // Reload appointments
+            } else {
+                displayMessage('Error: ' + (data.error || 'Unknown error'), 'danger');
+            }
+        })
+        .catch(error => {
+            console.error('Error updating appointment:', error);
+            displayMessage('Failed to update appointment. Please try again.', 'danger');
+        });
 }
 
 function deleteAppointment(appointmentId, patientName) {
     if (!confirm(`Are you sure you want to delete the appointment for "${patientName}"?`)) {
         return;
     }
-    
+
     const formData = new FormData();
     formData.append('entity', 'appointments');
     formData.append('action', 'delete');
     formData.append('id', appointmentId);
-    
+
     fetch('api.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            displayMessage(data.message, 'success');
-            loadInitialData(); // Reload appointments
-        } else {
-            displayMessage('Error: ' + (data.error || 'Unknown error'), 'danger');
-        }
-    })
-    .catch(error => {
-        console.error('Error deleting appointment:', error);
-        displayMessage('Failed to delete appointment. Please try again.', 'danger');
-    });
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                displayMessage(data.message, 'success');
+                loadInitialData(); // Reload appointments
+            } else {
+                displayMessage('Error: ' + (data.error || 'Unknown error'), 'danger');
+            }
+        })
+        .catch(error => {
+            console.error('Error deleting appointment:', error);
+            displayMessage('Failed to delete appointment. Please try again.', 'danger');
+        });
 }
 
 function showLoading(show) {
@@ -446,7 +475,7 @@ function displayMessage(message, type) {
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     `;
     messagesContainer.appendChild(alertDiv);
-    
+
     // Auto-remove after 5 seconds
     setTimeout(() => {
         if (alertDiv.parentNode) {

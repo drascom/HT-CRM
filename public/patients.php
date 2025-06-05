@@ -32,21 +32,18 @@ require_once 'includes/header.php';
 <!-- Search Section -->
 <div class="search-section">
     <div class="row align-items-center">
-        <div class="col-md-8">
+        <div class="col-12">
             <div class="input-group">
                 <span class="input-group-text">
                     <i class="fas fa-search"></i>
                 </span>
                 <input type="text" id="patient-search" class="form-control"
-                       placeholder="Search patients by name or date of birth...">
-            </div>
-        </div>
-        <div class="col-md-4 mt-3 mt-md-0">
-            <div class="text-muted small">
+                    placeholder="Search patients by name or date of birth...">
                 <i class="fas fa-info-circle me-1"></i>
                 <span id="patient-count">Loading...</span> patients found
             </div>
         </div>
+
     </div>
 </div>
 
@@ -265,7 +262,9 @@ document.addEventListener('DOMContentLoaded', function() {
             surgeriesListDiv.innerHTML = 'Loading surgeries...';
 
             // Fetch surgeries via AJAX
-            apiRequest('surgeries', 'list', { patient_id: patientId })
+            apiRequest('surgeries', 'list', {
+                    patient_id: patientId
+                })
                 .then(data => {
                     surgeriesListDiv.innerHTML = ''; // Clear loading message
 

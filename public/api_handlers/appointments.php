@@ -9,11 +9,10 @@ function handle_appointments($action, $method, $db, $input = [])
                 $appointment_date = $_POST['appointment_date'] ?? $input['appointment_date'] ?? null;
                 $start_time = $_POST['start_time'] ?? $input['start_time'] ?? null;
                 $end_time = $_POST['end_time'] ?? $input['end_time'] ?? null;
-                $type = $_POST['type'] ?? $input['type'] ?? null;
-                $subtype = $_POST['subtype'] ?? $input['subtype'] ?? null;
+                $procedure_id = $_POST['procedure_id'] ?? $input['procedure_id'] ?? null;
                 $notes = $_POST['notes'] ?? $input['notes'] ?? null;
 
-                if (!$room_id || !$patient_id || !$appointment_date || !$start_time || !$end_time || !$type) {
+                if (!$room_id || !$patient_id || !$appointment_date || !$start_time || !$end_time || !$procedure_id) {
                     return ['success' => false, 'error' => 'Missing required fields'];
                 }
 
@@ -32,10 +31,10 @@ function handle_appointments($action, $method, $db, $input = [])
 
                 try {
                     $stmt = $db->prepare("
-                        INSERT INTO appointments (room_id, patient_id, appointment_date, start_time, end_time, type, subtype, notes)
-                        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                        INSERT INTO appointments (room_id, patient_id, appointment_date, start_time, end_time, procedure_id, notes)
+                        VALUES (?, ?, ?, ?, ?, ?, ?)
                     ");
-                    $stmt->execute([$room_id, $patient_id, $appointment_date, $start_time, $end_time, $type, $subtype, $notes]);
+                    $stmt->execute([$room_id, $patient_id, $appointment_date, $start_time, $end_time, $procedure_id, $notes]);
                     
                     return ['success' => true, 'id' => $db->lastInsertId()];
                 } catch (PDOException $e) {
@@ -52,11 +51,10 @@ function handle_appointments($action, $method, $db, $input = [])
                 $appointment_date = $_POST['appointment_date'] ?? $input['appointment_date'] ?? null;
                 $start_time = $_POST['start_time'] ?? $input['start_time'] ?? null;
                 $end_time = $_POST['end_time'] ?? $input['end_time'] ?? null;
-                $type = $_POST['type'] ?? $input['type'] ?? null;
-                $subtype = $_POST['subtype'] ?? $input['subtype'] ?? null;
+                $procedure_id = $_POST['procedure_id'] ?? $input['procedure_id'] ?? null;
                 $notes = $_POST['notes'] ?? $input['notes'] ?? null;
 
-                if (!$id || !$room_id || !$patient_id || !$appointment_date || !$start_time || !$end_time || !$type) {
+                if (!$id || !$room_id || !$patient_id || !$appointment_date || !$start_time || !$end_time || !$procedure_id) {
                     return ['success' => false, 'error' => 'Missing required fields'];
                 }
 
@@ -77,10 +75,10 @@ function handle_appointments($action, $method, $db, $input = [])
                     $stmt = $db->prepare("
                         UPDATE appointments
                         SET room_id = ?, patient_id = ?, appointment_date = ?, start_time = ?, end_time = ?,
-                            type = ?, subtype = ?, notes = ?, updated_at = datetime('now')
+                            procedure_id = ?, notes = ?, updated_at = datetime('now')
                         WHERE id = ?
                     ");
-                    $stmt->execute([$room_id, $patient_id, $appointment_date, $start_time, $end_time, $type, $subtype, $notes, $id]);
+                    $stmt->execute([$room_id, $patient_id, $appointment_date, $start_time, $end_time, $procedure_id, $notes, $id]);
 
                     return ['success' => true, 'message' => 'Appointment updated successfully'];
                 } catch (PDOException $e) {
@@ -122,10 +120,11 @@ function handle_appointments($action, $method, $db, $input = [])
 
                 try {
                     $stmt = $db->prepare("
-                        SELECT a.*, p.name as patient_name, r.name as room_name
+                        SELECT a.*, p.name as patient_name, r.name as room_name, pr.name as procedure_name
                         FROM appointments a
                         JOIN patients p ON a.patient_id = p.id
                         JOIN rooms r ON a.room_id = r.id
+                        LEFT JOIN procedures pr ON a.procedure_id = pr.id
                         WHERE a.id = ?
                     ");
                     $stmt->execute([$id]);
@@ -150,10 +149,11 @@ function handle_appointments($action, $method, $db, $input = [])
 
                 try {
                     $sql = "
-                        SELECT a.*, p.name as patient_name, r.name as room_name
+                        SELECT a.*, p.name as patient_name, r.name as room_name, pr.name as procedure_name
                         FROM appointments a
                         JOIN patients p ON a.patient_id = p.id
                         JOIN rooms r ON a.room_id = r.id
+                        LEFT JOIN procedures pr ON a.procedure_id = pr.id
                         WHERE 1=1
                     ";
                     $params = [];
@@ -169,7 +169,7 @@ function handle_appointments($action, $method, $db, $input = [])
                     }
 
                     if ($type) {
-                        $sql .= " AND a.type = ?";
+                        $sql .= " AND a.procedure_id = ?";
                         $params[] = $type;
                     }
 
