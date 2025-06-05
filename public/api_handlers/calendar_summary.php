@@ -20,18 +20,18 @@ function handle_calendar_summary($action, $method, $db, $input = [])
         }
 
         try {
-            // Get consultation count
+            // Get consultation count (based on notes)
             $stmt = $db->prepare("
                 SELECT COUNT(*) as count FROM appointments
-                WHERE room_id = ? AND appointment_date = ? AND type = 'consult'
+                WHERE room_id = ? AND appointment_date = ? AND notes LIKE '%consultation%'
             ");
             $stmt->execute([$room_id, $date]);
             $consult_count = $stmt->fetch(PDO::FETCH_ASSOC)['count'];
 
-            // Get cosmetic count
+            // Get cosmetic count (appointments without consultation in notes)
             $stmt = $db->prepare("
                 SELECT COUNT(*) as count FROM appointments
-                WHERE room_id = ? AND appointment_date = ? AND type = 'cosmetic'
+                WHERE room_id = ? AND appointment_date = ? AND (notes NOT LIKE '%consultation%' OR notes IS NULL OR notes = '')
             ");
             $stmt->execute([$room_id, $date]);
             $cosmetic_count = $stmt->fetch(PDO::FETCH_ASSOC)['count'];
@@ -74,17 +74,18 @@ function getMonthSummary($db, $year, $month) {
             'surgeries' => []
         ];
 
-        // Get all appointments for the month grouped by room and date
+        // Get all appointments for the month with room types to determine appointment type
         $stmt = $db->prepare("
             SELECT
-                room_id,
-                appointment_date,
-                type,
+                a.room_id,
+                a.appointment_date,
+                r.types as room_type,
                 COUNT(*) as count
-            FROM appointments
-            WHERE appointment_date BETWEEN ? AND ?
-            GROUP BY room_id, appointment_date, type
-            ORDER BY room_id, appointment_date, type
+            FROM appointments a
+            JOIN rooms r ON a.room_id = r.id
+            WHERE a.appointment_date BETWEEN ? AND ?
+            GROUP BY a.room_id, a.appointment_date, r.types
+            ORDER BY a.room_id, a.appointment_date
         ");
         $stmt->execute([$startDate, $endDate]);
         $appointments = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -101,11 +102,13 @@ function getMonthSummary($db, $year, $month) {
                 ];
             }
 
-            if ($apt['type'] === 'consult') {
-                $result['appointments'][$key]['consult_count'] = (int)$apt['count'];
-            } elseif ($apt['type'] === 'cosmetic') {
-                $result['appointments'][$key]['cosmetic_count'] = (int)$apt['count'];
+            // Determine type based on room type
+            if ($apt['room_type'] === 'consultation') {
+                $result['appointments'][$key]['consult_count'] += (int)$apt['count'];
+            } elseif ($apt['room_type'] === 'treatment') {
+                $result['appointments'][$key]['cosmetic_count'] += (int)$apt['count'];
             }
+            // Note: surgery rooms are handled separately in the surgeries section
         }
 
         // Get all surgeries for the month

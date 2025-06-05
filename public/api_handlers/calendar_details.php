@@ -10,29 +10,34 @@ function handle_calendar_details($action, $method, $db, $input = [])
         }
         
         try {
-            // Get consultations
+            // Get room type to determine how to categorize appointments
+            $stmt = $db->prepare("SELECT types FROM rooms WHERE id = ?");
+            $stmt->execute([$room_id]);
+            $room = $stmt->fetch(PDO::FETCH_ASSOC);
+            $room_type = $room['types'] ?? '';
+
+            // Get all appointments for this room and date
             $stmt = $db->prepare("
-                SELECT a.id, p.name as name, a.subtype, a.start_time, a.end_time
+                SELECT a.id, p.name as name, a.start_time, a.end_time, a.notes
                 FROM appointments a
                 JOIN patients p ON a.patient_id = p.id
-                WHERE a.room_id = ? AND a.appointment_date = ? AND a.type = 'consult'
+                WHERE a.room_id = ? AND a.appointment_date = ?
                 ORDER BY a.start_time
             ");
             $stmt->execute([$room_id, $date]);
-            $consults = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $appointments = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            // Categorize appointments based on room type
+            $consults = [];
+            $cosmetics = [];
+
+            if ($room_type === 'consultation') {
+                $consults = $appointments;
+            } elseif ($room_type === 'treatment') {
+                $cosmetics = $appointments;
+            }
             
-            // Get cosmetic procedures
-            $stmt = $db->prepare("
-                SELECT a.id, p.name as name, a.subtype, a.start_time, a.end_time
-                FROM appointments a
-                JOIN patients p ON a.patient_id = p.id
-                WHERE a.room_id = ? AND a.appointment_date = ? AND a.type = 'cosmetic'
-                ORDER BY a.start_time
-            ");
-            $stmt->execute([$room_id, $date]);
-            $cosmetics = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            
-            // Get surgery details with technicians
+            // Get surgery details
             $stmt = $db->prepare("
                 SELECT s.id, p.name as patient_name, s.graft_count, s.status
                 FROM room_reservations rr
@@ -42,27 +47,15 @@ function handle_calendar_details($action, $method, $db, $input = [])
             ");
             $stmt->execute([$room_id, $date]);
             $surgery = $stmt->fetch(PDO::FETCH_ASSOC);
-
+            
             $surgery_details = null;
             if ($surgery) {
-                // Get assigned technicians for this surgery
-                $stmt = $db->prepare("
-                    SELECT t.name
-                    FROM surgery_technicians st
-                    JOIN technicians t ON st.id = t.id
-                    WHERE st.surgery_id = ?
-                    ORDER BY t.name
-                ");
-                $stmt->execute([$surgery['id']]);
-                $technicians = $stmt->fetchAll(PDO::FETCH_COLUMN);
-
                 $surgery_details = [
                     'patient_name' => $surgery['patient_name'],
                     'procedure' => 'Hair Transplant',
                     'graft_count' => $surgery['graft_count'],
                     'status' => $surgery['status'],
-                    'time' => '08:00-17:00', // Default time for surgeries
-                    'technicians' => $technicians
+                    'time' => '08:00-17:00' // Default time for surgeries
                 ];
             }
             
@@ -77,5 +70,5 @@ function handle_calendar_details($action, $method, $db, $input = [])
         }
     }
     
-    return ['success' => false, 'error' => 'Invalid method for calendar_details entity'];
+    return ['success' => false, 'error' => 'Only POST method is supported for calendar_details entity'];
 }

@@ -1,0 +1,2706 @@
+
+## Auto Import Log - 2025-06-05 18:06:15
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:07:55
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:09:53
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:13:37
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:13:38
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:13:38
+
+**Level:** INFO
+**Message:** Starting Google Sheets fetch and save
+---
+
+## Auto Import Log - 2025-06-05 18:13:49
+
+**Level:** INFO
+**Message:** Google Sheets data saved successfully
+**Data:**
+```json
+{
+    "file": "sheets_data_2025-06-05_18-13-49.json",
+    "size": 56522
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:15:28
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:15:30
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:15:30
+
+**Level:** INFO
+**Message:** Starting Google Sheets fetch and save
+---
+
+## Auto Import Log - 2025-06-05 18:15:40
+
+**Level:** INFO
+**Message:** Google Sheets data saved successfully
+**Data:**
+```json
+{
+    "file": "sheets_data_2025-06-05_18-15-40.json",
+    "size": 56522
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:22:08
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:22:10
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:22:45
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:22:49
+
+**Level:** INFO
+**Message:** Using calendar.json file for testing
+---
+
+## Auto Import Log - 2025-06-05 18:22:49
+
+**Level:** INFO
+**Message:** Calendar.json loaded successfully
+**Data:**
+```json
+{
+    "data_keys": [
+        "timestamp",
+        "spreadsheetTitle",
+        "sheetTitles",
+        "sheetValues"
+    ]
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:22:49
+
+**Level:** INFO
+**Message:** Calendar data processed successfully
+**Data:**
+```json
+{
+    "sheets": 12,
+    "total_rows": 359
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:55
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** INFO
+**Message:** Using calendar.json file for testing
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** INFO
+**Message:** Calendar.json loaded successfully
+**Data:**
+```json
+{
+    "data_keys": [
+        "timestamp",
+        "spreadsheetTitle",
+        "sheetTitles",
+        "sheetValues"
+    ]
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** INFO
+**Message:** Calendar data processed successfully
+**Data:**
+```json
+{
+    "sheets": 12,
+    "total_rows": 359
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "2",
+    "date": "2025-03-10",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "3",
+    "date": "2025-03-11",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "4",
+    "date": "2025-03-25",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "5",
+    "date": "2025-03-27",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "6",
+    "date": "2025-04-01",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "7",
+    "date": "2025-04-07",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "8",
+    "date": "2025-04-08",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "9",
+    "date": "2025-04-09",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "10",
+    "date": "2025-04-11",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "11",
+    "date": "2025-04-14",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "12",
+    "date": "2025-04-23",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "13",
+    "date": "2025-04-24",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "14",
+    "date": "2025-04-25",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "15",
+    "date": "2025-04-28",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "16",
+    "date": "2025-04-29",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "17",
+    "date": "2025-05-01",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "18",
+    "date": "2025-05-02",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "19",
+    "date": "2025-05-12",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "20",
+    "date": "2025-05-13",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "21",
+    "date": "2025-05-14",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "22",
+    "date": "2025-05-15",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "23",
+    "date": "2025-05-16",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "24",
+    "date": "2025-05-19",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "25",
+    "date": "2025-05-20",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "26",
+    "date": "2025-05-21",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "27",
+    "date": "2025-05-22",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "28",
+    "date": "2025-05-23",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "29",
+    "date": "2025-05-27",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "30",
+    "date": "2025-05-28",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "31",
+    "date": "2025-05-29",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "32",
+    "date": "2025-06-02",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "33",
+    "date": "2025-06-03",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "34",
+    "date": "2025-06-04",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "35",
+    "date": "2025-06-10",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "36",
+    "date": "2025-06-12",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "37",
+    "date": "2025-06-16",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "38",
+    "date": "2025-06-17",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "39",
+    "date": "2025-06-19",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "40",
+    "date": "2025-06-20",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "41",
+    "date": "2025-06-25",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "42",
+    "date": "2025-06-26",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "43",
+    "date": "2025-07-08",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "44",
+    "date": "2025-07-09",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "45",
+    "date": "2025-07-10",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "46",
+    "date": "2025-07-11",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "47",
+    "date": "2025-07-14",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "48",
+    "date": "2025-07-18",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "49",
+    "date": "2025-07-21",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "50",
+    "date": "2025-08-01",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "51",
+    "date": "2025-08-04",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "52",
+    "date": "2025-08-05",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "53",
+    "date": "2025-08-06",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "54",
+    "date": "2025-08-08",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "55",
+    "date": "2025-08-15",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "56",
+    "date": "2025-08-18",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "57",
+    "date": "2025-08-20",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "58",
+    "date": "2025-09-01",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "59",
+    "date": "2025-09-02",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "60",
+    "date": "2025-09-04",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "61",
+    "date": "2025-09-05",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "62",
+    "date": "2025-09-09",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "63",
+    "date": "2025-09-11",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "64",
+    "date": "2025-09-12",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "65",
+    "date": "2025-09-15",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "66",
+    "date": "2025-09-22",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "67",
+    "date": "2025-09-29",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "68",
+    "date": "2025-10-01",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "69",
+    "date": "2025-10-02",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "70",
+    "date": "2025-10-06",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "71",
+    "date": "2025-10-15",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "72",
+    "date": "2025-10-20",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "73",
+    "date": "2025-10-24",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "74",
+    "date": "2025-11-03",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "75",
+    "date": "2025-11-07",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "76",
+    "date": "2025-11-13",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "77",
+    "date": "2025-12-15",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "78",
+    "date": "2025-12-18",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "79",
+    "date": "2025-12-19",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "80",
+    "date": "2025-01-19",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:25:57
+
+**Level:** ERROR
+**Message:** Error creating surgery
+**Data:**
+```json
+{
+    "patient_id": "81",
+    "date": "2025-02-13",
+    "error": "SQLSTATE[HY000]: General error: 1 table surgeries has no column named agency_id"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:34:20
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:34:24
+
+**Level:** INFO
+**Message:** Using calendar.json file for testing
+---
+
+## Auto Import Log - 2025-06-05 18:34:24
+
+**Level:** INFO
+**Message:** Calendar.json loaded successfully
+**Data:**
+```json
+{
+    "data_keys": [
+        "timestamp",
+        "spreadsheetTitle",
+        "sheetTitles",
+        "sheetValues"
+    ]
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:34:24
+
+**Level:** INFO
+**Message:** Calendar data processed successfully
+**Data:**
+```json
+{
+    "sheets": 12,
+    "total_rows": 359
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:39:18
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:39:20
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:39:21
+
+**Level:** INFO
+**Message:** Using calendar.json file for testing
+---
+
+## Auto Import Log - 2025-06-05 18:39:21
+
+**Level:** INFO
+**Message:** Calendar.json loaded successfully
+**Data:**
+```json
+{
+    "data_keys": [
+        "timestamp",
+        "spreadsheetTitle",
+        "sheetTitles",
+        "sheetValues"
+    ]
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 18:39:21
+
+**Level:** INFO
+**Message:** Calendar data processed successfully
+**Data:**
+```json
+{
+    "sheets": 12,
+    "total_rows": 359
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:00:19
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:00:22
+
+**Level:** INFO
+**Message:** Starting Google Sheets fetch from API
+---
+
+## Auto Import Log - 2025-06-05 19:00:22
+
+**Level:** INFO
+**Message:** Cache not available, fetching from Google Sheets API
+---
+
+## Auto Import Log - 2025-06-05 19:00:23
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "MAR 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:00:23
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "APR 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:00:24
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "MAY 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:00:24
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "JUN 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:00:24
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "JUL 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:00:24
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "AUG 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:00:25
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "SEP 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:00:25
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "OCT 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:00:26
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "NOV 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:00:26
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "DEC 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:00:26
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "JAN 26",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:00:27
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "FEB 26",
+    "rows": 29
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:00:27
+
+**Level:** INFO
+**Message:** Google Sheets data saved to cache
+**Data:**
+```json
+{
+    "file": "auto_import_d3150955807ecdc9b83bed9d480c6b56.json",
+    "size": 58524,
+    "sheets": 12
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:21
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:23
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:24
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:26
+
+**Level:** INFO
+**Message:** Starting Google Sheets fetch from API
+---
+
+## Auto Import Log - 2025-06-05 19:06:26
+
+**Level:** INFO
+**Message:** Cache not available, fetching from Google Sheets API
+---
+
+## Auto Import Log - 2025-06-05 19:06:27
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "MAR 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:28
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "APR 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:28
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "MAY 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:29
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "JUN 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:29
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "JUL 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:30
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "AUG 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:30
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "SEP 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:31
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "OCT 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:31
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "NOV 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:32
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "DEC 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:32
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "JAN 26",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:33
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "FEB 26",
+    "rows": 29
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:33
+
+**Level:** INFO
+**Message:** Google Sheets data saved to cache
+**Data:**
+```json
+{
+    "file": "auto_import_d3150955807ecdc9b83bed9d480c6b56.json",
+    "size": 58524,
+    "sheets": 12
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:33
+
+**Level:** ERROR
+**Message:** Error checking appointment existence
+**Data:**
+```json
+{
+    "patient_id": "11",
+    "date": "2025-04-22",
+    "error": "SQLSTATE[HY000]: General error: 1 no such column: date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:33
+
+**Level:** ERROR
+**Message:** Error creating appointment
+**Data:**
+```json
+{
+    "patient_id": "11",
+    "date": "2025-04-22",
+    "type": "consultation_v2v",
+    "error": "SQLSTATE[HY000]: General error: 1 table appointments has no column named date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:33
+
+**Level:** ERROR
+**Message:** Error checking appointment existence
+**Data:**
+```json
+{
+    "patient_id": "14",
+    "date": "2025-04-24",
+    "error": "SQLSTATE[HY000]: General error: 1 no such column: date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:33
+
+**Level:** ERROR
+**Message:** Error creating appointment
+**Data:**
+```json
+{
+    "patient_id": "14",
+    "date": "2025-04-24",
+    "type": "consultation_v2v",
+    "error": "SQLSTATE[HY000]: General error: 1 table appointments has no column named date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:33
+
+**Level:** ERROR
+**Message:** Error checking appointment existence
+**Data:**
+```json
+{
+    "patient_id": "20",
+    "date": "2025-05-02",
+    "error": "SQLSTATE[HY000]: General error: 1 no such column: date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:33
+
+**Level:** ERROR
+**Message:** Error creating appointment
+**Data:**
+```json
+{
+    "patient_id": "20",
+    "date": "2025-05-02",
+    "type": "consultation_v2v",
+    "error": "SQLSTATE[HY000]: General error: 1 table appointments has no column named date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:33
+
+**Level:** ERROR
+**Message:** Error checking appointment existence
+**Data:**
+```json
+{
+    "patient_id": "26",
+    "date": "2025-05-16",
+    "error": "SQLSTATE[HY000]: General error: 1 no such column: date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:33
+
+**Level:** ERROR
+**Message:** Error creating appointment
+**Data:**
+```json
+{
+    "patient_id": "26",
+    "date": "2025-05-16",
+    "type": "consultation_f2f",
+    "error": "SQLSTATE[HY000]: General error: 1 table appointments has no column named date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:33
+
+**Level:** ERROR
+**Message:** Error checking appointment existence
+**Data:**
+```json
+{
+    "patient_id": "28",
+    "date": "2025-05-19",
+    "error": "SQLSTATE[HY000]: General error: 1 no such column: date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:33
+
+**Level:** ERROR
+**Message:** Error creating appointment
+**Data:**
+```json
+{
+    "patient_id": "28",
+    "date": "2025-05-19",
+    "type": "consultation_v2v",
+    "error": "SQLSTATE[HY000]: General error: 1 table appointments has no column named date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:33
+
+**Level:** ERROR
+**Message:** Error checking appointment existence
+**Data:**
+```json
+{
+    "patient_id": "32",
+    "date": "2025-05-22",
+    "error": "SQLSTATE[HY000]: General error: 1 no such column: date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:33
+
+**Level:** ERROR
+**Message:** Error creating appointment
+**Data:**
+```json
+{
+    "patient_id": "32",
+    "date": "2025-05-22",
+    "type": "consultation_v2v",
+    "error": "SQLSTATE[HY000]: General error: 1 table appointments has no column named date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:33
+
+**Level:** ERROR
+**Message:** Error checking appointment existence
+**Data:**
+```json
+{
+    "patient_id": "34",
+    "date": "2025-05-23",
+    "error": "SQLSTATE[HY000]: General error: 1 no such column: date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:33
+
+**Level:** ERROR
+**Message:** Error creating appointment
+**Data:**
+```json
+{
+    "patient_id": "34",
+    "date": "2025-05-23",
+    "type": "consultation_f2f",
+    "error": "SQLSTATE[HY000]: General error: 1 table appointments has no column named date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:51
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:52
+
+**Level:** INFO
+**Message:** Starting Google Sheets fetch from API
+---
+
+## Auto Import Log - 2025-06-05 19:06:52
+
+**Level:** INFO
+**Message:** Using cached data
+**Data:**
+```json
+{
+    "cache_age": 19
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:52
+
+**Level:** ERROR
+**Message:** Error checking appointment existence
+**Data:**
+```json
+{
+    "patient_id": 11,
+    "date": "2025-04-22",
+    "error": "SQLSTATE[HY000]: General error: 1 no such column: date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:52
+
+**Level:** ERROR
+**Message:** Error creating appointment
+**Data:**
+```json
+{
+    "patient_id": 11,
+    "date": "2025-04-22",
+    "type": "consultation_v2v",
+    "error": "SQLSTATE[HY000]: General error: 1 table appointments has no column named date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:52
+
+**Level:** ERROR
+**Message:** Error checking appointment existence
+**Data:**
+```json
+{
+    "patient_id": 14,
+    "date": "2025-04-24",
+    "error": "SQLSTATE[HY000]: General error: 1 no such column: date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:52
+
+**Level:** ERROR
+**Message:** Error creating appointment
+**Data:**
+```json
+{
+    "patient_id": 14,
+    "date": "2025-04-24",
+    "type": "consultation_v2v",
+    "error": "SQLSTATE[HY000]: General error: 1 table appointments has no column named date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:52
+
+**Level:** ERROR
+**Message:** Error checking appointment existence
+**Data:**
+```json
+{
+    "patient_id": 20,
+    "date": "2025-05-02",
+    "error": "SQLSTATE[HY000]: General error: 1 no such column: date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:52
+
+**Level:** ERROR
+**Message:** Error creating appointment
+**Data:**
+```json
+{
+    "patient_id": 20,
+    "date": "2025-05-02",
+    "type": "consultation_v2v",
+    "error": "SQLSTATE[HY000]: General error: 1 table appointments has no column named date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:52
+
+**Level:** ERROR
+**Message:** Error checking appointment existence
+**Data:**
+```json
+{
+    "patient_id": 26,
+    "date": "2025-05-16",
+    "error": "SQLSTATE[HY000]: General error: 1 no such column: date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:52
+
+**Level:** ERROR
+**Message:** Error creating appointment
+**Data:**
+```json
+{
+    "patient_id": 26,
+    "date": "2025-05-16",
+    "type": "consultation_f2f",
+    "error": "SQLSTATE[HY000]: General error: 1 table appointments has no column named date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:52
+
+**Level:** ERROR
+**Message:** Error checking appointment existence
+**Data:**
+```json
+{
+    "patient_id": 28,
+    "date": "2025-05-19",
+    "error": "SQLSTATE[HY000]: General error: 1 no such column: date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:52
+
+**Level:** ERROR
+**Message:** Error creating appointment
+**Data:**
+```json
+{
+    "patient_id": 28,
+    "date": "2025-05-19",
+    "type": "consultation_v2v",
+    "error": "SQLSTATE[HY000]: General error: 1 table appointments has no column named date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:52
+
+**Level:** ERROR
+**Message:** Error checking appointment existence
+**Data:**
+```json
+{
+    "patient_id": 32,
+    "date": "2025-05-22",
+    "error": "SQLSTATE[HY000]: General error: 1 no such column: date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:52
+
+**Level:** ERROR
+**Message:** Error creating appointment
+**Data:**
+```json
+{
+    "patient_id": 32,
+    "date": "2025-05-22",
+    "type": "consultation_v2v",
+    "error": "SQLSTATE[HY000]: General error: 1 table appointments has no column named date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:52
+
+**Level:** ERROR
+**Message:** Error checking appointment existence
+**Data:**
+```json
+{
+    "patient_id": 34,
+    "date": "2025-05-23",
+    "error": "SQLSTATE[HY000]: General error: 1 no such column: date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:06:52
+
+**Level:** ERROR
+**Message:** Error creating appointment
+**Data:**
+```json
+{
+    "patient_id": 34,
+    "date": "2025-05-23",
+    "type": "consultation_f2f",
+    "error": "SQLSTATE[HY000]: General error: 1 table appointments has no column named date"
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:21:48
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:21:50
+
+**Level:** INFO
+**Message:** Starting Google Sheets fetch from API
+---
+
+## Auto Import Log - 2025-06-05 19:21:50
+
+**Level:** INFO
+**Message:** Cache not available, fetching from Google Sheets API
+---
+
+## Auto Import Log - 2025-06-05 19:21:52
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "MAR 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:21:52
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "APR 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:21:52
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "MAY 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:21:53
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "JUN 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:21:54
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "JUL 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:21:54
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "AUG 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:21:54
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "SEP 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:21:55
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "OCT 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:21:55
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "NOV 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:21:56
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "DEC 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:21:56
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "JAN 26",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:21:57
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "FEB 26",
+    "rows": 29
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:21:57
+
+**Level:** INFO
+**Message:** Google Sheets data saved to cache
+**Data:**
+```json
+{
+    "file": "auto_import_d3150955807ecdc9b83bed9d480c6b56.json",
+    "size": 58524,
+    "sheets": 12
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:49:06
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:49:08
+
+**Level:** INFO
+**Message:** Starting Google Sheets fetch from API
+---
+
+## Auto Import Log - 2025-06-05 19:49:08
+
+**Level:** INFO
+**Message:** Cache not available, fetching from Google Sheets API
+---
+
+## Auto Import Log - 2025-06-05 19:49:09
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "MAR 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:49:10
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "APR 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:49:11
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "MAY 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:49:11
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "JUN 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:49:11
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "JUL 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:49:11
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "AUG 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:49:12
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "SEP 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:49:12
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "OCT 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:49:12
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "NOV 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:49:12
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "DEC 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:49:13
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "JAN 26",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:49:13
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "FEB 26",
+    "rows": 29
+}
+```
+---
+
+## Auto Import Log - 2025-06-05 19:49:13
+
+**Level:** INFO
+**Message:** Google Sheets data saved to cache
+**Data:**
+```json
+{
+    "file": "auto_import_d3150955807ecdc9b83bed9d480c6b56.json",
+    "size": 58524,
+    "sheets": 12
+}
+```
+---

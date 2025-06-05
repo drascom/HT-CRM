@@ -34,7 +34,7 @@ require_once 'includes/header.php';
 <!-- Search Section -->
 <div class="search-section">
     <div class="row align-items-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="input-group">
                 <span class="input-group-text">
                     <i class="fas fa-search"></i>
@@ -43,7 +43,7 @@ require_once 'includes/header.php';
                     placeholder="Search surgeries by date, patient, or status...">
             </div>
         </div>
-        <div class="col-md-4 mt-3 mt-md-0">
+        <div class="col-md-2 mt-3 mt-md-0">
             <div class="text-muted small">
                 <i class="fas fa-info-circle me-1"></i>
                 <span id="surgery-count">Loading...</span> surgeries found
@@ -268,11 +268,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const date = row.cells[0].textContent.toLowerCase();
             const patientName = row.cells[1].textContent.toLowerCase();
             const agencyName = isAdmin ? row.cells[2].textContent.toLowerCase() : '';
-            const roomName = isAdmin ? row.cells[3].textContent.toLowerCase() : row.cells[2].textContent.toLowerCase();
-            const status = isAdmin ? row.cells[5].textContent.toLowerCase() : row.cells[4].textContent.toLowerCase();
+            const roomName = isAdmin ? row.cells[3].textContent.toLowerCase() : row.cells[2].textContent
+                .toLowerCase();
+            const status = isAdmin ? row.cells[5].textContent.toLowerCase() : row.cells[4].textContent
+                .toLowerCase();
 
             if (date.includes(searchTerm) || patientName.includes(searchTerm) ||
-                agencyName.includes(searchTerm) || roomName.includes(searchTerm) || status.includes(searchTerm)) {
+                agencyName.includes(searchTerm) || roomName.includes(searchTerm) || status.includes(
+                    searchTerm)) {
                 row.style.display = '';
             } else {
                 row.style.display = 'none';

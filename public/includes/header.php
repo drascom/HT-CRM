@@ -129,6 +129,12 @@
                                     Agencies
                                 </a>
                             </li>
+                            <li>
+                                <a class="dropdown-item" href="auto_import.php">
+                                    <i class="fas fa-building me-1"></i>
+                                    Import Data
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <?php endif; ?>
