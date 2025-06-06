@@ -21,8 +21,8 @@
 }
 
 .availability-cell.unavailable {
-    background-color: #f8d7da;
-    color: #721c24;
+    /* background-color: #f8d7da; */
+    color: rgba(114, 28, 37, 0.43);
     border-color: #f5c6cb;
 }
 
@@ -64,7 +64,7 @@
     color: #6c757d;
     font-style: italic;
     line-height: 1.2;
-    }
+}
     
     /* New styles for updated layout */
     .tech-name-cell {

@@ -116,298 +116,298 @@ require_once 'includes/header.php';
 
 
 <script>
-class TechAvailability {
-    constructor() {
-        this.currentMonthStart = this.getMonthStart(new Date());
-        this.technicians = [];
-        this.availability = {};
-
-        this.initializeElements();
-        this.bindEvents();
-        this.loadData();
-    }
-
-    initializeElements() {
-        this.monthRangeEl = document.getElementById('monthRange');
-        this.prevMonthBtn = document.getElementById('prevMonth');
-        this.nextMonthBtn = document.getElementById('nextMonth');
-        this.todayBtn = document.getElementById('todayBtn');
-        this.loadingSpinner = document.getElementById('loading-spinner');
-        this.tableHeader = document.getElementById('table-header');
-        this.tableBody = document.getElementById('table-body');
-    }
-
-    bindEvents() {
-        this.prevMonthBtn.addEventListener('click', () => this.navigateMonth(-1));
-        this.nextMonthBtn.addEventListener('click', () => this.navigateMonth(1));
-        this.todayBtn.addEventListener('click', () => this.goToToday());
-    }
-
-    getMonthStart(date) {
-        const d = new Date(date);
-        return new Date(d.getFullYear(), d.getMonth(), 1);
-    }
-
-    getMonthEnd(date) {
-        const d = new Date(date);
-        return new Date(d.getFullYear(), d.getMonth() + 1, 0);
-    }
-
-    formatDate(date) {
-        const year = date.getFullYear();
-        const month = String(date.getMonth() + 1).padStart(2, '0');
-        const day = String(date.getDate()).padStart(2, '0');
-        return `${year}-${month}-${day}`;
-    }
-
-    navigateMonth(direction) {
-        this.currentMonthStart.setMonth(this.currentMonthStart.getMonth() + direction);
-        this.loadData();
-    }
-
-    goToToday() {
-        this.currentMonthStart = this.getMonthStart(new Date());
-        this.loadData();
-    }
-
-    updateMonthRange() {
-        const options = {
-            year: 'numeric',
-            month: 'long'
-        };
-        this.monthRangeEl.textContent = this.currentMonthStart.toLocaleDateString('en-US', options);
-    }
-
-    async loadData() {
-        this.showLoading(true);
-
-        try {
-            // Load technicians
-            const techsData = await apiRequest('techs', 'list');
-
-            if (!techsData.success) {
-                throw new Error(techsData.error || 'Failed to load technicians');
-            }
-
-            this.technicians = techsData.technicians;
-
-            // Load availability for the month
-            const startDate = this.formatDate(this.currentMonthStart);
-            const endDate = this.formatDate(this.getMonthEnd(this.currentMonthStart));
-
-            const availData = await apiRequest('techAvail', 'byRange', {
-                start: startDate,
-                end: endDate
-            });
-
-            if (!availData.success) {
-                throw new Error(availData.error || 'Failed to load availability');
-            }
-
-            // Process availability data
+    class TechAvailability {
+        constructor() {
+            this.currentMonthStart = this.getMonthStart(new Date());
+            this.technicians = [];
             this.availability = {};
-            availData.availability.forEach(avail => {
-                const key = `${avail.tech_id}-${avail.date}`;
-                if (!this.availability[key]) {
-                    this.availability[key] = [];
+
+            this.initializeElements();
+            this.bindEvents();
+            this.loadData();
+        }
+
+        initializeElements() {
+            this.monthRangeEl = document.getElementById('monthRange');
+            this.prevMonthBtn = document.getElementById('prevMonth');
+            this.nextMonthBtn = document.getElementById('nextMonth');
+            this.todayBtn = document.getElementById('todayBtn');
+            this.loadingSpinner = document.getElementById('loading-spinner');
+            this.tableHeader = document.getElementById('table-header');
+            this.tableBody = document.getElementById('table-body');
+        }
+
+        bindEvents() {
+            this.prevMonthBtn.addEventListener('click', () => this.navigateMonth(-1));
+            this.nextMonthBtn.addEventListener('click', () => this.navigateMonth(1));
+            this.todayBtn.addEventListener('click', () => this.goToToday());
+        }
+
+        getMonthStart(date) {
+            const d = new Date(date);
+            return new Date(d.getFullYear(), d.getMonth(), 1);
+        }
+
+        getMonthEnd(date) {
+            const d = new Date(date);
+            return new Date(d.getFullYear(), d.getMonth() + 1, 0);
+        }
+
+        formatDate(date) {
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        }
+
+        navigateMonth(direction) {
+            this.currentMonthStart.setMonth(this.currentMonthStart.getMonth() + direction);
+            this.loadData();
+        }
+
+        goToToday() {
+            this.currentMonthStart = this.getMonthStart(new Date());
+            this.loadData();
+        }
+
+        updateMonthRange() {
+            const options = {
+                year: 'numeric',
+                month: 'long'
+            };
+            this.monthRangeEl.textContent = this.currentMonthStart.toLocaleDateString('en-US', options);
+        }
+
+        async loadData() {
+            this.showLoading(true);
+
+            try {
+                // Load technicians
+                const techsData = await apiRequest('techs', 'list');
+
+                if (!techsData.success) {
+                    throw new Error(techsData.error || 'Failed to load technicians');
                 }
-                this.availability[key].push(avail.period);
+
+                this.technicians = techsData.technicians;
+
+                // Load availability for the month
+                const startDate = this.formatDate(this.currentMonthStart);
+                const endDate = this.formatDate(this.getMonthEnd(this.currentMonthStart));
+
+                const availData = await apiRequest('techAvail', 'byRange', {
+                    start: startDate,
+                    end: endDate
+                });
+
+                if (!availData.success) {
+                    throw new Error(availData.error || 'Failed to load availability');
+                }
+
+                // Process availability data
+                this.availability = {};
+                availData.availability.forEach(avail => {
+                    const key = `${avail.tech_id}-${avail.date}`;
+                    if (!this.availability[key]) {
+                        this.availability[key] = [];
+                    }
+                    this.availability[key].push(avail.period);
+                });
+
+                this.render();
+
+            } catch (error) {
+                console.error('Error loading data:', error);
+                this.showError('Failed to load technician availability data');
+            } finally {
+                this.showLoading(false);
+            }
+        }
+
+        render() {
+            this.updateMonthRange();
+            this.renderTable();
+        }
+
+        renderTable() {
+            // Clear existing content
+            this.tableHeader.innerHTML = '';
+            this.tableBody.innerHTML = '';
+
+            // Generate header row with dates
+            const headerRow = document.createElement('tr');
+            const techHeader = document.createElement('th');
+            techHeader.className = 'tech-name';
+            techHeader.textContent = 'Technician';
+            headerRow.appendChild(techHeader);
+
+            // Generate all days of the month for header
+            const monthStart = new Date(this.currentMonthStart);
+            const monthEnd = this.getMonthEnd(this.currentMonthStart);
+            const dates = [];
+            let currentDate = new Date(monthStart);
+
+            while (currentDate <= monthEnd) {
+                dates.push(new Date(currentDate));
+                currentDate.setDate(currentDate.getDate() + 1);
+            }
+
+            // Add day numbers to header
+            dates.forEach(date => {
+                const dayHeader = document.createElement('th');
+                dayHeader.className = 'day-header';
+                dayHeader.textContent = date.getDate();
+                headerRow.appendChild(dayHeader);
             });
+            this.tableHeader.appendChild(headerRow);
 
-            this.render();
+            // Generate rows for each active technician only
+            this.technicians.filter(tech => tech.is_active).forEach(tech => {
+                const row = document.createElement('tr');
 
-        } catch (error) {
-            console.error('Error loading data:', error);
-            this.showError('Failed to load technician availability data');
-        } finally {
-            this.showLoading(false);
-        }
-    }
-
-    render() {
-        this.updateMonthRange();
-        this.renderTable();
-    }
-
-    renderTable() {
-        // Clear existing content
-        this.tableHeader.innerHTML = '';
-        this.tableBody.innerHTML = '';
-
-        // Generate header row with dates
-        const headerRow = document.createElement('tr');
-        const techHeader = document.createElement('th');
-        techHeader.className = 'tech-name';
-        techHeader.textContent = 'Technician';
-        headerRow.appendChild(techHeader);
-
-        // Generate all days of the month for header
-        const monthStart = new Date(this.currentMonthStart);
-        const monthEnd = this.getMonthEnd(this.currentMonthStart);
-        const dates = [];
-        let currentDate = new Date(monthStart);
-
-        while (currentDate <= monthEnd) {
-            dates.push(new Date(currentDate));
-            currentDate.setDate(currentDate.getDate() + 1);
-        }
-
-        // Add day numbers to header
-        dates.forEach(date => {
-            const dayHeader = document.createElement('th');
-            dayHeader.className = 'day-header';
-            dayHeader.textContent = date.getDate();
-            headerRow.appendChild(dayHeader);
-        });
-        this.tableHeader.appendChild(headerRow);
-
-        // Generate rows for each active technician only
-        this.technicians.filter(tech => tech.is_active).forEach(tech => {
-            const row = document.createElement('tr');
-
-            // Technician name cell
-            const techCell = document.createElement('td');
-            techCell.className = 'tech-name-cell';
-            techCell.innerHTML = `
+                // Technician name cell
+                const techCell = document.createElement('td');
+                techCell.className = 'tech-name-cell';
+                techCell.innerHTML = `
                 <strong>${this.escapeHtml(tech.name)}</strong>
                 ${tech.specialty ? `<br><span class="tech-specialty">${this.escapeHtml(tech.specialty)}</span>` : ''}
             `;
-            techCell.addEventListener('dblclick', () => this.editTechnician(tech.id));
-            row.appendChild(techCell);
+                techCell.addEventListener('dblclick', () => this.editTechnician(tech.id));
+                row.appendChild(techCell);
 
-            // Availability cells for each day
-            dates.forEach(date => {
-                const dateStr = this.formatDate(date);
-                const cell = document.createElement('td');
-                cell.className = 'availability-cell';
+                // Availability cells for each day
+                dates.forEach(date => {
+                    const dateStr = this.formatDate(date);
+                    const cell = document.createElement('td');
+                    cell.className = 'availability-cell';
 
-                const availKey = `${tech.id}-${dateStr}`;
-                const isAvailable = this.availability[availKey] && this.availability[availKey]
-                    .length > 0;
+                    const availKey = `${tech.id}-${dateStr}`;
+                    const isAvailable = this.availability[availKey] && this.availability[availKey]
+                        .length > 0;
 
-                this.setCellAvailability(cell, isAvailable, tech.id, dateStr);
+                    this.setCellAvailability(cell, isAvailable, tech.id, dateStr);
 
-                row.appendChild(cell);
+                    row.appendChild(cell);
+                });
+
+                this.tableBody.appendChild(row);
             });
-
-            this.tableBody.appendChild(row);
-        });
-    }
-
-    setCellAvailability(cell, isAvailable, techId, date) {
-        cell.innerHTML = '';
-        cell.className = 'availability-cell'; // Reset classes
-        cell.style.textAlign = 'center';
-        cell.style.cursor = 'pointer';
-
-        if (isAvailable) {
-            cell.classList.add('available');
-            cell.innerHTML = '<span class="availability-indicator">✓</span>';
-            cell.style.backgroundColor = '#d4edda';
-            cell.style.color = '#155724';
-        } else {
-            cell.classList.add('unavailable');
-            cell.innerHTML = '<span class="availability-indicator">✗</span>';
-            cell.style.backgroundColor = '#f8d7da';
-            cell.style.color = '#721c24';
         }
 
-        // Add click handler for simple toggle
-        cell.addEventListener('click', async () => {
-            await this.toggleAvailability(techId, date, isAvailable);
-        });
-    }
-    async toggleAvailability(techId, date, currentlyAvailable) {
-        try {
-            const availKey = `${techId}-${date}`;
+        setCellAvailability(cell, isAvailable, techId, date) {
+            cell.innerHTML = '';
+            cell.className = 'availability-cell'; // Reset classes
+            cell.style.textAlign = 'center';
+            cell.style.cursor = 'pointer';
 
-            if (currentlyAvailable) {
-                // Remove availability - find and delete all periods for this date
-                const availIds = await this.findAllAvailabilityIds(techId, date);
-                for (const availId of availIds) {
+            if (isAvailable) {
+                cell.classList.add('available');
+                cell.innerHTML = '<span class="availability-indicator">✓</span>';
+                cell.style.backgroundColor = '#d4edda';
+                cell.style.color = '#155724';
+            } else {
+                cell.classList.add('unavailable');
+                cell.innerHTML = '<span class="availability-indicator">✗</span>';
+                //cell.style.backgroundColor = '#f8d7da';
+                cell.style.color = '#ea0e0e45';
+            }
+
+            // Add click handler for simple toggle
+            cell.addEventListener('click', async () => {
+                await this.toggleAvailability(techId, date, isAvailable);
+            });
+        }
+        async toggleAvailability(techId, date, currentlyAvailable) {
+            try {
+                const availKey = `${techId}-${date}`;
+
+                if (currentlyAvailable) {
+                    // Remove availability - find and delete all periods for this date
+                    const availIds = await this.findAllAvailabilityIds(techId, date);
+                    for (const availId of availIds) {
+                        const response = await fetch('api.php', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/x-www-form-urlencoded'
+                            },
+                            body: `entity=techAvail&action=unset&id=${availId}`
+                        });
+
+                        const result = await response.json();
+                        if (!result.success) {
+                            this.showError(result.error || 'Failed to remove availability');
+                            return;
+                        }
+                    }
+                } else {
+                    // Add availability - set as full day
+                    const formData = new FormData();
+                    formData.append('entity', 'techAvail');
+                    formData.append('action', 'set');
+                    formData.append('tech_id', techId);
+                    formData.append('date', date);
+                    formData.append('period', 'full');
+
                     const response = await fetch('api.php', {
                         method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded'
-                        },
-                        body: `entity=techAvail&action=unset&id=${availId}`
+                        body: formData
                     });
 
                     const result = await response.json();
                     if (!result.success) {
-                        this.showError(result.error || 'Failed to remove availability');
+                        this.showError(result.error || 'Failed to set availability');
                         return;
                     }
                 }
-            } else {
-                // Add availability - set as full day
-                const formData = new FormData();
-                formData.append('entity', 'techAvail');
-                formData.append('action', 'set');
-                formData.append('tech_id', techId);
-                formData.append('date', date);
-                formData.append('period', 'full');
 
-                const response = await fetch('api.php', {
-                    method: 'POST',
-                    body: formData
+                this.loadData(); // Reload to refresh display
+            } catch (error) {
+                console.error('Error toggling availability:', error);
+                this.showError('Failed to update availability');
+            }
+        }
+
+        async findAllAvailabilityIds(techId, date) {
+            try {
+                const result = await apiRequest('techAvail', 'list', {
+                    tech_id: techId,
+                    date: date
                 });
 
-                const result = await response.json();
-                if (!result.success) {
-                    this.showError(result.error || 'Failed to set availability');
-                    return;
+                if (result.success) {
+                    return result.availability.map(a => a.id);
                 }
+            } catch (error) {
+                console.error('Error finding availability IDs:', error);
             }
+            return [];
+        }
 
-            this.loadData(); // Reload to refresh display
-        } catch (error) {
-            console.error('Error toggling availability:', error);
-            this.showError('Failed to update availability');
+        editTechnician(techId) {
+            // Redirect to technician management page with edit mode
+            window.location.href = `technicians.php#edit-${techId}`;
+        }
+
+        showLoading(show) {
+            this.loadingSpinner.style.display = show ? 'block' : 'none';
+        }
+
+        showError(message) {
+            // Simple error display - you can enhance this
+            alert(message);
+        }
+
+        escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
         }
     }
 
-    async findAllAvailabilityIds(techId, date) {
-        try {
-            const result = await apiRequest('techAvail', 'list', {
-                tech_id: techId,
-                date: date
-            });
-
-            if (result.success) {
-                return result.availability.map(a => a.id);
-            }
-        } catch (error) {
-            console.error('Error finding availability IDs:', error);
-        }
-        return [];
-    }
-
-    editTechnician(techId) {
-        // Redirect to technician management page with edit mode
-        window.location.href = `technicians.php#edit-${techId}`;
-    }
-
-    showLoading(show) {
-        this.loadingSpinner.style.display = show ? 'block' : 'none';
-    }
-
-    showError(message) {
-        // Simple error display - you can enhance this
-        alert(message);
-    }
-
-    escapeHtml(text) {
-        const div = document.createElement('div');
-        div.textContent = text;
-        return div.innerHTML;
-    }
-}
-
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    new TechAvailability();
-});
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        new TechAvailability();
+    });
 </script>
 
 <?php require_once 'includes/footer.php'; ?>
