@@ -40,7 +40,7 @@ function handle_photo_album_types($action, $method, $db)
             break;
 
         case 'get':
-            if ($method === 'GET') {
+            if ($method === 'POST') {
                 $id = $input['id'] ?? null;
                 if ($id) {
                     $stmt = $db->prepare("SELECT * FROM photo_album_types WHERE id = ?");
@@ -53,7 +53,7 @@ function handle_photo_album_types($action, $method, $db)
             break;
 
         case 'list':
-            if ($method === 'GET') {
+            if ($method === 'POST') {
                 $stmt = $db->query("SELECT id, name FROM photo_album_types");
                 return ['success' => true, 'photo_album_types' => $stmt->fetchAll(PDO::FETCH_ASSOC)];
             }

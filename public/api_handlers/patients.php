@@ -9,15 +9,21 @@ function handle_patients($action, $method, $db, $input = [])
                 $user_id = $input['user_id'] ?? null;
                 $agency_id = $input['agency_id'] ?? null;
 
+                $phone = trim($input['phone'] ?? '');
+                $email = trim($input['email'] ?? '');
+                $city = trim($input['city'] ?? '');
+                $occupation = trim($input['occupation'] ?? '');
+
                 if (!empty($name)) {
-                    $stmt = $db->prepare("INSERT INTO patients (name, dob, user_id, created_at, updated_at, agency_id) VALUES (?, ?, ?, datetime('now'), datetime('now'), ?)");
-                    $stmt->execute([$name, $dob, $user_id, $agency_id]);
+                    $stmt = $db->prepare("INSERT INTO patients (name, dob, phone, email, user_id, created_at, updated_at, agency_id,city,occupation) VALUES (?, ?, ?, ?, ?, datetime('now'), datetime('now'), ?,?,?)");
+                    $stmt->execute([$name, $dob, $phone, $email, $user_id, $agency_id, $city, $occupation]);
                     $new_patient_id = $db->lastInsertId();
                     // Fetch the newly created patient to return its data
                     $stmt_fetch = $db->prepare("SELECT id, name, avatar FROM patients WHERE id = ?");
                     $stmt_fetch->execute([$new_patient_id]);
                     $new_patient = $stmt_fetch->fetch(PDO::FETCH_ASSOC);
-                    return ['success' => true, 'message' => 'Patient added successfully.', 'id' => $new_patient_id, 'patient' => $new_patient]; // Return patient object
+                    $response = ['success' => true, 'message' => 'Patient added successfully.', 'id' => $new_patient_id, 'patient' => $new_patient];
+                    return $response; // Return patient object
                 }
 
                 return ['success' => false, 'error' => 'Name is required.'];
@@ -27,14 +33,19 @@ function handle_patients($action, $method, $db, $input = [])
         case 'update':
         case 'edit':
             if ($method === 'POST') {
-                $id = $_POST['id'] ?? null;
-                $name = trim($_POST['name'] ?? '');
-                $dob = trim($_POST['dob'] ?? '');
-                $agency_id = $_POST['agency_id'] ?? null;
+                $id = $input['id'] ?? null;
+                $name = trim($input['name'] ?? '');
+                $dob = trim($input['dob'] ?? '');
+                $agency_id = $input['agency_id'] ?? null;
+
+                $phone = trim($input['phone'] ?? '');
+                $email = trim($input['email'] ?? '');
+                $city = trim($input['city'] ?? '');
+                $occupation = trim($input['occupation'] ?? '');
 
                 if ($id && $name) {
-                    $sql = "UPDATE patients SET name = ?, dob = ?, agency_id = ?, updated_at = datetime('now')";
-                    $params = [$name, $dob, $agency_id];
+                    $sql = "UPDATE patients SET name = ?, dob = ?, agency_id = ?, phone = ?, email = ?,city = ?,occupation = ?, updated_at = datetime('now')";
+                    $params = [$name, $dob, $agency_id, $phone, $email, $city, $occupation];
 
                     $sql .= " WHERE id = ?";
                     $params[] = $id;
@@ -77,7 +88,6 @@ function handle_patients($action, $method, $db, $input = [])
 
                     if (move_uploaded_file($_FILES['avatar']['tmp_name'], $destination)) {
                         $avatar_path = 'uploads/avatars/' . $file_name; // Path relative to public directory
-
                         // Optional: Delete old avatar if it exists before updating
                         $stmt_old_avatar = $db->prepare("SELECT avatar FROM patients WHERE id = ?");
                         $stmt_old_avatar->execute([$patient_id]);
@@ -92,21 +102,19 @@ function handle_patients($action, $method, $db, $input = [])
                         // Update the database with the new avatar path
                         $stmt = $db->prepare("UPDATE patients SET avatar = ? WHERE id = ?");
                         $stmt->execute([$avatar_path, $patient_id]);
-
-                        return ['success' => true, 'message' => 'Avatar uploaded successfully.', 'avatar_url' => $avatar_path.'-'. $patient_id];
+                        return ['success' => true, 'message' => 'Avatar uploaded successfully.', 'avatar_url' => $avatar_path . '-' . $patient_id];
                     } else {
                         return ['success' => false, 'error' => 'Failed to upload avatar file.'];
                     }
                 }
-
                 return ['success' => false, 'error' => 'Patient ID and avatar file are required for upload.'];
             }
             break;
 
         case 'delete_avatar':
             if ($method === 'POST') {
-                $patient_id = $_POST['patient_id'] ?? null;
-                $avatar_url = $_POST['avatar_url'] ?? null;
+                $patient_id = $input['patient_id'] ?? null;
+                $avatar_url = $input['avatar_url'] ?? null;
 
                 if ($patient_id && $avatar_url) {
                     // Construct the full file path
@@ -161,11 +169,23 @@ function handle_patients($action, $method, $db, $input = [])
                         $stmt3->execute([$id]);
                         $photos = $stmt3->fetchAll(PDO::FETCH_ASSOC);
 
+                        // Get all appointments for this patient
+                        $stmt4 = $db->prepare("
+                            SELECT a.*, p.name AS procedure_name
+                            FROM appointments a
+                            LEFT JOIN procedures p ON a.procedure_id = p.id
+                            WHERE a.patient_id = ?
+                            ORDER BY a.appointment_date DESC
+                        ");
+                        $stmt4->execute([$id]);
+                        $appointments = $stmt4->fetchAll(PDO::FETCH_ASSOC);
+
                         return [
                             'success' => true,
                             'patient' => $patient,
                             'surgeries' => $surgeries,
-                            'photos' => $photos
+                            'photos' => $photos,
+                            'appointments' => $appointments
                         ];
                     }
 

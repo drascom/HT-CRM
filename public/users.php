@@ -2,17 +2,12 @@
 require_once __DIR__ . '/includes/db.php';
 require_once __DIR__ . '/includes/auth.php';
 
-// Check if the user is logged in and has admin role (assuming 'admin' role is required for this page)
-// You might need to add a function like is_admin() in auth.php
-// For now, we'll just check if logged in. You can add role check later.
+
 if (!is_logged_in() || !is_admin()) {
     // Redirect to login page or show an unauthorized message
-    header('Location: login.php'); // Or a dedicated unauthorized page
+    header('Location: login.php');
     exit();
 }
-
-// You might want to fetch users here initially or rely entirely on JavaScript API calls
-// For a dynamic page using API, fetching initially might not be necessary.
 ?>
 
 <?php
@@ -68,7 +63,7 @@ include __DIR__ . '/includes/header.php';
                 <th>Username</th>
                 <th>Role</th>
                 <th class="d-none d-md-table-cell">Agency</th>
-                <th class="d-none d-lg-table-cell">Updated</th>
+                <th class="d-none d-lg-table-cell">Is Active</th>
                 <th class="text-center">Actions</th>
             </tr>
         </thead>
@@ -157,8 +152,19 @@ include __DIR__ . '/includes/header.php';
                             </div>
                         </div>
                     </div>
-                </form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="form-check-label" for="isActive">
+                                <i class="fas fa-toggle-on me-1 fas-lg"></i>
+                                Is Active
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3 form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="isActive">
+                    </div>
             </div>
+            </form>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                     <i class="fas fa-times me-1"></i>Close
@@ -170,6 +176,7 @@ include __DIR__ . '/includes/header.php';
         </div>
     </div>
 </div>
+<?php include __DIR__ . '/includes/footer.php'; ?>
 <script>
     // User Management Script
     document.addEventListener('DOMContentLoaded', function() {
@@ -188,6 +195,7 @@ include __DIR__ . '/includes/header.php';
         const statusMessagesDiv = document.getElementById('status-messages');
         let allUsers = []; // Store all users for client-side filtering
         let allAgencies = []; // Store all agencies for dropdown
+        const isActiveInput = document.getElementById('isActive');
 
         // Function to display status messages
         function displayStatusMessage(message, type = 'success') {
@@ -240,30 +248,42 @@ include __DIR__ . '/includes/header.php';
 
         // Function to fetch users from the API
         function fetchUsers() {
+            console.log('Inside fetchUsers()'); // Log 8
             apiRequest('users', 'list')
                 .then(data => {
+                    console.log('fetchUsers API response:', data); // Log 9
                     if (data.success) {
                         allUsers = data.users; // Store fetched users
+                        console.log('Users fetched:', allUsers); // Log 10
                         populateUsersTable(allUsers);
+                        console.log('populateUsersTable() called.'); // Log 11
                     } else {
-                        console.error('Error fetching users:', data.message);
+                        console.error('Error fetching users:', data.message); // Log 12
                         displayStatusMessage('Error fetching users: ' + data.message, 'danger');
                     }
                 })
                 .catch(error => {
-                    console.error('Error fetching users:', error);
+                    console.error('Error fetching users:', error); // Log 13
                     displayStatusMessage('Error fetching users: ' + error, 'danger');
                 });
         }
 
         // Function to populate the users table
         function populateUsersTable(users) {
+            console.log('Inside populateUsersTable() with users:', users); // Log 14
+            console.log('usersTableBody before clearing:', usersTableBody.innerHTML); // Log 15
             usersTableBody.innerHTML = ''; // Clear existing rows
+            console.log('usersTableBody after clearing:', usersTableBody.innerHTML); // Log 16
+
             if (users.length === 0) {
+                console.log('No users found, displaying "No users found" message.'); // Log 17
                 usersTableBody.innerHTML = '<tr><td colspan="8" class="text-center">No users found.</td></tr>';
                 return;
             }
+
+            console.log(`Populating table with ${users.length} users.`); // Log 18
             users.forEach(user => {
+                console.log('Adding row for user:', user.id); // Log 19
                 const roleColor = user.role === 'admin' ? 'danger' : 'primary';
                 const agencyName = getAgencyName(user.agency_id);
                 const row = `
@@ -273,15 +293,15 @@ include __DIR__ . '/includes/header.php';
                     <td><span class="fw-medium">${user.username}</span></td>
                     <td><span class="badge bg-${roleColor}">${user.role}</span></td>
                     <td class="d-none d-md-table-cell"><small>${agencyName}</small></td>
-                    <td class="d-none d-lg-table-cell"><small>${user.updated_at ? moment(user.updated_at).fromNow() : 'N/A'}</small></td>
+                    <td class="d-none d-lg-table-cell"><small>${user.is_active ? 'Yes' : 'No'}</small></td>
                     <td>
                         <div class="btn-group" role="group">
-                            <button class="btn btn-sm btn-outline-warning edit-user-btn" data-id="${user.id}"
+                            <button class="btn btn-sm btn-text text-primary edit-user-btn" data-id="${user.id}"
                                     data-bs-toggle="modal" data-bs-target="#userModal" title="Edit User">
                                 <i class="fas fa-edit"></i>
                                 <span class="d-none d-lg-inline ms-1">Edit</span>
                             </button>
-                            <button class="btn btn-sm btn-outline-danger delete-user-btn" data-id="${user.id}" title="Delete User">
+                            <button class="btn btn-sm btn-text text-danger delete-user-btn" data-id="${user.id}" title="Delete User">
                                 <i class="fas fa-trash-alt"></i>
                                 <span class="d-none d-lg-inline ms-1">Delete</span>
                             </button>
@@ -293,6 +313,7 @@ include __DIR__ . '/includes/header.php';
             });
 
             // Update user count
+            console.log('Updating user count to:', users.length); // Log 20
             document.getElementById('user-count').textContent = users.length;
         }
 
@@ -333,13 +354,16 @@ include __DIR__ . '/includes/header.php';
                     showPasswordHelp(false); // Hide password help when editing
 
                     // Fetch user data to populate the form
-                    apiRequest('users', 'get', { id: userId })
+                    apiRequest('users', 'get', {
+                            id: userId
+                        })
                         .then(data => {
                             if (data.success && data.user) {
                                 emailInput.value = data.user.email;
                                 usernameInput.value = data.user.username;
                                 roleSelect.value = data.user.role;
                                 agencySelect.value = data.user.agency_id || '';
+                                isActiveInput.checked = data.user.is_active == 1; // Set switch state
                                 // Password field is intentionally not populated for security
                             } else {
                                 console.error('Error fetching user data:', data.message);
@@ -382,11 +406,12 @@ include __DIR__ . '/includes/header.php';
                 const agencyId = agencySelect.value || null;
 
                 const userData = {
-                    entity: 'users',
+                    entity: 'users', // Add the missing entity here
                     email: email,
                     username: username,
                     role: role,
-                    agency_id: agencyId
+                    agency_id: agencyId,
+                    is_active: isActiveInput.checked ? 1 : 0 // Get switch value (1 or 0)
                 };
 
                 let action = 'add';
@@ -435,9 +460,13 @@ include __DIR__ . '/includes/header.php';
                 const target = event.target;
 
                 // Handle Delete button click
-                if (target.classList.contains('delete-user-btn')) {
-                    const userId = target.getAttribute('data-id');
+                if (target.classList.contains('delete-user-btn') || target.closest(
+                        '.delete-user-btn')) { // Also check parent for icon clicks
+                    const deleteButton = target.closest('.delete-user-btn');
+                    const userId = deleteButton.getAttribute('data-id');
+                    console.log('Delete button clicked for user ID:', userId); // Log 1
                     if (confirm('Are you sure you want to delete this user?')) {
+                        console.log('User confirmed deletion for user ID:', userId); // Log 2
                         fetch('api.php', {
                                 method: 'POST',
                                 headers: {
@@ -451,8 +480,11 @@ include __DIR__ . '/includes/header.php';
                             })
                             .then(response => response.json())
                             .then(data => {
+                                console.log('API response for delete:', data); // Log 3
                                 if (data.success) {
+                                    console.log('Fetching users after successful delete...'); // Log 6
                                     fetchUsers(); // Refresh the table
+                                    console.log('fetchUsers() called.'); // Log 7
                                     displayStatusMessage('User deleted successfully!', 'success');
                                 } else {
                                     console.error('Error deleting user:', data.message);
@@ -461,9 +493,11 @@ include __DIR__ . '/includes/header.php';
                                 }
                             })
                             .catch(error => {
-                                console.error('Error deleting user:', error);
+                                console.error('Error deleting user:', error); // Log 4
                                 displayStatusMessage('Error deleting user: ' + error, 'danger');
                             });
+                    } else {
+                        console.log('User cancelled deletion for user ID:', userId); // Log 5
                     }
                 }
             });
@@ -494,4 +528,3 @@ include __DIR__ . '/includes/header.php';
 
     });
 </script>
-<?php include __DIR__ . '/includes/footer.php'; ?>

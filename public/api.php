@@ -11,30 +11,12 @@ require_once 'includes/auth.php';
 
 header('Content-Type: application/json');
 
-// Log the request
-$timestamp = date('Y-m-d H:i:s');
-$request_method = $_SERVER['REQUEST_METHOD'];
-$request_uri = $_SERVER['REQUEST_URI'];
-$request_body = '';
-
-if ($request_method === 'POST' || $request_method === 'PUT') {
-    $request_body = file_get_contents('php://input');
-}
-
-$log_entry = "## Request Log - {$timestamp}\n\n";
-$log_entry .= "**Method:** {$request_method}\n";
-$log_entry .= "**URL:** {$request_uri}\n";
-if (!empty($request_body)) {
-    $log_entry .= "**Body:** " . htmlspecialchars($request_body) . "\n";
-}
-$log_entry .= "\n";
-file_put_contents('log.md', $log_entry, FILE_APPEND | LOCK_EX);
 
 // Auth check
 if (!is_logged_in()) {
     http_response_code(401);
     $response = ['error' => 'Unauthorized'];
-    log_response($response);
+    log_response($response, $entity, $action);
     echo json_encode($response);
     exit();
 }
@@ -43,6 +25,9 @@ if (!is_logged_in()) {
 $entity = null;
 $action = null;
 $method = $_SERVER['REQUEST_METHOD'];
+$request_body = file_get_contents('php://input');
+
+$request_body = file_get_contents('php://input');
 
 if ($method === 'POST') {
     // Check Content-Type to determine if it's JSON or form data
@@ -90,12 +75,12 @@ try {
                 $response = $handler_function($action, $method, $db, $input ?? []);
             } else {
                 $log_message = "Handler function not found for entity '{$entity}', action '{$action}', method '{$method}': " . $handler_function;
-                log_response(['log' => $log_message]);
+                log_response(['log' => $log_message], $entity, $action);
                 $response = ['success' => false, 'message' => "Function {$handler_function} not found."];
             }
         } else {
             $log_message = "Handler file not found for entity '{$entity}', action '{$action}', method '{$method}': " . $handler_file;
-            log_response(['log' => $log_message]);
+            log_response(['log' => $log_message], $entity, $action);
             $response = ['success' => false, 'message' => "Handler for {$entity} not found."];
         }
     }
@@ -109,12 +94,12 @@ try {
 ob_clean();
 
 // Log and return the response
-log_response($response);
+log_response($response, $entity, $action);
 echo json_encode($response);
 
 
 // Helper: response logger
-function log_response($response)
+function log_response($response, $entity = 'unknown', $action = 'unknown')
 {
     $log_file = 'log.md';
     $timestamp = date('Y-m-d H:i:s');
@@ -124,15 +109,13 @@ function log_response($response)
     } elseif (isset($response['log'])) {
         $status = 'Info';
     }
-    $json = json_encode($response, JSON_PRETTY_PRINT);
-    $log = "## Response Log - {$timestamp}\n\n";
-    $log .= "**Status:** {$status}\n";
-    $log .= "**Details:**\n```json\n{$json}\n```\n";
-    $log .= "---\n\n";
 
-    // Count existing log entries
+    // Minimal log format: time - entity - action - response status
+    $log = "[{$timestamp}] -Page: {$entity} -Method: {$action} -Status: {$status}\n";
+
+    // Count existing log entries (keeping this logic)
     $existing_content = file_exists($log_file) ? file_get_contents($log_file) : '';
-    $entry_count = substr_count($existing_content, "## Response Log -");
+    $entry_count = substr_count($existing_content, "\n"); // Count lines instead of "## Response Log -"
 
     // Clear file if entry count is 10 or more
     if ($entry_count >= 10) {

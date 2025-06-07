@@ -22,17 +22,17 @@ try {
             if ($sql !== false) {
                 $pdo->exec($sql);
             } else {
-                error_log("Failed to read database.sql file.");
+                log_to_file("Failed to read database.sql file.");
                 // Optionally handle this error more gracefully
             }
         } else {
-            error_log("database.sql file not found at " . $sql_file);
+            log_to_file("database.sql file not found at " . $sql_file);
             // Optionally handle this error more gracefully
         }
     }
 } catch (\PDOException $e) {
     // Log the error instead of displaying it in production
-    error_log("Database connection error: " . $e->getMessage());
+    log_to_file("Database connection error: " . $e->getMessage());
     // Display a generic error message to the user
     die("Database connection failed. Please try again later.");
 }
@@ -48,9 +48,24 @@ if (!$db_exists) {
         $stmt = $pdo->prepare("INSERT INTO users (username, email, password, role, created_at, updated_at) VALUES (?, ?, ?, 'admin', datetime('now'), datetime('now'))");
         $stmt->execute([$admin_username, $admin_email, $admin_password_hashed]);
     } catch (\PDOException $e) {
-        error_log("Failed to create initial admin user: " . $e->getMessage());
+        log_to_file("Failed to create initial admin user: " . $e->getMessage());
         // Optionally handle this error more gracefully
     }
+}
+
+/**
+ * Logs a message to the log.md file.
+ *
+ * @param string $message The message to log.
+ */
+function log_to_file($message)
+{
+    $log_file = __DIR__ . '/../log.md'; // Path to log.md in the public directory
+    $timestamp = date('Y-m-d H:i:s');
+    $log_message = "[{$timestamp}] {$message}" . PHP_EOL;
+
+    // Use FILE_APPEND to add to the end of the file, and LOCK_EX to prevent race conditions
+    file_put_contents($log_file, $log_message, FILE_APPEND | LOCK_EX);
 }
 
 function get_db()

@@ -20,6 +20,8 @@
     <!-- Dropzone CSS -->
     <link href="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css" rel="stylesheet" type="text/css" />
 
+    <!-- Tom-Select CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">
 
@@ -33,7 +35,7 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
-        <div class="container-fluid px-2">
+        <div class="container-fluid pe-2 ">
             <a class="navbar-brand fw-bold" href="/">
                 <i class="fas fa-heartbeat me-2"></i>
                 <span class="d-none d-sm-inline">Liv Patient Management</span>
@@ -45,15 +47,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse mx-auto" id="navbarNav">
                 <?php if (is_logged_in()): ?>
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="google.php">
-                            <i class="fas fa-file-excel me-1"></i>
-                            <span class="d-lg-inline">Sheet</span>
-                        </a>
-                    </li>
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="calendar.php">
                             <i class="fas fa-calendar me-1"></i>
@@ -73,12 +69,6 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="room_availability.php">
-                            <i class="fas fa-door-open me-1"></i>
-                            <span class="d-lg-inline">Rooms</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="technicians.php">
                             <i class="fas fa-users me-1"></i>
                             <span class="d-lg-inline">Technicians</span>
@@ -90,10 +80,17 @@
                             <span class="d-lg-inline">Patients</span>
                         </a>
                     </li>
-                    <?php if (is_admin()): ?>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                    <?php if (is_admin()): ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="view_log.php">
+                            <i class="fas fa-users me-1"></i>
+                            <span class="d-lg-inline">Log</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle dark" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-cog me-1"></i>
                             Settings
@@ -119,8 +116,7 @@
                             </li>
                             <li>
                                 <a class="dropdown-item" href="rooms.php">
-                                    <i class="fas fa-door-open me-1"></i>
-                                    Manage Rooms
+                                    <i class="fas fa-door-open me-2"></i>Rooms
                                 </a>
                             </li>
                             <li>
@@ -151,7 +147,7 @@
                         ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                            data-bs-toggle="dropdown" aria-expanded="false" style=" color: mediumblue;">
                             <i class="fas fa-user-circle me-1"></i>
                             <span class="d-none d-md-inline"><?php echo htmlspecialchars($username); ?></span>
                         </a>
@@ -192,4 +188,4 @@
 
     <!-- Main Content -->
     <main class="main-content">
-        <div class="container-fluid px-3 px-md-4 py-2">
+        <div class="container  py-4 emp-profile">

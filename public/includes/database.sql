@@ -1,4 +1,3 @@
-
 CREATE TABLE surgeries (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   date TEXT,
@@ -29,7 +28,11 @@ CREATE TABLE patients (
   created_at TEXT,
   updated_at TEXT,
   avatar TEXT,
-  agency_id INTEGER
+  agency_id INTEGER,
+  phone TEXT,
+  email TEXT,
+  city TEXT,
+  occupation TEXT
 );
 
 CREATE TABLE patient_photos (
@@ -61,15 +64,23 @@ CREATE TABLE users (
   email TEXT NOT NULL UNIQUE,
   username TEXT NOT NULL UNIQUE,
   password TEXT NOT NULL,
-  role TEXT DEFAULT 'user',
+  role TEXT DEFAULT 'guest',
   created_at TEXT,
   updated_at TEXT,
-  agency_id INTEGER
+  agency_id INTEGER,
+  reset_token TEXT NULL,
+  reset_expiry DATETIME NULL,
+  name TEXT NULL,
+  surname TEXT NULL,
+  phone TEXT NULL,
+  is_active INTEGER DEFAULT 0
 );
-INSERT INTO users (email, username, password,role, created_at, updated_at, agency_id) VALUES ('a@b.com', 'Admin', '$2y$10$aEtcftk7GMX3bP3DqIRxQ.DmbuVMC.b18q96ziMwSQWyQO/TWuG5a','admin', datetime('now'), datetime('now'),1);
-INSERT INTO users (email, username, password,role, created_at, updated_at, agency_id) VALUES ('b@b.com', 'Editor', '$2y$10$aEtcftk7GMX3bP3DqIRxQ.DmbuVMC.b18q96ziMwSQWyQO/TWuG5a','editor', datetime('now'), datetime('now'),1);
-INSERT INTO users (email, username, password,role, created_at, updated_at, agency_id) VALUES ('c@c.com', 'Agent', '$2y$10$aEtcftk7GMX3bP3DqIRxQ.DmbuVMC.b18q96ziMwSQWyQO/TWuG5a','agent', datetime('now'), datetime('now'),2);
-INSERT INTO users (email, username, password,role, created_at, updated_at, agency_id) VALUES ('d@d.com', 'Technician', '$2y$10$aEtcftk7GMX3bP3DqIRxQ.DmbuVMC.b18q96ziMwSQWyQO/TWuG5a','technician', datetime('now'), datetime('now'),3);
+
+
+INSERT INTO users (email, username, password,role, created_at, updated_at, agency_id,is_active) VALUES ('drascom07@gmail.com', 'Admin', '$2y$10$aEtcftk7GMX3bP3DqIRxQ.DmbuVMC.b18q96ziMwSQWyQO/TWuG5a','admin', datetime('now'), datetime('now'),1,1);
+INSERT INTO users (email, username, password,role, created_at, updated_at, agency_id, is_active) VALUES ('b@b.com', 'Editor', '$2y$10$aEtcftk7GMX3bP3DqIRxQ.DmbuVMC.b18q96ziMwSQWyQO/TWuG5a','editor', datetime('now'), datetime('now'),1,1);
+INSERT INTO users (email, username, password,role, created_at, updated_at, agency_id,is_active) VALUES ('c@c.com', 'Agent', '$2y$10$aEtcftk7GMX3bP3DqIRxQ.DmbuVMC.b18q96ziMwSQWyQO/TWuG5a','agent', datetime('now'), datetime('now'),2,1);
+INSERT INTO users (email, username, password,role, created_at, updated_at, agency_id,is_active) VALUES ('d@d.com', 'Technician', '$2y$10$aEtcftk7GMX3bP3DqIRxQ.DmbuVMC.b18q96ziMwSQWyQO/TWuG5a','technician', datetime('now'), datetime('now'),3,1);
 
 CREATE TABLE settings (
   key TEXT PRIMARY KEY UNIQUE,
@@ -197,6 +208,7 @@ CREATE TABLE IF NOT EXISTS procedures (
 
 -- Insert default procedures
 INSERT OR IGNORE INTO procedures (name, is_active) VALUES
+('Consultation', 1),
 ('Botox', 1),
 ('Dermal Fillers', 1),
 ('PRP (Platelet-Rich Plasma)', 1),

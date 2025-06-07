@@ -27,7 +27,7 @@ require_once 'includes/header.php';
             </button>
             <a href="room_availability.php" class="btn btn-primary">
                 <i class="fas fa-calendar me-1"></i>
-                View Calendar
+                Availability
             </a>
         </div>
     </div>
@@ -107,43 +107,43 @@ require_once 'includes/header.php';
 </div>
 
 <script>
-let isEditing = false;
+    let isEditing = false;
 
-document.addEventListener('DOMContentLoaded', function() {
-    loadRooms();
+    document.addEventListener('DOMContentLoaded', function () {
+        loadRooms();
 
-    // Room form submission
-    document.getElementById('room-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        saveRoom();
-    });
-});
-
-function loadRooms() {
-    showLoading(true);
-
-    apiRequest('rooms', 'list')
-        .then(data => {
-            if (data.success) {
-                renderRoomsTable(data.rooms);
-            } else {
-                displayMessage('Error loading rooms: ' + (data.error || 'Unknown error'), 'danger');
-            }
-        })
-        .catch(error => {
-            console.error('Error loading rooms:', error);
-            displayMessage('Failed to load rooms. Please try again.', 'danger');
-        })
-        .finally(() => {
-            showLoading(false);
+        // Room form submission
+        document.getElementById('room-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            saveRoom();
         });
-}
+    });
 
-function renderRoomsTable(rooms) {
-    const tbody = document.getElementById('rooms-tbody');
+    function loadRooms() {
+        showLoading(true);
 
-    if (rooms.length === 0) {
-        tbody.innerHTML = `
+        apiRequest('rooms', 'list')
+            .then(data => {
+                if (data.success) {
+                    renderRoomsTable(data.rooms);
+                } else {
+                    displayMessage('Error loading rooms: ' + (data.error || 'Unknown error'), 'danger');
+                }
+            })
+            .catch(error => {
+                console.error('Error loading rooms:', error);
+                displayMessage('Failed to load rooms. Please try again.', 'danger');
+            })
+            .finally(() => {
+                showLoading(false);
+            });
+    }
+
+    function renderRoomsTable(rooms) {
+        const tbody = document.getElementById('rooms-tbody');
+
+        if (rooms.length === 0) {
+            tbody.innerHTML = `
             <tr>
                 <td colspan="5" class="text-center text-muted py-4">
                     <i class="fas fa-door-open fa-2x mb-2"></i><br>
@@ -151,10 +151,10 @@ function renderRoomsTable(rooms) {
                 </td>
             </tr>
         `;
-        return;
-    }
+            return;
+        }
 
-    tbody.innerHTML = rooms.map(room => `
+        tbody.innerHTML = rooms.map(room => `
         <tr>
             <td>
                 <strong>${escapeHtml(room.name)}</strong>
@@ -188,188 +188,188 @@ function renderRoomsTable(rooms) {
             </td>
         </tr>
     `).join('');
-}
-
-function openRoomModal(roomId = null) {
-    isEditing = !!roomId;
-    const modal = document.getElementById('roomModal');
-    const modalTitle = document.getElementById('roomModalLabel');
-    const submitBtn = document.getElementById('room-submit-btn');
-
-    // Reset form
-    const form = document.getElementById('room-form');
-    form.reset();
-    form.classList.remove('was-validated');
-    document.getElementById('room-id').value = '';
-
-    if (isEditing) {
-        modalTitle.textContent = 'Edit Room';
-        submitBtn.textContent = 'Update Room';
-        loadRoomData(roomId);
-    } else {
-        modalTitle.textContent = 'Add Room';
-        submitBtn.textContent = 'Save Room';
     }
 
-    new bootstrap.Modal(modal).show();
-}
+    function openRoomModal(roomId = null) {
+        isEditing = !!roomId;
+        const modal = document.getElementById('roomModal');
+        const modalTitle = document.getElementById('roomModalLabel');
+        const submitBtn = document.getElementById('room-submit-btn');
 
-function loadRoomData(roomId) {
-    apiRequest('rooms', 'get', { id: roomId })
-        .then(data => {
-            if (data.success) {
-                const room = data.room;
-                document.getElementById('room-id').value = room.id;
-                document.getElementById('room-name').value = room.name;
-                document.getElementById('room-types').value = room.types || '';
-            } else {
-                displayMessage('Error loading room data: ' + (data.error || 'Unknown error'), 'danger');
-            }
-        })
-        .catch(error => {
-            console.error('Error loading room data:', error);
-            displayMessage('Failed to load room data.', 'danger');
-        });
-}
+        // Reset form
+        const form = document.getElementById('room-form');
+        form.reset();
+        form.classList.remove('was-validated');
+        document.getElementById('room-id').value = '';
 
-function saveRoom() {
-    const form = document.getElementById('room-form');
+        if (isEditing) {
+            modalTitle.textContent = 'Edit Room';
+            submitBtn.textContent = 'Update Room';
+            loadRoomData(roomId);
+        } else {
+            modalTitle.textContent = 'Add Room';
+            submitBtn.textContent = 'Save Room';
+        }
 
-    // Add Bootstrap validation classes
-    form.classList.add('was-validated');
-
-    // Check form validity
-    if (!form.checkValidity()) {
-        displayMessage('Please fill in all required fields correctly.', 'danger');
-        return;
+        new bootstrap.Modal(modal).show();
     }
 
-    const formData = new FormData(form);
-    formData.append('entity', 'rooms');
-    formData.append('action', isEditing ? 'update' : 'create');
+    function loadRoomData(roomId) {
+        apiRequest('rooms', 'get', { id: roomId })
+            .then(data => {
+                if (data.success) {
+                    const room = data.room;
+                    document.getElementById('room-id').value = room.id;
+                    document.getElementById('room-name').value = room.name;
+                    document.getElementById('room-types').value = room.types || '';
+                } else {
+                    displayMessage('Error loading room data: ' + (data.error || 'Unknown error'), 'danger');
+                }
+            })
+            .catch(error => {
+                console.error('Error loading room data:', error);
+                displayMessage('Failed to load room data.', 'danger');
+            });
+    }
 
-    fetch('api.php', {
+    function saveRoom() {
+        const form = document.getElementById('room-form');
+
+        // Add Bootstrap validation classes
+        form.classList.add('was-validated');
+
+        // Check form validity
+        if (!form.checkValidity()) {
+            displayMessage('Please fill in all required fields correctly.', 'danger');
+            return;
+        }
+
+        const formData = new FormData(form);
+        formData.append('entity', 'rooms');
+        formData.append('action', isEditing ? 'update' : 'create');
+
+        fetch('api.php', {
             method: 'POST',
             body: formData
         })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                displayMessage(data.message, 'success');
-                bootstrap.Modal.getInstance(document.getElementById('roomModal')).hide();
-                loadRooms(); // Reload the table
-            } else {
-                displayMessage('Error: ' + (data.error || 'Unknown error'), 'danger');
-            }
-        })
-        .catch(error => {
-            console.error('Error saving room:', error);
-            displayMessage('Failed to save room. Please try again.', 'danger');
-        });
-}
-
-function editRoom(roomId) {
-    openRoomModal(roomId);
-}
-
-function deleteRoom(roomId, roomName) {
-    if (!confirm(`Are you sure you want to archive "${roomName}"? This will make it unavailable for new bookings.`)) {
-        return;
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    displayMessage(data.message, 'success');
+                    bootstrap.Modal.getInstance(document.getElementById('roomModal')).hide();
+                    loadRooms(); // Reload the table
+                } else {
+                    displayMessage('Error: ' + (data.error || 'Unknown error'), 'danger');
+                }
+            })
+            .catch(error => {
+                console.error('Error saving room:', error);
+                displayMessage('Failed to save room. Please try again.', 'danger');
+            });
     }
 
-    const formData = new FormData();
-    formData.append('entity', 'rooms');
-    formData.append('action', 'delete');
-    formData.append('id', roomId);
+    function editRoom(roomId) {
+        openRoomModal(roomId);
+    }
 
-    fetch('api.php', {
+    function deleteRoom(roomId, roomName) {
+        if (!confirm(`Are you sure you want to archive "${roomName}"? This will make it unavailable for new bookings.`)) {
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('entity', 'rooms');
+        formData.append('action', 'delete');
+        formData.append('id', roomId);
+
+        fetch('api.php', {
             method: 'POST',
             body: formData
         })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                displayMessage(data.message, 'success');
-                loadRooms(); // Reload the table
-            } else {
-                displayMessage('Error: ' + (data.error || 'Unknown error'), 'danger');
-            }
-        })
-        .catch(error => {
-            console.error('Error archiving room:', error);
-            displayMessage('Failed to archive room. Please try again.', 'danger');
-        });
-}
-
-function toggleRoomStatus(roomId, roomName, status) {
-    if (!confirm(`Are you sure you want to archive "${roomName}"? This will make it unavailable for new bookings.`)) {
-        return;
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    displayMessage(data.message, 'success');
+                    loadRooms(); // Reload the table
+                } else {
+                    displayMessage('Error: ' + (data.error || 'Unknown error'), 'danger');
+                }
+            })
+            .catch(error => {
+                console.error('Error archiving room:', error);
+                displayMessage('Failed to archive room. Please try again.', 'danger');
+            });
     }
 
-    const formData = new FormData();
-    formData.append('entity', 'rooms');
-    formData.append('action', 'toggle');
-    formData.append('id', roomId);
-    formData.append('status', status);
+    function toggleRoomStatus(roomId, roomName, status) {
+        if (!confirm(`Are you sure you want to archive "${roomName}"? This will make it unavailable for new bookings.`)) {
+            return;
+        }
 
-    fetch('api.php', {
+        const formData = new FormData();
+        formData.append('entity', 'rooms');
+        formData.append('action', 'toggle');
+        formData.append('id', roomId);
+        formData.append('status', status);
+
+        fetch('api.php', {
             method: 'POST',
             body: formData
         })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                displayMessage(data.message, 'success');
-                loadRooms(); // Reload the table
-            } else {
-                displayMessage('Error: ' + (data.error || 'Unknown error'), 'danger');
-            }
-        })
-        .catch(error => {
-            console.error('Error archiving room:', error);
-            displayMessage('Failed to archive room. Please try again.', 'danger');
-        });
-}
-
-function showLoading(show) {
-    const spinner = document.getElementById('loading-spinner');
-    const table = document.getElementById('rooms-table-container');
-
-    if (show) {
-        spinner.style.display = 'block';
-        table.style.display = 'none';
-    } else {
-        spinner.style.display = 'none';
-        table.style.display = 'block';
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    displayMessage(data.message, 'success');
+                    loadRooms(); // Reload the table
+                } else {
+                    displayMessage('Error: ' + (data.error || 'Unknown error'), 'danger');
+                }
+            })
+            .catch(error => {
+                console.error('Error archiving room:', error);
+                displayMessage('Failed to archive room. Please try again.', 'danger');
+            });
     }
-}
 
-function displayMessage(message, type) {
-    const container = document.getElementById('status-messages');
-    const alertDiv = document.createElement('div');
-    alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
-    alertDiv.innerHTML = `
+    function showLoading(show) {
+        const spinner = document.getElementById('loading-spinner');
+        const table = document.getElementById('rooms-table-container');
+
+        if (show) {
+            spinner.style.display = 'block';
+            table.style.display = 'none';
+        } else {
+            spinner.style.display = 'none';
+            table.style.display = 'block';
+        }
+    }
+
+    function displayMessage(message, type) {
+        const container = document.getElementById('status-messages');
+        const alertDiv = document.createElement('div');
+        alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
+        alertDiv.innerHTML = `
         ${message}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     `;
 
-    container.appendChild(alertDiv);
+        container.appendChild(alertDiv);
 
-    // Auto-remove success messages after 5 seconds
-    if (type === 'success') {
-        setTimeout(() => {
-            if (alertDiv.parentNode) {
-                alertDiv.remove();
-            }
-        }, 5000);
+        // Auto-remove success messages after 5 seconds
+        if (type === 'success') {
+            setTimeout(() => {
+                if (alertDiv.parentNode) {
+                    alertDiv.remove();
+                }
+            }, 5000);
+        }
     }
-}
 
-function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-}
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
 </script>
 
 <?php require_once 'includes/footer.php'; ?>

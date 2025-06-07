@@ -14,24 +14,24 @@ async function apiRequest(entity, action, data = {}) {
     const formData = new FormData();
     formData.append('entity', entity);
     formData.append('action', action);
-    
+
     // Add any additional data
     Object.keys(data).forEach(key => {
         if (data[key] !== null && data[key] !== undefined) {
             formData.append(key, data[key]);
         }
     });
-    
+
     try {
         const response = await fetch('api.php', {
             method: 'POST',
             body: formData
         });
-        
+
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        
+
         return await response.json();
     } catch (error) {
         console.error('API Request Error:', error);
@@ -49,14 +49,14 @@ async function secureFetch(url) {
     // Parse the URL to extract entity, action, and parameters
     const urlObj = new URL(url, window.location.origin);
     const params = new URLSearchParams(urlObj.search);
-    
+
     const entity = params.get('entity');
     const action = params.get('action');
-    
+
     if (!entity || !action) {
         throw new Error('Invalid API URL: missing entity or action');
     }
-    
+
     // Extract all other parameters
     const data = {};
     params.forEach((value, key) => {
@@ -64,7 +64,7 @@ async function secureFetch(url) {
             data[key] = value;
         }
     });
-    
+
     return apiRequest(entity, action, data);
 }
 

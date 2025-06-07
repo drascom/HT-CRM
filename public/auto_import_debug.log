@@ -2704,3 +2704,403 @@
 }
 ```
 ---
+
+## Auto Import Log - 2025-06-06 22:35:29
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-06 22:35:34
+
+**Level:** INFO
+**Message:** Starting Google Sheets fetch from API
+---
+
+## Auto Import Log - 2025-06-06 22:35:34
+
+**Level:** INFO
+**Message:** Cache not available, fetching from Google Sheets API
+---
+
+## Auto Import Log - 2025-06-06 22:35:36
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "MAR 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-06 22:35:37
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "APR 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-06 22:35:37
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "MAY 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-06 22:35:38
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "JUN 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-06 22:35:39
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "JUL 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-06 22:35:40
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "AUG 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-06 22:35:41
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "SEP 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-06 22:35:41
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "OCT 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-06 22:35:42
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "NOV 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-06 22:35:43
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "DEC 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-06 22:35:44
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "JAN 26",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-06 22:35:44
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "FEB 26",
+    "rows": 29
+}
+```
+---
+
+## Auto Import Log - 2025-06-06 22:35:44
+
+**Level:** INFO
+**Message:** Google Sheets data saved to cache
+**Data:**
+```json
+{
+    "file": "auto_import_d3150955807ecdc9b83bed9d480c6b56.json",
+    "size": 58595,
+    "sheets": 12
+}
+```
+---
+
+## Auto Import Log - 2025-06-06 22:45:47
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-07 21:26:24
+
+**Level:** INFO
+**Message:** Auto import started
+**Data:**
+```json
+{
+    "user_id": 1
+}
+```
+---
+
+## Auto Import Log - 2025-06-07 21:26:26
+
+**Level:** INFO
+**Message:** Starting Google Sheets fetch from API
+---
+
+## Auto Import Log - 2025-06-07 21:26:26
+
+**Level:** INFO
+**Message:** Cache not available, fetching from Google Sheets API
+---
+
+## Auto Import Log - 2025-06-07 21:26:27
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "MAR 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-07 21:26:27
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "APR 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-07 21:26:28
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "MAY 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-07 21:26:28
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "JUN 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-07 21:26:28
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "JUL 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-07 21:26:29
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "AUG 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-07 21:26:29
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "SEP 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-07 21:26:29
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "OCT 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-07 21:26:30
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "NOV 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-07 21:26:30
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "DEC 25",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-07 21:26:30
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "JAN 26",
+    "rows": 30
+}
+```
+---
+
+## Auto Import Log - 2025-06-07 21:26:30
+
+**Level:** INFO
+**Message:** Fetched sheet data
+**Data:**
+```json
+{
+    "sheet": "FEB 26",
+    "rows": 29
+}
+```
+---
+
+## Auto Import Log - 2025-06-07 21:26:30
+
+**Level:** INFO
+**Message:** Google Sheets data saved to cache
+**Data:**
+```json
+{
+    "file": "auto_import_d3150955807ecdc9b83bed9d480c6b56.json",
+    "size": 58595,
+    "sheets": 12
+}
+```
+---
